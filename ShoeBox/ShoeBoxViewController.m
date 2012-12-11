@@ -7,6 +7,7 @@
 //
 
 #import "ShoeBoxViewController.h"
+#import "LocationsViewController.h"
 
 @interface ShoeBoxViewController ()
 
@@ -34,6 +35,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) joinButtonClicked:(id)sender
+{
+    LocationsViewController *detailViewController = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPhone" bundle:nil];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

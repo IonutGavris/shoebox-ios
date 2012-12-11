@@ -22,6 +22,7 @@ bool ENABLE_IPAD = false;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2, *viewController3, *viewController4;
+    UINavigationController *navigationcontroller1, *navigationcontroller2, *navigationcontroller3, *navigationcontroller4;
     if (!ENABLE_IPAD || [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[ShoeBoxViewController alloc] initWithNibName:@"ShoeBoxViewController_iPhone" bundle:nil];
         viewController2 = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPhone" bundle:nil];
@@ -33,8 +34,14 @@ bool ENABLE_IPAD = false;
         viewController3 = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPad" bundle:nil];
         viewController4 = [[ContactViewController alloc] initWithNibName:@"ContactViewController_iPad" bundle:nil];
     }
+    
+    navigationcontroller1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    navigationcontroller2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+    navigationcontroller3 = [[UINavigationController alloc] initWithRootViewController:viewController3];
+    navigationcontroller4 = [[UINavigationController alloc] initWithRootViewController:viewController4];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2, viewController3, viewController4];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navigationcontroller1, navigationcontroller2, navigationcontroller3, navigationcontroller4, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

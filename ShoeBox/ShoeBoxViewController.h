@@ -10,4 +10,6 @@
 
 @interface ShoeBoxViewController : UIViewController
 
+- (IBAction) joinButtonClicked:(id)sender;
+
 @end
