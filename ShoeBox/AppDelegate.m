@@ -8,26 +8,33 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "ShoeBoxViewController.h"
+#import "NewsViewController.h"
+#import "LocationsViewController.h"
+#import "ContactViewController.h"
 
 @implementation AppDelegate
+
+bool ENABLE_IPAD = false;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+    UIViewController *viewController1, *viewController2, *viewController3, *viewController4;
+    if (!ENABLE_IPAD || [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        viewController1 = [[ShoeBoxViewController alloc] initWithNibName:@"ShoeBoxViewController_iPhone" bundle:nil];
+        viewController2 = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPhone" bundle:nil];
+        viewController3 = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPhone" bundle:nil];
+        viewController4 = [[ContactViewController alloc] initWithNibName:@"ContactViewController_iPhone" bundle:nil];
     } else {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
+        viewController1 = [[ShoeBoxViewController alloc] initWithNibName:@"ShoeBoxViewController_iPad" bundle:nil];
+        viewController2 = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPad" bundle:nil];
+        viewController3 = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPad" bundle:nil];
+        viewController4 = [[ContactViewController alloc] initWithNibName:@"ContactViewController_iPad" bundle:nil];
     }
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[viewController1, viewController2, viewController3, viewController4];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
