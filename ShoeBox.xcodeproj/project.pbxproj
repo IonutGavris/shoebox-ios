@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0C00331677BEE8009CCFEE /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C00301677BEE8009CCFEE /* ContactViewController.m */; };
+		FF0C00341677BEE8009CCFEE /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C00321677BEE8009CCFEE /* LocationsViewController.m */; };
+		FF0C003E1677BEF7009CCFEE /* ContactViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C00361677BEF7009CCFEE /* ContactViewController_iPad.xib */; };
+		FF0C003F1677BEF7009CCFEE /* ContactViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */; };
+		FF0C00401677BEF7009CCFEE /* LocationsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C003A1677BEF7009CCFEE /* LocationsViewController_iPad.xib */; };
+		FF0C00411677BEF7009CCFEE /* LocationsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */; };
 		FF19C37A1677B97300A3F9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C3791677B97300A3F9D5 /* UIKit.framework */; };
 		FF19C37C1677B97300A3F9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C37B1677B97300A3F9D5 /* Foundation.framework */; };
 		FF19C37E1677B97300A3F9D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C37D1677B97300A3F9D5 /* CoreGraphics.framework */; };
@@ -16,16 +22,16 @@
 		FF19C38C1677B97400A3F9D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C38B1677B97400A3F9D5 /* Default.png */; };
 		FF19C38E1677B97400A3F9D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C38D1677B97400A3F9D5 /* Default@2x.png */; };
 		FF19C3901677B97400A3F9D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C38F1677B97400A3F9D5 /* Default-568h@2x.png */; };
-		FF19C3931677B97400A3F9D5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19C3921677B97400A3F9D5 /* FirstViewController.m */; };
+		FF19C3931677B97400A3F9D5 /* ShoeBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19C3921677B97400A3F9D5 /* ShoeBoxViewController.m */; };
 		FF19C3951677B97400A3F9D5 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3941677B97400A3F9D5 /* first.png */; };
 		FF19C3971677B97400A3F9D5 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3961677B97400A3F9D5 /* first@2x.png */; };
-		FF19C39A1677B97400A3F9D5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19C3991677B97400A3F9D5 /* SecondViewController.m */; };
+		FF19C39A1677B97400A3F9D5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19C3991677B97400A3F9D5 /* NewsViewController.m */; };
 		FF19C39C1677B97400A3F9D5 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C39B1677B97400A3F9D5 /* second.png */; };
 		FF19C39E1677B97400A3F9D5 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF19C39D1677B97400A3F9D5 /* second@2x.png */; };
-		FF19C3A11677B97400A3F9D5 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C39F1677B97400A3F9D5 /* FirstViewController_iPhone.xib */; };
-		FF19C3A41677B97400A3F9D5 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A21677B97400A3F9D5 /* FirstViewController_iPad.xib */; };
-		FF19C3A71677B97400A3F9D5 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A51677B97400A3F9D5 /* SecondViewController_iPhone.xib */; };
-		FF19C3AA1677B97400A3F9D5 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A81677B97400A3F9D5 /* SecondViewController_iPad.xib */; };
+		FF19C3A11677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */; };
+		FF19C3A41677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A21677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib */; };
+		FF19C3A71677B97400A3F9D5 /* NewsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */; };
+		FF19C3AA1677B97400A3F9D5 /* NewsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3A81677B97400A3F9D5 /* NewsViewController_iPad.xib */; };
 		FF19C3B21677B97400A3F9D5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C3B11677B97400A3F9D5 /* SenTestingKit.framework */; };
 		FF19C3B31677B97400A3F9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C3791677B97300A3F9D5 /* UIKit.framework */; };
 		FF19C3B41677B97400A3F9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19C37B1677B97300A3F9D5 /* Foundation.framework */; };
@@ -44,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF0C002F1677BEE8009CCFEE /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		FF0C00301677BEE8009CCFEE /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		FF0C00311677BEE8009CCFEE /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		FF0C00321677BEE8009CCFEE /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		FF0C00371677BEF7009CCFEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ContactViewController_iPad.xib; sourceTree = "<group>"; };
+		FF0C00391677BEF7009CCFEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ContactViewController_iPhone.xib; sourceTree = "<group>"; };
+		FF0C003B1677BEF7009CCFEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LocationsViewController_iPad.xib; sourceTree = "<group>"; };
+		FF0C003D1677BEF7009CCFEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LocationsViewController_iPhone.xib; sourceTree = "<group>"; };
 		FF19C3751677B97300A3F9D5 /* ShoeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF19C3791677B97300A3F9D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF19C37B1677B97300A3F9D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,18 +71,18 @@
 		FF19C38B1677B97400A3F9D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FF19C38D1677B97400A3F9D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FF19C38F1677B97400A3F9D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FF19C3911677B97400A3F9D5 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FF19C3921677B97400A3F9D5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FF19C3911677B97400A3F9D5 /* ShoeBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoeBoxViewController.h; sourceTree = "<group>"; };
+		FF19C3921677B97400A3F9D5 /* ShoeBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoeBoxViewController.m; sourceTree = "<group>"; };
 		FF19C3941677B97400A3F9D5 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		FF19C3961677B97400A3F9D5 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		FF19C3981677B97400A3F9D5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FF19C3991677B97400A3F9D5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FF19C3981677B97400A3F9D5 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		FF19C3991677B97400A3F9D5 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		FF19C39B1677B97400A3F9D5 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		FF19C39D1677B97400A3F9D5 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		FF19C3A01677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		FF19C3A31677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		FF19C3A61677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		FF19C3A91677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		FF19C3A01677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ShoeBoxViewController_iPhone.xib; sourceTree = "<group>"; };
+		FF19C3A31677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ShoeBoxViewController_iPad.xib; sourceTree = "<group>"; };
+		FF19C3A61677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NewsViewController_iPhone.xib; sourceTree = "<group>"; };
+		FF19C3A91677B97400A3F9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NewsViewController_iPad.xib; sourceTree = "<group>"; };
 		FF19C3B01677B97400A3F9D5 /* ShoeBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF19C3B11677B97400A3F9D5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FF19C3B91677B97400A3F9D5 /* ShoeBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShoeBoxTests-Info.plist"; sourceTree = "<group>"; };
@@ -101,6 +115,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF0C00421677BF93009CCFEE /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				FF0C00441677C53E009CCFEE /* iPhone */,
+				FF0C00431677C534009CCFEE /* iPad */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		FF0C00431677C534009CCFEE /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				FF19C3A21677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib */,
+				FF19C3A81677B97400A3F9D5 /* NewsViewController_iPad.xib */,
+				FF0C003A1677BEF7009CCFEE /* LocationsViewController_iPad.xib */,
+				FF0C00361677BEF7009CCFEE /* ContactViewController_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		FF0C00441677C53E009CCFEE /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */,
+				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
+				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
+				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
 		FF19C36A1677B97300A3F9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -136,18 +181,9 @@
 			children = (
 				FF19C3881677B97400A3F9D5 /* AppDelegate.h */,
 				FF19C3891677B97400A3F9D5 /* AppDelegate.m */,
-				FF19C3911677B97400A3F9D5 /* FirstViewController.h */,
-				FF19C3921677B97400A3F9D5 /* FirstViewController.m */,
-				FF19C3941677B97400A3F9D5 /* first.png */,
-				FF19C3961677B97400A3F9D5 /* first@2x.png */,
-				FF19C3981677B97400A3F9D5 /* SecondViewController.h */,
-				FF19C3991677B97400A3F9D5 /* SecondViewController.m */,
-				FF19C39B1677B97400A3F9D5 /* second.png */,
-				FF19C39D1677B97400A3F9D5 /* second@2x.png */,
-				FF19C39F1677B97400A3F9D5 /* FirstViewController_iPhone.xib */,
-				FF19C3A21677B97400A3F9D5 /* FirstViewController_iPad.xib */,
-				FF19C3A51677B97400A3F9D5 /* SecondViewController_iPhone.xib */,
-				FF19C3A81677B97400A3F9D5 /* SecondViewController_iPad.xib */,
+				FF19C3C81677BAAC00A3F9D5 /* Views */,
+				FF0C00421677BF93009CCFEE /* Layouts */,
+				FF19C3CA1677BADF00A3F9D5 /* Images */,
 				FF19C3801677B97300A3F9D5 /* Supporting Files */,
 			);
 			path = ShoeBox;
@@ -184,6 +220,32 @@
 				FF19C3BA1677B97400A3F9D5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF19C3C81677BAAC00A3F9D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF19C3911677B97400A3F9D5 /* ShoeBoxViewController.h */,
+				FF19C3921677B97400A3F9D5 /* ShoeBoxViewController.m */,
+				FF19C3981677B97400A3F9D5 /* NewsViewController.h */,
+				FF19C3991677B97400A3F9D5 /* NewsViewController.m */,
+				FF0C00311677BEE8009CCFEE /* LocationsViewController.h */,
+				FF0C00321677BEE8009CCFEE /* LocationsViewController.m */,
+				FF0C002F1677BEE8009CCFEE /* ContactViewController.h */,
+				FF0C00301677BEE8009CCFEE /* ContactViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FF19C3CA1677BADF00A3F9D5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FF19C3941677B97400A3F9D5 /* first.png */,
+				FF19C3961677B97400A3F9D5 /* first@2x.png */,
+				FF19C39B1677B97400A3F9D5 /* second.png */,
+				FF19C39D1677B97400A3F9D5 /* second@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +327,14 @@
 				FF19C3971677B97400A3F9D5 /* first@2x.png in Resources */,
 				FF19C39C1677B97400A3F9D5 /* second.png in Resources */,
 				FF19C39E1677B97400A3F9D5 /* second@2x.png in Resources */,
-				FF19C3A11677B97400A3F9D5 /* FirstViewController_iPhone.xib in Resources */,
-				FF19C3A41677B97400A3F9D5 /* FirstViewController_iPad.xib in Resources */,
-				FF19C3A71677B97400A3F9D5 /* SecondViewController_iPhone.xib in Resources */,
-				FF19C3AA1677B97400A3F9D5 /* SecondViewController_iPad.xib in Resources */,
+				FF19C3A11677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib in Resources */,
+				FF19C3A41677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib in Resources */,
+				FF19C3A71677B97400A3F9D5 /* NewsViewController_iPhone.xib in Resources */,
+				FF19C3AA1677B97400A3F9D5 /* NewsViewController_iPad.xib in Resources */,
+				FF0C003E1677BEF7009CCFEE /* ContactViewController_iPad.xib in Resources */,
+				FF0C003F1677BEF7009CCFEE /* ContactViewController_iPhone.xib in Resources */,
+				FF0C00401677BEF7009CCFEE /* LocationsViewController_iPad.xib in Resources */,
+				FF0C00411677BEF7009CCFEE /* LocationsViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +371,10 @@
 			files = (
 				FF19C3861677B97300A3F9D5 /* main.m in Sources */,
 				FF19C38A1677B97400A3F9D5 /* AppDelegate.m in Sources */,
-				FF19C3931677B97400A3F9D5 /* FirstViewController.m in Sources */,
-				FF19C39A1677B97400A3F9D5 /* SecondViewController.m in Sources */,
+				FF19C3931677B97400A3F9D5 /* ShoeBoxViewController.m in Sources */,
+				FF19C39A1677B97400A3F9D5 /* NewsViewController.m in Sources */,
+				FF0C00331677BEE8009CCFEE /* ContactViewController.m in Sources */,
+				FF0C00341677BEE8009CCFEE /* LocationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +397,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FF0C00361677BEF7009CCFEE /* ContactViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF0C00371677BEF7009CCFEE /* en */,
+			);
+			name = ContactViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF0C00391677BEF7009CCFEE /* en */,
+			);
+			name = ContactViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FF0C003A1677BEF7009CCFEE /* LocationsViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF0C003B1677BEF7009CCFEE /* en */,
+			);
+			name = LocationsViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF0C003D1677BEF7009CCFEE /* en */,
+			);
+			name = LocationsViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
 		FF19C3821677B97300A3F9D5 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -337,36 +437,36 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FF19C39F1677B97400A3F9D5 /* FirstViewController_iPhone.xib */ = {
+		FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FF19C3A01677B97400A3F9D5 /* en */,
 			);
-			name = FirstViewController_iPhone.xib;
+			name = ShoeBoxViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		FF19C3A21677B97400A3F9D5 /* FirstViewController_iPad.xib */ = {
+		FF19C3A21677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FF19C3A31677B97400A3F9D5 /* en */,
 			);
-			name = FirstViewController_iPad.xib;
+			name = ShoeBoxViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
-		FF19C3A51677B97400A3F9D5 /* SecondViewController_iPhone.xib */ = {
+		FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FF19C3A61677B97400A3F9D5 /* en */,
 			);
-			name = SecondViewController_iPhone.xib;
+			name = NewsViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		FF19C3A81677B97400A3F9D5 /* SecondViewController_iPad.xib */ = {
+		FF19C3A81677B97400A3F9D5 /* NewsViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FF19C3A91677B97400A3F9D5 /* en */,
 			);
-			name = SecondViewController_iPad.xib;
+			name = NewsViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		FF19C3BA1677B97400A3F9D5 /* InfoPlist.strings */ = {
@@ -439,6 +539,7 @@
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -450,6 +551,7 @@
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -507,6 +609,7 @@
 				FF19C3C41677B97400A3F9D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF19C3C51677B97400A3F9D5 /* Build configuration list for PBXNativeTarget "ShoeBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +618,7 @@
 				FF19C3C71677B97400A3F9D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
