@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsViewController : UIViewController
+@interface NewsViewController : UITableViewController
+{
+    NSOperationQueue *_queue;
+}
+
+@property (retain) NSOperationQueue *queue;
 
 @end

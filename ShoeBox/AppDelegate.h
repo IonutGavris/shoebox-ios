@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegateProtocol.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, AppDelegateProtocol>
+{
+    AppDataObject *theAppDataObject;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
+@property (nonatomic, retain) AppDataObject *theAppDataObject;
 
 @end

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locations>
+
+    <location>
+        <locationCity>ALBA IULIA</locationCity>
+        <locationStreetAddress>Str.Doinei nr 2A</locationStreetAddress>
+        <locationDetails>sediul TELL-US Consulting</locationDetails>
+        <locationPhoneNo1>0751344273</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 10:00 - 19:00</locationHours>
+        <locationContact1>Tina</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>46.074742</locationLatitude>
+        <locationLongitude>23.576261</locationLongitude>        
+    </location>
+    
+    <location>
+        <locationCity>BUCURESTI</locationCity>
+        <locationStreetAddress>Calea Grivitei 33, et. 1, ap.4, sector 1</locationStreetAddress>
+        <locationDetails>sediul TELL-US Consulting</locationDetails>
+        <locationPhoneNo1>0731336829</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 9.00 - 17.00</locationHours>
+        <locationContact1>Loredana Pricopie</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>44.458137</locationLatitude>
+        <locationLongitude>26.06021</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>CLUJ-NAPOCA</locationCity>
+        <locationStreetAddress>Calea Motilor 6-8, etaj 8, Room D</locationStreetAddress>
+        <locationDetails>sediul iQuest, vis-a-vis de primaria Cluj-Napoca, in curte cu ING Bank</locationDetails>
+        <locationPhoneNo1>0758083786</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 9.00 - 18.00</locationHours>
+        <locationContact1>Valentin</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>46.769028</locationLatitude>
+        <locationLongitude>23.584124</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>BRASOV</locationCity>
+        <locationStreetAddress>str. B.P. Hasdeu Nr. 13</locationStreetAddress>
+        <locationDetails>sediul iQuest</locationDetails>
+        <locationPhoneNo1>0372343420</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Sorina Licherdopol</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.653528</locationLatitude>
+        <locationLongitude>25.623516</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>SIBIU</locationCity>
+        <locationStreetAddress>str. Nicolaus Olahus Nr.5</locationStreetAddress>
+        <locationDetails>sediul iQuest</locationDetails>
+        <locationPhoneNo1>0372343460</locationPhoneNo1>
+        <locationPhoneNo2>0742579146</locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Ioana Comsa</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.783567</locationLatitude>
+        <locationLongitude>24.14652</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>RAMNICU VALCEA</locationCity>
+        <locationStreetAddress>Str. George Cosbuc, nr.7</locationStreetAddress>
+        <locationDetails>sediul Magazinului Profrig, in fata Autogarii Antares</locationDetails>
+        <locationPhoneNo1>0745645153</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 10:00 - 18:00; Sambata intre 10:00 - 12:00</locationHours>
+        <locationContact1>Carmen Craciun- Cirstoiu</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.097314</locationLatitude>
+        <locationLongitude>24.365496</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>CONSTANTA</locationCity>
+        <locationStreetAddress>Str. Dragoslavele 6B</locationStreetAddress>
+        <locationDetails>Centrul de Zi</locationDetails>
+        <locationPhoneNo1>0747499022</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 10:00 - 16:00</locationHours>
+        <locationContact1>Alina Dragoman</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>44.202289</locationLatitude>
+        <locationLongitude>28.645851</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>CONSTANTA</locationCity>
+        <locationStreetAddress>strada Hermann Oberth nr. 12</locationStreetAddress>
+        <locationDetails>Sala Mihai Eminescu</locationDetails>
+        <locationPhoneNo1>0740993720</locationPhoneNo1>
+        <locationPhoneNo2>0744426171</locationPhoneNo2>
+        <locationHours>14 decembrie 2012 intre 09:00 - 19:00</locationHours>
+        <locationContact1>Eduard Banarescu</locationContact1>
+        <locationContact2>Ina Hentz</locationContact2>
+        <locationLatitude>46.217481</locationLatitude>
+        <locationLongitude>24.793701</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>ZALAU</locationCity>
+        <locationStreetAddress>b-dul Mihai Viteazu nr.1</locationStreetAddress>
+        <locationDetails>Redactia Graiul Salajului, in spatele restaurantului Time Out</locationDetails>
+        <locationPhoneNo1>0746224969</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 08:00 - 16:00</locationHours>
+        <locationContact1>Florica Sas</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>47.178775</locationLatitude>
+        <locationLongitude>23.055514</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>TIMISOARA</locationCity>
+        <locationStreetAddress>str Dr Iosif Bulbuca, nr 15</locationStreetAddress>
+        <locationDetails>Centrul Crestin Aletheia, zona calea Buziasului ñ noul Lidl</locationDetails>
+        <locationPhoneNo1>0730582793</locationPhoneNo1>
+        <locationPhoneNo2>0726100993</locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 08:00 - 20:00</locationHours>
+        <locationContact1>Anne Gunaru</locationContact1>
+        <locationContact1>Vesa Eunice</locationContact1>
+        <locationLatitude>45.737563</locationLatitude>
+        <locationLongitude>21.247104</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>BACAU</locationCity>
+        <locationStreetAddress>str. Buciumului, nr. 9, etaj 2</locationStreetAddress>
+        <locationDetails>Laboratorul Paval Dent, cladirea Medimex</locationDetails>
+        <locationPhoneNo1>0784030030</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Catalin Paval</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>46.579151</locationLatitude>
+        <locationLongitude>26.907769</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>GALATI</locationCity>
+        <locationStreetAddress>Strada Domneasca Nr 155 (campus studentesc) camin D, etaj 2, camera 210B</locationStreetAddress>
+        <locationDetails></locationDetails>
+        <locationPhoneNo1>0758303246</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Radu Clapa</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.453373</locationLatitude>
+        <locationLongitude>28.04998</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>PIATRA NEAMT</locationCity>
+        <locationStreetAddress>sediul CLUBUL RECONECTARII, Str.Duraului nr 24</locationStreetAddress>
+        <locationDetails>langa cofetaria Diana</locationDetails>
+        <locationPhoneNo1>0748521627</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Oana Apetrei</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>46.931532</locationLatitude>
+        <locationLongitude>26.365105</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>IASI</locationCity>
+        <locationStreetAddress>str. Paun nr.70</locationStreetAddress>
+        <locationDetails>Asociatia pentru Dezvoltarea Programelor Sociale (ADPS) Iasi, in incinta CSC Bucium</locationDetails>
+        <locationPhoneNo1>0741090309</locationPhoneNo1>
+        <locationPhoneNo2>0743752498</locationPhoneNo2>
+        <locationHours></locationHours>
+        <locationContact1>Madalina Belcescu</locationContact1>
+        <locationContact2>Ifrosie Laura</locationContact2>
+        <locationLatitude>47.165114</locationLatitude>
+        <locationLongitude>27.596888</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>DEJ</locationCity>
+        <locationStreetAddress>strada Aurel Vlaicu nr.5</locationStreetAddress>
+        <locationDetails>Sediul Radio Fir</locationDetails>
+        <locationPhoneNo1>0748148447</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 08:00 - 16:00</locationHours>
+        <locationContact1>Magdalena Rus</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>47.141482</locationLatitude>
+        <locationLongitude>23.873695</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>TULCEA</locationCity>
+        <locationStreetAddress>str. Isaccei, Casa Sindicatelor</locationStreetAddress>
+        <locationDetails>Sediul Magazinului Belle Boutique. parter (langa Piata Veche)</locationDetails>
+        <locationPhoneNo1>0745796208</locationPhoneNo1>
+        <locationPhoneNo2></locationPhoneNo2>
+        <locationHours>Luni-Vineri intre 10:00 - 19:00; Sambata intre 12:00 - 15:00</locationHours>
+        <locationContact1>Nascu Adriana</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.179965</locationLatitude>
+        <locationLongitude>28.795913</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>DEVA - SILVASU DE SUS</locationCity>
+        <locationStreetAddress>Str. Principala, nr. 113</locationStreetAddress>
+        <locationDetails>Casa Huniadi</locationDetails>
+        <locationPhoneNo1>0745035179</locationPhoneNo1>
+        <locationPhoneNo2>0372708825</locationPhoneNo2>
+        <locationHours>Luni-Duminica intre 08:00 - 20:00</locationHours>
+        <locationContact1>Cristina</locationContact1>
+        <locationContact2></locationContact2>
+        <locationLatitude>45.646528</locationLatitude>
+        <locationLongitude>22.881385</locationLongitude>
+    </location>
+    
+    <location>
+        <locationCity>CRAIOVA</locationCity>
+        <locationStreetAddress>Bvd Carol I, nr. 138, Bl J3</locationStreetAddress>
+        <locationDetails>Pe dreapta, fata in fata cu noul cazino; Ap2, interfon 2 (Cabinet Stomatologic Dr. Cojocaru Melania)</locationDetails>
+        <locationPhoneNo1>0753777081</locationPhoneNo1>
+        <locationPhoneNo2>0726179780</locationPhoneNo2>
+        <locationHours>Luni, Marti, Joi, Vineri si Sambata intre 15:00 - 20:00</locationHours>
+        <locationContact1>Rares Cojocaru</locationContact1>
+        <locationContact2>Radu Ionescu</locationContact2>
+        <locationLatitude>44.328138</locationLatitude>
+        <locationLongitude>23.814528</locationLongitude>
+    </location>
+
+</locations>

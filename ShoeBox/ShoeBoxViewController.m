@@ -7,7 +7,7 @@
 //
 
 #import "ShoeBoxViewController.h"
-#import "LocationsViewController.h"
+#import "StepsViewController.h"
 
 @interface ShoeBoxViewController ()
 
@@ -20,7 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"ShoeBox", @"ShoeBox");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"gift"];
     }
     return self;
 }
@@ -39,8 +39,8 @@
 
 - (IBAction) joinButtonClicked:(id)sender
 {
-    LocationsViewController *detailViewController = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPhone" bundle:nil];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    StepsViewController *stepsViewController = [[StepsViewController alloc] initWithNibName:@"StepsViewController_iPhone" bundle:nil];
+    [self.navigationController pushViewController:stepsViewController animated:YES];
 }
 
 @end

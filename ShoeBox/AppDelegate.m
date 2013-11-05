@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "AppDataObject.h"
 #import "ShoeBoxViewController.h"
 #import "NewsViewController.h"
 #import "LocationsViewController.h"
@@ -15,10 +16,13 @@
 
 @implementation AppDelegate
 
+@synthesize theAppDataObject;
+
 bool ENABLE_IPAD = false;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.theAppDataObject = [[AppDataObject alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2, *viewController3, *viewController4;
