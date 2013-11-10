@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StepThreeViewController : UIViewController
+@interface StepThreeViewController : UIViewController<UIScrollViewDelegate>
+{
+    IBOutlet UIScrollView *theScroll;
+}
+
+-(IBAction)pas4ButtonClicked:(id)sender;
 
 @end

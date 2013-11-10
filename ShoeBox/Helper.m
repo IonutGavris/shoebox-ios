@@ -139,4 +139,10 @@
     }
 }
 
++ (int) getOSVersion
+{
+    NSString *ver = [[UIDevice currentDevice] systemVersion];
+    return [ver intValue];
+}
+
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StepFourViewController : UIViewController
+@interface StepFourViewController : UIViewController<UIScrollViewDelegate>
+{
+    IBOutlet UIScrollView *theScroll;
+}
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ContactViewController.h"
 #import "SKPSMTPMessage.h"
+#import "Helper.h"
 
 @interface ContactViewController () <SKPSMTPMessageDelegate>
 
@@ -37,7 +38,10 @@ SKPSMTPState HighestState;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    if([Helper getOSVersion] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,8 @@
 //
 
 #import "SocialViewController.h"
+#import "MediaWebViewController.h"
+#import "Constants.h"
 
 @interface SocialViewController ()
 
@@ -33,6 +35,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)facebookButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+    [newView setWebsiteUrlStr:URL_FACEBOOK_PAGE];
+    [self.navigationController pushViewController:newView animated:YES];
+
+}
+
+- (IBAction)twitterButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+    [newView setWebsiteUrlStr:URL_TWITTER_PAGE];
+    [self.navigationController pushViewController:newView animated:YES];
 }
 
 @end

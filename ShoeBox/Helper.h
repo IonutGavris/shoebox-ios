@@ -21,4 +21,6 @@
 + (double) getDistanceWithStartLatitude:(double)startLatitude startLongitude:(double)startLongitude endLatitude:(double)endLatitude endLongitude:(double)endLongitude;
 + (void)dialNumber:(NSString *)number;
 
++ (int) getOSVersion;
+
 @end

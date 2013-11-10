@@ -8,6 +8,9 @@
 
 #import "ShoeBoxViewController.h"
 #import "StepsViewController.h"
+#import "Constants.h"
+#import "Helper.h"
+#import "MediaWebViewController.h"
 
 @interface ShoeBoxViewController ()
 
@@ -29,7 +32,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    if([Helper getOSVersion] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +48,20 @@
 {
     StepsViewController *stepsViewController = [[StepsViewController alloc] initWithNibName:@"StepsViewController_iPhone" bundle:nil];
     [self.navigationController pushViewController:stepsViewController animated:YES];
+}
+
+- (IBAction) galleryButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+    [newView setWebsiteUrlStr:URL_FACEBOOK_ALBUM];
+    [self.navigationController pushViewController:newView animated:YES];
+}
+
+- (IBAction) videoButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+     [newView setWebsiteUrlStr:URL_YOUTUBE_CHANNEL];
+    [self.navigationController pushViewController:newView animated:YES];
 }
 
 @end

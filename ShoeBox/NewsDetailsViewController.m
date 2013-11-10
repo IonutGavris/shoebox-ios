@@ -7,12 +7,15 @@
 //
 
 #import "NewsDetailsViewController.h"
+#import "Helper.h"
 
 @interface NewsDetailsViewController ()
 
 @end
 
 @implementation NewsDetailsViewController
+
+@synthesize articleDescription, articleTitle, articleUrl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +30,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if([Helper getOSVersion] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    if(articleTitle != nil && [articleTitle length] > 0)
+    {
+        [txtTitle setText:articleTitle];
+    }
+    if(articleDescription != nil && [articleDescription length] > 0)
+    {
+        [webView loadHTMLString:articleDescription baseURL:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning

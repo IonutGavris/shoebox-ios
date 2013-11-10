@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StepOneViewController : UIViewController
+@interface StepOneViewController : UIViewController<UIScrollViewDelegate>
+{
+    IBOutlet UIScrollView *theScroll;
+}
+
+- (IBAction)step2ButtonClicked:(id)sender;
 
 @end

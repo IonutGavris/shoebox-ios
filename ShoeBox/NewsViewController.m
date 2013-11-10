@@ -15,6 +15,7 @@
 #import "GDataXMLElement-Extras.h"
 #import "NSDate+InternetDateTime.h"
 #import "NSArray+Extras.h"
+#import "NewsDetailsViewController.h"
 
 @interface NewsViewController ()
 
@@ -40,7 +41,7 @@
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -77,12 +78,14 @@
             NSString *articleTitle = [item valueForChild:@"title"];
             NSString *articleUrl = [item valueForChild:@"link"];
             NSString *articleDateString = [item valueForChild:@"pubDate"];
+            NSString *articleDescription = [item valueForChild:@"description"];
             NSDate *articleDate = [NSDate dateFromInternetDateTimeString:articleDateString formatHint:DateFormatHintRFC822];
             
             RSSEntry *entry = [[RSSEntry alloc] initWithBlogTitle:blogTitle
-                                                      articleTitle:articleTitle
-                                                        articleUrl:articleUrl
-                                                       articleDate:articleDate];
+                                                     articleTitle:articleTitle
+                                                       articleUrl:articleUrl
+                                               articleDescription:articleDescription
+                                                      articleDate:articleDate];
             [entries addObject:entry];
             
         }
@@ -99,6 +102,7 @@
         
         NSString *articleTitle = [item valueForChild:@"title"];
         NSString *articleUrl = nil;
+        NSString *articleDescription = [item valueForChild:@"description"];
         NSArray *links = [item elementsForName:@"link"];
         for(GDataXMLElement *link in links) {
             NSString *rel = [[link attributeForName:@"rel"] stringValue];
@@ -113,9 +117,10 @@
         NSDate *articleDate = [NSDate dateFromInternetDateTimeString:articleDateString formatHint:DateFormatHintRFC3339];
         
         RSSEntry *entry = [[RSSEntry alloc] initWithBlogTitle:blogTitle
-                                                  articleTitle:articleTitle
-                                                    articleUrl:articleUrl
-                                                   articleDate:articleDate];
+                                                 articleTitle:articleTitle
+                                                   articleUrl:articleUrl
+                                                articleDescription:articleDescription
+                                                  articleDate:articleDate];
         [entries addObject:entry];
         
     }
@@ -203,6 +208,22 @@
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    RSSEntry *entry = [[self theAppDataObject].getNews objectAtIndex:indexPath.row];
+    NSString *articleTitle = [entry articleTitle];
+    NSString *articleDescription = [entry articleDescription];
+    NSString *articleURL = [entry articleUrl];
+    
+    NewsDetailsViewController *detailsView = [[NewsDetailsViewController alloc] initWithNibName:@"NewsDetailsViewController_iPhone" bundle:nil];
+    [detailsView setArticleDescription:articleDescription];
+    [detailsView setArticleTitle:articleTitle];
+    [detailsView setArticleUrl:articleURL];
+    [self.navigationController pushViewController:detailsView animated:YES];
+
 }
 
 @end

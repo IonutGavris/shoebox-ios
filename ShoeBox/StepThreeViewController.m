@@ -7,6 +7,7 @@
 //
 
 #import "StepThreeViewController.h"
+#import "StepFourViewController.h"
 
 @interface StepThreeViewController ()
 
@@ -27,12 +28,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [theScroll setDelegate:self];
+    [theScroll setScrollEnabled:YES];
+    [theScroll setContentSize:CGSizeMake(320, 600)];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)pas4ButtonClicked:(id)sender
+{
+    StepFourViewController *step1ViewController = [[StepFourViewController alloc] initWithNibName:@"StepFourViewController_iPhone" bundle:nil];
+    [self.navigationController pushViewController:step1ViewController animated:YES];
 }
 
 @end
