@@ -19,6 +19,7 @@
 		3AAA1006183021F9005EE7AB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */; };
 		3AAA100818302201005EE7AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100718302201005EE7AB /* MessageUI.framework */; };
 		3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100918302214005EE7AB /* MapKit.framework */; };
+		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
 		FF07500D16A147FB0090CD74 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500B16A147FB0090CD74 /* Icon.png */; };
 		FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500C16A147FB0090CD74 /* Icon@2x.png */; };
 		FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07504016A14AA30090CD74 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -165,6 +166,7 @@
 		3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3AAA100718302201005EE7AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3AAA100918302214005EE7AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF07500B16A147FB0090CD74 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		FF07500C16A147FB0090CD74 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		FF07503F16A14AA30090CD74 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				FF0C00421677BF93009CCFEE /* Layouts */,
 				FF19C3CA1677BADF00A3F9D5 /* Images */,
 				FFFFF94A16839DD100E1E0F1 /* Raw */,
+				3AAA100B18302E2F005EE7AB /* Images.xcassets */,
 				FF19C3801677B97300A3F9D5 /* Supporting Files */,
 			);
 			path = ShoeBox;
@@ -838,6 +841,7 @@
 				FFFA91801679181600EA8862 /* movies.png in Resources */,
 				FFFA91811679181600EA8862 /* news.png in Resources */,
 				FFFA91821679181600EA8862 /* phone.png in Resources */,
+				3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */,
 				FFFA91831679181600EA8862 /* santa.png in Resources */,
 				FFFA91841679181600EA8862 /* shoebox_bg_full.png in Resources */,
 				FFFA91851679181600EA8862 /* shoebox.png in Resources */,
@@ -1115,6 +1119,8 @@
 		FF19C3C31677B97400A3F9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
@@ -1127,6 +1133,8 @@
 		FF19C3C41677B97400A3F9D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
