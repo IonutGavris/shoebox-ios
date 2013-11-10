@@ -8,6 +8,8 @@
 
 #import "Helper.h"
 #import "XMLParser.h"
+#import "LocationsViewController.h"
+#import "LocationsDetailsViewController.h"
 
 @implementation Helper
 
@@ -51,6 +53,89 @@
     } else {
         NSLog(@"Error parsing document!");
         return nil;
+    }
+}
+
++ (void)showLocationsScreen:(id)sender {
+    bool isIphone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
+    NSString *viewControllerNib;
+    
+    if(isIphone) {
+        viewControllerNib = @"LocationsViewController_iPhone";
+    } else {
+        viewControllerNib = @"LocationsViewController_iPad";
+    }
+    
+    LocationsViewController *addController = [[LocationsViewController alloc]
+                                         initWithNibName:viewControllerNib bundle:nil];
+    [[sender navigationController] pushViewController:addController  animated:YES];
+}
+
++ (void)showLocationDetailScreen:(id)sender {
+    bool isIphone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
+    NSString *viewControllerNib;
+    
+    if(isIphone) {
+        viewControllerNib = @"LocationsDetailsViewController_iPhone";
+    } else {
+        viewControllerNib = @"LocationsDetailsViewController_iPad";
+    }
+    
+    LocationsDetailsViewController *addController = [[LocationsDetailsViewController alloc]
+                                              initWithNibName:viewControllerNib bundle:nil];
+    [[sender navigationController] pushViewController:addController  animated:YES];
+}
+
++ (double) getDistanceWithStartLatitude:(double)startLatitude startLongitude:(double)startLongitude endLatitude:(double)endLatitude endLongitude:(double)endLongitude
+{
+    
+    CLLocation *locA = [[CLLocation alloc] initWithLatitude:startLatitude longitude:startLongitude];
+    CLLocation *locB = [[CLLocation alloc] initWithLatitude:endLatitude longitude:endLongitude];
+    CLLocationDistance theDistance = [locA distanceFromLocation:locB];
+    
+    return  theDistance / 1000;
+}
+
++ (Location *) getNearestLocation:(NSArray *)stores startLatitude:(double)startLatitude startLongitude:(double)startLongitude  {
+    Location *nearestStore;
+    double nearestDistance = -1;
+    
+    //we create a number formater for gps coordinates
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    for (int i=0;i<[stores count];i++) {
+        Location *store = [stores objectAtIndex:i];
+        
+        //we set the pin details
+        NSNumber * latitude = [f numberFromString:store.latitude];
+        NSNumber * longitude = [f numberFromString:store.longitude];
+        
+        double currentDistance = [self getDistanceWithStartLatitude:startLatitude startLongitude:startLongitude endLatitude:latitude.doubleValue endLongitude:longitude.doubleValue];
+        
+        if(nearestDistance == -1 || currentDistance < nearestDistance){
+            nearestDistance = currentDistance;
+            nearestStore = store;
+            NSLog(@"distance: %lf", currentDistance);
+            
+        }
+        
+    }
+    if(nearestStore != nil && nearestDistance != -1){
+        return nearestStore;
+    }
+    return nil;
+}
+
++ (void)dialNumber:(NSString *)number {
+    UIDevice *device = [UIDevice currentDevice];
+    if ([[device model] isEqualToString:@"iPhone"] ) {
+        NSMutableString *url = [[NSMutableString alloc]initWithString:@"tel://"];
+        [url appendString:number];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    } else {
+        UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Alerta" message:@"Dispozitivul dumneavoastra nu suporta aceasta functionalitate!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [Notpermitted show];
     }
 }
 

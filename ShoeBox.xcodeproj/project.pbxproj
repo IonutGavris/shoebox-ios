@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA7FD41182FD86500F6C883 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7FD40182FD86500F6C883 /* MessageUI.framework */; };
+		3ABF7B4E182FAAE700E78608 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF7B4D182FAAE700E78608 /* MapAnnotation.m */; };
+		3ABF7B52182FAC1600E78608 /* SQLiteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF7B51182FAC1600E78608 /* SQLiteDatabase.m */; };
+		3ABF7B55182FADED00E78608 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF7B54182FADED00E78608 /* LocationManager.m */; };
+		3ABF7B57182FAF6D00E78608 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF7B56182FAF6D00E78608 /* MapKit.framework */; };
+		3ABF7B59182FAF7400E78608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF7B58182FAF7400E78608 /* CoreLocation.framework */; };
+		3ABF7B5B182FB17500E78608 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF7B5A182FB17500E78608 /* libsqlite3.0.dylib */; };
+		3AC0351E18297777009729CC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0351C18297777009729CC /* MapViewController.m */; };
+		3AC0351F18297777009729CC /* MapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC0351D18297777009729CC /* MapViewController_iPhone.xib */; };
 		FF07500D16A147FB0090CD74 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500B16A147FB0090CD74 /* Icon.png */; };
 		FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500C16A147FB0090CD74 /* Icon@2x.png */; };
 		FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07504016A14AA30090CD74 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -135,6 +144,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA7FD40182FD86500F6C883 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3ABF7B4C182FAAE700E78608 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		3ABF7B4D182FAAE700E78608 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		3ABF7B50182FAC1600E78608 /* SQLiteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDatabase.h; sourceTree = "<group>"; };
+		3ABF7B51182FAC1600E78608 /* SQLiteDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteDatabase.m; sourceTree = "<group>"; };
+		3ABF7B53182FADED00E78608 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		3ABF7B54182FADED00E78608 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		3ABF7B56182FAF6D00E78608 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3ABF7B58182FAF7400E78608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3ABF7B5A182FB17500E78608 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3AC0351B18297777009729CC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3AC0351C18297777009729CC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3AC0351D18297777009729CC /* MapViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController_iPhone.xib; sourceTree = "<group>"; };
+		3AC0352018297821009729CC /* LocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		FF07500B16A147FB0090CD74 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		FF07500C16A147FB0090CD74 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		FF07503F16A14AA30090CD74 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -303,6 +326,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA7FD41182FD86500F6C883 /* MessageUI.framework in Frameworks */,
+				3ABF7B5B182FB17500E78608 /* libsqlite3.0.dylib in Frameworks */,
+				3ABF7B59182FAF7400E78608 /* CoreLocation.framework in Frameworks */,
+				3ABF7B57182FAF6D00E78608 /* MapKit.framework in Frameworks */,
 				FFFFF9831683B16600E1E0F1 /* MobileCoreServices.framework in Frameworks */,
 				FFFFF9811683B15B00E1E0F1 /* SystemConfiguration.framework in Frameworks */,
 				FFFFF97F1683B15600E1E0F1 /* CFNetwork.framework in Frameworks */,
@@ -326,6 +353,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ABF7B4F182FAB6300E78608 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3ABF7B50182FAC1600E78608 /* SQLiteDatabase.h */,
+				3ABF7B51182FAC1600E78608 /* SQLiteDatabase.m */,
+				FFFFF94416839D5400E1E0F1 /* XMLParser.h */,
+				FFFFF94516839D5400E1E0F1 /* XMLParser.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		FF07503E16A14AA30090CD74 /* Email */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +412,7 @@
 				FFFA91A71679294400EA8862 /* StepFourViewController_iPhone.xib */,
 				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
 				FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */,
+				3AC0351D18297777009729CC /* MapViewController_iPhone.xib */,
 				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
 				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
 				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
@@ -405,6 +444,10 @@
 		FF19C3781677B97300A3F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AA7FD40182FD86500F6C883 /* MessageUI.framework */,
+				3ABF7B5A182FB17500E78608 /* libsqlite3.0.dylib */,
+				3ABF7B58182FAF7400E78608 /* CoreLocation.framework */,
+				3ABF7B56182FAF6D00E78608 /* MapKit.framework */,
 				FFFFF97C1683B13700E1E0F1 /* libz.1.2.5.dylib */,
 				FFFFF9821683B16600E1E0F1 /* MobileCoreServices.framework */,
 				FFFFF9801683B15B00E1E0F1 /* SystemConfiguration.framework */,
@@ -530,6 +573,7 @@
 		FFFA913C1679155800EA8862 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3ABF7B4F182FAB6300E78608 /* Data */,
 				FF07503E16A14AA30090CD74 /* Email */,
 				FFFFF9541683ADB300E1E0F1 /* ASIHTTPRequest */,
 				FFFFF9741683ADBE00E1E0F1 /* GDataXML */,
@@ -539,10 +583,13 @@
 				FFFFF9401683944000E1E0F1 /* AppDelegateProtocol.h */,
 				FFFFF94116839CDF00E1E0F1 /* Helper.h */,
 				FFFFF94216839CDF00E1E0F1 /* Helper.m */,
+				3ABF7B4C182FAAE700E78608 /* MapAnnotation.h */,
+				3ABF7B4D182FAAE700E78608 /* MapAnnotation.m */,
 				FFFFF94716839D9D00E1E0F1 /* Location.h */,
 				FFFFF94816839D9E00E1E0F1 /* Location.m */,
-				FFFFF94416839D5400E1E0F1 /* XMLParser.h */,
-				FFFFF94516839D5400E1E0F1 /* XMLParser.m */,
+				3ABF7B53182FADED00E78608 /* LocationManager.h */,
+				3ABF7B54182FADED00E78608 /* LocationManager.m */,
+				3AC0352018297821009729CC /* LocationManagerProtocol.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -576,6 +623,8 @@
 		FFFA91B516792AE700EA8862 /* LocationsSubViews */ = {
 			isa = PBXGroup;
 			children = (
+				FF0C00311677BEE8009CCFEE /* LocationsViewController.h */,
+				FF0C00321677BEE8009CCFEE /* LocationsViewController.m */,
 				FFFA91B016792AD900EA8862 /* LocationsDetailsViewController.h */,
 				FFFA91B116792AD900EA8862 /* LocationsDetailsViewController.m */,
 			);
@@ -589,8 +638,8 @@
 				FF19C3921677B97400A3F9D5 /* ShoeBoxViewController.m */,
 				FF19C3981677B97400A3F9D5 /* NewsViewController.h */,
 				FF19C3991677B97400A3F9D5 /* NewsViewController.m */,
-				FF0C00311677BEE8009CCFEE /* LocationsViewController.h */,
-				FF0C00321677BEE8009CCFEE /* LocationsViewController.m */,
+				3AC0351B18297777009729CC /* MapViewController.h */,
+				3AC0351C18297777009729CC /* MapViewController.m */,
 				FF0C002F1677BEE8009CCFEE /* ContactViewController.h */,
 				FF0C00301677BEE8009CCFEE /* ContactViewController.m */,
 				FFFA9195167928EF00EA8862 /* ShoeBoxSubViews */,
@@ -764,6 +813,7 @@
 				FFFA91731679181600EA8862 /* img7.png in Resources */,
 				FFFA91741679181600EA8862 /* img8.png in Resources */,
 				FFFA91751679181600EA8862 /* img9.png in Resources */,
+				3AC0351F18297777009729CC /* MapViewController_iPhone.xib in Resources */,
 				FFFA91761679181600EA8862 /* img10.png in Resources */,
 				FFFA91771679181600EA8862 /* img11.png in Resources */,
 				FFFA91781679181600EA8862 /* img12.png in Resources */,
@@ -845,11 +895,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABF7B4E182FAAE700E78608 /* MapAnnotation.m in Sources */,
 				FF19C3861677B97300A3F9D5 /* main.m in Sources */,
 				FF19C38A1677B97400A3F9D5 /* AppDelegate.m in Sources */,
 				FF19C3931677B97400A3F9D5 /* ShoeBoxViewController.m in Sources */,
 				FF19C39A1677B97400A3F9D5 /* NewsViewController.m in Sources */,
 				FF0C00331677BEE8009CCFEE /* ContactViewController.m in Sources */,
+				3ABF7B52182FAC1600E78608 /* SQLiteDatabase.m in Sources */,
 				FF0C00341677BEE8009CCFEE /* LocationsViewController.m in Sources */,
 				FFFA91931679263E00EA8862 /* StepsViewController.m in Sources */,
 				FFFA91991679291E00EA8862 /* StepOneViewController.m in Sources */,
@@ -871,6 +923,7 @@
 				FFFFF96F1683ADB300E1E0F1 /* ASIFormDataRequest.m in Sources */,
 				FFFFF9701683ADB300E1E0F1 /* ASIHTTPRequest.m in Sources */,
 				FFFFF9711683ADB300E1E0F1 /* ASIInputStream.m in Sources */,
+				3ABF7B55182FADED00E78608 /* LocationManager.m in Sources */,
 				FFFFF9721683ADB300E1E0F1 /* ASINetworkQueue.m in Sources */,
 				FFFFF9731683ADB300E1E0F1 /* Reachability.m in Sources */,
 				FFFFF9791683ADBF00E1E0F1 /* GDataXMLElement-Extras.m in Sources */,
@@ -878,6 +931,7 @@
 				FFFFF98B1683B4F000E1E0F1 /* NSArray+Extras.m in Sources */,
 				FFFFF98C1683B4F000E1E0F1 /* NSDate+InternetDateTime.m in Sources */,
 				FFFFF98D1683B4F000E1E0F1 /* RSSEntry.m in Sources */,
+				3AC0351E18297777009729CC /* MapViewController.m in Sources */,
 				FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */,
 				FF07504A16A14AA30090CD74 /* HSK_CFUtilities.m in Sources */,
 				FF07504B16A14AA30090CD74 /* NSData+Base64Additions.m in Sources */,
@@ -1050,6 +1104,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1062,6 +1117,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

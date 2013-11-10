@@ -11,7 +11,7 @@
 #import "AppDataObject.h"
 #import "ShoeBoxViewController.h"
 #import "NewsViewController.h"
-#import "LocationsViewController.h"
+#import "MapViewController.h"
 #import "ContactViewController.h"
 
 @implementation AppDelegate
@@ -24,18 +24,19 @@ bool ENABLE_IPAD = false;
 {
     self.theAppDataObject = [[AppDataObject alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2, *viewController3, *viewController4;
     UINavigationController *navigationcontroller1, *navigationcontroller2, *navigationcontroller3, *navigationcontroller4;
     if (!ENABLE_IPAD || [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[ShoeBoxViewController alloc] initWithNibName:@"ShoeBoxViewController_iPhone" bundle:nil];
         viewController2 = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPhone" bundle:nil];
-        viewController3 = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPhone" bundle:nil];
+        viewController3 = [[MapViewController alloc] initWithNibName:@"MapViewController_iPhone" bundle:nil];
         viewController4 = [[ContactViewController alloc] initWithNibName:@"ContactViewController_iPhone" bundle:nil];
     } else {
         viewController1 = [[ShoeBoxViewController alloc] initWithNibName:@"ShoeBoxViewController_iPad" bundle:nil];
         viewController2 = [[NewsViewController alloc] initWithNibName:@"NewsViewController_iPad" bundle:nil];
-        viewController3 = [[LocationsViewController alloc] initWithNibName:@"LocationsViewController_iPad" bundle:nil];
+        viewController3 = [[MapViewController alloc] initWithNibName:@"MapViewController_iPhone" bundle:nil];
         viewController4 = [[ContactViewController alloc] initWithNibName:@"ContactViewController_iPad" bundle:nil];
     }
     
