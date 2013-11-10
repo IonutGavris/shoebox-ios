@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StepOneViewController.h"
+#import "StepTwoViewController.h"
+#import "StepThreeViewController.h"
+#import "StepFourViewController.h"
 
 @interface StepsViewController : UIViewController
+{
+    
+}
+
+-(IBAction)step1ButtonClicked:(id)sender;
+-(IBAction)step2ButtonClicked:(id)sender;
+-(IBAction)step3ButtonClicked:(id)sender;
+-(IBAction)step4ButtonClicked:(id)sender;
 
 @end

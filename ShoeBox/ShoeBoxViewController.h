@@ -11,5 +11,7 @@
 @interface ShoeBoxViewController : UIViewController
 
 - (IBAction) joinButtonClicked:(id)sender;
+- (IBAction) galleryButtonClicked:(id)sender;
+- (IBAction) videoButtonClicked:(id)sender;
 
 @end

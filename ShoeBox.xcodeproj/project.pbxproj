@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146AED5B182D7A9E00C419F4 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91A11679293800EA8862 /* StepThreeViewController.m */; };
+		14C3145C182C2AFF00A59213 /* MediaWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C3145A182C2AFF00A59213 /* MediaWebViewController.m */; };
+		14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */; };
 		FF07500D16A147FB0090CD74 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500B16A147FB0090CD74 /* Icon.png */; };
 		FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500C16A147FB0090CD74 /* Icon@2x.png */; };
 		FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07504016A14AA30090CD74 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -135,6 +138,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1421D534182A2C3E005B12E5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		14C31459182C2AFE00A59213 /* MediaWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaWebViewController.h; sourceTree = "<group>"; };
+		14C3145A182C2AFF00A59213 /* MediaWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaWebViewController.m; sourceTree = "<group>"; };
+		14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaWebViewController_iPhone.xib; sourceTree = "<group>"; };
 		FF07500B16A147FB0090CD74 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		FF07500C16A147FB0090CD74 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		FF07503F16A14AA30090CD74 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -366,19 +373,20 @@
 		FF0C00441677C53E009CCFEE /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */,
-				FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */,
-				FFFA91981679291E00EA8862 /* StepOneViewController_iPhone.xib */,
-				FFFA919D1679292D00EA8862 /* StepTwoViewController_iPhone.xib */,
-				FFFA91A21679293800EA8862 /* StepThreeViewController_iPhone.xib */,
-				FFFA91A71679294400EA8862 /* StepFourViewController_iPhone.xib */,
-				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
-				FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */,
-				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
-				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
-				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
-				FFFA91BD16792B9B00EA8862 /* SocialViewController_iPhone.xib */,
 				FFFA91B816792B8C00EA8862 /* AboutViewController_iPhone.xib */,
+				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
+				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
+				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
+				14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */,
+				FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */,
+				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
+				FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */,
+				FFFA91BD16792B9B00EA8862 /* SocialViewController_iPhone.xib */,
+				FFFA91A71679294400EA8862 /* StepFourViewController_iPhone.xib */,
+				FFFA91981679291E00EA8862 /* StepOneViewController_iPhone.xib */,
+				FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */,
+				FFFA91A21679293800EA8862 /* StepThreeViewController_iPhone.xib */,
+				FFFA919D1679292D00EA8862 /* StepTwoViewController_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -543,6 +551,7 @@
 				FFFFF94816839D9E00E1E0F1 /* Location.m */,
 				FFFFF94416839D5400E1E0F1 /* XMLParser.h */,
 				FFFFF94516839D5400E1E0F1 /* XMLParser.m */,
+				1421D534182A2C3E005B12E5 /* Constants.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -560,6 +569,8 @@
 				FFFA91A11679293800EA8862 /* StepThreeViewController.m */,
 				FFFA91A51679294400EA8862 /* StepFourViewController.h */,
 				FFFA91A61679294400EA8862 /* StepFourViewController.m */,
+				14C31459182C2AFE00A59213 /* MediaWebViewController.h */,
+				14C3145A182C2AFF00A59213 /* MediaWebViewController.m */,
 			);
 			name = ShoeBoxSubViews;
 			sourceTree = "<group>";
@@ -783,6 +794,7 @@
 				FFFA91861679181600EA8862 /* splash_screen.png in Resources */,
 				FFFA91871679181600EA8862 /* twitter.png in Resources */,
 				FFFA918C16791A9F00EA8862 /* contact@2x.png in Resources */,
+				14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */,
 				FFFA918D16791A9F00EA8862 /* gift@2x.png in Resources */,
 				FFFA918E16791A9F00EA8862 /* news@2x.png in Resources */,
 				FFFA918F16791A9F00EA8862 /* locatii@2x.png in Resources */,
@@ -852,6 +864,7 @@
 				FF0C00331677BEE8009CCFEE /* ContactViewController.m in Sources */,
 				FF0C00341677BEE8009CCFEE /* LocationsViewController.m in Sources */,
 				FFFA91931679263E00EA8862 /* StepsViewController.m in Sources */,
+				14C3145C182C2AFF00A59213 /* MediaWebViewController.m in Sources */,
 				FFFA91991679291E00EA8862 /* StepOneViewController.m in Sources */,
 				FFFA919E1679292D00EA8862 /* StepTwoViewController.m in Sources */,
 				FFFA91A31679293800EA8862 /* StepThreeViewController.m in Sources */,
@@ -891,6 +904,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF19C3BF1677B97400A3F9D5 /* ShoeBoxTests.m in Sources */,
+				146AED5B182D7A9E00C419F4 /* StepThreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

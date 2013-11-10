@@ -8,6 +8,8 @@
 
 #import "ShoeBoxViewController.h"
 #import "StepsViewController.h"
+#import "Constants.h"
+#import "MediaWebViewController.h"
 
 @interface ShoeBoxViewController ()
 
@@ -41,6 +43,20 @@
 {
     StepsViewController *stepsViewController = [[StepsViewController alloc] initWithNibName:@"StepsViewController_iPhone" bundle:nil];
     [self.navigationController pushViewController:stepsViewController animated:YES];
+}
+
+- (IBAction) galleryButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+    [newView setWebsiteUrlStr:URL_FACEBOOK_ALBUM];
+    [self.navigationController pushViewController:newView animated:YES];
+}
+
+- (IBAction) videoButtonClicked:(id)sender
+{
+    MediaWebViewController *newView = [[MediaWebViewController alloc] initWithNibName:@"MediaWebViewController_iPhone" bundle:nil];
+     [newView setWebsiteUrlStr:URL_YOUTUBE_CHANNEL];
+    [self.navigationController pushViewController:newView animated:YES];
 }
 
 @end

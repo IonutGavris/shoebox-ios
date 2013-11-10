@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SocialViewController : UIViewController
+{
+    
+}
+
+- (IBAction)facebookButtonClicked:(id)sender;
+- (IBAction)twitterButtonClicked:(id)sender;
 
 @end
