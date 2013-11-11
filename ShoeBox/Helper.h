@@ -16,6 +16,7 @@
 
 + (void)showLocationsScreen:(id)sender;
 + (void)showLocationDetailScreen:(id)sender;
++ (void)showSocialScreen:(id)sender;
 
 + (Location *) getNearestLocation:(NSArray *)stores startLatitude:(double)startLatitude startLongitude:(double)startLongitude;
 + (double) getDistanceWithStartLatitude:(double)startLatitude startLongitude:(double)startLongitude endLatitude:(double)endLatitude endLongitude:(double)endLongitude;

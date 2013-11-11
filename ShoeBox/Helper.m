@@ -10,6 +10,7 @@
 #import "XMLParser.h"
 #import "LocationsViewController.h"
 #import "LocationsDetailsViewController.h"
+#import "SocialViewController.h"
 
 @implementation Helper
 
@@ -82,6 +83,21 @@
     }
     
     LocationsDetailsViewController *addController = [[LocationsDetailsViewController alloc]
+                                              initWithNibName:viewControllerNib bundle:nil];
+    [[sender navigationController] pushViewController:addController  animated:YES];
+}
+
++ (void)showSocialScreen:(id)sender {
+    bool isIphone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
+    NSString *viewControllerNib;
+    
+    if(isIphone) {
+        viewControllerNib = @"SocialViewController_iPhone";
+    } else {
+        viewControllerNib = @"SocialViewController_iPad";
+    }
+    
+    SocialViewController *addController = [[SocialViewController alloc]
                                               initWithNibName:viewControllerNib bundle:nil];
     [[sender navigationController] pushViewController:addController  animated:YES];
 }

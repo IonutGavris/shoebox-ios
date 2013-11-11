@@ -7,6 +7,7 @@
 //
 
 #import "StepsViewController.h"
+#import "Helper.h"
 
 @interface StepsViewController ()
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if([Helper getOSVersion] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning

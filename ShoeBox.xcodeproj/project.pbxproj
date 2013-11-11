@@ -20,6 +20,11 @@
 		3AAA100818302201005EE7AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100718302201005EE7AB /* MessageUI.framework */; };
 		3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100918302214005EE7AB /* MapKit.framework */; };
 		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
+		3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A7183098AD002D3108 /* contact@2x.png */; };
+		3AFF06AC183098AD002D3108 /* gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A8183098AD002D3108 /* gift@2x.png */; };
+		3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A9183098AD002D3108 /* locatii@2x.png */; };
+		3AFF06AE183098AD002D3108 /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06AA183098AD002D3108 /* news@2x.png */; };
+		3AFF06B118309ADB002D3108 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF06B018309ADB002D3108 /* BaseViewController.m */; };
 		FF07500D16A147FB0090CD74 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500B16A147FB0090CD74 /* Icon.png */; };
 		FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500C16A147FB0090CD74 /* Icon@2x.png */; };
 		FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07504016A14AA30090CD74 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -88,12 +93,7 @@
 		FFFA91831679181600EA8862 /* santa.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA915E1679181600EA8862 /* santa.png */; };
 		FFFA91841679181600EA8862 /* shoebox_bg_full.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA915F1679181600EA8862 /* shoebox_bg_full.png */; };
 		FFFA91851679181600EA8862 /* shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91601679181600EA8862 /* shoebox.png */; };
-		FFFA91861679181600EA8862 /* splash_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91611679181600EA8862 /* splash_screen.png */; };
 		FFFA91871679181600EA8862 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91621679181600EA8862 /* twitter.png */; };
-		FFFA918C16791A9F00EA8862 /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA918816791A9F00EA8862 /* contact@2x.png */; };
-		FFFA918D16791A9F00EA8862 /* gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA918916791A9F00EA8862 /* gift@2x.png */; };
-		FFFA918E16791A9F00EA8862 /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA918A16791A9F00EA8862 /* news@2x.png */; };
-		FFFA918F16791A9F00EA8862 /* locatii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA918B16791A9F00EA8862 /* locatii@2x.png */; };
 		FFFA91931679263E00EA8862 /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91911679263E00EA8862 /* StepsViewController.m */; };
 		FFFA91941679263E00EA8862 /* StepsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */; };
 		FFFA91991679291E00EA8862 /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91971679291E00EA8862 /* StepOneViewController.m */; };
@@ -167,6 +167,12 @@
 		3AAA100718302201005EE7AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3AAA100918302214005EE7AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AFF06A7183098AD002D3108 /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact@2x.png"; path = "images/contact@2x.png"; sourceTree = "<group>"; };
+		3AFF06A8183098AD002D3108 /* gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gift@2x.png"; path = "images/gift@2x.png"; sourceTree = "<group>"; };
+		3AFF06A9183098AD002D3108 /* locatii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locatii@2x.png"; path = "images/locatii@2x.png"; sourceTree = "<group>"; };
+		3AFF06AA183098AD002D3108 /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news@2x.png"; path = "images/news@2x.png"; sourceTree = "<group>"; };
+		3AFF06AF18309ADB002D3108 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3AFF06B018309ADB002D3108 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		FF07500B16A147FB0090CD74 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		FF07500C16A147FB0090CD74 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		FF07503F16A14AA30090CD74 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -249,12 +255,7 @@
 		FFFA915E1679181600EA8862 /* santa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = santa.png; path = images/santa.png; sourceTree = "<group>"; };
 		FFFA915F1679181600EA8862 /* shoebox_bg_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_bg_full.png; path = images/shoebox_bg_full.png; sourceTree = "<group>"; };
 		FFFA91601679181600EA8862 /* shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox.png; path = images/shoebox.png; sourceTree = "<group>"; };
-		FFFA91611679181600EA8862 /* splash_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen.png; path = images/splash_screen.png; sourceTree = "<group>"; };
 		FFFA91621679181600EA8862 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = images/twitter.png; sourceTree = "<group>"; };
-		FFFA918816791A9F00EA8862 /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact@2x.png"; path = "images/contact@2x.png"; sourceTree = "<group>"; };
-		FFFA918916791A9F00EA8862 /* gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gift@2x.png"; path = "images/gift@2x.png"; sourceTree = "<group>"; };
-		FFFA918A16791A9F00EA8862 /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news@2x.png"; path = "images/news@2x.png"; sourceTree = "<group>"; };
-		FFFA918B16791A9F00EA8862 /* locatii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locatii@2x.png"; path = "images/locatii@2x.png"; sourceTree = "<group>"; };
 		FFFA91901679263E00EA8862 /* StepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsViewController.h; sourceTree = "<group>"; };
 		FFFA91911679263E00EA8862 /* StepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsViewController.m; sourceTree = "<group>"; };
 		FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepsViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -391,7 +392,6 @@
 		FF0C00421677BF93009CCFEE /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				FF0C00441677C53E009CCFEE /* iPhone */,
 				FF0C00431677C534009CCFEE /* iPad */,
 			);
 			name = Layouts;
@@ -406,28 +406,6 @@
 				FF0C00361677BEF7009CCFEE /* ContactViewController_iPad.xib */,
 			);
 			name = iPad;
-			sourceTree = "<group>";
-		};
-		FF0C00441677C53E009CCFEE /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				FFFA91B816792B8C00EA8862 /* AboutViewController_iPhone.xib */,
-				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
-				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
-				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
-				14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */,
-				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
-				FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */,
-				3AAA0FF8183021A0005EE7AB /* MapViewController_iPhone.xib */,
-				FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */,
-				FFFA91BD16792B9B00EA8862 /* SocialViewController_iPhone.xib */,
-				FFFA91981679291E00EA8862 /* StepOneViewController_iPhone.xib */,
-				FFFA919D1679292D00EA8862 /* StepTwoViewController_iPhone.xib */,
-				FFFA91A21679293800EA8862 /* StepThreeViewController_iPhone.xib */,
-				FFFA91A71679294400EA8862 /* StepFourViewController_iPhone.xib */,
-				FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */,
-			);
-			name = iPhone;
 			sourceTree = "<group>";
 		};
 		FF19C36A1677B97300A3F9D5 = {
@@ -452,11 +430,11 @@
 		FF19C3781677B97300A3F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */,
+				FFFFF97C1683B13700E1E0F1 /* libz.1.2.5.dylib */,
 				3AAA100918302214005EE7AB /* MapKit.framework */,
 				3AAA100718302201005EE7AB /* MessageUI.framework */,
-				3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */,
 				3AAA1003183021F4005EE7AB /* CoreLocation.framework */,
-				FFFFF97C1683B13700E1E0F1 /* libz.1.2.5.dylib */,
 				FFFFF9821683B16600E1E0F1 /* MobileCoreServices.framework */,
 				FFFFF9801683B15B00E1E0F1 /* SystemConfiguration.framework */,
 				FFFFF97E1683B15500E1E0F1 /* CFNetwork.framework */,
@@ -525,8 +503,10 @@
 				FFFA91C016792C6900EA8862 /* Tabs */,
 				FFFA91B616792B8B00EA8862 /* AboutViewController.h */,
 				FFFA91B716792B8C00EA8862 /* AboutViewController.m */,
+				FFFA91B816792B8C00EA8862 /* AboutViewController_iPhone.xib */,
 				FFFA91BB16792B9B00EA8862 /* SocialViewController.h */,
 				FFFA91BC16792B9B00EA8862 /* SocialViewController.m */,
+				FFFA91BD16792B9B00EA8862 /* SocialViewController_iPhone.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -534,10 +514,10 @@
 		FF19C3CA1677BADF00A3F9D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FFFA918816791A9F00EA8862 /* contact@2x.png */,
-				FFFA918916791A9F00EA8862 /* gift@2x.png */,
-				FFFA918A16791A9F00EA8862 /* news@2x.png */,
-				FFFA918B16791A9F00EA8862 /* locatii@2x.png */,
+				3AFF06A7183098AD002D3108 /* contact@2x.png */,
+				3AFF06A8183098AD002D3108 /* gift@2x.png */,
+				3AFF06A9183098AD002D3108 /* locatii@2x.png */,
+				3AFF06AA183098AD002D3108 /* news@2x.png */,
 				FFFA913E1679181600EA8862 /* about_info.png */,
 				FFFA913F1679181600EA8862 /* alarm_warning_icon.png */,
 				FFFA91401679181600EA8862 /* arrow.png */,
@@ -573,7 +553,6 @@
 				FFFA915E1679181600EA8862 /* santa.png */,
 				FFFA915F1679181600EA8862 /* shoebox_bg_full.png */,
 				FFFA91601679181600EA8862 /* shoebox.png */,
-				FFFA91611679181600EA8862 /* splash_screen.png */,
 				FFFA91621679181600EA8862 /* twitter.png */,
 			);
 			name = Images;
@@ -611,16 +590,22 @@
 			children = (
 				FFFA91901679263E00EA8862 /* StepsViewController.h */,
 				FFFA91911679263E00EA8862 /* StepsViewController.m */,
+				FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */,
 				FFFA91961679291E00EA8862 /* StepOneViewController.h */,
 				FFFA91971679291E00EA8862 /* StepOneViewController.m */,
+				FFFA91981679291E00EA8862 /* StepOneViewController_iPhone.xib */,
 				FFFA919B1679292D00EA8862 /* StepTwoViewController.h */,
 				FFFA919C1679292D00EA8862 /* StepTwoViewController.m */,
+				FFFA919D1679292D00EA8862 /* StepTwoViewController_iPhone.xib */,
 				FFFA91A01679293800EA8862 /* StepThreeViewController.h */,
 				FFFA91A11679293800EA8862 /* StepThreeViewController.m */,
+				FFFA91A21679293800EA8862 /* StepThreeViewController_iPhone.xib */,
 				FFFA91A51679294400EA8862 /* StepFourViewController.h */,
 				FFFA91A61679294400EA8862 /* StepFourViewController.m */,
+				FFFA91A71679294400EA8862 /* StepFourViewController_iPhone.xib */,
 				14C31459182C2AFE00A59213 /* MediaWebViewController.h */,
 				14C3145A182C2AFF00A59213 /* MediaWebViewController.m */,
+				14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */,
 			);
 			name = ShoeBoxSubViews;
 			sourceTree = "<group>";
@@ -630,6 +615,7 @@
 			children = (
 				FFFA91AA16792A6C00EA8862 /* NewsDetailsViewController.h */,
 				FFFA91AB16792A6C00EA8862 /* NewsDetailsViewController.m */,
+				FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */,
 			);
 			name = NewsSubViews;
 			sourceTree = "<group>";
@@ -639,8 +625,10 @@
 			children = (
 				FF0C00311677BEE8009CCFEE /* LocationsViewController.h */,
 				FF0C00321677BEE8009CCFEE /* LocationsViewController.m */,
+				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
 				FFFA91B016792AD900EA8862 /* LocationsDetailsViewController.h */,
 				FFFA91B116792AD900EA8862 /* LocationsDetailsViewController.m */,
+				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
 			);
 			name = LocationsSubViews;
 			sourceTree = "<group>";
@@ -648,14 +636,20 @@
 		FFFA91C016792C6900EA8862 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				3AFF06AF18309ADB002D3108 /* BaseViewController.h */,
+				3AFF06B018309ADB002D3108 /* BaseViewController.m */,
 				FF19C3911677B97400A3F9D5 /* ShoeBoxViewController.h */,
 				FF19C3921677B97400A3F9D5 /* ShoeBoxViewController.m */,
+				FF19C39F1677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib */,
 				FF19C3981677B97400A3F9D5 /* NewsViewController.h */,
 				FF19C3991677B97400A3F9D5 /* NewsViewController.m */,
+				FF19C3A51677B97400A3F9D5 /* NewsViewController_iPhone.xib */,
 				3AAA0FF9183021A0005EE7AB /* MapViewController.h */,
 				3AAA0FFA183021A0005EE7AB /* MapViewController.m */,
+				3AAA0FF8183021A0005EE7AB /* MapViewController_iPhone.xib */,
 				FF0C002F1677BEE8009CCFEE /* ContactViewController.h */,
 				FF0C00301677BEE8009CCFEE /* ContactViewController.m */,
+				FF0C00381677BEF7009CCFEE /* ContactViewController_iPhone.xib */,
 				FFFA9195167928EF00EA8862 /* ShoeBoxSubViews */,
 				FFFA91AF16792A8000EA8862 /* NewsSubViews */,
 				FFFA91B516792AE700EA8862 /* LocationsSubViews */,
@@ -819,6 +813,7 @@
 				FFFA916A1679181600EA8862 /* gift.png in Resources */,
 				FFFA916B1679181600EA8862 /* icon_shoe_box.png in Resources */,
 				FFFA916C1679181600EA8862 /* image_icon.png in Resources */,
+				3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */,
 				FFFA916D1679181600EA8862 /* img1.png in Resources */,
 				FFFA916E1679181600EA8862 /* img2.png in Resources */,
 				FFFA916F1679181600EA8862 /* img3.png in Resources */,
@@ -832,6 +827,7 @@
 				FFFA91771679181600EA8862 /* img11.png in Resources */,
 				FFFA91781679181600EA8862 /* img12.png in Resources */,
 				FFFA91791679181600EA8862 /* img13.png in Resources */,
+				3AFF06AE183098AD002D3108 /* news@2x.png in Resources */,
 				FFFA917A1679181600EA8862 /* img14.png in Resources */,
 				FFFA917B1679181600EA8862 /* info.png in Resources */,
 				FFFA917C1679181600EA8862 /* locatii.png in Resources */,
@@ -843,15 +839,12 @@
 				FFFA91821679181600EA8862 /* phone.png in Resources */,
 				3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */,
 				FFFA91831679181600EA8862 /* santa.png in Resources */,
+				3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */,
 				FFFA91841679181600EA8862 /* shoebox_bg_full.png in Resources */,
+				3AFF06AC183098AD002D3108 /* gift@2x.png in Resources */,
 				FFFA91851679181600EA8862 /* shoebox.png in Resources */,
-				FFFA91861679181600EA8862 /* splash_screen.png in Resources */,
 				FFFA91871679181600EA8862 /* twitter.png in Resources */,
-				FFFA918C16791A9F00EA8862 /* contact@2x.png in Resources */,
 				14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */,
-				FFFA918D16791A9F00EA8862 /* gift@2x.png in Resources */,
-				FFFA918E16791A9F00EA8862 /* news@2x.png in Resources */,
-				FFFA918F16791A9F00EA8862 /* locatii@2x.png in Resources */,
 				FFFA91941679263E00EA8862 /* StepsViewController_iPhone.xib in Resources */,
 				FFFA919A1679291E00EA8862 /* StepOneViewController_iPhone.xib in Resources */,
 				FFFA919F1679292D00EA8862 /* StepTwoViewController_iPhone.xib in Resources */,
@@ -924,6 +917,7 @@
 				FFFA919E1679292D00EA8862 /* StepTwoViewController.m in Sources */,
 				FFFA91A31679293800EA8862 /* StepThreeViewController.m in Sources */,
 				FFFA91A81679294400EA8862 /* StepFourViewController.m in Sources */,
+				3AFF06B118309ADB002D3108 /* BaseViewController.m in Sources */,
 				FFFA91AD16792A6D00EA8862 /* NewsDetailsViewController.m in Sources */,
 				FFFA91B316792ADA00EA8862 /* LocationsDetailsViewController.m in Sources */,
 				FFFA91B916792B8D00EA8862 /* AboutViewController.m in Sources */,
@@ -1124,6 +1118,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1138,6 +1133,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

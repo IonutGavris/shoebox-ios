@@ -57,7 +57,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBar.translucent = YES;
     mapView.delegate = self;
     
     CLLocationCoordinate2D zoomLocation;

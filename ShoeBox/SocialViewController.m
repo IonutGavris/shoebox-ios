@@ -9,6 +9,7 @@
 #import "SocialViewController.h"
 #import "MediaWebViewController.h"
 #import "Constants.h"
+#import "Helper.h"
 
 @interface SocialViewController ()
 
@@ -29,6 +30,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if([Helper getOSVersion] >= 7)
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Ionut Gavris. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ShoeBoxViewController : UIViewController
+@interface ShoeBoxViewController : BaseViewController
 
 - (IBAction) joinButtonClicked:(id)sender;
 - (IBAction) galleryButtonClicked:(id)sender;
