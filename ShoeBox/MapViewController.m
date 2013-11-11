@@ -192,10 +192,10 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     
     if ([view.annotation isKindOfClass:[MapAnnotation class]]) {
-        //MapAnnotation *tm = (MapAnnotation *)view.annotation;
-        //AppDataObject* theDataObject = [self theAppDataObject];
-        //theDataObject.store = [theDataObject.mapStoreList objectAtIndex:[tm.index intValue]];
-        //[theDataObject setFromMap:YES];
+        MapAnnotation *tm = (MapAnnotation *)view.annotation;
+        AppDataObject* theDataObject = [self theAppDataObject];
+        [theDataObject setSelectedLocation:[[theDataObject getLocations] objectAtIndex:[tm.index intValue]]];
+        [theDataObject setFromMap:YES];
         
         [Helper showLocationDetailScreen:self];
     }

@@ -10,6 +10,8 @@
 		146AED5B182D7A9E00C419F4 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91A11679293800EA8862 /* StepThreeViewController.m */; };
 		14C3145C182C2AFF00A59213 /* MediaWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C3145A182C2AFF00A59213 /* MediaWebViewController.m */; };
 		14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */; };
+		3A6C197518316735000304FA /* Romania.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C197418316735000304FA /* Romania.gpx */; };
+		3A6C197718317A4A000304FA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6C197618317A4A000304FA /* Crashlytics.framework */; };
 		3AAA0FFD183021A0005EE7AB /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA0FF4183021A0005EE7AB /* LocationManager.m */; };
 		3AAA0FFE183021A0005EE7AB /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA0FF7183021A0005EE7AB /* MapAnnotation.m */; };
 		3AAA0FFF183021A0005EE7AB /* MapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA0FF8183021A0005EE7AB /* MapViewController_iPhone.xib */; };
@@ -152,6 +154,8 @@
 		14C31459182C2AFE00A59213 /* MediaWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaWebViewController.h; sourceTree = "<group>"; };
 		14C3145A182C2AFF00A59213 /* MediaWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaWebViewController.m; sourceTree = "<group>"; };
 		14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaWebViewController_iPhone.xib; sourceTree = "<group>"; };
+		3A6C197418316735000304FA /* Romania.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Romania.gpx; sourceTree = "<group>"; };
+		3A6C197618317A4A000304FA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3AAA0FF3183021A0005EE7AB /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		3AAA0FF4183021A0005EE7AB /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		3AAA0FF5183021A0005EE7AB /* LocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 				FFFFF97D1683B13800E1E0F1 /* libz.1.2.5.dylib in Frameworks */,
 				FF19C37A1677B97300A3F9D5 /* UIKit.framework in Frameworks */,
 				FF19C37C1677B97300A3F9D5 /* Foundation.framework in Frameworks */,
+				3A6C197718317A4A000304FA /* Crashlytics.framework in Frameworks */,
 				FF19C37E1677B97300A3F9D5 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +437,7 @@
 			children = (
 				3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */,
 				FFFFF97C1683B13700E1E0F1 /* libz.1.2.5.dylib */,
+				3A6C197618317A4A000304FA /* Crashlytics.framework */,
 				3AAA100918302214005EE7AB /* MapKit.framework */,
 				3AAA100718302201005EE7AB /* MessageUI.framework */,
 				3AAA1003183021F4005EE7AB /* CoreLocation.framework */,
@@ -465,6 +471,7 @@
 		FF19C3801677B97300A3F9D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A6C197418316735000304FA /* Romania.gpx */,
 				FF19C3811677B97300A3F9D5 /* ShoeBox-Info.plist */,
 				FF19C3821677B97300A3F9D5 /* InfoPlist.strings */,
 				FF19C3851677B97300A3F9D5 /* main.m */,
@@ -804,6 +811,7 @@
 				FF0C00401677BEF7009CCFEE /* LocationsViewController_iPad.xib in Resources */,
 				FF0C00411677BEF7009CCFEE /* LocationsViewController_iPhone.xib in Resources */,
 				FFFA91631679181600EA8862 /* about_info.png in Resources */,
+				3A6C197518316735000304FA /* Romania.gpx in Resources */,
 				FFFA91641679181600EA8862 /* alarm_warning_icon.png in Resources */,
 				FFFA91651679181600EA8862 /* arrow.png in Resources */,
 				FFFA91661679181600EA8862 /* checkmark.png in Resources */,
@@ -895,7 +903,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "./Crashlytics.framework/run 3b24327bf13dc6258f579bf4303b6eb98aabd810";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1115,6 +1123,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ionutgavris/Development/xcode/ShoeBox,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";
@@ -1130,6 +1142,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ionutgavris/Development/xcode/ShoeBox,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShoeBox/ShoeBox-Prefix.pch";
 				INFOPLIST_FILE = "ShoeBox/ShoeBox-Info.plist";

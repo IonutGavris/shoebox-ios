@@ -10,14 +10,17 @@
 #import <MessageUI/MessageUI.h>
 #import "LocationManager.h"
 
-@interface LocationsDetailsViewController : UITableViewController <MFMailComposeViewControllerDelegate, LocationManagerProtocol>
+@interface LocationsDetailsViewController : UIViewController <MFMailComposeViewControllerDelegate, LocationManagerProtocol>
 {
-    IBOutlet UITableView *tableViewDetails;
     LocationManager *_locationManager;
     double distance;
 }
-    
-@property (nonatomic, retain) IBOutlet UITableView *tableViewDetails;
+@property (weak, nonatomic) IBOutlet UITextView *textViewAdress;
+@property (weak, nonatomic) IBOutlet UITextView *textViewContact;
+@property (weak, nonatomic) IBOutlet UITextView *textViewPhone;
+@property (weak, nonatomic) IBOutlet UILabel *labelDistance;
+@property (weak, nonatomic) IBOutlet UIButton *buttonMap;
+
 @property (nonatomic, retain) LocationManager *locationManager;
 
 @end

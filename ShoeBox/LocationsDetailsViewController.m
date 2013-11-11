@@ -18,7 +18,6 @@
 @end
 
 @implementation LocationsDetailsViewController
-@synthesize tableViewDetails;
 @synthesize locationManager = _locationManager;
 
 - (AppDataObject*) theAppDataObject;
@@ -59,7 +58,14 @@
     
     if([theDataObject getSelectedLocation] != nil){
         Location *location = [theDataObject getSelectedLocation];
-        self.title = location.details;
+        self.title = location.city;
+        [self.textViewAdress setText:location.streetAddress];
+        [self.textViewContact setText:location.contactOne];
+        [self.textViewPhone setText:location.phoneOne];
+        if(location.latitude == nil || location.longitude == nil)
+        {
+            [self.buttonMap setHidden:true];
+        }
     } else {
         [self.navigationController popViewControllerAnimated:TRUE];
     }
@@ -93,17 +99,6 @@
 {
     // Return the number of sections.
     return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    if(section == 0)
-        return 3;
-    else if (section == 1)
-        return 1;
-    else
-        return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -180,54 +175,6 @@
     return cell;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if(section == 0){
-        return @" ";
-    }
-    return nil;
-}
-
-
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
@@ -242,25 +189,15 @@
     return headerView;
 }
 
-#pragma mark - Table view delegate
+- (IBAction)buttonCallClick:(id)sender {
+    [Helper dialNumber:[[self theAppDataObject] getSelectedLocation].phoneOne];
+}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    if(indexPath.section == 0 && indexPath.row == 0 && [tableView cellForRowAtIndexPath:indexPath].tag == 0){
-        [Helper dialNumber:[[self theAppDataObject] getSelectedLocation].phoneOne];
-    } else if(indexPath.section == 0 && indexPath.row == 1 && [tableView cellForRowAtIndexPath:indexPath].tag == 1){
-        [Helper dialNumber:[[self theAppDataObject] getSelectedLocation].phoneTwo];
-    } else if (indexPath.section == 1 && indexPath.row == 0 && [tableView cellForRowAtIndexPath:indexPath].tag == 0){
-        //TODO: save store data in AppDataObject
-        //implement stuff in mapviewcontroller
-        //dont display this option if the store does not have
-        //the location coordinates
-        MapViewController *addController = [[MapViewController alloc]
-                                            initWithNibName:@"MapViewController_iPhone" bundle:nil];
-        [[self theAppDataObject] setFromDetails:YES];
-        [[self navigationController] pushViewController:addController  animated:YES];
-    }
+- (IBAction)buttonMapClick:(id)sender {
+    MapViewController *addController = [[MapViewController alloc]
+                                        initWithNibName:@"MapViewController_iPhone" bundle:nil];
+    [[self theAppDataObject] setFromDetails:YES];
+    [[self navigationController] pushViewController:addController  animated:YES];
 }
 
 - (void) locationReceived:(CLLocation *)location{
@@ -268,8 +205,6 @@
     
     distance = [Helper getDistanceWithStartLatitude:location.coordinate.latitude startLongitude:location.coordinate.longitude endLatitude:[[[self theAppDataObject] getSelectedLocation].latitude doubleValue] endLongitude:[[[self theAppDataObject] getSelectedLocation].longitude doubleValue]];
     
-    UITableViewCell *cell = [[self tableViewDetails] cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
-    if(cell != nil){
         NSString *dist = [NSString stringWithFormat:@"%lf",distance];
         NSRange range = [dist rangeOfString:@"."];
         NSMutableString *mutableDistance = [[NSMutableString alloc]init];
@@ -277,8 +212,7 @@
         [mutableDistance appendString:[dist substringToIndex:range.location + 2]];
         [mutableDistance appendString:@" km"];
         
-        [cell.textLabel setText:mutableDistance];
-    }
+        [self.labelDistance setText:mutableDistance];
     
 }
 
