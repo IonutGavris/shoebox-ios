@@ -14,14 +14,14 @@
     UITextField *textFieldName;
     UITextField *textFieldEmail;
     UITextField *textFieldPhone;
-    UITextField *textFieldMessage;
+    UITextView *textFieldMessage;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *buttonSend;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldName;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldEmail;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldPhone;
-@property (nonatomic, retain) IBOutlet UITextField *textFieldMessage;
+@property (nonatomic, retain) IBOutlet UITextView *textFieldMessage;
 
 - (IBAction)buttonSendPress:(id)sender;
 

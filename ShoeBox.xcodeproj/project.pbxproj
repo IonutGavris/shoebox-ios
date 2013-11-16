@@ -22,6 +22,7 @@
 		3AAA100818302201005EE7AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100718302201005EE7AB /* MessageUI.framework */; };
 		3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100918302214005EE7AB /* MapKit.framework */; };
 		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
+		3AE062331836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */; };
 		3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A7183098AD002D3108 /* contact@2x.png */; };
 		3AFF06AC183098AD002D3108 /* gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A8183098AD002D3108 /* gift@2x.png */; };
 		3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A9183098AD002D3108 /* locatii@2x.png */; };
@@ -109,7 +110,6 @@
 		FFFA91AD16792A6D00EA8862 /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91AB16792A6C00EA8862 /* NewsDetailsViewController.m */; };
 		FFFA91AE16792A6D00EA8862 /* NewsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */; };
 		FFFA91B316792ADA00EA8862 /* LocationsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91B116792AD900EA8862 /* LocationsDetailsViewController.m */; };
-		FFFA91B416792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */; };
 		FFFA91B916792B8D00EA8862 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91B716792B8C00EA8862 /* AboutViewController.m */; };
 		FFFA91BA16792B8D00EA8862 /* AboutViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91B816792B8C00EA8862 /* AboutViewController_iPhone.xib */; };
 		FFFA91BE16792B9C00EA8862 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91BC16792B9B00EA8862 /* SocialViewController.m */; };
@@ -171,6 +171,7 @@
 		3AAA100718302201005EE7AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3AAA100918302214005EE7AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
 		3AFF06A7183098AD002D3108 /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact@2x.png"; path = "images/contact@2x.png"; sourceTree = "<group>"; };
 		3AFF06A8183098AD002D3108 /* gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gift@2x.png"; path = "images/gift@2x.png"; sourceTree = "<group>"; };
 		3AFF06A9183098AD002D3108 /* locatii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locatii@2x.png"; path = "images/locatii@2x.png"; sourceTree = "<group>"; };
@@ -280,7 +281,6 @@
 		FFFA91AC16792A6C00EA8862 /* NewsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
 		FFFA91B016792AD900EA8862 /* LocationsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsDetailsViewController.h; sourceTree = "<group>"; };
 		FFFA91B116792AD900EA8862 /* LocationsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsDetailsViewController.m; sourceTree = "<group>"; };
-		FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
 		FFFA91B616792B8B00EA8862 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		FFFA91B716792B8C00EA8862 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		FFFA91B816792B8C00EA8862 /* AboutViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -635,7 +635,7 @@
 				FF0C003C1677BEF7009CCFEE /* LocationsViewController_iPhone.xib */,
 				FFFA91B016792AD900EA8862 /* LocationsDetailsViewController.h */,
 				FFFA91B116792AD900EA8862 /* LocationsDetailsViewController.m */,
-				FFFA91B216792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib */,
+				3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */,
 			);
 			name = LocationsSubViews;
 			sourceTree = "<group>";
@@ -773,6 +773,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ionut Gavris";
+				TargetAttributes = {
+					FF19C3741677B97300A3F9D5 = {
+						DevelopmentTeam = L76G333DCJ;
+					};
+				};
 			};
 			buildConfigurationList = FF19C36F1677B97300A3F9D5 /* Build configuration list for PBXProject "ShoeBox" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -818,6 +823,7 @@
 				FFFA91671679181600EA8862 /* contact.png in Resources */,
 				FFFA91681679181600EA8862 /* facebook.png in Resources */,
 				FFFA91691679181600EA8862 /* favorites.png in Resources */,
+				3AE062331836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib in Resources */,
 				FFFA916A1679181600EA8862 /* gift.png in Resources */,
 				FFFA916B1679181600EA8862 /* icon_shoe_box.png in Resources */,
 				FFFA916C1679181600EA8862 /* image_icon.png in Resources */,
@@ -859,7 +865,6 @@
 				FFFA91A41679293800EA8862 /* StepThreeViewController_iPhone.xib in Resources */,
 				FFFA91A91679294400EA8862 /* StepFourViewController_iPhone.xib in Resources */,
 				FFFA91AE16792A6D00EA8862 /* NewsDetailsViewController_iPhone.xib in Resources */,
-				FFFA91B416792ADA00EA8862 /* LocationsDetailsViewController_iPhone.xib in Resources */,
 				FFFA91BA16792B8D00EA8862 /* AboutViewController_iPhone.xib in Resources */,
 				FFFA91BF16792B9C00EA8862 /* SocialViewController_iPhone.xib in Resources */,
 				FFFFF94C16839DFF00E1E0F1 /* shoebox_locations.xml in Resources */,
@@ -1071,6 +1076,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1102,7 +1108,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ULTIMATE COMMUNICATION SOFTWARE LTD (L76G333DCJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ULTIMATE COMMUNICATION SOFTWARE LTD (L76G333DCJ)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1123,6 +1130,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ionutgavris/Development/xcode/ShoeBox,
@@ -1142,6 +1150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ionutgavris/Development/xcode/ShoeBox,

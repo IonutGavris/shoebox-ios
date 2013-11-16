@@ -132,6 +132,7 @@ SKPSMTPState HighestState;
     [alert show];
     [alert release];
     DEBUGLOG(@"email - message sent");
+    [[self view] endEditing:YES];
 }
 - (void)messageFailed:(SKPSMTPMessage *)SMTPmessage error:(NSError *)error
 {
@@ -142,6 +143,12 @@ SKPSMTPState HighestState;
     [alert show];
     [alert release];
     DEBUGLOG(@"email - error(%d): %@", [error code], [error localizedDescription]);
+    [[self view] endEditing:YES];
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[self view] endEditing:YES];
 }
 
 @end

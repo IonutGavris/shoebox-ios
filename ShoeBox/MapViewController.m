@@ -24,6 +24,9 @@
 @synthesize mapView;
 @synthesize currentLocation = _currentLocation;
 @synthesize locationManager = _locationManager;
+@synthesize fromDetails, location;
+
+bool centeredOnce;
 
 - (AppDataObject*) theAppDataObject;
 {
@@ -66,14 +69,29 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 500*METERS_PER_MILE, 500*METERS_PER_MILE);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:viewRegion];
     [mapView setRegion:adjustedRegion animated:YES];
-    
-    if([mapView.annotations count] == 0 && [[self theAppDataObject] getLocations] == nil){
-        //SQLiteDatabase *database = [[SQLiteDatabase alloc]initWithDatabaseName:@"StoresDatabase.sql"];
-        //[self theAppDataObject].mapStoreList = [database readStoresFromDatabase];
-        //[self addToMapStores:[self theAppDataObject].mapStoreList];
-    } else if ([mapView.annotations count] == 0){
-        [self addToMapStores:[[self theAppDataObject] getLocations]];
-    }
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
+                                             (unsigned long)NULL), ^(void) {
+        if([[self theAppDataObject] getLocations] != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                [self addToMapStores:[[self theAppDataObject] getLocations]];
+                if(fromDetails) {
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                        int *index = [[self theAppDataObject].getLocations  indexOfObject:location];
+                        NSNumber *nsIndex = [NSNumber numberWithInt:index];
+                        for (int i=0; i < [mapView.annotations count]; i++) {
+                            MapAnnotation *annotation = [mapView.annotations objectAtIndex:i];
+                            if(![annotation isKindOfClass:[MKUserLocation class]] && annotation.index == nsIndex) {
+                                [mapView selectAnnotation:annotation animated:true];
+                                break;
+                            }
+                        }
+                    });
+                }
+            });
+        }
+    });
+
     _locationManager = [[LocationManager alloc] initWithAccuracy:kCLLocationAccuracyBest];
 }
 
@@ -146,9 +164,8 @@
         //we init our on implementation of MKAnnotation
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address coordinate:coordinate index:[NSNumber numberWithInt:i]];
         //we add the pin to the map
-        [mapView addAnnotation:annotation];        
+        [mapView addAnnotation:annotation];
     }
-    
 }
 
 - (MKAnnotationView *) mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>) annotation{
@@ -194,12 +211,8 @@
     if ([view.annotation isKindOfClass:[MapAnnotation class]]) {
         MapAnnotation *tm = (MapAnnotation *)view.annotation;
         AppDataObject* theDataObject = [self theAppDataObject];
-        [theDataObject setSelectedLocation:[[theDataObject getLocations] objectAtIndex:[tm.index intValue]]];
-        [theDataObject setFromMap:YES];
-        
-        [Helper showLocationDetailScreen:self];
+        [Helper showLocationDetailScreen:self withLocation:[[theDataObject getLocations] objectAtIndex:[tm.index intValue]] fromMap:YES];
     }
-
 }
 
 - (void) locationReceived:(CLLocation *)location{
@@ -211,7 +224,8 @@
     
     self.currentLocation = location;
     
-    if(![self theAppDataObject].isFromDetails){
+    if(!fromDetails && !centeredOnce){
+        centeredOnce = true;
         [self centerMapOnLocation:self.currentLocation usingZoom:5.3];
     }
 }
@@ -234,7 +248,9 @@
 
 - (IBAction) barButtonNearestStore:(id)sender {
     if(self.currentLocation != nil){
-        [self openNearestStoreWithCurrentLatitude:self.currentLocation.coordinate.latitude andLongitude:self.currentLocation.coordinate.longitude];
+        Location *location = [Helper getNearestLocation:[[self theAppDataObject] getLocations] startLatitude:self.currentLocation.coordinate.latitude startLongitude:self.currentLocation.coordinate.longitude];
+        CLLocation *cclocation = [[CLLocation alloc] initWithLatitude:[location.latitude doubleValue] longitude:[location.longitude doubleValue]];
+        [self centerMapOnLocation:cclocation usingZoom:1.0];
     }
 }
 
@@ -258,9 +274,7 @@
     
     // Pass the selected object to the new view controller.
     AppDataObject* theDataObject = [self theAppDataObject];
-    [theDataObject setSelectedLocation:[Helper getNearestLocation:[theDataObject getLocations] startLatitude:latitude startLongitude:longitude]];
-    
-    [Helper showLocationDetailScreen:self];
+    [Helper showLocationDetailScreen:self withLocation:[Helper getNearestLocation:[theDataObject getLocations] startLatitude:latitude startLongitude:longitude] fromMap:YES];
 }
 
 @end

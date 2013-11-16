@@ -14,62 +14,21 @@
 - (void) dealloc {
     _storeList = nil;
     _newsList = nil;
-    _fromMap = NO;
-    _fromDetails = NO;
-    _fromSearch = NO;
     _updatingApplication = NO;
-    _selectedLocation = nil;
 }
 
 - (void) clearData {
     _storeList = nil;
     _newsList = nil;
-    _fromMap = NO;
-    _fromDetails = NO;
-    _fromSearch = NO;
     _updatingApplication = NO;
-    _selectedLocation = nil;
-}
-
-- (void) setFromMap:(BOOL)fromMap{
-    _fromMap = fromMap;
-}
-
-- (void) setFromDetails:(BOOL)fromDetails{
-    _fromDetails = fromDetails;
-}
-
-- (void) setFromSearch:(BOOL)fromSearch{
-    _fromSearch = fromSearch;
 }
 
 - (void) setIsUpdatingApplication:(BOOL)updating{
     _updatingApplication = updating;
 }
 
-- (BOOL) isFromMap{
-    return _fromMap;
-}
-
-- (BOOL) isFromDetails{
-    return _fromDetails;
-}
-
-- (BOOL) isFromSearch{
-    return _fromSearch;
-}
-
 - (BOOL) isUpdatingApplication{
     return _updatingApplication;
-}
-
-- (void) setSelectedLocation:(Location *)location
-{
-    _selectedLocation = location;
-}
-- (Location *) getSelectedLocation
-{
-    return _selectedLocation;
 }
 
 - (NSArray *) getLocations
@@ -79,7 +38,13 @@
         return _storeList;
     } else {
         //http://adspedia.ro/shoebox/shoebox_locations.xml
-        _storeList = [[NSMutableArray alloc]initWithArray:[Helper parseXmlFileOffline:@"shoebox_locations"]];
+        NSArray *locationsList = [Helper parseXmlFileOffline:@"shoebox_locations"];
+        NSArray *sortedLocationsList = [locationsList sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+            NSString *first = [(Location*)a city];
+            NSString *second = [(Location*)b city];
+            return [first compare:second];
+        }];
+        _storeList = [[NSMutableArray alloc]initWithArray:sortedLocationsList];
         return _storeList;
     }
 }

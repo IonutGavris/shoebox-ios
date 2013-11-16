@@ -15,7 +15,7 @@
 + (NSArray *) parseXmlFileOnline:(NSString *) fileUrl;
 
 + (void)showLocationsScreen:(id)sender;
-+ (void)showLocationDetailScreen:(id)sender;
++ (void)showLocationDetailScreen:(id)sender withLocation:(Location *) location fromMap:(bool)isFromMap;
 + (void)showSocialScreen:(id)sender;
 
 + (Location *) getNearestLocation:(NSArray *)stores startLatitude:(double)startLatitude startLongitude:(double)startLongitude;

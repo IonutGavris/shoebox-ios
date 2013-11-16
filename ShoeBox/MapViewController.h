@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "LocationManagerProtocol.h"
+#import "Location.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, LocationManagerProtocol> {
     BOOL *_doneInitialZoom;
@@ -20,6 +21,8 @@
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) LocationManager *locationManager;
 @property (nonatomic, retain) CLLocation *currentLocation;
+@property (nonatomic, retain) Location *location;
+@property (nonatomic, assign) BOOL fromDetails;
 
 - (IBAction) barButtonMyLocation:(id)sender;
 - (IBAction) barButtonNearestStore:(id)sender;

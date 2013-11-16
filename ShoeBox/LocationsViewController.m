@@ -10,6 +10,7 @@
 #import "AppDelegateProtocol.h"
 #import "AppDataObject.h"
 #import "Location.h"
+#import "Helper.h"
 
 @interface LocationsViewController ()
 
@@ -77,6 +78,12 @@
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Location *location = [[self theAppDataObject].getLocations objectAtIndex:indexPath.row];
+    [Helper showLocationDetailScreen:self withLocation:location fromMap:false];
 }
 
 @end

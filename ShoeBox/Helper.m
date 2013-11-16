@@ -72,7 +72,7 @@
     [[sender navigationController] pushViewController:addController  animated:YES];
 }
 
-+ (void)showLocationDetailScreen:(id)sender {
++ (void)showLocationDetailScreen:(id)sender withLocation:(Location *) location fromMap:(bool)isFromMap  {
     bool isIphone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
     NSString *viewControllerNib;
     
@@ -84,6 +84,8 @@
     
     LocationsDetailsViewController *addController = [[LocationsDetailsViewController alloc]
                                               initWithNibName:viewControllerNib bundle:nil];
+    [addController setCurrentLocation:location];
+    [addController setFromMap:isFromMap];
     [[sender navigationController] pushViewController:addController  animated:YES];
 }
 
