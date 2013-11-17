@@ -59,6 +59,8 @@
 #pragma mark - Feed downloader
 
 - (void)refresh {
+    [self.tableView setHidden:YES];;
+    [self.activityIndicator startAnimating];
     NSURL *url = [NSURL URLWithString:@"http://shoebox.ro/feed/"];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setDelegate:self];
@@ -73,6 +75,7 @@
         NSString *blogTitle = [channel valueForChild:@"title"];
         
         NSArray *items = [channel elementsForName:@"item"];
+        
         for (GDataXMLElement *item in items) {
             
             NSString *articleTitle = [item valueForChild:@"title"];
@@ -87,7 +90,6 @@
                                                articleDescription:articleDescription
                                                       articleDate:articleDate];
             [entries addObject:entry];
-            
         }
     }
     
@@ -153,6 +155,9 @@
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 
+                [self.activityIndicator stopAnimating];
+                [self.tableView setHidden:NO];
+                
                 for (RSSEntry *entry in entries) {
                     
                     int insertIdx = [[self theAppDataObject].getNews indexForInsertingObject:entry sortedUsingBlock:^(id a, id b) {
@@ -202,6 +207,7 @@
     
     // Configure the cell...
     RSSEntry *entry = [[self theAppDataObject].getNews objectAtIndex:indexPath.row];
+    [cell.imageView setImage:[UIImage imageNamed:@"news"]];
     [cell.textLabel setText:entry.articleTitle];
     [cell.textLabel setHighlightedTextColor:[UIColor whiteColor]];
     [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:56.0/255 blue:150.0/255 alpha:1.0]];

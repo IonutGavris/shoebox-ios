@@ -16,7 +16,6 @@
 
 @implementation ContactViewController
 
-@synthesize buttonSend;
 @synthesize textFieldName;
 @synthesize textFieldEmail;
 @synthesize textFieldPhone;
@@ -42,6 +41,10 @@ SKPSMTPState HighestState;
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+    
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Trimite" style:UIBarButtonItemStylePlain target:self action:@selector(buttonSendPress:)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    [anotherButton release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,16 +68,30 @@ SKPSMTPState HighestState;
 
 - (IBAction)buttonSendPress:(id)sender
 {
-    NSMutableString *body = [[NSMutableString alloc] initWithString:@"Nume: "];
-    [body appendString:[textFieldName text]];
-    [body appendString:@"<br>Email: "];
-    [body appendString:[textFieldEmail text]];
-    [body appendString:@"<br>Telefon: "];
-    [body appendString:[textFieldPhone text]];
-    [body appendString:@"<br>Mesaj:<br><br>"];
-    [body appendString:[textFieldMessage text]];
-
-    [self sendMailFrom:[textFieldEmail text] to:@"valvesa@gmail.com" subject:@"Mesaj aplicatie ShoeBox iOS" body:body delegate:self];
+    if([[textFieldEmail text] length] > 0 ||
+       [[textFieldPhone text] length] > 0) {
+        
+        NSMutableString *body = [[NSMutableString alloc] initWithString:@"Nume: "];
+        [body appendString:[textFieldName text]];
+        [body appendString:@"<br>Email: "];
+        [body appendString:[textFieldEmail text]];
+        [body appendString:@"<br>Telefon: "];
+        [body appendString:[textFieldPhone text]];
+        [body appendString:@"<br>Mesaj:<br><br>"];
+        [body appendString:[textFieldMessage text]];
+        
+        [self sendMailFrom:[textFieldEmail text] to:@"valvesa@gmail.com" subject:@"Mesaj aplicatie ShoeBox iOS" body:body delegate:self];
+    } else {
+        //cere de la utilizator input pentru numar
+        UIAlertView* dialog = [[UIAlertView alloc] init];
+        [dialog setDelegate:self];
+        [dialog setTitle:@"Atentie"];
+        [dialog setMessage:@"Completati campurile din formularul de contact!"];
+        [dialog addButtonWithTitle:NSLocalizedString(@"OK", @"")];
+        
+        [dialog show];
+        [dialog release];
+    }
 }
 
 - (void)sendMailFrom:(NSString *)from to:(NSString *)to subject:(NSString *)subject body:(NSString *) messageBody delegate:(NSObject <SKPSMTPMessageDelegate> *) delegate

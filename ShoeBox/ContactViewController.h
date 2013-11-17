@@ -10,14 +10,12 @@
 
 @interface ContactViewController : UIViewController
 {
-    UIButton *buttonSend;
     UITextField *textFieldName;
     UITextField *textFieldEmail;
     UITextField *textFieldPhone;
     UITextView *textFieldMessage;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *buttonSend;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldName;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldEmail;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldPhone;

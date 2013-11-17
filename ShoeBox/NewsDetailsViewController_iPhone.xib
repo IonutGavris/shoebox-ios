@@ -2,12 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailsViewController">
             <connections>
-                <outlet property="txtTitle" destination="Qtz-mU-Dl5" id="9Kj-ni-be5"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="webView" destination="Axa-mz-l9v" id="CCd-4H-h2x"/>
             </connections>
@@ -17,33 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="6yw-4e-WFF">
-                    <rect key="frame" x="20" y="20" width="281" height="45"/>
+                <webView contentMode="scaleToFill" id="Axa-mz-l9v">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qtz-mU-Dl5">
-                            <rect key="frame" x="17" y="4" width="247" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <view contentMode="scaleToFill" id="7OP-x2-JWG">
-                    <rect key="frame" x="20" y="73" width="281" height="283"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <webView contentMode="scaleToFill" id="Axa-mz-l9v">
-                            <rect key="frame" x="5" y="5" width="271" height="273"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </webView>
-                    </subviews>
-                    <color key="backgroundColor" white="0.93293220769999996" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

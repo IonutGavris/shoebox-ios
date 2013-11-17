@@ -12,10 +12,6 @@
 #import "Helper.h"
 #import "MediaWebViewController.h"
 
-@interface ShoeBoxViewController ()
-
-@end
-
 @implementation ShoeBoxViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

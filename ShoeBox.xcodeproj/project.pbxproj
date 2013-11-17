@@ -23,6 +23,13 @@
 		3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100918302214005EE7AB /* MapKit.framework */; };
 		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
 		3AE062331836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */; };
+		3AF17F7B18392D3C006952D9 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7918392D3C006952D9 /* call.png */; };
+		3AF17F7C18392D3C006952D9 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7A18392D3C006952D9 /* call@2x.png */; };
+		3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7D18393BFD006952D9 /* shoebox_box.png */; };
+		3AF17F8018393BFD006952D9 /* shoebox_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7E18393BFD006952D9 /* shoebox_logo.png */; };
+		3AF17F8318393F1E006952D9 /* shoebox_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F8118393F1E006952D9 /* shoebox_map.png */; };
+		3AF17F8418393F1E006952D9 /* shoebox_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F8218393F1E006952D9 /* shoebox_map@2x.png */; };
+		3AF17F86183956D7006952D9 /* shoebox_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F85183956D7006952D9 /* shoebox_navbar.png */; };
 		3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A7183098AD002D3108 /* contact@2x.png */; };
 		3AFF06AC183098AD002D3108 /* gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A8183098AD002D3108 /* gift@2x.png */; };
 		3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A9183098AD002D3108 /* locatii@2x.png */; };
@@ -95,7 +102,6 @@
 		FFFA91821679181600EA8862 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA915D1679181600EA8862 /* phone.png */; };
 		FFFA91831679181600EA8862 /* santa.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA915E1679181600EA8862 /* santa.png */; };
 		FFFA91841679181600EA8862 /* shoebox_bg_full.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA915F1679181600EA8862 /* shoebox_bg_full.png */; };
-		FFFA91851679181600EA8862 /* shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91601679181600EA8862 /* shoebox.png */; };
 		FFFA91871679181600EA8862 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91621679181600EA8862 /* twitter.png */; };
 		FFFA91931679263E00EA8862 /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91911679263E00EA8862 /* StepsViewController.m */; };
 		FFFA91941679263E00EA8862 /* StepsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91921679263E00EA8862 /* StepsViewController_iPhone.xib */; };
@@ -172,6 +178,13 @@
 		3AAA100918302214005EE7AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
+		3AF17F7918392D3C006952D9 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = images/call.png; sourceTree = "<group>"; };
+		3AF17F7A18392D3C006952D9 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "images/call@2x.png"; sourceTree = "<group>"; };
+		3AF17F7D18393BFD006952D9 /* shoebox_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_box.png; path = images/shoebox_box.png; sourceTree = "<group>"; };
+		3AF17F7E18393BFD006952D9 /* shoebox_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_logo.png; path = images/shoebox_logo.png; sourceTree = "<group>"; };
+		3AF17F8118393F1E006952D9 /* shoebox_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_map.png; path = images/shoebox_map.png; sourceTree = "<group>"; };
+		3AF17F8218393F1E006952D9 /* shoebox_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shoebox_map@2x.png"; path = "images/shoebox_map@2x.png"; sourceTree = "<group>"; };
+		3AF17F85183956D7006952D9 /* shoebox_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_navbar.png; path = images/shoebox_navbar.png; sourceTree = "<group>"; };
 		3AFF06A7183098AD002D3108 /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact@2x.png"; path = "images/contact@2x.png"; sourceTree = "<group>"; };
 		3AFF06A8183098AD002D3108 /* gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gift@2x.png"; path = "images/gift@2x.png"; sourceTree = "<group>"; };
 		3AFF06A9183098AD002D3108 /* locatii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locatii@2x.png"; path = "images/locatii@2x.png"; sourceTree = "<group>"; };
@@ -259,7 +272,6 @@
 		FFFA915D1679181600EA8862 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phone.png; path = images/phone.png; sourceTree = "<group>"; };
 		FFFA915E1679181600EA8862 /* santa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = santa.png; path = images/santa.png; sourceTree = "<group>"; };
 		FFFA915F1679181600EA8862 /* shoebox_bg_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_bg_full.png; path = images/shoebox_bg_full.png; sourceTree = "<group>"; };
-		FFFA91601679181600EA8862 /* shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox.png; path = images/shoebox.png; sourceTree = "<group>"; };
 		FFFA91621679181600EA8862 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = images/twitter.png; sourceTree = "<group>"; };
 		FFFA91901679263E00EA8862 /* StepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsViewController.h; sourceTree = "<group>"; };
 		FFFA91911679263E00EA8862 /* StepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsViewController.m; sourceTree = "<group>"; };
@@ -521,6 +533,13 @@
 		FF19C3CA1677BADF00A3F9D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3AF17F85183956D7006952D9 /* shoebox_navbar.png */,
+				3AF17F8118393F1E006952D9 /* shoebox_map.png */,
+				3AF17F8218393F1E006952D9 /* shoebox_map@2x.png */,
+				3AF17F7D18393BFD006952D9 /* shoebox_box.png */,
+				3AF17F7E18393BFD006952D9 /* shoebox_logo.png */,
+				3AF17F7918392D3C006952D9 /* call.png */,
+				3AF17F7A18392D3C006952D9 /* call@2x.png */,
 				3AFF06A7183098AD002D3108 /* contact@2x.png */,
 				3AFF06A8183098AD002D3108 /* gift@2x.png */,
 				3AFF06A9183098AD002D3108 /* locatii@2x.png */,
@@ -559,7 +578,6 @@
 				FFFA915D1679181600EA8862 /* phone.png */,
 				FFFA915E1679181600EA8862 /* santa.png */,
 				FFFA915F1679181600EA8862 /* shoebox_bg_full.png */,
-				FFFA91601679181600EA8862 /* shoebox.png */,
 				FFFA91621679181600EA8862 /* twitter.png */,
 			);
 			name = Images;
@@ -812,14 +830,17 @@
 				FF19C3A71677B97400A3F9D5 /* NewsViewController_iPhone.xib in Resources */,
 				FF19C3AA1677B97400A3F9D5 /* NewsViewController_iPad.xib in Resources */,
 				FF0C003E1677BEF7009CCFEE /* ContactViewController_iPad.xib in Resources */,
+				3AF17F7C18392D3C006952D9 /* call@2x.png in Resources */,
 				FF0C003F1677BEF7009CCFEE /* ContactViewController_iPhone.xib in Resources */,
 				FF0C00401677BEF7009CCFEE /* LocationsViewController_iPad.xib in Resources */,
 				FF0C00411677BEF7009CCFEE /* LocationsViewController_iPhone.xib in Resources */,
 				FFFA91631679181600EA8862 /* about_info.png in Resources */,
+				3AF17F7B18392D3C006952D9 /* call.png in Resources */,
 				3A6C197518316735000304FA /* Romania.gpx in Resources */,
 				FFFA91641679181600EA8862 /* alarm_warning_icon.png in Resources */,
 				FFFA91651679181600EA8862 /* arrow.png in Resources */,
 				FFFA91661679181600EA8862 /* checkmark.png in Resources */,
+				3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */,
 				FFFA91671679181600EA8862 /* contact.png in Resources */,
 				FFFA91681679181600EA8862 /* facebook.png in Resources */,
 				FFFA91691679181600EA8862 /* favorites.png in Resources */,
@@ -827,10 +848,12 @@
 				FFFA916A1679181600EA8862 /* gift.png in Resources */,
 				FFFA916B1679181600EA8862 /* icon_shoe_box.png in Resources */,
 				FFFA916C1679181600EA8862 /* image_icon.png in Resources */,
+				3AF17F86183956D7006952D9 /* shoebox_navbar.png in Resources */,
 				3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */,
 				FFFA916D1679181600EA8862 /* img1.png in Resources */,
 				FFFA916E1679181600EA8862 /* img2.png in Resources */,
 				FFFA916F1679181600EA8862 /* img3.png in Resources */,
+				3AF17F8418393F1E006952D9 /* shoebox_map@2x.png in Resources */,
 				FFFA91701679181600EA8862 /* img4.png in Resources */,
 				FFFA91711679181600EA8862 /* img5.png in Resources */,
 				FFFA91721679181600EA8862 /* img6.png in Resources */,
@@ -850,13 +873,14 @@
 				FFFA917F1679181600EA8862 /* movie_icon.png in Resources */,
 				FFFA91801679181600EA8862 /* movies.png in Resources */,
 				FFFA91811679181600EA8862 /* news.png in Resources */,
+				3AF17F8018393BFD006952D9 /* shoebox_logo.png in Resources */,
 				FFFA91821679181600EA8862 /* phone.png in Resources */,
 				3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */,
 				FFFA91831679181600EA8862 /* santa.png in Resources */,
+				3AF17F8318393F1E006952D9 /* shoebox_map.png in Resources */,
 				3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */,
 				FFFA91841679181600EA8862 /* shoebox_bg_full.png in Resources */,
 				3AFF06AC183098AD002D3108 /* gift@2x.png in Resources */,
-				FFFA91851679181600EA8862 /* shoebox.png in Resources */,
 				FFFA91871679181600EA8862 /* twitter.png in Resources */,
 				14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */,
 				FFFA91941679263E00EA8862 /* StepsViewController_iPhone.xib in Resources */,

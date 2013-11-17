@@ -61,6 +61,7 @@
     if(currentLocation != nil){
         self.title = currentLocation.city;
         [self.textViewAdress setText:currentLocation.streetAddress];
+        [self.textViewHours setText:currentLocation.hours];
         [self.textViewContact setText:currentLocation.contactOne];
         [self.textViewPhone setText:currentLocation.phoneOne];
         if(currentLocation.latitude == nil || currentLocation.longitude == nil || fromMap)
@@ -102,7 +103,7 @@
     MapViewController *addController = [[MapViewController alloc]
                                         initWithNibName:@"MapViewController_iPhone" bundle:nil];
     [addController setFromDetails:true];
-    [addController setLocation:currentLocation];
+    [addController setSelectedLocation:currentLocation];
     [[self navigationController] pushViewController:addController  animated:YES];
 }
 

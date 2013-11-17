@@ -24,7 +24,7 @@
 @synthesize mapView;
 @synthesize currentLocation = _currentLocation;
 @synthesize locationManager = _locationManager;
-@synthesize fromDetails, location;
+@synthesize fromDetails, selectedLocation;
 
 bool centeredOnce;
 
@@ -77,7 +77,7 @@ bool centeredOnce;
                 [self addToMapStores:[[self theAppDataObject] getLocations]];
                 if(fromDetails) {
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                        int *index = [[self theAppDataObject].getLocations  indexOfObject:location];
+                        int *index = [[self theAppDataObject].getLocations  indexOfObject:selectedLocation];
                         NSNumber *nsIndex = [NSNumber numberWithInt:index];
                         for (int i=0; i < [mapView.annotations count]; i++) {
                             MapAnnotation *annotation = [mapView.annotations objectAtIndex:i];
@@ -97,7 +97,7 @@ bool centeredOnce;
 
 - (void)viewDidUnload
 {
-    _mapView = nil;
+    mapView = nil;
     _locationManager = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -113,17 +113,17 @@ bool centeredOnce;
     [super viewDidAppear:animated];
     //we check to see if we need to focus on a store
     //else we request a position from LocationManager
-    /*
-    if([self theAppDataObject].store != nil && [self theAppDataObject].isFromDetails){
+    
+    if(selectedLocation != nil && fromDetails){
         CLLocationCoordinate2D zoomLocation;
-        zoomLocation.latitude = [[self theAppDataObject].store.latitude doubleValue];
-        zoomLocation.longitude = [[self theAppDataObject].store.longitude doubleValue];
+        zoomLocation.latitude = [selectedLocation.latitude doubleValue];
+        zoomLocation.longitude = [selectedLocation.longitude doubleValue];
 
         MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.3*METERS_PER_MILE, 0.3*METERS_PER_MILE);
         MKCoordinateRegion adjustedRegion = [mapView regionThatFits:viewRegion];
         [mapView setRegion:adjustedRegion animated:YES];
-    } 
-     */
+    }
+    
     [_locationManager startUpdatingLocationForDelegate:self];
 }
 
@@ -176,7 +176,7 @@ bool centeredOnce;
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    if(true) {
+    if(false) {
          //default initialization used to show map pins
         MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
         annView.pinColor = MKPinAnnotationColorRed;
@@ -196,7 +196,7 @@ bool centeredOnce;
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
         }
         
-        annotationView.image = [UIImage imageNamed:@"gift.png"];
+        annotationView.image = [UIImage imageNamed:@"shoebox_map.png"];
         annotationView.canShowCallout = YES;
         annotationView.calloutOffset = CGPointMake(-5, 5);
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];

@@ -73,6 +73,7 @@
     // Configure the cell...
     Location *location = [[self theAppDataObject].getLocations objectAtIndex:indexPath.row];
     [cell.textLabel setText:location.city];
+    [cell.imageView setImage:[UIImage imageNamed:@"locatii"]];
     [cell.textLabel setHighlightedTextColor:[UIColor whiteColor]];
     [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:56.0/255 blue:150.0/255 alpha:1.0]];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;

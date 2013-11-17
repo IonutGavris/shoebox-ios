@@ -28,7 +28,7 @@
                         <action selector="joinButtonClicked:" destination="-1" eventType="touchUpInside" id="37"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="41">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="41">
                     <rect key="frame" x="20" y="86" width="280" height="83"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,15 +36,15 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Macar de Craciun, cand toti copiii primesc cadouri, vrem sa aduceam zambetul si pe fetele lor. " id="XSX-Wb-B5h">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Macar de Craciun, cand toti copiii primesc cadouri, vrem sa aduceam zambetul si pe fetele lor. " id="XSX-Wb-B5h">
                     <rect key="frame" x="20" y="177" width="280" height="67"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Suntem la a 7-a editie si va invitam sa aducem bucurie in jurul nostru!" id="hY2-Ri-rmT">
-                    <rect key="frame" x="20" y="252" width="280" height="41"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Suntem la a 7-a editie si va invitam sa aducem bucurie in jurul nostru!" id="hY2-Ri-rmT">
+                    <rect key="frame" x="20" y="252" width="280" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,8 +80,12 @@
                         <action selector="videoButtonClicked:" destination="-1" eventType="touchUpInside" id="PK8-3H-1yK"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoebox.png" id="9O8-em-MSJ">
-                    <rect key="frame" x="10" y="20" width="300" height="58"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoebox_box.png" id="6xR-lO-hQv">
+                    <rect key="frame" x="223" y="0.0" width="110" height="100"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoebox_logo.png" id="9O8-em-MSJ">
+                    <rect key="frame" x="20" y="18" width="220" height="60"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
                 </imageView>
             </subviews>
@@ -92,6 +96,7 @@
     <resources>
         <image name="image_icon.png" width="64" height="64"/>
         <image name="movie_icon.png" width="64" height="64"/>
-        <image name="shoebox.png" width="300" height="58"/>
+        <image name="shoebox_box.png" width="392" height="381"/>
+        <image name="shoebox_logo.png" width="627" height="143"/>
     </resources>
 </document>

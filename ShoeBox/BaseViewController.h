@@ -10,6 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
-- (void)btnReloadPressed:(id)sender;
+- (void)btnPressed:(id)sender;
 
 @end

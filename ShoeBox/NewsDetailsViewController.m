@@ -36,7 +36,7 @@
     }
     if(articleTitle != nil && [articleTitle length] > 0)
     {
-        [txtTitle setText:articleTitle];
+        self.title = articleTitle;
     }
     if(articleDescription != nil && [articleDescription length] > 0)
     {

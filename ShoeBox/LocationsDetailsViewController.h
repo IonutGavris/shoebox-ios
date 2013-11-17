@@ -17,6 +17,7 @@
     double distance;
 }
 @property (weak, nonatomic) IBOutlet UILabel *textViewAdress;
+@property (weak, nonatomic) IBOutlet UILabel *textViewHours;
 @property (weak, nonatomic) IBOutlet UILabel *textViewContact;
 @property (weak, nonatomic) IBOutlet UILabel *textViewPhone;
 @property (weak, nonatomic) IBOutlet UILabel *labelDistance;

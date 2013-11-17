@@ -10,7 +10,6 @@
 
 @interface NewsDetailsViewController : UIViewController
 {
-    IBOutlet UILabel *txtTitle;
     IBOutlet UIWebView *webView;
 }
 

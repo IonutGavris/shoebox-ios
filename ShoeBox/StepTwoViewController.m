@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view from its nib.
     [theScroll setDelegate:self];
     [theScroll setScrollEnabled:YES];
-    [theScroll setContentSize:CGSizeMake(320, 1500)];
+    [theScroll setContentSize:CGSizeMake(320, 1330)];
 }
 
 - (void)didReceiveMemoryWarning

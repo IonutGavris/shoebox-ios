@@ -16,11 +16,15 @@
 #import "MapViewController.h"
 #import "ContactViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:0.5]
+
+
 @implementation AppDelegate
 
 @synthesize theAppDataObject;
 
 bool ENABLE_IPAD = false;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -29,7 +33,12 @@ bool ENABLE_IPAD = false;
     self.theAppDataObject = [[AppDataObject alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
+    
     // Override point for customization after application launch.
+    
+    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"shoebox_navbar.png"] forBarMetrics:UIBarMetricsDefault];
+    //[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x574f3b)];
+    
     UIViewController *viewController1, *viewController2, *viewController3, *viewController4;
     UINavigationController *navigationcontroller1, *navigationcontroller2, *navigationcontroller3, *navigationcontroller4;
     if (!ENABLE_IPAD || [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

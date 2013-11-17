@@ -28,12 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIBarButtonItem *btnReload = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(btnReloadPressed:)];
+    UIBarButtonItem *btnReload = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(btnPressed:)];
     self.navigationController.topViewController.navigationItem.rightBarButtonItem = btnReload;
     btnReload.enabled=TRUE;
 }
 
-- (void)btnReloadPressed:(id)sender
+- (void)btnPressed:(id)sender
 {
     [Helper showSocialScreen:self];
 }

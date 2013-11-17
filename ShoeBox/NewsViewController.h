@@ -15,4 +15,6 @@
 
 @property (retain) NSOperationQueue *queue;
 
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end
