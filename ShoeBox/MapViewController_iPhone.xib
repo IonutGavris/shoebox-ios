@@ -26,27 +26,15 @@
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="19"/>
-                        <barButtonItem title="Eu" style="plain" id="39">
-                            <connections>
-                                <action selector="barButtonMyLocation:" destination="-1" id="8eF-Rt-wR3"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="56"/>
-                        <barButtonItem title="ShoeBox" style="plain" id="50">
+                        <barButtonItem title="Cauta ShoeBox" style="plain" id="50">
                             <connections>
                                 <action selector="barButtonNearestStore:" destination="-1" id="ect-9b-RZl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="58"/>
+                        <barButtonItem width="40" style="plain" systemItem="fixedSpace" id="58"/>
                         <barButtonItem title="Locatii" style="plain" id="40">
                             <connections>
                                 <action selector="barButtonStoreList:" destination="-1" id="V6t-Lo-ZDo"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="57"/>
-                        <barButtonItem title="Harta" style="plain" id="42">
-                            <connections>
-                                <action selector="barButtonMapMode:" destination="-1" id="1Tl-rO-zgT"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="24"/>
