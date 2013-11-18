@@ -23,6 +23,8 @@
 		3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAA100918302214005EE7AB /* MapKit.framework */; };
 		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
 		3AE062331836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */; };
+		3AE12A02183AAB5100EF1F85 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE12A01183AAB5100EF1F85 /* MediaPlayer.framework */; };
+		3AE12A0A183AB36B00EF1F85 /* shoeboxintro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */; };
 		3AF17F7B18392D3C006952D9 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7918392D3C006952D9 /* call.png */; };
 		3AF17F7C18392D3C006952D9 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7A18392D3C006952D9 /* call@2x.png */; };
 		3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7D18393BFD006952D9 /* shoebox_box.png */; };
@@ -152,6 +154,8 @@
 		3AAA100918302214005EE7AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
+		3AE12A01183AAB5100EF1F85 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = shoeboxintro.mov; path = raw/shoeboxintro.mov; sourceTree = "<group>"; };
 		3AF17F7918392D3C006952D9 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = images/call.png; sourceTree = "<group>"; };
 		3AF17F7A18392D3C006952D9 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "images/call@2x.png"; sourceTree = "<group>"; };
 		3AF17F7D18393BFD006952D9 /* shoebox_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_box.png; path = images/shoebox_box.png; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE12A02183AAB5100EF1F85 /* MediaPlayer.framework in Frameworks */,
 				3AAA100A18302214005EE7AB /* MapKit.framework in Frameworks */,
 				3AAA100818302201005EE7AB /* MessageUI.framework in Frameworks */,
 				3AAA1006183021F9005EE7AB /* libsqlite3.0.dylib in Frameworks */,
@@ -395,6 +400,7 @@
 		FF19C3781677B97300A3F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AE12A01183AAB5100EF1F85 /* MediaPlayer.framework */,
 				3AAA1005183021F9005EE7AB /* libsqlite3.0.dylib */,
 				FFFFF97C1683B13700E1E0F1 /* libz.1.2.5.dylib */,
 				3A6C197618317A4A000304FA /* Crashlytics.framework */,
@@ -607,6 +613,7 @@
 		FFFFF94A16839DD100E1E0F1 /* Raw */ = {
 			isa = PBXGroup;
 			children = (
+				3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */,
 				FFFFF94B16839DFF00E1E0F1 /* shoebox_locations.xml */,
 			);
 			name = Raw;
@@ -749,6 +756,7 @@
 				FF19C3901677B97400A3F9D5 /* Default-568h@2x.png in Resources */,
 				FF19C3A11677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib in Resources */,
 				FF19C3A41677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib in Resources */,
+				3AE12A0A183AB36B00EF1F85 /* shoeboxintro.mov in Resources */,
 				FF19C3A71677B97400A3F9D5 /* NewsViewController_iPhone.xib in Resources */,
 				FF19C3AA1677B97400A3F9D5 /* NewsViewController_iPad.xib in Resources */,
 				FF0C003E1677BEF7009CCFEE /* ContactViewController_iPad.xib in Resources */,
