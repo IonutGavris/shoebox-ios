@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <Crashlytics/Crashlytics.h>
+//#import <Crashlytics/Crashlytics.h>
 
 #import "AppDataObject.h"
 #import "ShoeBoxViewController.h"
@@ -28,7 +28,7 @@ bool ENABLE_IPAD = false;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Crashlytics startWithAPIKey:@"3b24327bf13dc6258f579bf4303b6eb98aabd810"];
+  //  [Crashlytics startWithAPIKey:@"3b24327bf13dc6258f579bf4303b6eb98aabd810"];
     
     self.theAppDataObject = [[AppDataObject alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

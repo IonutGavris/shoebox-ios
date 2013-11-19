@@ -30,7 +30,16 @@
     // Do any additional setup after loading the view from its nib.
     [theScroll setDelegate:self];
     [theScroll setScrollEnabled:YES];
-    [theScroll setContentSize:CGSizeMake(320, 1330)];
+    
+    
+    if([[UIScreen mainScreen] bounds].size.height == 568.0f)//iphone 5
+    {
+        [theScroll setContentSize:CGSizeMake(320, 1230)];
+    }
+    else
+    {
+        [theScroll setContentSize:CGSizeMake(320, 1430)];
+    }
 }
 
 - (void)didReceiveMemoryWarning

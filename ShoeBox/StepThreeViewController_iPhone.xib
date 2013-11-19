@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepThreeViewController">
@@ -35,7 +35,7 @@
                             <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" id="g1q-RP-hZD">
-                            <rect key="frame" x="20" y="73" width="280" height="373"/>
+                            <rect key="frame" x="20" y="73" width="280" height="467"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" id="PzL-F8-U1t">
@@ -47,7 +47,7 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YsC-Nl-XXb">
-                                    <rect key="frame" x="10" y="319" width="260" height="45"/>
+                                    <rect key="frame" x="10" y="414" width="260" height="45"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -75,7 +75,7 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" id="j7T-IJ-fcl">
-                                    <rect key="frame" x="10" y="163" width="260" height="64"/>
+                                    <rect key="frame" x="10" y="162" width="260" height="101"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.93293220769999996" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text">Nu lipiti capacele pe cutii, le vom lipi atunci cand veniti cu ele, cand vom lipi si etichetele speciale cu varsta si sexul copilului pentru care ati pregatit cutia/cutiile.</string>
@@ -83,10 +83,10 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" id="SVY-0s-rMN">
-                                    <rect key="frame" x="10" y="226" width="260" height="68"/>
+                                    <rect key="frame" x="10" y="264" width="260" height="134"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.93293220769999996" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Va rog sa va completati numele si adresa de email pe tabelul care vi se va inmana, pentru ca sa va putem mai apoi da de stire despre unde si la cine a ajuns cutia voastra.  Termen limita: 15 Decembrie 2012, ora 18:00</string>
+                                    <string key="text">Va rog sa va completati numele si adresa de email pe tabelul care vi se va inmana, pentru ca sa va putem mai apoi da de stire despre unde si la cine a ajuns cutia voastra.  Termen limita: 13 Decembrie 2013.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>

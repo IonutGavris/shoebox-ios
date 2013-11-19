@@ -202,13 +202,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
     RSSEntry *entry = [[self theAppDataObject].getNews objectAtIndex:indexPath.row];
-    [cell.imageView setImage:[UIImage imageNamed:@"news"]];
+    [cell.imageView setImage:[UIImage imageNamed:@"shoebox_map"]];
+    
     [cell.textLabel setText:entry.articleTitle];
+    
+    NSString *stringWithoutSpaces = [[NSString stringWithFormat:@"%@", entry.articleDate]
+                                     stringByReplacingOccurrencesOfString:@"+0000" withString:@""];
+    [cell.detailTextLabel setText:stringWithoutSpaces];
     [cell.textLabel setHighlightedTextColor:[UIColor whiteColor]];
     [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:56.0/255 blue:150.0/255 alpha:1.0]];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;

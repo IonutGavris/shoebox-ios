@@ -10,6 +10,8 @@
 		146AED5B182D7A9E00C419F4 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFA91A11679293800EA8862 /* StepThreeViewController.m */; };
 		14C3145C182C2AFF00A59213 /* MediaWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C3145A182C2AFF00A59213 /* MediaWebViewController.m */; };
 		14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */; };
+		14DF1F90183BF75F00128BBB /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DF1F8F183BF75F00128BBB /* checkmark.png */; };
+		14DF1F92183C11C400128BBB /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DF1F91183C11C400128BBB /* map.png */; };
 		3A6C197518316735000304FA /* Romania.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C197418316735000304FA /* Romania.gpx */; };
 		3A6C197718317A4A000304FA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6C197618317A4A000304FA /* Crashlytics.framework */; };
 		3AAA0FFD183021A0005EE7AB /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA0FF4183021A0005EE7AB /* LocationManager.m */; };
@@ -70,7 +72,6 @@
 		FF19C3BC1677B97400A3F9D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF19C3BA1677B97400A3F9D5 /* InfoPlist.strings */; };
 		FF19C3BF1677B97400A3F9D5 /* ShoeBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19C3BE1677B97400A3F9D5 /* ShoeBoxTests.m */; };
 		FFFA91651679181600EA8862 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91401679181600EA8862 /* arrow.png */; };
-		FFFA91661679181600EA8862 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91411679181600EA8862 /* checkmark.png */; };
 		FFFA91671679181600EA8862 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91421679181600EA8862 /* contact.png */; };
 		FFFA91681679181600EA8862 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91431679181600EA8862 /* facebook.png */; };
 		FFFA916A1679181600EA8862 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFA91451679181600EA8862 /* gift.png */; };
@@ -136,6 +137,8 @@
 		14C31459182C2AFE00A59213 /* MediaWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaWebViewController.h; sourceTree = "<group>"; };
 		14C3145A182C2AFF00A59213 /* MediaWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaWebViewController.m; sourceTree = "<group>"; };
 		14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaWebViewController_iPhone.xib; sourceTree = "<group>"; };
+		14DF1F8F183BF75F00128BBB /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		14DF1F91183C11C400128BBB /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		3A6C197418316735000304FA /* Romania.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Romania.gpx; sourceTree = "<group>"; };
 		3A6C197618317A4A000304FA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3AAA0FF3183021A0005EE7AB /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
@@ -216,7 +219,6 @@
 		FF19C3BD1677B97400A3F9D5 /* ShoeBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoeBoxTests.h; sourceTree = "<group>"; };
 		FF19C3BE1677B97400A3F9D5 /* ShoeBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoeBoxTests.m; sourceTree = "<group>"; };
 		FFFA91401679181600EA8862 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = images/arrow.png; sourceTree = "<group>"; };
-		FFFA91411679181600EA8862 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkmark.png; path = images/checkmark.png; sourceTree = "<group>"; };
 		FFFA91421679181600EA8862 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contact.png; path = images/contact.png; sourceTree = "<group>"; };
 		FFFA91431679181600EA8862 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = images/facebook.png; sourceTree = "<group>"; };
 		FFFA91451679181600EA8862 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gift.png; path = images/gift.png; sourceTree = "<group>"; };
@@ -487,6 +489,8 @@
 		FF19C3CA1677BADF00A3F9D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				14DF1F91183C11C400128BBB /* map.png */,
+				14DF1F8F183BF75F00128BBB /* checkmark.png */,
 				3AF17F8118393F1E006952D9 /* shoebox_map.png */,
 				3AF17F8218393F1E006952D9 /* shoebox_map@2x.png */,
 				3AF17F7D18393BFD006952D9 /* shoebox_box.png */,
@@ -498,7 +502,6 @@
 				3AFF06A9183098AD002D3108 /* locatii@2x.png */,
 				3AFF06AA183098AD002D3108 /* news@2x.png */,
 				FFFA91401679181600EA8862 /* arrow.png */,
-				FFFA91411679181600EA8862 /* checkmark.png */,
 				FFFA91421679181600EA8862 /* contact.png */,
 				FFFA91431679181600EA8862 /* facebook.png */,
 				FFFA91451679181600EA8862 /* gift.png */,
@@ -682,7 +685,7 @@
 				FF19C3711677B97300A3F9D5 /* Sources */,
 				FF19C3721677B97300A3F9D5 /* Frameworks */,
 				FF19C3731677B97300A3F9D5 /* Resources */,
-				FFFFF97B1683B0B300E1E0F1 /* ShellScript */,
+				FFFFF97B1683B0B300E1E0F1 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -753,6 +756,7 @@
 				3AAA0FFF183021A0005EE7AB /* MapViewController_iPhone.xib in Resources */,
 				FF19C38C1677B97400A3F9D5 /* Default.png in Resources */,
 				FF19C38E1677B97400A3F9D5 /* Default@2x.png in Resources */,
+				14DF1F92183C11C400128BBB /* map.png in Resources */,
 				FF19C3901677B97400A3F9D5 /* Default-568h@2x.png in Resources */,
 				FF19C3A11677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib in Resources */,
 				FF19C3A41677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib in Resources */,
@@ -767,7 +771,6 @@
 				3AF17F7B18392D3C006952D9 /* call.png in Resources */,
 				3A6C197518316735000304FA /* Romania.gpx in Resources */,
 				FFFA91651679181600EA8862 /* arrow.png in Resources */,
-				FFFA91661679181600EA8862 /* checkmark.png in Resources */,
 				3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */,
 				FFFA91671679181600EA8862 /* contact.png in Resources */,
 				FFFA91681679181600EA8862 /* facebook.png in Resources */,
@@ -788,6 +791,7 @@
 				FFFA91871679181600EA8862 /* twitter.png in Resources */,
 				14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */,
 				FFFA91941679263E00EA8862 /* StepsViewController_iPhone.xib in Resources */,
+				14DF1F90183BF75F00128BBB /* checkmark.png in Resources */,
 				FFFA919A1679291E00EA8862 /* StepOneViewController_iPhone.xib in Resources */,
 				FFFA919F1679292D00EA8862 /* StepTwoViewController_iPhone.xib in Resources */,
 				FFFA91A41679293800EA8862 /* StepThreeViewController_iPhone.xib in Resources */,
@@ -825,13 +829,14 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		FFFFF97B1683B0B300E1E0F1 /* ShellScript */ = {
+		FFFFF97B1683B0B300E1E0F1 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1061,6 +1066,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/florianstanila/Desktop/shoeboxios,
 					/Users/ionutgavris/Development/xcode/ShoeBox,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1081,6 +1087,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/florianstanila/Desktop/shoeboxios,
 					/Users/ionutgavris/Development/xcode/ShoeBox,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

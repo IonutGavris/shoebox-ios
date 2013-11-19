@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactViewController : UIViewController
+@interface ContactViewController : UIViewController<UIScrollViewDelegate, UITextViewDelegate>
 {
     UITextField *textFieldName;
     UITextField *textFieldEmail;
     UITextField *textFieldPhone;
     UITextView *textFieldMessage;
+    IBOutlet UIScrollView *theScroll;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *textFieldName;
