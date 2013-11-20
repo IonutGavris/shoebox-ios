@@ -67,15 +67,16 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
     Location *location = [[self theAppDataObject].getLocations objectAtIndex:indexPath.row];
     [cell.textLabel setText:location.city];
+    [cell.detailTextLabel setText:location.streetAddress];
     [cell.imageView setImage:[UIImage imageNamed:@"map"]];
     [cell.textLabel setHighlightedTextColor:[UIColor whiteColor]];
-    [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:56.0/255 blue:150.0/255 alpha:1.0]];
+    [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:124.0/255 blue:255.0/255 alpha:1.0]];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;

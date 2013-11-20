@@ -45,19 +45,7 @@ SKPSMTPState HighestState;
     [theScroll setDelegate:self];
     [theScroll setScrollEnabled:YES];
     
-    if([[UIScreen mainScreen] bounds].size.height == 568.0f)//iphone 5
-    {
-        [theScroll setContentSize:CGSizeMake(320, 530)];
-    }
-    else
-    {
-        [theScroll setContentSize:CGSizeMake(320, 640)];
-    }
-
-//    
-//    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Trimite" style:UIBarButtonItemStylePlain target:self action:@selector(buttonSendPress:)];
-//   self.navigationItem.rightBarButtonItem = anotherButton;
-//    [anotherButton release];
+    [theScroll setContentSize:CGSizeMake(320, 560)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,9 +61,7 @@ SKPSMTPState HighestState;
         [self.textFieldPhone becomeFirstResponder];
     } else if (theTextField == textFieldPhone) {
         [self.textFieldMessage becomeFirstResponder];
-   } //else if (theTextField == textFieldMessage) {
-   //   [theTextField resignFirstResponder];
-   // }
+    }
     return YES;
 }
 

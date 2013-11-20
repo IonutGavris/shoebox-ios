@@ -37,8 +37,14 @@
     {
         return _storeList;
     } else {
-        //http://adspedia.ro/shoebox/shoebox_locations.xml
-        NSArray *locationsList = [Helper parseXmlFileOffline:@"shoebox_locations"];
+        //Load from web/cache
+        NSArray *locationsList = [Helper parseXmlFileOnline:@"http://shoebox.ro/app/shoebox_locations.xml"];
+        
+        //Load from local data
+        if(locationsList == nil) {
+            locationsList = [Helper parseXmlFileOffline:@"shoebox_locations"];
+        }
+        
         NSArray *sortedLocationsList = [locationsList sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
             NSString *first = [(Location*)a city];
             NSString *second = [(Location*)b city];

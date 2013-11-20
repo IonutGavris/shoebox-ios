@@ -215,7 +215,7 @@
                                      stringByReplacingOccurrencesOfString:@"+0000" withString:@""];
     [cell.detailTextLabel setText:stringWithoutSpaces];
     [cell.textLabel setHighlightedTextColor:[UIColor whiteColor]];
-    [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:56.0/255 blue:150.0/255 alpha:1.0]];
+    [cell.textLabel setTextColor:[UIColor colorWithRed:0 green:124.0/255 blue:255.0/255 alpha:1.0]];
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;

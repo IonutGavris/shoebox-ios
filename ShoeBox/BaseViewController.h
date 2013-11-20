@@ -10,6 +10,8 @@
 
 @interface BaseViewController : UIViewController
 
-- (void)btnPressed:(id)sender;
+- (void)leftPressed:(id)sender;
+- (void)rightPressed:(id)sender;
+- (void) playVideo;
 
 @end

@@ -12,6 +12,8 @@
 		14C3145D182C2AFF00A59213 /* MediaWebViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */; };
 		14DF1F90183BF75F00128BBB /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DF1F8F183BF75F00128BBB /* checkmark.png */; };
 		14DF1F92183C11C400128BBB /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DF1F91183C11C400128BBB /* map.png */; };
+		3A4A5FD5183D43EE007FA7D0 /* shoebox_locations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3A4A5FD3183D43EE007FA7D0 /* shoebox_locations.xml */; };
+		3A4A5FD6183D43EE007FA7D0 /* shoeboxintro.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3A4A5FD4183D43EE007FA7D0 /* shoeboxintro.m4v */; };
 		3A6C197518316735000304FA /* Romania.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3A6C197418316735000304FA /* Romania.gpx */; };
 		3A6C197718317A4A000304FA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6C197618317A4A000304FA /* Crashlytics.framework */; };
 		3AAA0FFD183021A0005EE7AB /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA0FF4183021A0005EE7AB /* LocationManager.m */; };
@@ -26,7 +28,6 @@
 		3AAA100C18302E2F005EE7AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA100B18302E2F005EE7AB /* Images.xcassets */; };
 		3AE062331836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */; };
 		3AE12A02183AAB5100EF1F85 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE12A01183AAB5100EF1F85 /* MediaPlayer.framework */; };
-		3AE12A0A183AB36B00EF1F85 /* shoeboxintro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */; };
 		3AF17F7B18392D3C006952D9 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7918392D3C006952D9 /* call.png */; };
 		3AF17F7C18392D3C006952D9 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7A18392D3C006952D9 /* call@2x.png */; };
 		3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF17F7D18393BFD006952D9 /* shoebox_box.png */; };
@@ -101,7 +102,6 @@
 		FFFFF94316839CDF00E1E0F1 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF94216839CDF00E1E0F1 /* Helper.m */; };
 		FFFFF94616839D5400E1E0F1 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF94516839D5400E1E0F1 /* XMLParser.m */; };
 		FFFFF94916839D9E00E1E0F1 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF94816839D9E00E1E0F1 /* Location.m */; };
-		FFFFF94C16839DFF00E1E0F1 /* shoebox_locations.xml in Resources */ = {isa = PBXBuildFile; fileRef = FFFFF94B16839DFF00E1E0F1 /* shoebox_locations.xml */; };
 		FFFFF96B1683ADB300E1E0F1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF9561683ADB300E1E0F1 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FFFFF96C1683ADB300E1E0F1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF9591683ADB300E1E0F1 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FFFFF96D1683ADB300E1E0F1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFF95B1683ADB300E1E0F1 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -139,6 +139,8 @@
 		14C3145B182C2AFF00A59213 /* MediaWebViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaWebViewController_iPhone.xib; sourceTree = "<group>"; };
 		14DF1F8F183BF75F00128BBB /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		14DF1F91183C11C400128BBB /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		3A4A5FD3183D43EE007FA7D0 /* shoebox_locations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = shoebox_locations.xml; path = raw/shoebox_locations.xml; sourceTree = "<group>"; };
+		3A4A5FD4183D43EE007FA7D0 /* shoeboxintro.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = shoeboxintro.m4v; path = raw/shoeboxintro.m4v; sourceTree = "<group>"; };
 		3A6C197418316735000304FA /* Romania.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Romania.gpx; sourceTree = "<group>"; };
 		3A6C197618317A4A000304FA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3AAA0FF3183021A0005EE7AB /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
@@ -158,7 +160,6 @@
 		3AAA100B18302E2F005EE7AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE062321836C8BF005AAB8B /* LocationsDetailsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationsDetailsViewController_iPhone.xib; sourceTree = "<group>"; };
 		3AE12A01183AAB5100EF1F85 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = shoeboxintro.mov; path = raw/shoeboxintro.mov; sourceTree = "<group>"; };
 		3AF17F7918392D3C006952D9 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = images/call.png; sourceTree = "<group>"; };
 		3AF17F7A18392D3C006952D9 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "images/call@2x.png"; sourceTree = "<group>"; };
 		3AF17F7D18393BFD006952D9 /* shoebox_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shoebox_box.png; path = images/shoebox_box.png; sourceTree = "<group>"; };
@@ -262,7 +263,6 @@
 		FFFFF94516839D5400E1E0F1 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		FFFFF94716839D9D00E1E0F1 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		FFFFF94816839D9E00E1E0F1 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		FFFFF94B16839DFF00E1E0F1 /* shoebox_locations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shoebox_locations.xml; sourceTree = "<group>"; };
 		FFFFF9551683ADB300E1E0F1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		FFFFF9561683ADB300E1E0F1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		FFFFF9571683ADB300E1E0F1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -616,8 +616,8 @@
 		FFFFF94A16839DD100E1E0F1 /* Raw */ = {
 			isa = PBXGroup;
 			children = (
-				3AE12A09183AB36B00EF1F85 /* shoeboxintro.mov */,
-				FFFFF94B16839DFF00E1E0F1 /* shoebox_locations.xml */,
+				3A4A5FD3183D43EE007FA7D0 /* shoebox_locations.xml */,
+				3A4A5FD4183D43EE007FA7D0 /* shoeboxintro.m4v */,
 			);
 			name = Raw;
 			sourceTree = "<group>";
@@ -760,7 +760,6 @@
 				FF19C3901677B97400A3F9D5 /* Default-568h@2x.png in Resources */,
 				FF19C3A11677B97400A3F9D5 /* ShoeBoxViewController_iPhone.xib in Resources */,
 				FF19C3A41677B97400A3F9D5 /* ShoeBoxViewController_iPad.xib in Resources */,
-				3AE12A0A183AB36B00EF1F85 /* shoeboxintro.mov in Resources */,
 				FF19C3A71677B97400A3F9D5 /* NewsViewController_iPhone.xib in Resources */,
 				FF19C3AA1677B97400A3F9D5 /* NewsViewController_iPad.xib in Resources */,
 				FF0C003E1677BEF7009CCFEE /* ContactViewController_iPad.xib in Resources */,
@@ -771,6 +770,7 @@
 				3AF17F7B18392D3C006952D9 /* call.png in Resources */,
 				3A6C197518316735000304FA /* Romania.gpx in Resources */,
 				FFFA91651679181600EA8862 /* arrow.png in Resources */,
+				3A4A5FD5183D43EE007FA7D0 /* shoebox_locations.xml in Resources */,
 				3AF17F7F18393BFD006952D9 /* shoebox_box.png in Resources */,
 				FFFA91671679181600EA8862 /* contact.png in Resources */,
 				FFFA91681679181600EA8862 /* facebook.png in Resources */,
@@ -779,6 +779,7 @@
 				FFFA916C1679181600EA8862 /* image_icon.png in Resources */,
 				3AFF06AB183098AD002D3108 /* contact@2x.png in Resources */,
 				3AF17F8418393F1E006952D9 /* shoebox_map@2x.png in Resources */,
+				3A4A5FD6183D43EE007FA7D0 /* shoeboxintro.m4v in Resources */,
 				3AFF06AE183098AD002D3108 /* news@2x.png in Resources */,
 				FFFA917C1679181600EA8862 /* locatii.png in Resources */,
 				FFFA917F1679181600EA8862 /* movie_icon.png in Resources */,
@@ -799,7 +800,6 @@
 				FFFA91AE16792A6D00EA8862 /* NewsDetailsViewController_iPhone.xib in Resources */,
 				FFFA91BA16792B8D00EA8862 /* AboutViewController_iPhone.xib in Resources */,
 				FFFA91BF16792B9C00EA8862 /* SocialViewController_iPhone.xib in Resources */,
-				FFFFF94C16839DFF00E1E0F1 /* shoebox_locations.xml in Resources */,
 				FF07500D16A147FB0090CD74 /* Icon.png in Resources */,
 				FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */,
 			);

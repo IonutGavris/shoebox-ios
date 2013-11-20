@@ -34,24 +34,12 @@
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-    [self playVideo];
-}
-
-- (void) playVideo
-{
-    NSString *thePath=[[NSBundle mainBundle] pathForResource:@"shoeboxintro" ofType:@"mov"];
-    NSURL *videoURL = [NSURL fileURLWithPath:thePath];
     
-    MPMoviePlayerViewController *movieView_ = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
-    [movieView_.view setContentMode:UIViewContentModeScaleAspectFill];
-    [movieView_.moviePlayer setShouldAutoplay:NO];
-    movieView_.moviePlayer.view.frame=self.view.frame;
-    [movieView_.moviePlayer setControlStyle:MPMovieControlStyleNone];
-    [movieView_.moviePlayer setScalingMode:MPMovieScalingModeAspectFill];
-    [movieView_.moviePlayer setMovieSourceType:MPMovieSourceTypeFile];
-    [movieView_.moviePlayer prepareToPlay];
-    [movieView_.moviePlayer play];
-    [self presentViewController: movieView_ animated: NO completion: nil];
+    bool movieWasPlayed = [[NSUserDefaults standardUserDefaults] boolForKey:@"movieWasPlayed"];
+    if (!movieWasPlayed) {
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"movieWasPlayed"];
+        [self playVideo];
+    }
 }
 
 - (void)didReceiveMemoryWarning

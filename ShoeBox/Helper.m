@@ -26,8 +26,9 @@
 + (NSArray *) parseXmlFileOnline:(NSString *) fileUrl{
     NSData *fetchedData = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileUrl]];
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *filePath = [documentsPath stringByAppendingPathComponent:@"update.xml"];
-    if([fetchedData writeToFile:filePath atomically:YES]){
+    NSString *filePath = [documentsPath stringByAppendingPathComponent:@"shoebox_locations.xml"];
+    
+    if([fetchedData writeToFile:filePath atomically:YES] || [[NSFileManager defaultManager] fileExistsAtPath:filePath]){
         return [self parseStream:[NSInputStream inputStreamWithFileAtPath:filePath]];
     }
     return nil;
