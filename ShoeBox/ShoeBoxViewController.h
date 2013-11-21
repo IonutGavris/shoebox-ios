@@ -14,6 +14,4 @@
 - (IBAction) galleryButtonClicked:(id)sender;
 - (IBAction) videoButtonClicked:(id)sender;
 
-- (void) moviePlayBackDidFinish:(NSNotification*)notification;
-
 @end

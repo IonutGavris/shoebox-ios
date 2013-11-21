@@ -12,6 +12,6 @@
 
 - (void)leftPressed:(id)sender;
 - (void)rightPressed:(id)sender;
-- (void) playVideo;
+- (void) playVideo:(bool)withControls;
 
 @end

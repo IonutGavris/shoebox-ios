@@ -38,7 +38,7 @@
     bool movieWasPlayed = [[NSUserDefaults standardUserDefaults] boolForKey:@"movieWasPlayed"];
     if (!movieWasPlayed) {
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"movieWasPlayed"];
-        [self playVideo];
+        [self playVideo:false];
     }
 }
 

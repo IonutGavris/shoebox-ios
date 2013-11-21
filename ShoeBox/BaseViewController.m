@@ -40,7 +40,7 @@
 
 - (void)leftPressed:(id)sender
 {
-    [self playVideo];
+    [self playVideo:false];
 }
 
 - (void)rightPressed:(id)sender
@@ -48,7 +48,7 @@
     [Helper showSocialScreen:self];
 }
 
-- (void) playVideo
+- (void) playVideo:(bool)withControls
 {
     NSString *thePath=[[NSBundle mainBundle] pathForResource:@"shoeboxintro" ofType:@"m4v"];
     NSURL *videoURL = [NSURL fileURLWithPath:thePath];
@@ -57,7 +57,12 @@
     [movieView_.view setContentMode:UIViewContentModeScaleAspectFill];
     [movieView_.moviePlayer setShouldAutoplay:NO];
     movieView_.moviePlayer.view.frame=self.view.frame;
-    [movieView_.moviePlayer setControlStyle:MPMovieControlStyleNone];
+    if(withControls) {
+        [movieView_.moviePlayer setControlStyle:MPMovieControlStyleDefault];
+    } else {
+        [movieView_.moviePlayer setControlStyle:MPMovieControlStyleNone];
+    }
+    // Set the modal transition style of your choice
     [movieView_.moviePlayer setScalingMode:MPMovieScalingModeAspectFill];
     [movieView_.moviePlayer setMovieSourceType:MPMovieSourceTypeFile];
     [movieView_.moviePlayer prepareToPlay];
