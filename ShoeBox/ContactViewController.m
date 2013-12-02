@@ -9,6 +9,7 @@
 #import "ContactViewController.h"
 #import "SKPSMTPMessage.h"
 #import "Helper.h"
+#import "MBProgressHUD.h"
 
 @interface ContactViewController () <SKPSMTPMessageDelegate>
 
@@ -89,6 +90,7 @@ SKPSMTPState HighestState;
         [body appendString:@"<br>Mesaj:<br><br>"];
         [body appendString:[textFieldMessage text]];
         
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self sendMailFrom:[textFieldEmail text] to:@"valvesa@gmail.com" subject:@"Mesaj aplicatie ShoeBox iOS" body:body delegate:self];
     } else {
         //cere de la utilizator input pentru numar
@@ -111,7 +113,7 @@ SKPSMTPState HighestState;
     test_smtp_message.relayHost = @"smtp.gmail.com";
     test_smtp_message.requiresAuth = YES;
     test_smtp_message.login = @"appshoebox@gmail.com";
-    test_smtp_message.pass = @"shoe2012";
+    test_smtp_message.pass = @"ShoeBox2013";
     test_smtp_message.wantsSecure = YES; // smtp.gmail.com doesn't work without TLS!
     test_smtp_message.subject = subject;
     //    test_smtp_message.bccEmail = @"testbcc@test.com";
@@ -151,9 +153,10 @@ SKPSMTPState HighestState;
 }
 - (void)messageSent:(SKPSMTPMessage *)SMTPmessage
 {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [SMTPmessage release];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Sent!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Trimis" message:@"Mesaj trimis cu succes!"
                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
     [alert release];
@@ -162,6 +165,7 @@ SKPSMTPState HighestState;
 }
 - (void)messageFailed:(SKPSMTPMessage *)SMTPmessage error:(NSError *)error
 {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [SMTPmessage release];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]

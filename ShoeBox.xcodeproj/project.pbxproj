@@ -39,6 +39,7 @@
 		3AFF06AD183098AD002D3108 /* locatii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06A9183098AD002D3108 /* locatii@2x.png */; };
 		3AFF06AE183098AD002D3108 /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF06AA183098AD002D3108 /* news@2x.png */; };
 		3AFF06B118309ADB002D3108 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF06B018309ADB002D3108 /* BaseViewController.m */; };
+		3AFF8DE2184D4FDC0044FB4A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF8DE1184D4FDC0044FB4A /* MBProgressHUD.m */; };
 		FF07500D16A147FB0090CD74 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500B16A147FB0090CD74 /* Icon.png */; };
 		FF07500E16A147FB0090CD74 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF07500C16A147FB0090CD74 /* Icon@2x.png */; };
 		FF07504916A14AA30090CD74 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF07504016A14AA30090CD74 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -172,6 +173,8 @@
 		3AFF06AA183098AD002D3108 /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "news@2x.png"; path = "images/news@2x.png"; sourceTree = "<group>"; };
 		3AFF06AF18309ADB002D3108 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		3AFF06B018309ADB002D3108 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		3AFF8DE0184D4FDC0044FB4A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3AFF8DE1184D4FDC0044FB4A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FF07500B16A147FB0090CD74 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		FF07500C16A147FB0090CD74 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		FF07503F16A14AA30090CD74 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -342,6 +345,15 @@
 				3AAA0FFC183021A0005EE7AB /* SQLiteDatabase.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		3AFF8DDF184D4FB50044FB4A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3AFF8DE0184D4FDC0044FB4A /* MBProgressHUD.h */,
+				3AFF8DE1184D4FDC0044FB4A /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		FF07503E16A14AA30090CD74 /* Email */ = {
@@ -517,6 +529,7 @@
 		FFFA913C1679155800EA8862 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3AFF8DDF184D4FB50044FB4A /* MBProgressHUD */,
 				3AAA1002183021A8005EE7AB /* Data */,
 				FF07503E16A14AA30090CD74 /* Email */,
 				FFFFF9541683ADB300E1E0F1 /* ASIHTTPRequest */,
@@ -872,6 +885,7 @@
 				FFFFF93E1683940500E1E0F1 /* AppDataObject.m in Sources */,
 				FFFFF94316839CDF00E1E0F1 /* Helper.m in Sources */,
 				FFFFF94616839D5400E1E0F1 /* XMLParser.m in Sources */,
+				3AFF8DE2184D4FDC0044FB4A /* MBProgressHUD.m in Sources */,
 				FFFFF94916839D9E00E1E0F1 /* Location.m in Sources */,
 				3AAA1001183021A1005EE7AB /* SQLiteDatabase.m in Sources */,
 				FFFFF96B1683ADB300E1E0F1 /* ASIAuthenticationDialog.m in Sources */,
