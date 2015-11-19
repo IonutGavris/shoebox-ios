@@ -485,6 +485,7 @@
 				6703408B1BFE0EBC001DE623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6703408C1BFE0EBC001DE623 /* Build configuration list for PBXNativeTarget "ShoeBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				6703408E1BFE0EBC001DE623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6703408F1BFE0EBC001DE623 /* Build configuration list for PBXNativeTarget "ShoeBoxUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				670340911BFE0EBC001DE623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
