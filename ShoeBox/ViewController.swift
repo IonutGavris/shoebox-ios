@@ -11,15 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     
     // Get a reference to firebase locations endpoint
-    var ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    var locations = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    var suggestions = Firebase(url: "https://shoebox.firebaseio.com/suggestions")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         // Attach a closure to read the data from firebase
-        ref.observeEventType(.Value, withBlock: { snapshot in
+        locations.observeEventType(.Value, withBlock: { snapshot in
                 print(snapshot.value)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        suggestions.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
             }, withCancelBlock: { error in
                 print(error.description)
         })
