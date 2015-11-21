@@ -1,2 +1,6 @@
 ShoeBox.xcodeproj/project.xcworkspace/xcuserdata
 ShoeBox.xcodeproj/xcuserdata
+Pods
+Podfile.lock
+*.xcworkspacedata
+ShoeBox.xcworkspace
