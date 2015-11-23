@@ -6,6 +6,7 @@
 //  Copyright © 2015 ShoeBox. All rights reserved.
 //
 
+import GoogleMaps
 import UIKit
 
 class ViewController: UIViewController {
@@ -29,13 +30,26 @@ class ViewController: UIViewController {
             }, withCancelBlock: { error in
                 print(error.description)
         })
+        
+        loadGoogleMaps()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func loadGoogleMaps() {
+        let camera = GMSCameraPosition.cameraWithLatitude(46.7695945,longitude: 23.5862859, zoom: 12)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = true
+        self.view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(46.7695945, 23.5862859)
+        marker.title = "Cluj-Napoca"
+        marker.snippet = "Romania"
+        marker.map = mapView
+    }
 }
 

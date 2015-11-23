@@ -4,6 +4,7 @@
 # use_frameworks!
 
 pod 'Firebase', '>= 2.3.2'
+pod 'GoogleMaps', '>= 1.10.5'
 
 target 'ShoeBox' do
 
