@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LYu-dI-Lpv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro slides-->
+        <scene sceneID="vBw-ht-TYq">
+            <objects>
+                <viewController id="6n1-dG-mhT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ore-2b-4X2"/>
+                        <viewControllerLayoutGuide type="bottom" id="edu-bj-tqZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQE-N0-Ldi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Intro slides" id="03g-fw-CHj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQn-1x-gEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="-1089"/>
+        </scene>
+        <!--ShoeBox-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +36,211 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc">
+                                <rect key="frame" x="245" y="220" width="110" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Ce pun in cutie?"/>
+                                <connections>
+                                    <segue destination="vQH-Yx-ri1" kind="show" id="7gP-S6-8nO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc">
+                                <rect key="frame" x="248" y="373" width="105" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Unde las cutia?"/>
+                                <connections>
+                                    <segue destination="m3E-7j-JUR" kind="show" id="YOn-5M-eeq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="60A-KW-ZJF"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qo-0j-wIX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="197" id="IRG-Ab-Nau"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="k23-PB-0gc" secondAttribute="centerX" id="swy-W5-DTP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
+                        <barButtonItem key="rightBarButtonItem" title="Intro" id="D6G-wQ-jFl">
+                            <connections>
+                                <segue destination="6n1-dG-mhT" kind="show" id="O8X-Sl-cdG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1254" y="-378"/>
+        </scene>
+        <!--Alege-->
+        <scene sceneID="OBE-sg-aGA">
+            <objects>
+                <tableViewController id="vQH-Yx-ri1" customClass="AgesViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S1l-6Q-lPS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9CV-n6-xtu">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9CV-n6-xtu" id="YYI-HQ-t9I">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="zLx-Q6-8iB" kind="show" id="Feh-LC-Q09"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vQH-Yx-ri1" id="FgL-HQ-OdN"/>
+                            <outlet property="delegate" destination="vQH-Yx-ri1" id="FMy-oq-7iq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alege" id="Sx4-Dw-gSA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPg-ca-CVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="-735"/>
+        </scene>
+        <!--Baiat 5-6 ani-->
+        <scene sceneID="9Zo-lz-aug">
+            <objects>
+                <viewController id="zLx-Q6-8iB" customClass="SuggestionsViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4fQ-uP-ayk"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbW-yZ-Gim"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5K-w2-dnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Baiat 5-6 ani" id="jFb-un-hAN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qur-cT-siJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2675" y="-735"/>
+        </scene>
+        <!--Locatii-->
+        <scene sceneID="Pba-EX-U5Z">
+            <objects>
+                <tableViewController id="nHl-cT-1qc" customClass="LocationsViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mdx-Kd-X89">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XtV-KI-EtE">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="vaq-Wd-mn1" kind="show" id="NM9-Jv-Yhg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nHl-cT-1qc" id="i5a-8H-zeH"/>
+                            <outlet property="delegate" destination="nHl-cT-1qc" id="jAf-jb-oek"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWZ-so-5EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2675" y="-15"/>
+        </scene>
+        <!--Locatie-->
+        <scene sceneID="UyP-vu-pxG">
+            <objects>
+                <tableViewController id="vaq-Wd-mn1" customClass="LocationDetailViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gD5-VW-7Xg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o8p-UT-W87">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8p-UT-W87" id="Ydz-Y3-H2y">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vaq-Wd-mn1" id="qd6-OE-ESW"/>
+                            <outlet property="delegate" destination="vaq-Wd-mn1" id="93j-pZ-3Zs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Locatie" id="GP3-kd-AZT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMo-0q-7YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3406" y="-15"/>
+        </scene>
+        <!--Harta-->
+        <scene sceneID="d60-4T-KuH">
+            <objects>
+                <viewController id="m3E-7j-JUR" customClass="MapViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bsH-Po-oMT"/>
+                        <viewControllerLayoutGuide type="bottom" id="nm6-tn-4QK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dFC-mf-lBN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Harta" id="Naq-r0-uB6">
+                        <barButtonItem key="rightBarButtonItem" title="Lista" id="jQF-Xg-hZs">
+                            <connections>
+                                <segue destination="nHl-cT-1qc" kind="show" id="mbv-sY-irq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7FD-km-J4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="-15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Pm-QZ-0p5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LYu-dI-Lpv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fKg-5H-0xu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K6v-u6-H3a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtU-Ni-W22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="-378"/>
         </scene>
     </scenes>
 </document>
