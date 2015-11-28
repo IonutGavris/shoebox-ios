@@ -5,6 +5,7 @@
 
 pod 'Firebase', '>= 2.3.2'
 pod 'GoogleMaps', '>= 1.10.5'
+pod 'ECSlidingViewController', '~> 2.0.3'
 
 target 'ShoeBox' do
 

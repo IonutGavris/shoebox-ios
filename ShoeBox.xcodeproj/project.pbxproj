@@ -20,9 +20,9 @@
 		E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainViewController.swift */; };
 		E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E595B1C09890300E4E0B9 /* MapViewController.swift */; };
 		E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */; };
-		E34E59651C0989F600E4E0B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E34E59631C0989F600E4E0B9 /* Info.plist */; };
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
 		E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59691C098A1700E4E0B9 /* Main.storyboard */; };
+		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF25368E5729049FB07709A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +69,7 @@
 		E34E59641C0989F600E4E0B9 /* ShoeBox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShoeBox-Bridging-Header.h"; path = "SupportingFiles/ShoeBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		E34E59671C098A0200E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E596A1C098A1700E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,13 +190,15 @@
 		E34E592F1C0982F300E4E0B9 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				E34E595D1C09890B00E4E0B9 /* SuggestionScreen */,
-				E34E59581C0988E800E4E0B9 /* MapScreen */,
-				E34E594F1C0988A400E4E0B9 /* LocationScreen */,
+				E3DE2C501C09D4A200F73362 /* Base */,
+				E3DE2C4C1C09A04400F73362 /* MenuScreen */,
 				E34E593B1C0986F400E4E0B9 /* AgesScreen */,
-				E34E59381C09851B00E4E0B9 /* Storyboard */,
-				E34E59311C09834600E4E0B9 /* MainScreen */,
 				E34E59301C09833E00E4E0B9 /* IntroScreen */,
+				E34E594F1C0988A400E4E0B9 /* LocationScreen */,
+				E34E59311C09834600E4E0B9 /* MainScreen */,
+				E34E59581C0988E800E4E0B9 /* MapScreen */,
+				E34E595D1C09890B00E4E0B9 /* SuggestionScreen */,
+				E34E59381C09851B00E4E0B9 /* Storyboard */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -386,6 +389,29 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE2C4D1C09A04C00F73362 /* ViewController */,
+			);
+			name = MenuScreen;
+			sourceTree = "<group>";
+		};
+		E3DE2C4D1C09A04C00F73362 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E3DE2C501C09D4A200F73362 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,7 +523,6 @@
 			files = (
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
 				E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */,
-				E34E59651C0989F600E4E0B9 /* Info.plist in Resources */,
 				E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +614,7 @@
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
+				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
