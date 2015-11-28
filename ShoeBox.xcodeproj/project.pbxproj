@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1BAB9C1C0791B5007DE234 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BAB9B1C0791B5007DE234 /* MapViewController.swift */; };
-		3A1BAB9E1C0792BC007DE234 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BAB9D1C0792BC007DE234 /* AgesViewController.swift */; };
-		3A1BABA01C0792F7007DE234 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BAB9F1C0792F7007DE234 /* SuggestionsViewController.swift */; };
-		3A1BABA21C079601007DE234 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BABA11C079601007DE234 /* IntroViewController.swift */; };
-		3A1BABA91C079778007DE234 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BABA81C079778007DE234 /* LocationsViewController.swift */; };
-		3A1BABAB1C07979E007DE234 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BABAA1C07979E007DE234 /* LocationDetailViewController.swift */; };
-		670340651BFE0EBB001DE623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340641BFE0EBB001DE623 /* AppDelegate.swift */; };
-		670340671BFE0EBB001DE623 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340661BFE0EBB001DE623 /* MainViewController.swift */; };
-		6703406A1BFE0EBB001DE623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670340681BFE0EBB001DE623 /* Main.storyboard */; };
-		6703406C1BFE0EBB001DE623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6703406B1BFE0EBB001DE623 /* Assets.xcassets */; };
-		6703406F1BFE0EBB001DE623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6703406D1BFE0EBB001DE623 /* LaunchScreen.storyboard */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
+		E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */; };
+		E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59401C09880100E4E0B9 /* AgesViewController.swift */; };
+		E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E594B1C09885F00E4E0B9 /* Assets.xcassets */; };
+		E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E594D1C09889900E4E0B9 /* IntroViewController.swift */; };
+		E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */; };
+		E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */; };
+		E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainViewController.swift */; };
+		E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E595B1C09890300E4E0B9 /* MapViewController.swift */; };
+		E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */; };
+		E34E59651C0989F600E4E0B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E34E59631C0989F600E4E0B9 /* Info.plist */; };
+		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
+		E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59691C098A1700E4E0B9 /* Main.storyboard */; };
 		F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF25368E5729049FB07709A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,28 +47,28 @@
 		0C9AFE9953D52A7A78E63EEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1EF25368E5729049FB07709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3533925F2F659A57015949DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		3A1BAB9B1C0791B5007DE234 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		3A1BAB9D1C0792BC007DE234 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgesViewController.swift; sourceTree = "<group>"; };
-		3A1BAB9F1C0792F7007DE234 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
-		3A1BABA11C079601007DE234 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		3A1BABA81C079778007DE234 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = ../LocationsViewController.swift; sourceTree = "<group>"; };
-		3A1BABAA1C07979E007DE234 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = ../LocationDetailViewController.swift; sourceTree = "<group>"; };
 		670340611BFE0EBB001DE623 /* ShoeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		670340641BFE0EBB001DE623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		670340661BFE0EBB001DE623 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		670340691BFE0EBB001DE623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6703406B1BFE0EBB001DE623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6703406E1BFE0EBB001DE623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		670340701BFE0EBB001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670340751BFE0EBB001DE623 /* ShoeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeBoxTests.swift; sourceTree = "<group>"; };
 		6703407B1BFE0EBB001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670340801BFE0EBC001DE623 /* ShoeBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeBoxUITests.swift; sourceTree = "<group>"; };
 		670340861BFE0EBC001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6746CD4D1C008F86001E2D23 /* ShoeBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoeBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		678718961C0088AC00F2E739 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
+		E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		E34E59401C09880100E4E0B9 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = Classes/GUI/AgesScreen/ViewController/AgesViewController.swift; sourceTree = "<group>"; };
+		E34E594B1C09885F00E4E0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
+		E34E594D1C09889900E4E0B9 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Classes/GUI/IntroScrees/ViewController/IntroViewController.swift; sourceTree = "<group>"; };
+		E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationDetailViewController.swift; sourceTree = "<group>"; };
+		E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationsViewController.swift; sourceTree = "<group>"; };
+		E34E59561C0988D700E4E0B9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/GUI/MainScreen/ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		E34E595B1C09890300E4E0B9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Classes/GUI/MapScreen/ViewController/MapViewController.swift; sourceTree = "<group>"; };
+		E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsViewController.swift; path = Classes/GUI/SuggestionScreen/ViewController/SuggestionsViewController.swift; sourceTree = "<group>"; };
+		E34E59631C0989F600E4E0B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
+		E34E59641C0989F600E4E0B9 /* ShoeBox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShoeBox-Bridging-Header.h"; path = "SupportingFiles/ShoeBox-Bridging-Header.h"; sourceTree = "<group>"; };
+		E34E59671C098A0200E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E34E596A1C098A1700E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,41 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1BABA31C0796DB007DE234 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		3A1BABA41C0796E5007DE234 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		3A1BABA51C0796EE007DE234 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				670340661BFE0EBB001DE623 /* MainViewController.swift */,
-				3A1BABA11C079601007DE234 /* IntroViewController.swift */,
-				3A1BAB9D1C0792BC007DE234 /* AgesViewController.swift */,
-				3A1BAB9F1C0792F7007DE234 /* SuggestionsViewController.swift */,
-				3A1BAB9B1C0791B5007DE234 /* MapViewController.swift */,
-				3A1BABA81C079778007DE234 /* LocationsViewController.swift */,
-				3A1BABAA1C07979E007DE234 /* LocationDetailViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		3A1BABA61C0796FF007DE234 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Stores;
-			sourceTree = "<group>";
-		};
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,17 +131,9 @@
 		670340631BFE0EBB001DE623 /* ShoeBox */ = {
 			isa = PBXGroup;
 			children = (
-				3A1BABA31C0796DB007DE234 /* Models */,
-				3A1BABA41C0796E5007DE234 /* Views */,
-				3A1BABA51C0796EE007DE234 /* Controllers */,
-				3A1BABA61C0796FF007DE234 /* Stores */,
-				3A1BABA71C079709007DE234 /* Helpers */,
-				670340641BFE0EBB001DE623 /* AppDelegate.swift */,
-				6703406B1BFE0EBB001DE623 /* Assets.xcassets */,
-				670340681BFE0EBB001DE623 /* Main.storyboard */,
-				6703406D1BFE0EBB001DE623 /* LaunchScreen.storyboard */,
-				670340701BFE0EBB001DE623 /* Info.plist */,
-				6746CD4D1C008F86001E2D23 /* ShoeBox-Bridging-Header.h */,
+				E34E592E1C0982E800E4E0B9 /* Classes */,
+				E34E59371C09850500E4E0B9 /* Resources */,
+				E34E59621C0989B000E4E0B9 /* SupportingFiles */,
 			);
 			path = ShoeBox;
 			sourceTree = "<group>";
@@ -215,6 +173,217 @@
 				3533925F2F659A57015949DD /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E34E592E1C0982E800E4E0B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */,
+				E34E592F1C0982F300E4E0B9 /* GUI */,
+				E34E596C1C098A7A00E4E0B9 /* Model */,
+				3A1BABA71C079709007DE234 /* Helpers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E34E592F1C0982F300E4E0B9 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				E34E595D1C09890B00E4E0B9 /* SuggestionScreen */,
+				E34E59581C0988E800E4E0B9 /* MapScreen */,
+				E34E594F1C0988A400E4E0B9 /* LocationScreen */,
+				E34E593B1C0986F400E4E0B9 /* AgesScreen */,
+				E34E59381C09851B00E4E0B9 /* Storyboard */,
+				E34E59311C09834600E4E0B9 /* MainScreen */,
+				E34E59301C09833E00E4E0B9 /* IntroScreen */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		E34E59301C09833E00E4E0B9 /* IntroScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59351C0984D000E4E0B9 /* View */,
+				E34E59341C0984C800E4E0B9 /* ViewController */,
+			);
+			name = IntroScreen;
+			sourceTree = "<group>";
+		};
+		E34E59311C09834600E4E0B9 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59331C0984C300E4E0B9 /* View */,
+				E34E59321C0984BA00E4E0B9 /* ViewController */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		E34E59321C0984BA00E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59561C0988D700E4E0B9 /* MainViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E59331C0984C300E4E0B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E34E59341C0984C800E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E594D1C09889900E4E0B9 /* IntroViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E59351C0984D000E4E0B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E34E59371C09850500E4E0B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59391C09853C00E4E0B9 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E34E59381C09851B00E4E0B9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59691C098A1700E4E0B9 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		E34E59391C09853C00E4E0B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E34E594B1C09885F00E4E0B9 /* Assets.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E34E593B1C0986F400E4E0B9 /* AgesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E593D1C09870000E4E0B9 /* Views */,
+				E34E593C1C0986FA00E4E0B9 /* ViewController */,
+			);
+			name = AgesScreen;
+			sourceTree = "<group>";
+		};
+		E34E593C1C0986FA00E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59401C09880100E4E0B9 /* AgesViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E593D1C09870000E4E0B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E34E594F1C0988A400E4E0B9 /* LocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59511C0988B400E4E0B9 /* Views */,
+				E34E59501C0988AE00E4E0B9 /* ViewController */,
+			);
+			name = LocationScreen;
+			sourceTree = "<group>";
+		};
+		E34E59501C0988AE00E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */,
+				E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E59511C0988B400E4E0B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E34E59581C0988E800E4E0B9 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E595A1C0988F800E4E0B9 /* Views */,
+				E34E59591C0988F200E4E0B9 /* ViewController */,
+			);
+			name = MapScreen;
+			sourceTree = "<group>";
+		};
+		E34E59591C0988F200E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E595B1C09890300E4E0B9 /* MapViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E595A1C0988F800E4E0B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E34E595D1C09890B00E4E0B9 /* SuggestionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E34E595F1C09891900E4E0B9 /* Views */,
+				E34E595E1C09891200E4E0B9 /* ViewController */,
+			);
+			name = SuggestionScreen;
+			sourceTree = "<group>";
+		};
+		E34E595E1C09891200E4E0B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E34E595F1C09891900E4E0B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E34E59621C0989B000E4E0B9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */,
+				E34E59631C0989F600E4E0B9 /* Info.plist */,
+				E34E59641C0989F600E4E0B9 /* ShoeBox-Bridging-Header.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E34E596C1C098A7A00E4E0B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +495,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6703406F1BFE0EBB001DE623 /* LaunchScreen.storyboard in Resources */,
-				6703406C1BFE0EBB001DE623 /* Assets.xcassets in Resources */,
-				6703406A1BFE0EBB001DE623 /* Main.storyboard in Resources */,
+				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
+				E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */,
+				E34E59651C0989F600E4E0B9 /* Info.plist in Resources */,
+				E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +584,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1BABAB1C07979E007DE234 /* LocationDetailViewController.swift in Sources */,
-				3A1BABA91C079778007DE234 /* LocationsViewController.swift in Sources */,
-				670340671BFE0EBB001DE623 /* MainViewController.swift in Sources */,
-				3A1BAB9C1C0791B5007DE234 /* MapViewController.swift in Sources */,
-				3A1BAB9E1C0792BC007DE234 /* AgesViewController.swift in Sources */,
-				3A1BABA21C079601007DE234 /* IntroViewController.swift in Sources */,
-				3A1BABA01C0792F7007DE234 /* SuggestionsViewController.swift in Sources */,
-				670340651BFE0EBB001DE623 /* AppDelegate.swift in Sources */,
+				E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */,
+				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
+				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
+				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
+				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
+				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
+				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
+				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,20 +627,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		670340681BFE0EBB001DE623 /* Main.storyboard */ = {
+		E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				670340691BFE0EBB001DE623 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6703406D1BFE0EBB001DE623 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6703406E1BFE0EBB001DE623 /* Base */,
+				E34E59671C098A0200E4E0B9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E34E59691C098A1700E4E0B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E34E596A1C098A1700E4E0B9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -569,11 +739,11 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = ShoeBox/Info.plist;
+				INFOPLIST_FILE = ShoeBox/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/ShoeBox-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/SupportingFiles/ShoeBox-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -590,11 +760,11 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = ShoeBox/Info.plist;
+				INFOPLIST_FILE = ShoeBox/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/ShoeBox-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/SupportingFiles/ShoeBox-Bridging-Header.h";
 			};
 			name = Release;
 		};
