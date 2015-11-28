@@ -23,6 +23,8 @@
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
 		E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59691C098A1700E4E0B9 /* Main.storyboard */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
+		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
+		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgexTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgexTopView.swift */; };
 		F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF25368E5729049FB07709A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		E34E59671C098A0200E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E596A1C098A1700E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
+		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
+		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgexTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgexTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgexTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 		E34E593D1C09870000E4E0B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgexTopView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -410,6 +416,22 @@
 			children = (
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		E3DE2C511C0A0FFA00F73362 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE2C521C0A100400F73362 /* UIColor */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E3DE2C521C0A100400F73362 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */,
+			);
+			name = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,8 +637,10 @@
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
+				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgexTopView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
+				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

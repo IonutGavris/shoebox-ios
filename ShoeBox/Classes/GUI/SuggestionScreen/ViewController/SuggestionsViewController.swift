@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuggestionsViewController: UITableViewController {
+class SuggestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
