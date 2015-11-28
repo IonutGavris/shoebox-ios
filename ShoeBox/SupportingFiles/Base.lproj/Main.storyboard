@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Intro slides-->
@@ -37,18 +38,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc">
-                                <rect key="frame" x="245" y="220" width="110" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="268"/>
                                 <animations/>
-                                <state key="normal" title="Ce pun in cutie?"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-wh-O8Z">
+                                <rect key="frame" x="0.0" y="64" width="600" height="268"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.69810901988636365" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc">
+                                <rect key="frame" x="230" y="280" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Ud-H3-ypk"/>
+                                    <constraint firstAttribute="width" constant="140" id="SAt-jm-vtD">
+                                        <variation key="widthClass=compact" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Ce pun in cutie?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="vQH-Yx-ri1" kind="show" id="7gP-S6-8nO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc">
-                                <rect key="frame" x="248" y="373" width="105" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
+                                <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <animations/>
-                                <state key="normal" title="Unde las cutia?"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMo-FO-PQi">
+                                <rect key="frame" x="0.0" y="332" width="600" height="268"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.80000000000000004" alpha="0.69686612215909094" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc">
+                                <rect key="frame" x="230" y="548" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IJU-Gm-2L2"/>
+                                    <constraint firstAttribute="width" constant="120" id="OKl-lT-cig"/>
+                                    <constraint firstAttribute="width" constant="140" id="Xtx-WH-2P5">
+                                        <variation key="widthClass=compact" constant="160"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="wKW-Jd-lXL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Unde las cutia?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OKl-lT-cig"/>
+                                        <exclude reference="wKW-Jd-lXL"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="m3E-7j-JUR" kind="show" id="YOn-5M-eeq"/>
                                 </connections>
@@ -57,11 +102,70 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="LBU-wh-O8Z" secondAttribute="centerX" id="1EX-vN-Fjz"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="bottom" secondItem="8c3-G2-M7y" secondAttribute="bottom" constant="-15" id="21x-Tn-14V"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="bottom" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-25" id="4LQ-B7-DPC"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="bottom" id="4Q6-bv-0Xw"/>
                             <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="60A-KW-ZJF"/>
                             <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qo-0j-wIX"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="197" id="IRG-Ab-Nau"/>
+                            <constraint firstItem="fMo-FO-PQi" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="7NJ-y7-xis"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1f-3O-6bf"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Fr5-2d-9D4"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="top" id="G8l-JV-KQg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="8" symbolic="YES" id="IRG-Ab-Nau"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="bottom" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-8" id="IkN-nE-328"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="LBU-wh-O8Z" secondAttribute="bottom" constant="-52" id="M3U-af-sCo"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="height" secondItem="8c3-G2-M7y" secondAttribute="height" id="Nik-3a-ujj"/>
+                            <constraint firstAttribute="trailing" secondItem="8c3-G2-M7y" secondAttribute="trailing" id="Ot9-iA-h4z"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="width" secondItem="8c3-G2-M7y" secondAttribute="width" id="P4u-Ew-sdA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="25" id="RMN-vj-gqe"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WzL-2c-55y"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XWh-aP-wbY"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="centerX" secondItem="8c3-G2-M7y" secondAttribute="centerX" id="Yep-SI-MFD"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="cbC-MK-8Uf"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="centerY" secondItem="8c3-G2-M7y" secondAttribute="centerY" id="ceF-xo-0We"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" constant="-172" id="egG-LG-EWx"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="top" id="esa-dV-EfV"/>
+                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="height" secondItem="8c3-G2-M7y" secondAttribute="height" id="fRk-M1-hcd"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="LBU-wh-O8Z" secondAttribute="bottom" id="iGF-p1-Is4"/>
+                            <constraint firstItem="fMo-FO-PQi" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" id="j2m-nU-dsu"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jOu-nb-vnL"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-98" id="jtt-7y-SIO"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="bottom" id="lH6-vA-8lg"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="leading" secondItem="fMo-FO-PQi" secondAttribute="leading" id="mbH-qG-yR6"/>
+                            <constraint firstItem="fMo-FO-PQi" firstAttribute="width" secondItem="3cQ-Rl-0FF" secondAttribute="width" id="pS5-x1-0t8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" id="q4i-vf-wI5"/>
                             <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="k23-PB-0gc" secondAttribute="centerX" id="swy-W5-DTP"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="tXP-gI-GBd"/>
+                            <constraint firstAttribute="trailing" secondItem="3cQ-Rl-0FF" secondAttribute="trailing" id="uqP-pF-SjX"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-52" id="vex-h3-eji"/>
+                            <constraint firstItem="fMo-FO-PQi" firstAttribute="centerY" secondItem="3cQ-Rl-0FF" secondAttribute="centerY" id="wUh-iW-7yH"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" constant="-60" id="xvR-V8-fHW"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" constant="-238" id="yAv-h0-HfU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="egG-LG-EWx"/>
+                                <exclude reference="xvR-V8-fHW"/>
+                                <exclude reference="G8l-JV-KQg"/>
+                                <exclude reference="esa-dV-EfV"/>
+                                <exclude reference="4Q6-bv-0Xw"/>
+                                <exclude reference="21x-Tn-14V"/>
+                                <exclude reference="60A-KW-ZJF"/>
+                                <exclude reference="6qo-0j-wIX"/>
+                                <exclude reference="iGF-p1-Is4"/>
+                                <exclude reference="swy-W5-DTP"/>
+                                <exclude reference="4LQ-B7-DPC"/>
+                                <exclude reference="C1f-3O-6bf"/>
+                                <exclude reference="IkN-nE-328"/>
+                                <exclude reference="jtt-7y-SIO"/>
+                                <exclude reference="mbH-qG-yR6"/>
+                                <exclude reference="tXP-gI-GBd"/>
+                                <exclude reference="yAv-h0-HfU"/>
+                                <exclude reference="IRG-Ab-Nau"/>
+                                <exclude reference="RMN-vj-gqe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5">
@@ -352,7 +456,6 @@
         <!--Navigation Controller-->
         <scene sceneID="ew0-Tj-7gI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DXe-OX-mcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dgV-BU-tOU" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dft-10-HGj">
@@ -368,14 +471,13 @@
                         <segue destination="ZeT-TO-UXT" kind="relationship" relationship="rootViewController" id="1zo-fe-y1N"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXe-OX-mcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="508" y="398"/>
         </scene>
         <!--About-->
         <scene sceneID="W9J-d5-kxz">
             <objects>
-                <exit id="EmJ-dV-7eV" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rMj-X9-qLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ZeT-TO-UXT" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ro0-02-i9m"/>
@@ -397,8 +499,14 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
+                <exit id="EmJ-dV-7eV" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMj-X9-qLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1278" y="398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="what_to_put_in_box" width="720" height="512"/>
+        <image name="where_to_leave_box" width="720" height="512"/>
+    </resources>
 </document>
