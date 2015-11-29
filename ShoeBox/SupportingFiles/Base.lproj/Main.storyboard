@@ -47,19 +47,27 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.69810901988636365" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <rect key="frame" x="230" y="280" width="140" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6Ud-H3-ypk"/>
                                     <constraint firstAttribute="width" constant="140" id="SAt-jm-vtD">
-                                        <variation key="widthClass=compact" constant="160"/>
+                                        <variation key="widthClass=compact" constant="230"/>
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Ce pun in cutie?">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_what_to_put_in_the_box"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="SOP-bb-kVa" kind="show" id="TMW-81-BBs"/>
                                 </connections>
@@ -73,21 +81,28 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.80000000000000004" alpha="0.69686612215909094" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <rect key="frame" x="230" y="548" width="140" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IJU-Gm-2L2"/>
                                     <constraint firstAttribute="width" constant="120" id="OKl-lT-cig"/>
                                     <constraint firstAttribute="width" constant="140" id="Xtx-WH-2P5">
-                                        <variation key="widthClass=compact" constant="160"/>
+                                        <variation key="widthClass=compact" constant="230"/>
                                     </constraint>
                                     <constraint firstAttribute="height" constant="30" id="wKW-Jd-lXL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Unde las cutia?">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_where_to_leave_the_box"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="OKl-lT-cig"/>
@@ -249,7 +264,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <animations/>
                                                 <gestureRecognizers/>
@@ -264,6 +279,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_details_girl"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="LMx-7a-W2Q"/>
@@ -344,7 +362,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <animations/>
                                                 <constraints>
@@ -356,6 +374,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_details_boy"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="9IN-bn-XIw"/>
@@ -561,19 +582,19 @@
                                 <exclude reference="juP-uc-6IG"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Pop-tc-YUH"/>
-                                <exclude reference="T8D-wk-nRq"/>
-                                <exclude reference="nh7-kS-H5o"/>
+                                <exclude reference="Tcj-8W-X2K"/>
+                                <exclude reference="m1j-nh-Pjp"/>
                                 <exclude reference="Ikc-Zo-vew"/>
                                 <exclude reference="dK9-eM-7gX"/>
                                 <exclude reference="oOB-mk-q2I"/>
                                 <exclude reference="p1s-Mm-WiR"/>
                                 <exclude reference="pe7-Bg-0mE"/>
+                                <exclude reference="Pop-tc-YUH"/>
+                                <exclude reference="T8D-wk-nRq"/>
+                                <exclude reference="nh7-kS-H5o"/>
                                 <exclude reference="gzC-1M-UTG"/>
                                 <exclude reference="hwR-SW-Pbw"/>
                                 <exclude reference="l0I-6k-kes"/>
-                                <exclude reference="Tcj-8W-X2K"/>
-                                <exclude reference="m1j-nh-Pjp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -583,19 +604,19 @@
                                 <include reference="juP-uc-6IG"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Pop-tc-YUH"/>
-                                <include reference="T8D-wk-nRq"/>
-                                <include reference="nh7-kS-H5o"/>
+                                <include reference="Tcj-8W-X2K"/>
+                                <include reference="m1j-nh-Pjp"/>
                                 <include reference="Ikc-Zo-vew"/>
                                 <include reference="dK9-eM-7gX"/>
                                 <exclude reference="oOB-mk-q2I"/>
                                 <include reference="p1s-Mm-WiR"/>
                                 <exclude reference="pe7-Bg-0mE"/>
+                                <include reference="Pop-tc-YUH"/>
+                                <include reference="T8D-wk-nRq"/>
+                                <include reference="nh7-kS-H5o"/>
                                 <include reference="gzC-1M-UTG"/>
                                 <include reference="hwR-SW-Pbw"/>
                                 <include reference="l0I-6k-kes"/>
-                                <include reference="Tcj-8W-X2K"/>
-                                <include reference="m1j-nh-Pjp"/>
                             </mask>
                         </variation>
                     </view>
@@ -697,14 +718,14 @@
                                         <exclude reference="RJL-eH-3Qj"/>
                                         <exclude reference="Tvi-0i-iDR"/>
                                         <exclude reference="kRX-ku-Vdq"/>
-                                        <exclude reference="J0g-9b-YEm"/>
-                                        <exclude reference="TKK-Qu-D9L"/>
-                                        <exclude reference="giU-0d-hw5"/>
-                                        <exclude reference="jKg-9g-OQB"/>
                                         <exclude reference="Blv-LG-GK1"/>
                                         <exclude reference="d0W-Om-BpQ"/>
                                         <exclude reference="efN-qW-l0V"/>
                                         <exclude reference="ocJ-KR-u3n"/>
+                                        <exclude reference="J0g-9b-YEm"/>
+                                        <exclude reference="TKK-Qu-D9L"/>
+                                        <exclude reference="giU-0d-hw5"/>
+                                        <exclude reference="jKg-9g-OQB"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -716,14 +737,14 @@
                                         <exclude reference="RJL-eH-3Qj"/>
                                         <include reference="Tvi-0i-iDR"/>
                                         <exclude reference="kRX-ku-Vdq"/>
-                                        <include reference="J0g-9b-YEm"/>
-                                        <include reference="TKK-Qu-D9L"/>
-                                        <include reference="giU-0d-hw5"/>
-                                        <include reference="jKg-9g-OQB"/>
                                         <include reference="Blv-LG-GK1"/>
                                         <include reference="d0W-Om-BpQ"/>
                                         <include reference="efN-qW-l0V"/>
                                         <include reference="ocJ-KR-u3n"/>
+                                        <include reference="J0g-9b-YEm"/>
+                                        <include reference="TKK-Qu-D9L"/>
+                                        <include reference="giU-0d-hw5"/>
+                                        <include reference="jKg-9g-OQB"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -764,6 +785,7 @@
                                 <exclude reference="g6v-qk-jUf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4UP-df-I1K"/>
                                 <exclude reference="KzO-OR-1ST"/>
                                 <exclude reference="Qem-dR-1XD"/>
                                 <exclude reference="geP-HY-TAQ"/>
@@ -774,7 +796,6 @@
                                 <exclude reference="tLC-Mj-MrG"/>
                                 <exclude reference="vI8-PJ-tdq"/>
                                 <exclude reference="zxH-vc-TeI"/>
-                                <exclude reference="4UP-df-I1K"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -783,6 +804,7 @@
                                 <include reference="g6v-qk-jUf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4UP-df-I1K"/>
                                 <include reference="KzO-OR-1ST"/>
                                 <include reference="Qem-dR-1XD"/>
                                 <include reference="geP-HY-TAQ"/>
@@ -793,7 +815,6 @@
                                 <exclude reference="tLC-Mj-MrG"/>
                                 <include reference="vI8-PJ-tdq"/>
                                 <exclude reference="zxH-vc-TeI"/>
-                                <include reference="4UP-df-I1K"/>
                             </mask>
                         </variation>
                     </view>

@@ -1,0 +1,54 @@
+
+/* Class = "UINavigationItem"; title = "Intro slides"; ObjectID = "03g-fw-CHj"; */
+"03g-fw-CHj.title" = "Intro slides";
+
+/* Class = "UIButton"; normalTitle = "Ce pun in cutie?"; ObjectID = "C0y-JY-uDc"; */
+"C0y-JY-uDc.normalTitle" = "Ce pun in cutie?";
+
+/* Class = "UIBarButtonItem"; title = "Intro"; ObjectID = "D6G-wQ-jFl"; */
+"D6G-wQ-jFl.title" = "Intro";
+
+/* Class = "UINavigationItem"; title = "Locatie"; ObjectID = "GP3-kd-AZT"; */
+"GP3-kd-AZT.title" = "Locatie";
+
+/* Class = "UINavigationItem"; title = "Harta"; ObjectID = "Naq-r0-uB6"; */
+"Naq-r0-uB6.title" = "Harta";
+
+/* Class = "UILabel"; text = "Baiat"; ObjectID = "Rec-Ta-szn"; */
+"Rec-Ta-szn.text" = "Baiat";
+
+/* Class = "UIViewController"; title = "ShoeBox"; ObjectID = "SOP-bb-kVa"; */
+"SOP-bb-kVa.title" = "ShoeBox";
+
+/* Class = "UIBarButtonItem"; title = "Menu"; ObjectID = "Sq8-DO-rHJ"; */
+"Sq8-DO-rHJ.title" = "Menu";
+
+/* Class = "UIBarButtonItem"; title = "Menu"; ObjectID = "Uas-us-KD5"; */
+"Uas-us-KD5.title" = "Menu";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "ecw-gy-lJF"; */
+"ecw-gy-lJF.text" = "About";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "hOc-yG-RR0"; */
+"hOc-yG-RR0.title" = "About";
+
+/* Class = "UINavigationItem"; title = "ShoeBox"; ObjectID = "jFb-un-hAN"; */
+"jFb-un-hAN.title" = "ShoeBox";
+
+/* Class = "UIBarButtonItem"; title = "Lista"; ObjectID = "jQF-Xg-hZs"; */
+"jQF-Xg-hZs.title" = "Lista";
+
+/* Class = "UINavigationItem"; title = "ShoeBox"; ObjectID = "jeg-UX-pG6"; */
+"jeg-UX-pG6.title" = "ShoeBox";
+
+/* Class = "UIButton"; normalTitle = "Unde las cutia?"; ObjectID = "k23-PB-0gc"; */
+"k23-PB-0gc.normalTitle" = "Unde las cutia?";
+
+/* Class = "UINavigationItem"; title = "Locatii"; ObjectID = "lAd-Za-6tQ"; */
+"lAd-Za-6tQ.title" = "Locatii";
+
+/* Class = "UILabel"; text = "ShoeBox"; ObjectID = "sw5-xE-dv1"; */
+"sw5-xE-dv1.text" = "ShoeBox";
+
+/* Class = "UILabel"; text = "Fetita"; ObjectID = "zhU-U2-rTC"; */
+"zhU-U2-rTC.text" = "Fetita";

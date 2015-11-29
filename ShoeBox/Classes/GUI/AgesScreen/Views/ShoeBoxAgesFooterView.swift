@@ -39,7 +39,7 @@ class ShoeBoxAgesFooterView: UIView {
         var button = UIButton(frame: CGRectZero)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.shoeBoxGreenColor(0.8)
-        button.setTitle("Urmatorul pas", forState: .Normal)
+        button.setTitle(NSLocalizedString("shoeBox_details_next_step", comment: ""), forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 17.0)
         button.addTarget(self, action: "nextStepPressed:", forControlEvents: .TouchUpInside)

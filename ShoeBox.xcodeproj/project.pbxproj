@@ -23,6 +23,9 @@
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
 		E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59691C098A1700E4E0B9 /* Main.storyboard */; };
 		E381C0E21C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0E11C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift */; };
+		E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E381C0EC1C0B1D7900D7AD1E /* Localizable.strings */; };
+		E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */; };
+		E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
@@ -73,6 +76,11 @@
 		E34E59671C098A0200E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E596A1C098A1700E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E381C0E11C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesFooterView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesFooterView.swift; sourceTree = "<group>"; };
+		E381C0ED1C0B1D7E00D7AD1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E381C0EF1C0B1DCC00D7AD1E /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "SupportingFiles/ro-RO.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E381C0F01C0B1DCC00D7AD1E /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "ro-RO.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedButton.swift; path = Classes/Helpers/LocalizedButton/ShoeBoxLocalizedButton.swift; sourceTree = "<group>"; };
+		E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedLabel.swift; path = Classes/Helpers/LocalizedLabel/ShoeBoxLocalizedLabel.swift; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,8 @@
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E381C0F41C0B2A9600D7AD1E /* LocalizedLabel */,
+				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
 				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 			);
 			name = Helpers;
@@ -262,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				E34E59391C09853C00E4E0B9 /* Images */,
+				E381C0E31C0B1C8900D7AD1E /* Language */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -398,6 +409,30 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E381C0E31C0B1C8900D7AD1E /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				E381C0EC1C0B1D7900D7AD1E /* Localizable.strings */,
+			);
+			name = Language;
+			sourceTree = "<group>";
+		};
+		E381C0F11C0B1F1900D7AD1E /* LocalizedButton */ = {
+			isa = PBXGroup;
+			children = (
+				E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */,
+			);
+			name = LocalizedButton;
+			sourceTree = "<group>";
+		};
+		E381C0F41C0B2A9600D7AD1E /* LocalizedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */,
+			);
+			name = LocalizedLabel;
+			sourceTree = "<group>";
+		};
 		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +563,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ro-RO",
 			);
 			mainGroup = 670340581BFE0EBB001DE623;
 			productRefGroup = 670340621BFE0EBB001DE623 /* Products */;
@@ -547,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
+				E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */,
 				E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */,
 				E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */,
 			);
@@ -637,6 +674,7 @@
 				E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */,
 				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
+				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				E381C0E21C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
@@ -646,6 +684,7 @@
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
 				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
+				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +724,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E34E59671C098A0200E4E0B9 /* Base */,
+				E381C0EF1C0B1DCC00D7AD1E /* ro-RO */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -695,6 +735,16 @@
 				E34E596A1C098A1700E4E0B9 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E381C0EC1C0B1D7900D7AD1E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E381C0ED1C0B1D7E00D7AD1E /* en */,
+				E381C0F01C0B1DCC00D7AD1E /* ro-RO */,
+			);
+			name = Localizable.strings;
+			path = Resources/Language;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  ShoeBox
+
+  Created by Gabriel Vermesan on 29/11/15.
+  Copyright © 2015 ShoeBox. All rights reserved.
+*/
+
+//ShoeBox
+
+"shoeBox_what_to_put_in_the_box" = "What to put in the box?";
+"shoeBox_where_to_leave_the_box" = "Where to leave the box?";
+
+//ShoeBox Details
+
+"shoeBox_details_girl" = "Girl";
+"shoeBox_details_boy" = "Boy";
+"shoeBox_details_header_name" = "Choose age";
+"shoeBox_details_years" = "years";
+"shoeBox_details_choose_another_age" = "Another age";
+"shoeBox_details_next_step" = "Next step";
+
+//ShoeBox Suggestions
+
+"shoeBox_suggestions_header_name" = "Suggestions";

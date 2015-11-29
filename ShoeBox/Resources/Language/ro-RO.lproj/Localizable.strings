@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  ShoeBox
+
+  Created by Gabriel Vermesan on 29/11/15.
+  Copyright © 2015 ShoeBox. All rights reserved.
+*/
+
+//ShoeBox
+
+"shoeBox_what_to_put_in_the_box" = "Ce sa pun in cutie?";
+"shoeBox_where_to_leave_the_box" = "Unde sa las cutia?";
+
+//ShoeBox Details
+
+"shoeBox_details_girl" = "Fetita";
+"shoeBox_details_boy" = "Baiat";
+"shoeBox_details_header_name" = "Alege varsta";
+"shoeBox_details_years" = "ani";
+"shoeBox_details_choose_another_age" = "Alta varsta";
+"shoeBox_details_next_step" = "Urmatorul pas";
+
+//ShoeBox Suggestions
+
+"shoeBox_suggestions_header_name" = "Sugestii";

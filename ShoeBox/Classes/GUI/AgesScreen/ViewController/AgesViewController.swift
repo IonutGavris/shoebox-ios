@@ -50,7 +50,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Alege varsta"
+        return NSLocalizedString("shoeBox_details_header_name", comment: "")
     }
     
     //MARK: UITableViewDelegate
@@ -100,21 +100,22 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         var title: String?
         
+        let age = NSLocalizedString("shoeBox_details_years", comment: "")
         switch indexPath.row {
         case 0:
-            title = "4-6 ani"
+            title = "4-6 \(age)"
             break
         case 1:
-            title = "6-8 ani"
+            title = "6-8 \(age)"
             break
         case 2:
-            title = "8-10 ani"
+            title = "8-10 \(age)"
             break
         case 3:
-            title = "10-12 ani"
+            title = "10-12 \(age)"
             break
         case 4:
-            title = "Alta varsta"
+            title = NSLocalizedString("shoeBox_details_choose_another_age", comment: "")
             break
         default:
             break

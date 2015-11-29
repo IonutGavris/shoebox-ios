@@ -37,7 +37,7 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Sugestii"
+        return NSLocalizedString("shoeBox_suggestions_header_name", comment: "")
     }
     
     //MARK: UITableViewDelegate
