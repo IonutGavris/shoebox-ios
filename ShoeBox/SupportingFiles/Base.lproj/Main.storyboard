@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -38,27 +39,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
                                 <rect key="frame" x="0.0" y="64" width="600" height="268"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-wh-O8Z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="268"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.69810901988636365" colorSpace="calibratedRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="230" y="280" width="140" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6Ud-H3-ypk"/>
-                                    <constraint firstAttribute="width" constant="140" id="SAt-jm-vtD">
-                                        <variation key="widthClass=compact" constant="230"/>
-                                    </constraint>
-                                </constraints>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.69810901989999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="34"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,28 +63,16 @@
                                     <segue destination="SOP-bb-kVa" kind="show" id="TMW-81-BBs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
                                 <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMo-FO-PQi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.80000000000000004" alpha="0.69686612215909094" colorSpace="calibratedRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="230" y="548" width="140" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IJU-Gm-2L2"/>
-                                    <constraint firstAttribute="width" constant="120" id="OKl-lT-cig"/>
-                                    <constraint firstAttribute="width" constant="140" id="Xtx-WH-2P5">
-                                        <variation key="widthClass=compact" constant="230"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="30" id="wKW-Jd-lXL"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.80000000000000004" alpha="0.69686612219999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="34"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -103,12 +82,6 @@
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="OKl-lT-cig"/>
-                                        <exclude reference="wKW-Jd-lXL"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <segue destination="m3E-7j-JUR" kind="show" id="YOn-5M-eeq"/>
                                 </connections>
@@ -117,70 +90,26 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="LBU-wh-O8Z" secondAttribute="centerX" id="1EX-vN-Fjz"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="bottom" secondItem="8c3-G2-M7y" secondAttribute="bottom" constant="-15" id="21x-Tn-14V"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="bottom" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-25" id="4LQ-B7-DPC"/>
-                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="bottom" id="4Q6-bv-0Xw"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="60A-KW-ZJF"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qo-0j-wIX"/>
-                            <constraint firstItem="fMo-FO-PQi" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="7NJ-y7-xis"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1f-3O-6bf"/>
-                            <constraint firstItem="8c3-G2-M7y" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Fr5-2d-9D4"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="top" id="G8l-JV-KQg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="8" symbolic="YES" id="IRG-Ab-Nau"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="bottom" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-8" id="IkN-nE-328"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="LBU-wh-O8Z" secondAttribute="bottom" constant="-52" id="M3U-af-sCo"/>
-                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="height" secondItem="8c3-G2-M7y" secondAttribute="height" id="Nik-3a-ujj"/>
-                            <constraint firstAttribute="trailing" secondItem="8c3-G2-M7y" secondAttribute="trailing" id="Ot9-iA-h4z"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="width" secondItem="8c3-G2-M7y" secondAttribute="width" id="P4u-Ew-sdA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k23-PB-0gc" secondAttribute="bottom" constant="25" id="RMN-vj-gqe"/>
-                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WzL-2c-55y"/>
-                            <constraint firstItem="8c3-G2-M7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XWh-aP-wbY"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="centerX" secondItem="8c3-G2-M7y" secondAttribute="centerX" id="Yep-SI-MFD"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="cbC-MK-8Uf"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="centerY" secondItem="8c3-G2-M7y" secondAttribute="centerY" id="ceF-xo-0We"/>
-                            <constraint firstItem="8c3-G2-M7y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" constant="-172" id="egG-LG-EWx"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="top" id="esa-dV-EfV"/>
-                            <constraint firstItem="LBU-wh-O8Z" firstAttribute="height" secondItem="8c3-G2-M7y" secondAttribute="height" id="fRk-M1-hcd"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="LBU-wh-O8Z" secondAttribute="bottom" id="iGF-p1-Is4"/>
-                            <constraint firstItem="fMo-FO-PQi" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" id="j2m-nU-dsu"/>
-                            <constraint firstItem="8c3-G2-M7y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jOu-nb-vnL"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-98" id="jtt-7y-SIO"/>
-                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="bottom" id="lH6-vA-8lg"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="leading" secondItem="fMo-FO-PQi" secondAttribute="leading" id="mbH-qG-yR6"/>
-                            <constraint firstItem="fMo-FO-PQi" firstAttribute="width" secondItem="3cQ-Rl-0FF" secondAttribute="width" id="pS5-x1-0t8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" id="q4i-vf-wI5"/>
-                            <constraint firstItem="C0y-JY-uDc" firstAttribute="centerX" secondItem="k23-PB-0gc" secondAttribute="centerX" id="swy-W5-DTP"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="centerX" secondItem="3cQ-Rl-0FF" secondAttribute="centerX" id="tXP-gI-GBd"/>
-                            <constraint firstAttribute="trailing" secondItem="3cQ-Rl-0FF" secondAttribute="trailing" id="uqP-pF-SjX"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" constant="-52" id="vex-h3-eji"/>
-                            <constraint firstItem="fMo-FO-PQi" firstAttribute="centerY" secondItem="3cQ-Rl-0FF" secondAttribute="centerY" id="wUh-iW-7yH"/>
-                            <constraint firstItem="8c3-G2-M7y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" constant="-60" id="xvR-V8-fHW"/>
-                            <constraint firstItem="k23-PB-0gc" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" constant="-238" id="yAv-h0-HfU"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2A2-4t-gHo"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" id="3JK-SE-yjt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3cQ-Rl-0FF" secondAttribute="trailing" constant="-20" id="8r9-VI-tak"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="leading" secondItem="3cQ-Rl-0FF" secondAttribute="leading" id="9ev-hD-xFx"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="width" secondItem="3cQ-Rl-0FF" secondAttribute="width" id="BSH-3C-nPB"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="trailing" secondItem="3cQ-Rl-0FF" secondAttribute="trailing" id="G5D-mM-NN8"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="G7I-U3-h61"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="height" secondItem="3cQ-Rl-0FF" secondAttribute="height" id="K24-63-PX4"/>
+                            <constraint firstItem="3cQ-Rl-0FF" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="bottom" id="RbC-Sy-70f"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="leading" secondItem="8c3-G2-M7y" secondAttribute="leading" id="VdL-ag-pNg"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="trailing" secondItem="8c3-G2-M7y" secondAttribute="trailing" id="a3y-Qe-Bc3"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="top" id="cFv-KY-i4T"/>
+                            <constraint firstItem="k23-PB-0gc" firstAttribute="width" secondItem="3cQ-Rl-0FF" secondAttribute="width" id="eKc-LZ-qJG"/>
+                            <constraint firstItem="8c3-G2-M7y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oci-63-Jir"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="width" secondItem="8c3-G2-M7y" secondAttribute="width" id="pq9-8T-j1k"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="top" secondItem="8c3-G2-M7y" secondAttribute="top" id="qPc-dF-9t8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8c3-G2-M7y" secondAttribute="trailing" constant="-20" id="rSM-of-NAR"/>
+                            <constraint firstItem="C0y-JY-uDc" firstAttribute="height" secondItem="8c3-G2-M7y" secondAttribute="height" id="t2h-g1-TWE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" id="vwm-gn-wvL"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="egG-LG-EWx"/>
-                                <exclude reference="xvR-V8-fHW"/>
-                                <exclude reference="G8l-JV-KQg"/>
-                                <exclude reference="esa-dV-EfV"/>
-                                <exclude reference="4Q6-bv-0Xw"/>
-                                <exclude reference="21x-Tn-14V"/>
-                                <exclude reference="60A-KW-ZJF"/>
-                                <exclude reference="6qo-0j-wIX"/>
-                                <exclude reference="iGF-p1-Is4"/>
-                                <exclude reference="swy-W5-DTP"/>
-                                <exclude reference="4LQ-B7-DPC"/>
-                                <exclude reference="C1f-3O-6bf"/>
-                                <exclude reference="IkN-nE-328"/>
-                                <exclude reference="jtt-7y-SIO"/>
-                                <exclude reference="mbH-qG-yR6"/>
-                                <exclude reference="tXP-gI-GBd"/>
-                                <exclude reference="yAv-h0-HfU"/>
-                                <exclude reference="IRG-Ab-Nau"/>
-                                <exclude reference="RMN-vj-gqe"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5">
@@ -528,7 +457,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -751,7 +680,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <animations/>
