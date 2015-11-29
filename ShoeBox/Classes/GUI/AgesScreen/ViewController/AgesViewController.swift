@@ -13,28 +13,21 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let suggestionSegueIdentifier = "ShowSuggestionScreenIdentifier"
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var topBarView: ShoeBoxAgexTopView!
+    @IBOutlet weak var topBarView: ShoeBoxAgesTopView!
+    @IBOutlet weak var tableOverview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        topBarView.girlBoyTappedCompletion = {[unowned self] () -> Void in
+            self.tableOverview.removeFromSuperview()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-    }
-    
-    //MARK: Action methods
-    
-    @IBAction func nextStepPressed(button : UIButton) {
-        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: self)
     }
     
     //MARK: UItableViewDataSouce
@@ -63,14 +56,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let button = UIButton(frame: CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 50.0))
-        button.backgroundColor = UIColor.shoeBoxGreenColor()
-        button.setTitle("Urmatorul pas", forState: .Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 17.0)
-        button.addTarget(self, action: "nextStepPressed:", forControlEvents: .TouchUpInside)
-        
-        return button
+        return footerView
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -83,6 +69,8 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        footerView.overview.removeFromSuperview()
+        
         let allIndexPaths = tableView.indexPathsForVisibleRows
         
         for idxPath in allIndexPaths! {
@@ -94,6 +82,18 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
         cell.accessoryType = .Checkmark
     }
+    
+    //MARK: Prperty
+    
+    lazy var footerView: ShoeBoxAgesFooterView = {
+        var footer = ShoeBoxAgesFooterView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 50.0))
+        footer.viewTapped = { [unowned self] () -> Void in
+            self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
+        }
+    
+        return footer
+    }()
+    
     
     //MARK: Private methods
     

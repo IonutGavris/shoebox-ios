@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
         
         // Attach a closure to read the data from firebase
         locations.observeEventType(.Value, withBlock: { snapshot in
-                print(snapshot.value)
+                //print(snapshot.value)
             }, withCancelBlock: { error in
                 print(error.description)
         })

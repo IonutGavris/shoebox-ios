@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ShoeBoxAgexTopView: UIView {
+typealias ShoeBoxAgesTopViewTapped = () -> Void
+
+class ShoeBoxAgesTopView: UIView {
 
     @IBOutlet weak var girlBackgroundView: UIView!
     @IBOutlet weak var girlCheckmarkImageView: UIView!
     @IBOutlet weak var boyBackgroundView: UIView!
     @IBOutlet weak var boyCheckmarkImageView: UIView!
-
+    
+    var girlBoyTappedCompletion: ShoeBoxAgesTopViewTapped!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,13 +26,20 @@ class ShoeBoxAgexTopView: UIView {
     }
     
     @IBAction func girlViewTapped(gesture: UITapGestureRecognizer) {
+        girlBackgroundView.backgroundColor = UIColor.shoeBoxRedColor(0.7)
+        boyBackgroundView.backgroundColor = UIColor.shoeBoxBlueColor(0.8)
         girlCheckmarkImageView.alpha = 1.0
         boyCheckmarkImageView.alpha = 0.0
+        
+        girlBoyTappedCompletion()
     }
     
     @IBAction func boyViewTapped(gesture: UITapGestureRecognizer) {
+        girlBackgroundView.backgroundColor = UIColor.shoeBoxRedColor(0.8)
+        boyBackgroundView.backgroundColor = UIColor.shoeBoxBlueColor(0.7)
         girlCheckmarkImageView.alpha = 0.0
         boyCheckmarkImageView.alpha = 1.0
-
+        
+        girlBoyTappedCompletion()
     }
 }
