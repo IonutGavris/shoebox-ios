@@ -11,6 +11,8 @@
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
+		67E731C81C0B5F9500F259A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E731C71C0B5F9500F259A5 /* Location.swift */; };
+		67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E731C91C0B878D00F259A5 /* CoreLocation.framework */; };
 		E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */; };
 		E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59401C09880100E4E0B9 /* AgesViewController.swift */; };
 		E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E594B1C09885F00E4E0B9 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		670340861BFE0EBC001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		678718961C0088AC00F2E739 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
+		67E731C71C0B5F9500F259A5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		67E731C91C0B878D00F259A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		E34E59401C09880100E4E0B9 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = Classes/GUI/AgesScreen/ViewController/AgesViewController.swift; sourceTree = "<group>"; };
 		E34E594B1C09885F00E4E0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */,
 				678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */,
 				678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */,
 				F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */,
@@ -179,11 +184,20 @@
 		678718911C00881900F2E739 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67E731C91C0B878D00F259A5 /* CoreLocation.framework */,
 				678718961C0088AC00F2E739 /* Fabric.framework */,
 				678718971C0088AC00F2E739 /* Crashlytics.framework */,
 				1EF25368E5729049FB07709A /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67E731C61C0B5F6C00F259A5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				67E731C71C0B5F9500F259A5 /* Location.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 		BC2CD61291BFFA8AF574BADE /* Pods */ = {
@@ -408,6 +422,7 @@
 		E34E596C1C098A7A00E4E0B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				67E731C61C0B5F6C00F259A5 /* Map */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -692,6 +707,7 @@
 			files = (
 				E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */,
 				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
+				67E731C81C0B5F9500F259A5 /* Location.swift in Sources */,
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
 				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,

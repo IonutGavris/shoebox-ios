@@ -766,6 +766,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Oeg-za-6gw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Han-jX-0oN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-57-kfp" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
@@ -831,16 +832,16 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="HSs-zN-i57"/>
-                                        <exclude reference="o1j-Xm-WDc"/>
                                         <exclude reference="TgC-Rl-Z8Y"/>
+                                        <exclude reference="o1j-Xm-WDc"/>
+                                        <exclude reference="GvL-Up-LNf"/>
+                                        <exclude reference="N1y-CO-1Pj"/>
+                                        <exclude reference="Qi5-2n-01E"/>
+                                        <exclude reference="w3Q-8V-7PY"/>
                                         <exclude reference="CeU-Sg-GLK"/>
-                                        <exclude reference="ePs-Gw-1E7"/>
                                         <exclude reference="NGE-MR-fqu"/>
                                         <exclude reference="YiK-Wu-aoF"/>
-                                        <exclude reference="N1y-CO-1Pj"/>
-                                        <exclude reference="w3Q-8V-7PY"/>
-                                        <exclude reference="GvL-Up-LNf"/>
-                                        <exclude reference="Qi5-2n-01E"/>
+                                        <exclude reference="ePs-Gw-1E7"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -850,23 +851,23 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="HSs-zN-i57"/>
-                                        <include reference="o1j-Xm-WDc"/>
                                         <exclude reference="TgC-Rl-Z8Y"/>
+                                        <include reference="o1j-Xm-WDc"/>
+                                        <include reference="GvL-Up-LNf"/>
+                                        <include reference="N1y-CO-1Pj"/>
+                                        <include reference="Qi5-2n-01E"/>
+                                        <include reference="w3Q-8V-7PY"/>
                                         <include reference="CeU-Sg-GLK"/>
-                                        <include reference="ePs-Gw-1E7"/>
                                         <include reference="NGE-MR-fqu"/>
                                         <include reference="YiK-Wu-aoF"/>
-                                        <include reference="N1y-CO-1Pj"/>
-                                        <include reference="w3Q-8V-7PY"/>
-                                        <include reference="GvL-Up-LNf"/>
-                                        <include reference="Qi5-2n-01E"/>
+                                        <include reference="ePs-Gw-1E7"/>
                                     </mask>
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-FP-Azg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -892,13 +893,13 @@
                                 <exclude reference="xPq-FP-Azg"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="yZu-5h-rVh"/>
                                 <exclude reference="20c-Y3-Emb"/>
                                 <exclude reference="ab9-MX-TnL"/>
                                 <exclude reference="bqf-it-ac4"/>
                                 <exclude reference="1Qf-Ig-qMz"/>
                                 <exclude reference="aeN-T0-N6T"/>
                                 <exclude reference="pMO-ZV-AuS"/>
-                                <exclude reference="yZu-5h-rVh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -907,13 +908,13 @@
                                 <include reference="xPq-FP-Azg"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="yZu-5h-rVh"/>
                                 <include reference="20c-Y3-Emb"/>
                                 <include reference="ab9-MX-TnL"/>
                                 <include reference="bqf-it-ac4"/>
                                 <include reference="1Qf-Ig-qMz"/>
                                 <include reference="aeN-T0-N6T"/>
                                 <include reference="pMO-ZV-AuS"/>
-                                <include reference="yZu-5h-rVh"/>
                             </mask>
                         </variation>
                     </view>
@@ -945,7 +946,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="vaq-Wd-mn1" kind="show" id="NM9-Jv-Yhg"/>
+                                    <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="NM9-Jv-Yhg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -963,7 +964,7 @@
         <!--Locatie-->
         <scene sceneID="UyP-vu-pxG">
             <objects>
-                <tableViewController id="vaq-Wd-mn1" customClass="LocationDetailViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vaq-Wd-mn1" customClass="LocationsViewControllersViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gD5-VW-7Xg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1013,6 +1014,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="uld-bm-5k5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FD-km-J4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1196,4 +1200,7 @@
         <image name="what_to_put_in_box" width="720" height="512"/>
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NM9-Jv-Yhg"/>
+    </inferredMetricsTieBreakers>
 </document>
