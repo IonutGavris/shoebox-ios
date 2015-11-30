@@ -12,10 +12,12 @@ import UIKit
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // segue id
-    let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
+    let suggestionSegueIdentifier = "ShowMapLocationDetailsScreenIdentifier"
     
     // Get a reference to firebase locations endpoint
     let locations = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    
+    var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +58,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
         //var infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil).first! as CustomInfoWindow
         //infoWindow.label.text = "\(marker.position.latitude) \(marker.position.longitude)"
+        selectedLocation = marker.userData as? Location
         self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
         return nil
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == suggestionSegueIdentifier
+        {
+            if let destination = segue.destinationViewController as? LocationDetailViewController{
+                destination.location = selectedLocation
+            }
+        }
     }
     
     func getDistanceMetresBetweenLocationCoordinates(coord1: CLLocationCoordinate2D, coord2: CLLocationCoordinate2D) -> Double {

@@ -16,18 +16,19 @@ class LocationsViewController: UITableViewController {
     // Get a reference to firebase locations endpoint
     let locations = Firebase(url: "https://shoebox.firebaseio.com/locations")
     var dataSource: FirebaseTableViewDataSource!
+    var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.dataSource = FirebaseTableViewDataSource(ref: locations, cellReuseIdentifier: "cell", view: self.tableView)
+        self.dataSource = FirebaseTableViewDataSource(ref: locations, prototypeReuseIdentifier: "cell", view: self.tableView)
         self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
             let snap = obj as! FDataSnapshot
             let location = Location(dict: snap.value as! NSDictionary)
             
             // Populate cell as you see fit, like as below
             cell.textLabel?.text = location.title
+            cell.detailTextLabel?.text = location.city! + ", " + location.country!
         }
         
         self.tableView.dataSource = self.dataSource
@@ -35,7 +36,18 @@ class LocationsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
+        let snap = dataSource.array.objectAtIndex(UInt(indexPath.row)) as! FDataSnapshot
+        selectedLocation = Location(dict: snap.value as! NSDictionary)
+        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == suggestionSegueIdentifier
+        {
+            if let destination = segue.destinationViewController as? LocationDetailViewController{
+                destination.location = selectedLocation
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

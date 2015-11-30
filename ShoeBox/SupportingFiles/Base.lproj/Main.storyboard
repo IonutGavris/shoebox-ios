@@ -936,18 +936,33 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XtV-KI-EtE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="iEH-bD-0h9" detailTextLabel="FMg-4L-3P9" style="IBUITableViewCellStyleSubtitle" id="XtV-KI-EtE">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEH-bD-0h9">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMg-4L-3P9">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="NM9-Jv-Yhg"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -956,6 +971,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ"/>
+                    <connections>
+                        <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="t9q-Tg-BFF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWZ-so-5EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -964,7 +982,7 @@
         <!--Locatie-->
         <scene sceneID="UyP-vu-pxG">
             <objects>
-                <tableViewController id="vaq-Wd-mn1" customClass="LocationsViewControllersViewController" sceneMemberID="viewController">
+                <tableViewController id="vaq-Wd-mn1" customClass="LocationDetailViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gD5-VW-7Xg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1015,7 +1033,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="uld-bm-5k5"/>
+                        <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowMapLocationDetailsScreenIdentifier" id="uld-bm-5k5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FD-km-J4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1201,6 +1219,6 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NM9-Jv-Yhg"/>
+        <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>
