@@ -1216,7 +1216,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dgV-BU-tOU" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dft-10-HGj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Dft-10-HGj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
