@@ -40,6 +40,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func initGoogleMaps() {
         let camera = GMSCameraPosition.cameraWithLatitude(45.9321727,longitude: 24.9330333, zoom: 6)
         mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
         mapView.delegate = self
         self.view = mapView
         
@@ -75,16 +77,22 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             // location.
             firstLocationUpdate = true;
             let location = change?[NSKeyValueChangeNewKey] as? CLLocation
-            mapView.camera = GMSCameraPosition.cameraWithTarget((location?.coordinate)!, zoom: 12);
+            if (location != nil) {
+                mapView.camera = GMSCameraPosition.cameraWithTarget((location?.coordinate)!, zoom: 12);
+            }
         }
     }
     
-    func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
-        //var infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil).first! as CustomInfoWindow
-        //infoWindow.label.text = "\(marker.position.latitude) \(marker.position.longitude)"
+    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
+        let infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil).first! as! CustomInfoWindow
         selectedLocation = marker.userData as? Location
+        infoWindow.title.text = selectedLocation?.title
+        infoWindow.subtitle.text = selectedLocation?.city
+        return infoWindow
+    }
+    
+    func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
         self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
-        return nil
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

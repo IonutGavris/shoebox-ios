@@ -21,8 +21,12 @@
 "shoeBox_details_next_step" = "Urmatorul pas";
 
 //ShoeBox Suggestions
-
 "shoeBox_suggestions_header_name" = "Sugestii";
 
 //ShoeBox Suggestion Details
 "shoeBox_sUggestion_Details_footer_name" = "* NU puneti produse perisabile! (ex: banane, portocale, iaurt)";
+
+//ShoeBox Map
+"shoebox_map" = "Harta";
+"shoebox_locations" = "Locatii";
+"shoebox_list" = "Lista";

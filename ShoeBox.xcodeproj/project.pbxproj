@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */; };
+		3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */; };
+		3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */; };
+		3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
@@ -56,6 +60,10 @@
 		0C9AFE9953D52A7A78E63EEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1EF25368E5729049FB07709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3533925F2F659A57015949DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
+		3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNavigationItem.swift; sourceTree = "<group>"; };
+		3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
 		670340611BFE0EBB001DE623 /* ShoeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340751BFE0EBB001DE623 /* ShoeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeBoxTests.swift; sourceTree = "<group>"; };
@@ -124,11 +132,21 @@
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3A8224C21C0E26C600A64284 /* LocalizedNavigation */,
 				E381C0F41C0B2A9600D7AD1E /* LocalizedLabel */,
 				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
 				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3A8224C21C0E26C600A64284 /* LocalizedNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */,
+				3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */,
+			);
+			name = LocalizedNavigation;
 			sourceTree = "<group>";
 		};
 		670340581BFE0EBB001DE623 = {
@@ -380,6 +398,8 @@
 		E34E595A1C0988F800E4E0B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */,
+				3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -616,6 +636,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
 				E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */,
 				E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */,
@@ -711,6 +732,7 @@
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
 				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
+				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
 				E381C0E21C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
@@ -719,6 +741,8 @@
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
 				E381C0FA1C0B311A00D7AD1E /* SuggestionDetailsViewController.swift in Sources */,
 				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,
+				3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */,
+				3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
 			);

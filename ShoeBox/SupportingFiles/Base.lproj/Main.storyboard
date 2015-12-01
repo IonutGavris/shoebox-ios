@@ -970,7 +970,11 @@
                             <outlet property="delegate" destination="nHl-cT-1qc" id="jAf-jb-oek"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ"/>
+                    <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ" customClass="LocalizedNavigationItem" customModule="ShoeBox" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoebox_locations"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
                         <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="t9q-Tg-BFF"/>
                     </connections>
@@ -979,7 +983,7 @@
             </objects>
             <point key="canvasLocation" x="2675" y="-15"/>
         </scene>
-        <!--Locatie-->
+        <!--Location Detail View Controller-->
         <scene sceneID="UyP-vu-pxG">
             <objects>
                 <tableViewController id="vaq-Wd-mn1" customClass="LocationDetailViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -988,13 +992,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ydO-LB-Jng">
+                            <rect key="frame" x="0.0" y="64" width="600" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o8p-UT-W87">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="large" textLabel="mJ5-Hc-Tz0" rowHeight="120" style="IBUITableViewCellStyleDefault" id="o8p-UT-W87">
+                                <rect key="frame" x="0.0" y="220" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8p-UT-W87" id="Ydz-Y3-H2y">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJ5-Hc-Tz0">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="119"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="small" textLabel="qqt-Lh-uxL" style="IBUITableViewCellStyleDefault" id="xef-hC-JCx">
+                                <rect key="frame" x="0.0" y="340" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xef-hC-JCx" id="Btp-G5-c59">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qqt-Lh-uxL">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -1005,11 +1051,10 @@
                             <outlet property="delegate" destination="vaq-Wd-mn1" id="93j-pZ-3Zs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Locatie" id="GP3-kd-AZT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMo-0q-7YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3406" y="-15"/>
+            <point key="canvasLocation" x="3405" y="-15"/>
         </scene>
         <!--Harta-->
         <scene sceneID="d60-4T-KuH">
@@ -1025,12 +1070,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Harta" id="Naq-r0-uB6">
-                        <barButtonItem key="rightBarButtonItem" title="Lista" id="jQF-Xg-hZs">
+                    <navigationItem key="navigationItem" title="Harta" id="Naq-r0-uB6" customClass="LocalizedNavigationItem" customModule="ShoeBox" customModuleProvider="target">
+                        <barButtonItem key="rightBarButtonItem" title="Lista" id="jQF-Xg-hZs" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoebox_list"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="nHl-cT-1qc" kind="show" id="mbv-sY-irq"/>
                             </connections>
                         </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoebox_map"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
                         <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowMapLocationDetailsScreenIdentifier" id="uld-bm-5k5"/>

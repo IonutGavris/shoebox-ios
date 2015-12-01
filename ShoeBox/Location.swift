@@ -15,7 +15,7 @@ class Location {
     var country:String?
     var latitude:Double?
     var longitude:Double?
-    var message:String?
+    var messages:String?
     var postalCode:String?
     var state:String?
     var title:String?
@@ -24,12 +24,12 @@ class Location {
     }
     
     init(dict : NSDictionary) {
-        address = dict.objectForKey("location") as? String
+        address = dict.objectForKey("address") as? String
         city = dict.objectForKey("city") as? String
         country = dict.objectForKey("country") as? String
         latitude = Double.init(dict.objectForKey("latitude") as! NSNumber)
         longitude = Double.init(dict.objectForKey("longitude") as! NSNumber)
-        message = dict.objectForKey("message") as? String
+        messages = dict.objectForKey("messages") as? String
         postalCode = dict.objectForKey("postalCode") as? String
         state = dict.objectForKey("state") as? String
         title = dict.objectForKey("title") as? String
