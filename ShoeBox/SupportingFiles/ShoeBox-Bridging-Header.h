@@ -3,5 +3,4 @@
 //
 
 #import <Firebase/Firebase.h>
-#import <FirebaseUI/FirebaseUI.h>
 #import <GoogleMaps/GoogleMaps.h>

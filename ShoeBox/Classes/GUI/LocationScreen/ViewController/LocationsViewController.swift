@@ -14,30 +14,43 @@ class LocationsViewController: UITableViewController {
     let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
     
     // Get a reference to firebase locations endpoint
-    let locations = Firebase(url: "https://shoebox.firebaseio.com/locations")
-    var dataSource: FirebaseTableViewDataSource!
+    let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    let locationsData = NSMutableArray()
     var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.dataSource = FirebaseTableViewDataSource(ref: locations, prototypeReuseIdentifier: "cell", view: self.tableView)
-        self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
-            let snap = obj as! FDataSnapshot
-            let location = Location(dict: snap.value as! NSDictionary)
-            
-            // Populate cell as you see fit, like as below
-            cell.textLabel?.text = location.title
-            cell.detailTextLabel?.text = location.city! + ", " + location.country!
-        }
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            guard let locations = snapshot.value as? NSArray else {
+                return
+            }
+            self.locationsData.removeAllObjects();
+            for location in locations {
+                self.locationsData.addObject(Location(dict: location as! NSDictionary))
+            }
+            self.tableView.reloadData()
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locationsData.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let location = locationsData.objectAtIndex(indexPath.row) as! Location;
+        // Populate cell as you see fit, like as below
+        cell.textLabel?.text = location.title
+        cell.detailTextLabel?.text = location.city! + ", " + location.country!
         
-        self.tableView.dataSource = self.dataSource
-        self.tableView.delegate = self;
+        return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let snap = dataSource.array.objectAtIndex(UInt(indexPath.row)) as! FDataSnapshot
-        selectedLocation = Location(dict: snap.value as! NSDictionary)
+        selectedLocation = locationsData.objectAtIndex(indexPath.row) as? Location;
         self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: self)
     }
     
