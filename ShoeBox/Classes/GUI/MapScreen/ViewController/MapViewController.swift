@@ -15,9 +15,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let suggestionSegueIdentifier = "ShowMapLocationDetailsScreenIdentifier"
     
     // Get a reference to firebase locations endpoint
-    let locations = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
     
     var selectedLocation: Location?
+    var mapView: GMSMapView!
+    var firstLocationUpdate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +27,24 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         initGoogleMaps();
     }
     
+    override func viewWillAppear(animated: Bool) {
+        mapView.myLocationEnabled = true
+        mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        mapView.myLocationEnabled = false
+        mapView.removeObserver(self, forKeyPath: "myLocation")
+    }
+    
     func initGoogleMaps() {
         let camera = GMSCameraPosition.cameraWithLatitude(45.9321727,longitude: 24.9330333, zoom: 6)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = true
+        mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.delegate = self
         self.view = mapView
         
         // Attach a closure to read the data from firebase
-        locations.observeEventType(.Value, withBlock: { snapshot in
+        ref.observeEventType(.Value, withBlock: { snapshot in
             guard let locations = snapshot.value as? NSArray else {
                 return
             }
@@ -48,11 +59,24 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 marker.userData = current;
                 marker.icon = GMSMarker.markerImageWithColor(UIColor.shoeBoxBlueColor(1.0))
                 marker.opacity = 0.9
-                marker.map = mapView
+                marker.map = self.mapView
             }
             }, withCancelBlock: { error in
                 print(error.description)
         })
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if (context != nil) {
+            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+        }
+        if (!firstLocationUpdate) {
+            // If the first location update has not yet been recieved, then jump to that
+            // location.
+            firstLocationUpdate = true;
+            let location = change?[NSKeyValueChangeNewKey] as? CLLocation
+            mapView.camera = GMSCameraPosition.cameraWithTarget((location?.coordinate)!, zoom: 12);
+        }
     }
     
     func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
