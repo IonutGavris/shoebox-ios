@@ -10,6 +10,7 @@ import UIKit
 
 class SuggestionDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var suggestion: String?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

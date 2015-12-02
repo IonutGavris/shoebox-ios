@@ -16,7 +16,6 @@
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
 		67A968E21C0F4BA700330961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A968E11C0F4BA700330961 /* Constants.swift */; };
-		67E731C81C0B5F9500F259A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E731C71C0B5F9500F259A5 /* Location.swift */; };
 		67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E731C91C0B878D00F259A5 /* CoreLocation.framework */; };
 		E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */; };
 		E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59401C09880100E4E0B9 /* AgesViewController.swift */; };
@@ -29,11 +28,13 @@
 		E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */; };
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
 		E34E596B1C098A1700E4E0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59691C098A1700E4E0B9 /* Main.storyboard */; };
-		E381C0E21C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0E11C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift */; };
+		E37EDD0B1C0C57AF0077B7F9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37EDD0A1C0C57AF0077B7F9 /* Location.swift */; };
 		E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E381C0EC1C0B1D7900D7AD1E /* Localizable.strings */; };
 		E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */; };
 		E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */; };
 		E381C0FA1C0B311A00D7AD1E /* SuggestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F91C0B311A00D7AD1E /* SuggestionDetailsViewController.swift */; };
+		E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D51C0F6719004983ED /* Suggestion.swift */; };
+		E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D81C0F6912004983ED /* FirebaseManager.swift */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
@@ -75,7 +76,6 @@
 		678718961C0088AC00F2E739 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
 		67A968E11C0F4BA700330961 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
-		67E731C71C0B5F9500F259A5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Classes/Model/Map/Location.swift; sourceTree = "<group>"; };
 		67E731C91C0B878D00F259A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		E34E59401C09880100E4E0B9 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = Classes/GUI/AgesScreen/ViewController/AgesViewController.swift; sourceTree = "<group>"; };
@@ -90,13 +90,15 @@
 		E34E59641C0989F600E4E0B9 /* ShoeBox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShoeBox-Bridging-Header.h"; path = "SupportingFiles/ShoeBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		E34E59671C098A0200E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E596A1C098A1700E4E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SupportingFiles/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E381C0E11C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesFooterView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesFooterView.swift; sourceTree = "<group>"; };
+		E37EDD0A1C0C57AF0077B7F9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Classes/Model/Map/Location.swift; sourceTree = "<group>"; };
 		E381C0ED1C0B1D7E00D7AD1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E381C0EF1C0B1DCC00D7AD1E /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "SupportingFiles/ro-RO.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		E381C0F01C0B1DCC00D7AD1E /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "ro-RO.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedButton.swift; path = Classes/Helpers/LocalizedButton/ShoeBoxLocalizedButton.swift; sourceTree = "<group>"; };
 		E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedLabel.swift; path = Classes/Helpers/LocalizedLabel/ShoeBoxLocalizedLabel.swift; sourceTree = "<group>"; };
 		E381C0F91C0B311A00D7AD1E /* SuggestionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionDetailsViewController.swift; path = Classes/GUI/SuggestionScreen/DetailsScreen/ViewController/SuggestionDetailsViewController.swift; sourceTree = "<group>"; };
+		E38D37D51C0F6719004983ED /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Suggestion.swift; path = Classes/Model/Suggestion/Suggestion.swift; sourceTree = "<group>"; };
+		E38D37D81C0F6912004983ED /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Classes/Helpers/FirebaseManager/FirebaseManager.swift; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E38D37D71C0F68B3004983ED /* FirebaseManager */,
 				3A8224C21C0E26C600A64284 /* LocalizedNavigation */,
 				E381C0F41C0B2A9600D7AD1E /* LocalizedLabel */,
 				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
@@ -216,7 +219,7 @@
 		67E731C61C0B5F6C00F259A5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				67E731C71C0B5F9500F259A5 /* Location.swift */,
+				E37EDD0A1C0C57AF0077B7F9 /* Location.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -351,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */,
-				E381C0E11C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -445,6 +447,7 @@
 		E34E596C1C098A7A00E4E0B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E38D37D41C0F66F6004983ED /* Suggestion */,
 				67E731C61C0B5F6C00F259A5 /* Map */,
 			);
 			name = Model;
@@ -488,6 +491,22 @@
 				E381C0F91C0B311A00D7AD1E /* SuggestionDetailsViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E38D37D41C0F66F6004983ED /* Suggestion */ = {
+			isa = PBXGroup;
+			children = (
+				E38D37D51C0F6719004983ED /* Suggestion.swift */,
+			);
+			name = Suggestion;
+			sourceTree = "<group>";
+		};
+		E38D37D71C0F68B3004983ED /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				E38D37D81C0F6912004983ED /* FirebaseManager.swift */,
+			);
+			name = FirebaseManager;
 			sourceTree = "<group>";
 		};
 		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
@@ -731,14 +750,14 @@
 			files = (
 				E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */,
 				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
-				67E731C81C0B5F9500F259A5 /* Location.swift in Sources */,
+				E37EDD0B1C0C57AF0077B7F9 /* Location.swift in Sources */,
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
 				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
-				E381C0E21C0B0C3900D7AD1E /* ShoeBoxAgesFooterView.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
+				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
@@ -749,6 +768,7 @@
 				3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
+				E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topBarView: ShoeBoxAgesTopView!
     @IBOutlet weak var tableOverview: UIView!
+    @IBOutlet weak var bottomViewOverview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,22 +56,13 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return footerView
-    }
-    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50.0
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        footerView.overview.removeFromSuperview()
-        
+        bottomViewOverview.removeFromSuperview()
         let allIndexPaths = tableView.indexPathsForVisibleRows
         
         for idxPath in allIndexPaths! {
@@ -82,17 +74,6 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
         cell.accessoryType = .Checkmark
     }
-    
-    //MARK: Prperty
-    
-    lazy var footerView: ShoeBoxAgesFooterView = {
-        var footer = ShoeBoxAgesFooterView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 50.0))
-        footer.viewTapped = { [unowned self] () -> Void in
-            self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
-        }
-    
-        return footer
-    }()
     
     
     //MARK: Private methods

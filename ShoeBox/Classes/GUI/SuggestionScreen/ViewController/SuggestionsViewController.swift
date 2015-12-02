@@ -11,18 +11,41 @@ import UIKit
 class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let showDetailsScreenSequeIdentifier = "showDetailsScreenSegueIdentifier"
+    var allSuggestions: [Suggestion] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        FirebaseManager.extractFirebaseDataForPath("suggestions") { [unowned self] (results) -> Void in
+            self.allSuggestions.removeAll()
+            
+            for dict in results! {
+                if dict as! NSObject == NSNull() {
+                    continue
+                }
+                let suggestion = Suggestion(dictionary: dict as! [String : AnyObject])
+                self.allSuggestions.append(suggestion)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == showDetailsScreenSequeIdentifier {
+            if let viewController = segue.destinationViewController as? SuggestionDetailsViewController {
+                viewController.suggestion = sender as? String
+            }
+        }
     }
     
     //MARK: UItableViewDataSouce
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.allSuggestions.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -33,7 +56,9 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
             cell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier)
         }
         
-        configureCell(cell, atIndexPath: indexPath)
+        let suggestion = allSuggestions[indexPath.row]
+        cell.textLabel?.text = suggestion.name
+        cell.accessoryType = .DisclosureIndicator
         
         return cell
     }
@@ -50,35 +75,10 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier(showDetailsScreenSequeIdentifier, sender: self)
-    }
-    
-    //MARK: Private methods
-    
-    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        var title: String?
-        
-        switch indexPath.row {
-        case 0:
-            title = "Dulciuri"
-            break
-        case 1:
-            title = "Articole scolare"
-            break
-        case 2:
-            title = "Jucarii"
-            break
-        case 3:
-            title = "Produse de igiena personala"
-            break
-        case 4:
-            title = "Articole de imbracaminte"
-            break
-        default:
-            break
-        }
-        
-        cell.textLabel?.text = title
-        cell.accessoryType = .DisclosureIndicator
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let name = cell?.textLabel?.text
+        self.performSegueWithIdentifier(showDetailsScreenSequeIdentifier, sender: name)
     }
 }
