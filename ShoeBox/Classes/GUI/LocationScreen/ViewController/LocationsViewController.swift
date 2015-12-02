@@ -18,7 +18,7 @@ class LocationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get a reference to firebase locations endpoint
-        let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
+        let ref = Firebase(url: Constants.ENDPOINT_LOCATIONS)
         // Do any additional setup after loading the view, typically from a nib.
         ref.observeEventType(.Value, withBlock: { snapshot in
             guard let locations = snapshot.value as? NSArray else {

@@ -53,7 +53,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.view = mapView
         
         // Get a reference to firebase locations endpoint
-        let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
+        let ref = Firebase(url: Constants.ENDPOINT_LOCATIONS)
         // Attach a closure to read the data from firebase
         ref.observeEventType(.Value, withBlock: { snapshot in
             guard let locations = snapshot.value as? NSArray else {
