@@ -6,3 +6,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 #import "ActionSheetPicker.h"
+#import "GCluster.h"
+#import "GClusterManager.h"
+#import "GDefaultClusterRenderer.h"
+#import "NonHierarchicalDistanceBasedAlgorithm.h"

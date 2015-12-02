@@ -15,6 +15,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let suggestionSegueIdentifier = "ShowMapLocationDetailsScreenIdentifier"
     
     var mapView: GMSMapView!
+    var clusterManager: GClusterManager!
     var firstLocationUpdate = false
     
     override func viewDidLoad() {
@@ -49,8 +50,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
-        mapView.delegate = self
+        mapView.delegate = self;
         self.view = mapView
+        
+        // Create the Cluster Manager
+        self.clusterManager = GClusterManager(mapView: mapView, algorithm: NonHierarchicalDistanceBasedAlgorithm(), renderer: GDefaultClusterRenderer(mapView: mapView))
         
         // Get a reference to firebase locations endpoint
         let ref = Firebase(url: Constants.ENDPOINT_LOCATIONS)
@@ -61,6 +65,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             }
             var current:Location
             var marker:GMSMarker
+            self.clusterManager.removeItems()
             for location in locations {
                 current = Location(dict: location as! NSDictionary)
                 marker = GMSMarker()
@@ -70,8 +75,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 marker.userData = current;
                 marker.icon = GMSMarker.markerImageWithColor(UIColor.shoeBoxBlueColor(1.0))
                 marker.opacity = 0.9
-                marker.map = self.mapView
+                self.clusterManager.addItem(Spot(marker: marker))
             }
+            self.clusterManager.cluster()
             }, withCancelBlock: { error in
                 print(error.description)
         })
@@ -106,6 +112,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         infoWindow.title.text = selectedLocation?.title
         infoWindow.subtitle.text = selectedLocation?.city
         return infoWindow
+    }
+    
+    func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+        clusterManager.mapView(mapView, idleAtCameraPosition: position)
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
