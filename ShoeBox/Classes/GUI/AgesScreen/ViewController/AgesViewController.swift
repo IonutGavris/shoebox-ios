@@ -11,6 +11,7 @@ import UIKit
 class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let suggestionSegueIdentifier = "ShowSuggestionScreenIdentifier"
+    var selectedAge: Int?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topBarView: ShoeBoxAgesTopView!
@@ -63,6 +64,8 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         bottomViewOverview.removeFromSuperview()
+        selectedAge = nil
+        
         let allIndexPaths = tableView.indexPathsForVisibleRows
         
         for idxPath in allIndexPaths! {
@@ -73,6 +76,12 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
         cell.accessoryType = .Checkmark
+        tableView.reloadData()
+
+        if indexPath.row == 4 {
+            displayPickerView()
+        }
+        
     }
     
     
@@ -97,12 +106,31 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
             break
         case 4:
             title = NSLocalizedString("shoeBox_details_choose_another_age", comment: "")
+            if let age = selectedAge {
+                title = title! + " - \(age)" + " years"
+            }
             break
         default:
             break
         }
         
         cell.textLabel?.text = title
+    }
+    
+    func displayPickerView() {
+        var allAges: [Int] = []
+        for i in 4...18 {
+            allAges.append(i)
+        }
+        
+        ActionSheetStringPicker.showPickerWithTitle("Select age", rows: allAges, initialSelection: 0,
+            doneBlock: { [unowned self] (picker, selectedIndex, selectedValue) -> Void in
+                self.selectedAge = selectedValue as? Int
+                self.tableView.reloadData()
+                
+            }, cancelBlock: { (picker) -> Void in
+        
+        }, origin: self.view)
     }
 
 }

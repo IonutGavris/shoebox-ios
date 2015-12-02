@@ -590,28 +590,28 @@
                                 <exclude reference="ubS-bx-EIh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Pop-tc-YUH"/>
-                                <exclude reference="T8D-wk-nRq"/>
-                                <exclude reference="nh7-kS-H5o"/>
-                                <exclude reference="Ikc-Zo-vew"/>
-                                <exclude reference="dK9-eM-7gX"/>
-                                <exclude reference="oOB-mk-q2I"/>
-                                <exclude reference="p1s-Mm-WiR"/>
-                                <exclude reference="pe7-Bg-0mE"/>
-                                <exclude reference="gzC-1M-UTG"/>
-                                <exclude reference="hwR-SW-Pbw"/>
-                                <exclude reference="l0I-6k-kes"/>
-                                <exclude reference="XFC-w8-t2a"/>
-                                <exclude reference="bZ7-vi-kxG"/>
+                                <exclude reference="ACX-iI-CHc"/>
+                                <exclude reference="IdW-S4-dPs"/>
+                                <exclude reference="Tcj-8W-X2K"/>
+                                <exclude reference="m1j-nh-Pjp"/>
                                 <exclude reference="0VJ-pR-xxB"/>
                                 <exclude reference="IUV-Kf-9Yo"/>
                                 <exclude reference="Mkk-sO-TG4"/>
                                 <exclude reference="p0I-t1-DXR"/>
                                 <exclude reference="tGk-Tz-JMz"/>
-                                <exclude reference="ACX-iI-CHc"/>
-                                <exclude reference="IdW-S4-dPs"/>
-                                <exclude reference="Tcj-8W-X2K"/>
-                                <exclude reference="m1j-nh-Pjp"/>
+                                <exclude reference="Ikc-Zo-vew"/>
+                                <exclude reference="dK9-eM-7gX"/>
+                                <exclude reference="oOB-mk-q2I"/>
+                                <exclude reference="p1s-Mm-WiR"/>
+                                <exclude reference="pe7-Bg-0mE"/>
+                                <exclude reference="Pop-tc-YUH"/>
+                                <exclude reference="T8D-wk-nRq"/>
+                                <exclude reference="nh7-kS-H5o"/>
+                                <exclude reference="gzC-1M-UTG"/>
+                                <exclude reference="hwR-SW-Pbw"/>
+                                <exclude reference="l0I-6k-kes"/>
+                                <exclude reference="XFC-w8-t2a"/>
+                                <exclude reference="bZ7-vi-kxG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -623,28 +623,28 @@
                                 <include reference="ubS-bx-EIh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Pop-tc-YUH"/>
-                                <include reference="T8D-wk-nRq"/>
-                                <include reference="nh7-kS-H5o"/>
-                                <include reference="Ikc-Zo-vew"/>
-                                <include reference="dK9-eM-7gX"/>
-                                <exclude reference="oOB-mk-q2I"/>
-                                <include reference="p1s-Mm-WiR"/>
-                                <exclude reference="pe7-Bg-0mE"/>
-                                <include reference="gzC-1M-UTG"/>
-                                <include reference="hwR-SW-Pbw"/>
-                                <include reference="l0I-6k-kes"/>
-                                <include reference="XFC-w8-t2a"/>
-                                <include reference="bZ7-vi-kxG"/>
+                                <include reference="ACX-iI-CHc"/>
+                                <include reference="IdW-S4-dPs"/>
+                                <exclude reference="Tcj-8W-X2K"/>
+                                <exclude reference="m1j-nh-Pjp"/>
                                 <include reference="0VJ-pR-xxB"/>
                                 <include reference="IUV-Kf-9Yo"/>
                                 <exclude reference="Mkk-sO-TG4"/>
                                 <include reference="p0I-t1-DXR"/>
                                 <include reference="tGk-Tz-JMz"/>
-                                <include reference="ACX-iI-CHc"/>
-                                <include reference="IdW-S4-dPs"/>
-                                <exclude reference="Tcj-8W-X2K"/>
-                                <exclude reference="m1j-nh-Pjp"/>
+                                <include reference="Ikc-Zo-vew"/>
+                                <include reference="dK9-eM-7gX"/>
+                                <exclude reference="oOB-mk-q2I"/>
+                                <include reference="p1s-Mm-WiR"/>
+                                <exclude reference="pe7-Bg-0mE"/>
+                                <include reference="Pop-tc-YUH"/>
+                                <include reference="T8D-wk-nRq"/>
+                                <include reference="nh7-kS-H5o"/>
+                                <include reference="gzC-1M-UTG"/>
+                                <include reference="hwR-SW-Pbw"/>
+                                <include reference="l0I-6k-kes"/>
+                                <include reference="XFC-w8-t2a"/>
+                                <include reference="bZ7-vi-kxG"/>
                             </mask>
                         </variation>
                     </view>
@@ -1039,11 +1039,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEH-bD-0h9">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1051,7 +1051,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMg-4L-3P9">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -1102,11 +1102,11 @@
                                 <rect key="frame" x="0.0" y="220" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8p-UT-W87" id="Ydz-Y3-H2y">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJ5-Hc-Tz0">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="119.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="119"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1125,11 +1125,11 @@
                                 <rect key="frame" x="0.0" y="340" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xef-hC-JCx" id="Btp-G5-c59">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qqt-Lh-uxL">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1229,11 +1229,11 @@
                                         <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c4D-fu-Tzs" id="CQP-tK-Fc0">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ShoeBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sw5-xE-dv1">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1252,11 +1252,11 @@
                                         <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lga-a9-ouW" id="9T8-Yl-UQw">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecw-gy-lJF">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>

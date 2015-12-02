@@ -6,6 +6,7 @@
 pod 'Firebase', '>= 2.3.2'
 pod 'GoogleMaps', '>= 1.11.0'
 pod 'ECSlidingViewController', '~> 2.0.3'
+pod 'ActionSheetPicker-3.0'
 
 target 'ShoeBox' do
 
