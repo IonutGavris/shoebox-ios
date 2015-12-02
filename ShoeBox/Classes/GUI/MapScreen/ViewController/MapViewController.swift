@@ -14,22 +14,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // segue id
     let suggestionSegueIdentifier = "ShowMapLocationDetailsScreenIdentifier"
     
-    // Get a reference to firebase locations endpoint
-    let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
-    
-    var selectedLocation: Location?
     var mapView: GMSMapView!
     var firstLocationUpdate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        initGoogleMaps();
+        addGoogleMaps();
     }
     
     override func viewWillAppear(animated: Bool) {
         mapView.myLocationEnabled = true
-        mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
+        mapView.addObserver(self, forKeyPath: "myLocation", options: .New, context: nil)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -37,7 +33,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapView.removeObserver(self, forKeyPath: "myLocation")
     }
     
-    func initGoogleMaps() {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == suggestionSegueIdentifier
+        {
+            if let destination = segue.destinationViewController as? LocationDetailViewController{
+                destination.location = sender as? Location
+            }
+        }
+    }
+    
+    //MARK: Google Maps
+    
+    func addGoogleMaps() {
         let camera = GMSCameraPosition.cameraWithLatitude(45.9321727,longitude: 24.9330333, zoom: 6)
         mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.settings.compassButton = true
@@ -45,6 +52,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         self.view = mapView
         
+        // Get a reference to firebase locations endpoint
+        let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
         // Attach a closure to read the data from firebase
         ref.observeEventType(.Value, withBlock: { snapshot in
             guard let locations = snapshot.value as? NSArray else {
@@ -68,6 +77,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         })
     }
     
+    func getDistanceMetresBetweenLocationCoordinates(coord1: CLLocationCoordinate2D, coord2: CLLocationCoordinate2D) -> Double {
+        let location1 = CLLocation(latitude: coord1.latitude, longitude: coord1.longitude)
+        let location2 = CLLocation(latitude: coord2.latitude, longitude: coord2.longitude)
+        return location1.distanceFromLocation(location2)
+    }
+    
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if (context != nil) {
             super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
@@ -83,36 +98,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
+    //MARK: GMSMapViewDelegate
+    
     func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
         let infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil).first! as! CustomInfoWindow
-        selectedLocation = marker.userData as? Location
+        let selectedLocation = marker.userData as? Location
         infoWindow.title.text = selectedLocation?.title
         infoWindow.subtitle.text = selectedLocation?.city
         return infoWindow
     }
     
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
-        self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: self)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == suggestionSegueIdentifier
-        {
-            if let destination = segue.destinationViewController as? LocationDetailViewController{
-                destination.location = selectedLocation
-            }
-        }
-    }
-    
-    func getDistanceMetresBetweenLocationCoordinates(coord1: CLLocationCoordinate2D, coord2: CLLocationCoordinate2D) -> Double {
-        let location1 = CLLocation(latitude: coord1.latitude, longitude: coord1.longitude)
-        let location2 = CLLocation(latitude: coord2.latitude, longitude: coord2.longitude)
-        return location1.distanceFromLocation(location2)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: marker.userData as? Location)
     }
 }
 

@@ -20,9 +20,6 @@ class Location {
     var state:String?
     var title:String?
     
-    init() {
-    }
-    
     init(dict : NSDictionary) {
         address = dict.objectForKey("address") as? String
         city = dict.objectForKey("city") as? String

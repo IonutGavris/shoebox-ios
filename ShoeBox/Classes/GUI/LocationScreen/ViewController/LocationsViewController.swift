@@ -12,14 +12,13 @@ class LocationsViewController: UITableViewController {
     
     // segue id
     let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
-    
-    // Get a reference to firebase locations endpoint
-    let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
+    // data
     let locationsData = NSMutableArray()
-    var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Get a reference to firebase locations endpoint
+        let ref = Firebase(url: "https://shoebox.firebaseio.com/locations")
         // Do any additional setup after loading the view, typically from a nib.
         ref.observeEventType(.Value, withBlock: { snapshot in
             guard let locations = snapshot.value as? NSArray else {
@@ -35,6 +34,16 @@ class LocationsViewController: UITableViewController {
         })
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == suggestionSegueIdentifier
+        {
+            if let destination = segue.destinationViewController as? LocationDetailViewController{
+                destination.location = sender as? Location
+            }
+        }
+    }
+    
+    //MARK: UItableViewDataSouce
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locationsData.count
     }
@@ -49,22 +58,10 @@ class LocationsViewController: UITableViewController {
         return cell
     }
     
+    //MARK: UITableViewDelegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedLocation = locationsData.objectAtIndex(indexPath.row) as? Location;
-        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: self)
+        let selectedLocation = locationsData.objectAtIndex(indexPath.row) as? Location;
+        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: selectedLocation)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == suggestionSegueIdentifier
-        {
-            if let destination = segue.destinationViewController as? LocationDetailViewController{
-                destination.location = selectedLocation
-            }
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
