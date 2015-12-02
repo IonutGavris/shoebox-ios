@@ -99,7 +99,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             firstLocationUpdate = true;
             let location = change?[NSKeyValueChangeNewKey] as? CLLocation
             if (location != nil) {
-                mapView.camera = GMSCameraPosition.cameraWithTarget((location?.coordinate)!, zoom: 12);
+                self.mapView.camera = GMSCameraPosition.cameraWithTarget((location?.coordinate)!, zoom: 6)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+                dispatch_after(time, dispatch_get_main_queue(), {
+                    self.mapView.animateToZoom(12)
+                })
             }
         }
     }
