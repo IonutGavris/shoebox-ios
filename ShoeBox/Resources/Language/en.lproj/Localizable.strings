@@ -11,8 +11,10 @@
 "shoeBox_what_to_put_in_the_box" = "What to put in the box?";
 "shoeBox_where_to_leave_the_box" = "Where to leave the box?";
 
-//ShoeBox Details
+//ShoeBox Ages
+"shoeBox_choose" = "Choose";
 
+//ShoeBox Details
 "shoeBox_details_girl" = "Girl";
 "shoeBox_details_boy" = "Boy";
 "shoeBox_details_header_name" = "Choose age";

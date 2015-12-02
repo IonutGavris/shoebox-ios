@@ -10,10 +10,10 @@ import UIKit
 
 class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let showDetailsScreenSequeIdentifier = "showDetailsScreenSegueIdentifier"
     var allSuggestions: [Suggestion] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomViewOverview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +34,6 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == showDetailsScreenSequeIdentifier {
-            if let viewController = segue.destinationViewController as? SuggestionDetailsViewController {
-                viewController.suggestion = sender as? String
-            }
-        }
-    }
-    
     //MARK: UItableViewDataSouce
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,7 +50,6 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let suggestion = allSuggestions[indexPath.row]
         cell.textLabel?.text = suggestion.name
-        cell.accessoryType = .DisclosureIndicator
         
         return cell
     }
@@ -68,17 +59,25 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
         return NSLocalizedString("shoeBox_suggestions_header_name", comment: "")
     }
     
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let offsetX = 35.0 as CGFloat
+        let view = UIView(frame: CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.bounds), 40.0))
+        
+        let label = UILabel(frame: CGRectMake(offsetX, 0.0, CGRectGetWidth(tableView.bounds) - 2 * offsetX, 40.0))
+        label.font = UIFont(name: "HelveticaNeue", size: 12.0)
+        label.textColor = UIColor.shoeBoxRedColor(1.0)
+        label.numberOfLines = 2
+        label.textAlignment = .Center
+        label.text = NSLocalizedString("shoeBox_sUggestion_Details_footer_name", comment: "")
+        
+        view.addSubview(label)
+        
+        return view
+    }
+    
     //MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        let name = cell?.textLabel?.text
-        self.performSegueWithIdentifier(showDetailsScreenSequeIdentifier, sender: name)
     }
 }

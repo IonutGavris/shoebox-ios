@@ -11,8 +11,10 @@
 "shoeBox_what_to_put_in_the_box" = "Ce sa pun in cutie?";
 "shoeBox_where_to_leave_the_box" = "Unde sa las cutia?";
 
-//ShoeBox Details
+//ShoeBox Ages
+"shoeBox_choose" = "Choose";
 
+//ShoeBox Details
 "shoeBox_details_girl" = "Fetita";
 "shoeBox_details_boy" = "Baiat";
 "shoeBox_details_header_name" = "Alege varsta";
