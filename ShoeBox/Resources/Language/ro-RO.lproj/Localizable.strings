@@ -32,3 +32,4 @@
 "shoebox_map" = "Harta";
 "shoebox_locations" = "Locatii";
 "shoebox_list" = "Lista";
+"shoebox_list_search_placeHolder" = "Cauta";

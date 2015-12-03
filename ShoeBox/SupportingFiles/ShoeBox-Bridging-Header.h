@@ -10,3 +10,5 @@
 #import "GClusterManager.h"
 #import "GDefaultClusterRenderer.h"
 #import "NonHierarchicalDistanceBasedAlgorithm.h"
+#import "ECSlidingViewController.h"
+#import "UIViewController+ECSlidingViewController.h"

@@ -36,6 +36,7 @@
 		E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */; };
 		E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D51C0F6719004983ED /* Suggestion.swift */; };
 		E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D81C0F6912004983ED /* FirebaseManager.swift */; };
+		E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
@@ -101,6 +102,7 @@
 		E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedLabel.swift; path = Classes/Helpers/LocalizedLabel/ShoeBoxLocalizedLabel.swift; sourceTree = "<group>"; };
 		E38D37D51C0F6719004983ED /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Suggestion.swift; path = Classes/Model/Suggestion/Suggestion.swift; sourceTree = "<group>"; };
 		E38D37D81C0F6912004983ED /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Classes/Helpers/FirebaseManager/FirebaseManager.swift; sourceTree = "<group>"; };
+		E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheBoxLocationHeaderView.swift; path = Classes/GUI/LocationScreen/Views/SheBoxLocationHeaderView.swift; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 		E34E59511C0988B400E4E0B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
+				E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
 				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,

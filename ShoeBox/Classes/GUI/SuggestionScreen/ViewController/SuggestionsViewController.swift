@@ -20,7 +20,7 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         tableView.delegate = self
         
-        FirebaseManager.extractFirebaseDataForPath("suggestions") { [unowned self] (results) -> Void in
+        FirebaseManager.extractFirebaseDataForPath("suggestions") { (results) -> Void in
             self.allSuggestions.removeAll()
             
             for dict in results! {

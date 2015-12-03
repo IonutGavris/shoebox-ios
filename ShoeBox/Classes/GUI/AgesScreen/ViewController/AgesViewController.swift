@@ -63,15 +63,10 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        bottomViewOverview.removeFromSuperview()
+        bottomViewOverview.hidden = true
         selectedAge = nil
         
-        let allIndexPaths = tableView.indexPathsForVisibleRows
-        
-        for idxPath in allIndexPaths! {
-            let newCell = tableView.cellForRowAtIndexPath(idxPath)
-            newCell?.accessoryType = .None
-        }
+        removeAllCheckmarkIndicators()
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
@@ -117,7 +112,16 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.textLabel?.text = title
     }
     
-    func displayPickerView() {
+    private func removeAllCheckmarkIndicators() {
+        let allIndexPaths = tableView.indexPathsForVisibleRows
+        
+        for idxPath in allIndexPaths! {
+            let newCell = tableView.cellForRowAtIndexPath(idxPath)
+            newCell?.accessoryType = .None
+        }
+    }
+    
+    private func displayPickerView() {
         var allAges: [Int] = []
         for i in 4...18 {
             allAges.append(i)
@@ -129,7 +133,8 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.tableView.reloadData()
                 
             }, cancelBlock: { (picker) -> Void in
-        
+                self.removeAllCheckmarkIndicators()
+                self.bottomViewOverview.hidden = false
         }, origin: self.view)
     }
 

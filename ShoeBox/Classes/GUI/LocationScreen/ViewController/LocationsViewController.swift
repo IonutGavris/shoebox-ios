@@ -13,8 +13,9 @@ class LocationsViewController: UITableViewController {
     // segue id
     let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
     // data
-    let locationsData = NSMutableArray()
-    
+    var locationsData = [Location]()
+    var filteredLocations = [Location]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get a reference to firebase locations endpoint
@@ -24,10 +25,13 @@ class LocationsViewController: UITableViewController {
             guard let locations = snapshot.value as? NSArray else {
                 return
             }
-            self.locationsData.removeAllObjects();
+            self.locationsData.removeAll()
             for location in locations {
-                self.locationsData.addObject(Location(dict: location as! NSDictionary))
+                self.locationsData.append(Location(dict: location as! NSDictionary))
+                
             }
+            self.filteredLocations = self.locationsData
+            
             self.tableView.reloadData()
             }, withCancelBlock: { error in
                 print(error.description)
@@ -45,12 +49,13 @@ class LocationsViewController: UITableViewController {
     
     //MARK: UItableViewDataSouce
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locationsData.count
+        return filteredLocations.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let location = locationsData.objectAtIndex(indexPath.row) as! Location;
+        
+        let location = filteredLocations[indexPath.row]
         // Populate cell as you see fit, like as below
         cell.textLabel?.text = location.title
         cell.detailTextLabel?.text = location.city! + ", " + location.country!
@@ -59,8 +64,31 @@ class LocationsViewController: UITableViewController {
     }
     
     //MARK: UITableViewDelegate
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44.0
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = SheBoxLocationHeaderView(frame: CGRectMake(0.0, 0.0, CGRectGetHeight(tableView.bounds), 44.0))
+        view.closure = { (searchText) -> Void in
+            if searchText!.isEmpty {
+                self.filteredLocations = self.locationsData
+                self.tableView.reloadData()
+                return
+            }
+            
+            self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
+                let stringMatch = location.title!.rangeOfString(searchText!)
+                
+                return stringMatch != nil
+            })
+            self.tableView.reloadData()
+        }
+        return view
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let selectedLocation = locationsData.objectAtIndex(indexPath.row) as? Location;
+        let selectedLocation = filteredLocations[indexPath.row]
         self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: selectedLocation)
     }
     

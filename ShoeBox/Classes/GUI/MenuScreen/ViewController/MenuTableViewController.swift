@@ -8,8 +8,22 @@
 
 import UIKit
 
+enum ShoeBoxSliderState: String {
+    case Close = "Close"
+    case Open = "Open"
+}
+
 class MenuTableViewController: UITableViewController {
 
+    var slidingVC: ECSlidingViewController {
+        return self.slidingViewController()
+
+    }
+    
+    var slideState: ShoeBoxSliderState = .Close
+    
+    let anchorDefaultOffset: CGFloat = 54.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +32,7 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        slidingVC.anchorRightRevealAmount = CGRectGetWidth(self.tableView.bounds) - anchorDefaultOffset
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,8 +41,16 @@ class MenuTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToMenuViewController(segue: UIStoryboardSegue) {
-        
-    
+        switch slideState {
+        case .Close:
+            slideState = .Open
+            allowUserInteraction = false
+            break
+        case .Open:
+            slideState = .Close
+            slidingVC.resetTopViewAnimated(true)
+            break
+        }
     }
 
 

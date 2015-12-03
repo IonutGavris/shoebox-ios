@@ -32,3 +32,4 @@
 "shoebox_map" = "Map";
 "shoebox_locations" = "Locations";
 "shoebox_list" = "List";
+"shoebox_list_search_placeHolder" = "Search";
