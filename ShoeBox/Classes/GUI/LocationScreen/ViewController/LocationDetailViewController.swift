@@ -43,11 +43,11 @@ class LocationDetailViewController: UITableViewController {
     //MARK: UItableViewDataSouce
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 3
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return indexPath.row > 0 ? 44 : 120
+        return indexPath.row > 0 ? 44 : 88
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -67,22 +67,13 @@ class LocationDetailViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            title = location?.messages
+            title = location?.addressFull
             break
         case 1:
-            title = location?.address
+            title = location?.contacts?.first?.name
             break
         case 2:
-            title = location?.postalCode
-            break
-        case 3:
-            title = location?.city
-            break
-        case 4:
-            title = location?.state
-            break
-        case 5:
-            title = location?.country
+            title = location?.contacts?.first?.phoneNumber
             break
 
         default:
