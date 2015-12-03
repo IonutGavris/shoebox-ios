@@ -78,7 +78,7 @@ class LocationsViewController: UITableViewController {
             }
             
             self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
-                let stringMatch = location.title!.rangeOfString(searchText!)
+                let stringMatch = location.title!.rangeOfString(searchText!, options: .CaseInsensitiveSearch)
                 
                 return stringMatch != nil
             })

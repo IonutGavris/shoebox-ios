@@ -44,7 +44,6 @@ class MenuTableViewController: UITableViewController {
         switch slideState {
         case .Close:
             slideState = .Open
-            allowUserInteraction = false
             break
         case .Open:
             slideState = .Close
