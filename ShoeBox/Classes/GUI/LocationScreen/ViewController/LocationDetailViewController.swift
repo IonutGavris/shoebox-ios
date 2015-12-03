@@ -83,8 +83,20 @@ class LocationDetailViewController: UITableViewController {
         cell.textLabel?.text = title
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 2 {
+            callNumber((location?.contacts?.first?.phoneNumber)!)
+        }
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber.removeWhitespace())") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
+        }
     }
 }

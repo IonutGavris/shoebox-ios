@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A127F3F1C10FA4400406423 /* String+Whitespace.swift */; };
 		3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B183E1C10EADE00C26BD9 /* Contact.swift */; };
 		3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */; };
 		3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */; };
@@ -65,6 +66,7 @@
 		0C9AFE9953D52A7A78E63EEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1EF25368E5729049FB07709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3533925F2F659A57015949DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3A127F3F1C10FA4400406423 /* String+Whitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Whitespace.swift"; path = "Classes/Helpers/Extensions/String/String+Whitespace.swift"; sourceTree = "<group>"; };
 		3A4B183E1C10EADE00C26BD9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Classes/Model/Map/Contact.swift; sourceTree = "<group>"; };
 		3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoWindow.xib; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.xib; sourceTree = "<group>"; };
 		3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoWindow.swift; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A127F3E1C10FA0000406423 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				3A127F3F1C10FA4400406423 /* String+Whitespace.swift */,
+			);
+			name = String;
+			sourceTree = "<group>";
+		};
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +538,7 @@
 		E3DE2C511C0A0FFA00F73362 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3A127F3E1C10FA0000406423 /* String */,
 				E3DE2C521C0A100400F73362 /* UIColor */,
 			);
 			name = Extensions;
@@ -751,6 +762,7 @@
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
+				3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */,
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
