@@ -43,15 +43,15 @@ class LocationDetailViewController: UITableViewController {
     //MARK: UItableViewDataSouce
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return indexPath.row > 0 ? 44 : 88
+        return indexPath.row == 1 ? 88 : 44
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = indexPath.row > 0 ? "small" : "large"
+        let cellIdentifier = indexPath.row == 1 ? "large" : "small"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
         
         if cell == nil {
@@ -67,13 +67,20 @@ class LocationDetailViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            title = location?.addressFull
+            title = "Directions: 5m"
             break
         case 1:
-            title = location?.contacts?.first?.name
+            title = location?.addressFull
             break
         case 2:
+            title = location?.hours
+            break
+        case 3:
+            title = location?.contacts?.first?.name
+            break
+        case 4:
             title = location?.contacts?.first?.phoneNumber
+            cell.accessoryType = .DetailButton
             break
 
         default:
