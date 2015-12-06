@@ -1290,11 +1290,34 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="LYu-dI-Lpv" kind="custom" customClass="ECSlidingSegue" id="ao9-ve-uNo"/>
+                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="ShoeBox" customClass="ECSlidingSegue" id="ao9-ve-uNo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationLevel="1" indentationWidth="0.0" textLabel="KfR-Ak-qm5" style="IBUITableViewCellStyleDefault" id="0pY-7W-JhW">
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pY-7W-JhW" id="P5o-1e-S69">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KfR-Ak-qm5">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="Contact" customClass="ECSlidingSegue" id="luv-oe-pPa"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ecw-gy-lJF" style="IBUITableViewCellStyleDefault" id="lga-a9-ouW">
-                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lga-a9-ouW" id="9T8-Yl-UQw">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -1313,7 +1336,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="dgV-BU-tOU" kind="custom" customClass="ECSlidingSegue" id="23F-lv-GsX"/>
+                                            <segue destination="3RY-3B-qUh" kind="presentation" identifier="About" id="XnF-6e-AA5"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1355,60 +1378,6 @@
             </objects>
             <point key="canvasLocation" x="508" y="-378"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ew0-Tj-7gI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dgV-BU-tOU" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Dft-10-HGj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="barTintColor" red="0.1764705882" green="0.24313725489999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ZeT-TO-UXT" kind="relationship" relationship="rootViewController" id="1zo-fe-y1N"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DXe-OX-mcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="508" y="398"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="W9J-d5-kxz">
-            <objects>
-                <viewController id="ZeT-TO-UXT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ro0-02-i9m"/>
-                        <viewControllerLayoutGuide type="bottom" id="o2K-zo-E1X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CzC-8N-a6P">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="hOc-yG-RR0">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Sq8-DO-rHJ" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="barButtonTitle" value="a"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <segue destination="EmJ-dV-7eV" kind="unwind" unwindAction="unwindToMenuViewController:" id="A29-pc-vdi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                </viewController>
-                <exit id="EmJ-dV-7eV" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rMj-X9-qLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1278" y="398"/>
-        </scene>
     </scenes>
     <resources>
         <image name="checkmark_image" width="48" height="48"/>
@@ -1417,6 +1386,8 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XnF-6e-AA5"/>
+        <segue reference="ao9-ve-uNo"/>
         <segue reference="YOn-5M-eeq"/>
         <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>

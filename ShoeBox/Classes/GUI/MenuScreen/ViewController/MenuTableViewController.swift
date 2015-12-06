@@ -13,6 +13,12 @@ enum ShoeBoxSliderState: String {
     case Open = "Open"
 }
 
+enum ShoeBoxMenuOptions: String {
+    case ShoeBox = "ShoeBox"
+    case Contact = "Contact"
+    case About = "About"
+}
+
 class MenuTableViewController: UITableViewController {
 
     var slidingVC: ECSlidingViewController {
@@ -35,9 +41,8 @@ class MenuTableViewController: UITableViewController {
         slidingVC.anchorRightRevealAmount = CGRectGetWidth(self.tableView.bounds) - anchorDefaultOffset
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        SwiftEventBus.postToMainThread("selectedMenu", sender: segue.identifier)
     }
     
     @IBAction func unwindToMenuViewController(segue: UIStoryboardSegue) {

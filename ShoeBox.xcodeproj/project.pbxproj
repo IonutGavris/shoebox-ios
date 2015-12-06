@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3110132CE444A155064544DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D064EEFA3E668F1B02FC996 /* libPods.a */; };
 		3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A127F3F1C10FA4400406423 /* String+Whitespace.swift */; };
 		3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B183E1C10EADE00C26BD9 /* Contact.swift */; };
 		3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */; };
 		3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */; };
 		3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */; };
 		3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */; };
+		3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */; };
 		3A8C0D181C137463001E4ED9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C0D171C137463001E4ED9 /* PageViewController.swift */; };
 		3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */; };
 		3ABEE10F1C143C9B00A78638 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEE10E1C143C9B00A78638 /* ContainerViewController.swift */; };
@@ -46,7 +48,6 @@
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
-		F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF25368E5729049FB07709A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0C9AFE9953D52A7A78E63EEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		1EF25368E5729049FB07709A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D064EEFA3E668F1B02FC996 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3533925F2F659A57015949DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3A127F3F1C10FA4400406423 /* String+Whitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Whitespace.swift"; path = "Classes/Helpers/Extensions/String/String+Whitespace.swift"; sourceTree = "<group>"; };
 		3A4B183E1C10EADE00C26BD9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Classes/Model/Map/Contact.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoWindow.swift; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.swift; sourceTree = "<group>"; };
 		3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedNavigationItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedNavigationItem.swift; sourceTree = "<group>"; };
 		3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedBarButtonItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
+		3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEventBus.swift; path = Classes/Helpers/SwiftEventBus.swift; sourceTree = "<group>"; };
 		3A8C0D171C137463001E4ED9 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Classes/GUI/IntroScrees/ViewController/PageViewController.swift; sourceTree = "<group>"; };
 		3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cluj-Napoca.gpx"; path = "SupportingFiles/Cluj-Napoca.gpx"; sourceTree = "<group>"; };
 		3ABEE10E1C143C9B00A78638 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Classes/GUI/IntroScrees/ViewController/ContainerViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 				67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */,
 				678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */,
 				678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */,
-				F0453DAC70FEDE158F6D5D5F /* libPods.a in Frameworks */,
+				3110132CE444A155064544DF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +168,7 @@
 				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
 				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 				67A968E11C0F4BA700330961 /* Constants.swift */,
+				3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -235,7 +238,7 @@
 				67E731C91C0B878D00F259A5 /* CoreLocation.framework */,
 				678718961C0088AC00F2E739 /* Fabric.framework */,
 				678718971C0088AC00F2E739 /* Crashlytics.framework */,
-				1EF25368E5729049FB07709A /* libPods.a */,
+				2D064EEFA3E668F1B02FC996 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				3A8C0D181C137463001E4ED9 /* PageViewController.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
+				3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
 				E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
