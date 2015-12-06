@@ -33,3 +33,10 @@
 "shoebox_locations" = "Locations";
 "shoebox_list" = "List";
 "shoebox_list_search_placeHolder" = "Search";
+
+//ShoeBox Intro
+"intro_slide_1" = "The ShoeBox project is a tiny attempt to make the world a better place.\n\nWe try to put a smile on the face of underprivileged children every year, in the cities we live in.";
+"intro_slide_2" = "You only need an empty shoe box, wrapping paper and the desire to buy the things you want to gift.\n\nDon’t know what to put in the box? We can help you!";
+"intro_slide_3" = "After you fill the shoe box with all the nice presents you just need to take it to a ShoeBox locati
+on.\n\nThere are more than 260 ShoeBox locations across the globe!";
+"intro_get_involved" = "I want to get involved!";

@@ -11,11 +11,18 @@ import UIKit
 class PageViewController: UIViewController {
     
     var pageIndex = 0
+    var imageName: String!
+    var labelText: String!
+    
+    @IBOutlet weak var imageContent: UIImageView!
+    @IBOutlet weak var labelDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.clearColor()
+        imageContent.image = UIImage(named: imageName)
+        labelDescription.text = labelText
     }
     
     override func didReceiveMemoryWarning() {
