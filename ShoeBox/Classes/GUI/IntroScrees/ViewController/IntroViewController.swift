@@ -35,18 +35,28 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        count++
-        return viewControllerAtIndex(count)
+        var index = (viewController as! PageViewController).pageIndex
+        index++
+        if (index == 0) {
+            return nil
+        }
+        return viewControllerAtIndex(index)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        count--
-        return viewControllerAtIndex(count)
+        var index = (viewController as! PageViewController).pageIndex
+        if (index == 0) {
+            return nil
+        }
+        index--
+        return viewControllerAtIndex(index)
     }
     
     func viewControllerAtIndex(index: Int) -> UIViewController? {
-        if (index > 0 && index < 2) {
-            return self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController")
+        if (index >= 0 && index <= 2) {
+            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! PageViewController
+            controller.pageIndex = index
+            return controller
         }
         return nil
     }

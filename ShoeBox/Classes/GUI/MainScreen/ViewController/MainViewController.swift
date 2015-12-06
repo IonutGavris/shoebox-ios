@@ -14,7 +14,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        if (!NSUserDefaults.standardUserDefaults().boolForKey(Constants.KEY_INTRO_COMPLETED)) {
+            performSegueWithIdentifier("ShowIntroScreenIdentifier", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

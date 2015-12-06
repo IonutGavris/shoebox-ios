@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -97,27 +98,117 @@
                                 <segue destination="oe0-2t-Oqo" kind="unwind" unwindAction="unwindToMenuViewController:" id="wfy-lw-XKZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Intro" id="D6G-wQ-jFl">
-                            <connections>
-                                <segue destination="YVI-dY-HhV" kind="presentation" id="lew-ty-ipF"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="3RY-3B-qUh" kind="presentation" identifier="ShowIntroScreenIdentifier" animates="NO" id="O1w-6i-lrf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="oe0-2t-Oqo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-378"/>
         </scene>
-        <!--Intro View Controller-->
-        <scene sceneID="6B9-Jq-xYk">
+        <!--Container View Controller-->
+        <scene sceneID="1pJ-A7-4LW">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="YVI-dY-HhV" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <value key="contentSizeForViewInPopover" type="size" width="401" height="600"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="InF-yd-IFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="3RY-3B-qUh" customClass="ContainerViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wbb-dp-cNd"/>
+                        <viewControllerLayoutGuide type="bottom" id="CGQ-8a-xTR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZwK-3M-afG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-jv-9LC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="DP2-GL-VvD" kind="embed" id="PEV-9p-P1h"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8d-Yu-bW7" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.6965332031" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cAJ-Rq-U4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_where_to_leave_the_box"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cAJ-Rq-U4a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="cAJ-Rq-U4a"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startAction:" destination="3RY-3B-qUh" eventType="touchUpInside" id="olr-jC-IlL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Pq-jv-9LC" secondAttribute="trailing" constant="-20" id="20S-I8-9Dq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V8d-Yu-bW7" secondAttribute="trailing" constant="-20" id="9AS-3s-6Py"/>
+                            <constraint firstItem="CGQ-8a-xTR" firstAttribute="top" secondItem="V8d-Yu-bW7" secondAttribute="bottom" id="PYy-4z-iTv"/>
+                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="leading" secondItem="ZwK-3M-afG" secondAttribute="leadingMargin" constant="-20" id="Sxr-tK-zx1"/>
+                            <constraint firstItem="5Pq-jv-9LC" firstAttribute="leading" secondItem="ZwK-3M-afG" secondAttribute="leadingMargin" constant="-20" id="TRj-4r-rFk"/>
+                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="top" secondItem="5Pq-jv-9LC" secondAttribute="bottom" id="YJ2-fN-q2h"/>
+                            <constraint firstItem="5Pq-jv-9LC" firstAttribute="top" secondItem="ZwK-3M-afG" secondAttribute="topMargin" id="dkf-eK-03y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5Pq-jv-9LC"/>
+                                <exclude reference="V8d-Yu-bW7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="20S-I8-9Dq"/>
+                                <exclude reference="TRj-4r-rFk"/>
+                                <exclude reference="dkf-eK-03y"/>
+                                <exclude reference="9AS-3s-6Py"/>
+                                <exclude reference="Sxr-tK-zx1"/>
+                                <exclude reference="YJ2-fN-q2h"/>
+                                <exclude reference="PYy-4z-iTv"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5Pq-jv-9LC"/>
+                                <include reference="V8d-Yu-bW7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="20S-I8-9Dq"/>
+                                <include reference="TRj-4r-rFk"/>
+                                <include reference="dkf-eK-03y"/>
+                                <include reference="9AS-3s-6Py"/>
+                                <include reference="Sxr-tK-zx1"/>
+                                <include reference="YJ2-fN-q2h"/>
+                                <include reference="PYy-4z-iTv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-sf-ZRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507" y="-1101"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="cCE-91-u5T">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DP2-GL-VvD" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKA-kp-wzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288.5" y="-1126"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="HhG-dc-eSQ">
@@ -128,6 +219,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vs7-qa-YP5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3f7-mK-wtD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-xP-Q6E">
@@ -172,13 +264,13 @@
                                 <exclude reference="bhL-x8-OVl"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="JOZ-rT-aDm"/>
-                                <exclude reference="b1h-DU-ny0"/>
-                                <exclude reference="mgd-rr-NWb"/>
+                                <exclude reference="YuH-Um-YdD"/>
                                 <exclude reference="7uo-m7-dNX"/>
                                 <exclude reference="9Cc-Qj-Ozb"/>
                                 <exclude reference="j7W-GD-J9j"/>
-                                <exclude reference="YuH-Um-YdD"/>
+                                <exclude reference="JOZ-rT-aDm"/>
+                                <exclude reference="b1h-DU-ny0"/>
+                                <exclude reference="mgd-rr-NWb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -187,20 +279,20 @@
                                 <include reference="bhL-x8-OVl"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="JOZ-rT-aDm"/>
-                                <include reference="b1h-DU-ny0"/>
-                                <include reference="mgd-rr-NWb"/>
+                                <include reference="YuH-Um-YdD"/>
                                 <include reference="7uo-m7-dNX"/>
                                 <include reference="9Cc-Qj-Ozb"/>
                                 <include reference="j7W-GD-J9j"/>
-                                <include reference="YuH-Um-YdD"/>
+                                <include reference="JOZ-rT-aDm"/>
+                                <include reference="b1h-DU-ny0"/>
+                                <include reference="mgd-rr-NWb"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF0-bZ-iE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-1101"/>
+            <point key="canvasLocation" x="1288.5" y="-1781"/>
         </scene>
         <!--ShoeBox-->
         <scene sceneID="RhZ-IM-vh0">
@@ -1307,7 +1399,7 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t9q-Tg-BFF"/>
         <segue reference="YOn-5M-eeq"/>
+        <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,4 +10,6 @@ struct Constants {
     static let ENDPOINT_FIREBASE = "https://shoebox.firebaseio.com"
     static let ENDPOINT_LOCATIONS = ENDPOINT_FIREBASE + "/temp"
     static let ENDPOINT_SUGGESTIONS = ENDPOINT_FIREBASE + "/suggestions"
+    
+    static let KEY_INTRO_COMPLETED = "KEY_INTRO_COMPLETED"
 }
