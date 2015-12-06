@@ -102,7 +102,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 4:
             title = NSLocalizedString("shoeBox_details_choose_another_age", comment: "")
             if let age = selectedAge {
-                title = title! + " - \(age)" + " years"
+                title = title! + " - \(age) " + NSLocalizedString("shoeBox_suggestions_age", comment: "")
             }
             break
         default:
@@ -123,11 +123,11 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private func displayPickerView() {
         var allAges: [Int] = []
-        for i in 4...18 {
+        for i in 0...18 {
             allAges.append(i)
         }
         
-        ActionSheetStringPicker.showPickerWithTitle("Select age", rows: allAges, initialSelection: 0,
+        ActionSheetStringPicker.showPickerWithTitle(NSLocalizedString("shoeBox_suggestions_select_age", comment: ""), rows: allAges, initialSelection: 0,
             doneBlock: { [unowned self] (picker, selectedIndex, selectedValue) -> Void in
                 self.selectedAge = selectedValue as? Int
                 self.tableView.reloadData()

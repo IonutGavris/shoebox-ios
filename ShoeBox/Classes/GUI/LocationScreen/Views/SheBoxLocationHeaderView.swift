@@ -18,7 +18,6 @@ class SheBoxLocationHeaderView: UISearchBar, UISearchBarDelegate {
         super.init(frame: frame)
         self.placeholder = NSLocalizedString("shoebox_list_search_placeHolder", comment: "")
         self.delegate = self
-        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -42,5 +41,10 @@ class SheBoxLocationHeaderView: UISearchBar, UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         closure?(searchBar.text)
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 }

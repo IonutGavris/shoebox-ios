@@ -24,6 +24,8 @@
 
 //ShoeBox Suggestions
 "shoeBox_suggestions_header_name" = "Sugestii";
+"shoeBox_suggestions_select_age" = "Alege varsta";
+"shoeBox_suggestions_age" = "ani";
 
 //ShoeBox Suggestion Details
 "shoeBox_sUggestion_Details_footer_name" = "* NU puneti produse perisabile! (ex: banane, portocale, iaurt)";

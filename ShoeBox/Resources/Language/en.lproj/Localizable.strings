@@ -24,6 +24,8 @@
 
 //ShoeBox Suggestions
 "shoeBox_suggestions_header_name" = "Suggestions";
+"shoeBox_suggestions_select_age" = "Select age";
+"shoeBox_suggestions_age" = "years";
 
 //ShoeBox Suggestion Details
 "shoeBox_sUggestion_Details_footer_name" = "* DO NOT put perishable products! (eg: bananas, oranges, yogurt)";
