@@ -15,7 +15,6 @@
 		3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */; };
 		3A8C0D181C137463001E4ED9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C0D171C137463001E4ED9 /* PageViewController.swift */; };
 		3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */; };
-		3AAD27001C0F9E3200134609 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD26FF1C0F9E3200134609 /* Spot.swift */; };
 		3ABEE10F1C143C9B00A78638 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEE10E1C143C9B00A78638 /* ContainerViewController.swift */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
@@ -41,6 +40,9 @@
 		E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D51C0F6719004983ED /* Suggestion.swift */; };
 		E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D81C0F6912004983ED /* FirebaseManager.swift */; };
 		E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */; };
+		E3B6EDD51C1469F200329635 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD41C1469F200329635 /* Spot.swift */; };
+		E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */; };
+		E3B6EDDC1C14711500329635 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
@@ -76,7 +78,6 @@
 		3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedBarButtonItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
 		3A8C0D171C137463001E4ED9 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Classes/GUI/IntroScrees/ViewController/PageViewController.swift; sourceTree = "<group>"; };
 		3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cluj-Napoca.gpx"; path = "SupportingFiles/Cluj-Napoca.gpx"; sourceTree = "<group>"; };
-		3AAD26FF1C0F9E3200134609 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		3ABEE10E1C143C9B00A78638 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Classes/GUI/IntroScrees/ViewController/ContainerViewController.swift; sourceTree = "<group>"; };
 		670340611BFE0EBB001DE623 /* ShoeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340751BFE0EBB001DE623 /* ShoeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +112,9 @@
 		E38D37D51C0F6719004983ED /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Suggestion.swift; path = Classes/Model/Suggestion/Suggestion.swift; sourceTree = "<group>"; };
 		E38D37D81C0F6912004983ED /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Classes/Helpers/FirebaseManager/FirebaseManager.swift; sourceTree = "<group>"; };
 		E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheBoxLocationHeaderView.swift; path = Classes/GUI/LocationScreen/Views/SheBoxLocationHeaderView.swift; sourceTree = "<group>"; };
+		E3B6EDD41C1469F200329635 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = Classes/Model/Map/Spot.swift; sourceTree = "<group>"; };
+		E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ShoeBoxFont.swift"; path = "Classes/Helpers/Extensions/UIFont/UIFont+ShoeBoxFont.swift"; sourceTree = "<group>"; };
+		E3B6EDDB1C14711500329635 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = Resources/Fonts/icomoon.ttf; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
@@ -239,9 +243,9 @@
 		67E731C61C0B5F6C00F259A5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E3B6EDD41C1469F200329635 /* Spot.swift */,
 				3A4B183E1C10EADE00C26BD9 /* Contact.swift */,
 				E37EDD0A1C0C57AF0077B7F9 /* Location.swift */,
-				3AAD26FF1C0F9E3200134609 /* Spot.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -335,6 +339,7 @@
 		E34E59371C09850500E4E0B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E3B6EDD61C146A0200329635 /* Fonts */,
 				E34E59391C09853C00E4E0B9 /* Images */,
 				E381C0E31C0B1C8900D7AD1E /* Language */,
 			);
@@ -518,6 +523,22 @@
 			name = FirebaseManager;
 			sourceTree = "<group>";
 		};
+		E3B6EDD61C146A0200329635 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E3B6EDDB1C14711500329635 /* icomoon.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		E3B6EDD81C146A8400329635 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */,
+			);
+			name = UIFont;
+			sourceTree = "<group>";
+		};
 		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +565,7 @@
 		E3DE2C511C0A0FFA00F73362 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E3B6EDD81C146A8400329635 /* UIFont */,
 				3A127F3E1C10FA0000406423 /* String */,
 				E3DE2C521C0A100400F73362 /* UIColor */,
 			);
@@ -669,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
+				E3B6EDDC1C14711500329635 /* icomoon.ttf in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
 				E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */,
 				3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */,
@@ -759,6 +782,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */,
 				E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */,
 				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
 				3ABEE10F1C143C9B00A78638 /* ContainerViewController.swift in Sources */,
@@ -782,8 +806,8 @@
 				3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */,
 				3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
+				E3B6EDD51C1469F200329635 /* Spot.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
-				3AAD27001C0F9E3200134609 /* Spot.swift in Sources */,
 				E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

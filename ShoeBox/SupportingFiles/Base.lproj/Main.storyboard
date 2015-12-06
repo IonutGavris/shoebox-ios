@@ -93,7 +93,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="barButtonTitle" value="a"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="oe0-2t-Oqo" kind="unwind" unwindAction="unwindToMenuViewController:" id="wfy-lw-XKZ"/>
                             </connections>
@@ -117,6 +120,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CGQ-8a-xTR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZwK-3M-afG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-jv-9LC">
@@ -172,13 +176,13 @@
                                 <exclude reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="20S-I8-9Dq"/>
-                                <exclude reference="TRj-4r-rFk"/>
-                                <exclude reference="dkf-eK-03y"/>
+                                <exclude reference="PYy-4z-iTv"/>
                                 <exclude reference="9AS-3s-6Py"/>
                                 <exclude reference="Sxr-tK-zx1"/>
                                 <exclude reference="YJ2-fN-q2h"/>
-                                <exclude reference="PYy-4z-iTv"/>
+                                <exclude reference="20S-I8-9Dq"/>
+                                <exclude reference="TRj-4r-rFk"/>
+                                <exclude reference="dkf-eK-03y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -187,13 +191,13 @@
                                 <include reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="20S-I8-9Dq"/>
-                                <include reference="TRj-4r-rFk"/>
-                                <include reference="dkf-eK-03y"/>
+                                <include reference="PYy-4z-iTv"/>
                                 <include reference="9AS-3s-6Py"/>
                                 <include reference="Sxr-tK-zx1"/>
                                 <include reference="YJ2-fN-q2h"/>
-                                <include reference="PYy-4z-iTv"/>
+                                <include reference="20S-I8-9Dq"/>
+                                <include reference="TRj-4r-rFk"/>
+                                <include reference="dkf-eK-03y"/>
                             </mask>
                         </variation>
                     </view>
@@ -1069,11 +1073,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEH-bD-0h9">
-                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1081,7 +1085,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMg-4L-3P9">
-                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -1132,11 +1136,11 @@
                                 <rect key="frame" x="0.0" y="220" width="600" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8p-UT-W87" id="Ydz-Y3-H2y">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJ5-Hc-Tz0">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="87"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1155,11 +1159,11 @@
                                 <rect key="frame" x="0.0" y="308" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xef-hC-JCx" id="Btp-G5-c59">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qqt-Lh-uxL">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1259,11 +1263,11 @@
                                         <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c4D-fu-Tzs" id="CQP-tK-Fc0">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ShoeBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sw5-xE-dv1">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1282,11 +1286,11 @@
                                         <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lga-a9-ouW" id="9T8-Yl-UQw">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecw-gy-lJF">
-                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1377,8 +1381,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="hOc-yG-RR0">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Sq8-DO-rHJ">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Sq8-DO-rHJ" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="barButtonTitle" value="a"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="EmJ-dV-7eV" kind="unwind" unwindAction="unwindToMenuViewController:" id="A29-pc-vdi"/>
                             </connections>

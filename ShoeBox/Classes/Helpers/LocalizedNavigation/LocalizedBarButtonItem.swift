@@ -15,4 +15,16 @@ class LocalizedBarButtonItem: UIBarButtonItem {
             self.title = NSLocalizedString(localizedText, comment: "")
         }
     }
+    
+    var barButtonTitle: String! {
+        didSet {
+            
+            let font = UIFont.icommonFont(20.0)
+            let attributes = [NSFontAttributeName : font,
+                NSForegroundColorAttributeName : UIColor.whiteColor()]
+            
+            self.title = barButtonTitle
+            self.setTitleTextAttributes(attributes, forState: .Normal)
+        }
+    }
 }
