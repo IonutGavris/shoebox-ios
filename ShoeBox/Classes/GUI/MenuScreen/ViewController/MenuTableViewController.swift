@@ -38,17 +38,26 @@ class MenuTableViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         SwiftEventBus.postToMainThread("selectedMenu", sender: segue.identifier)
+        slideState = .Close
     }
     
     @IBAction func unwindToMenuViewController(segue: UIStoryboardSegue) {
+        var enableInteraction = true
         switch slideState {
         case .Close:
             slideState = .Open
+            enableInteraction = false
             break
         case .Open:
             slideState = .Close
             slidingVC.resetTopViewAnimated(true)
             break
+        }
+        
+        for view in slidingVC.topViewController.view.subviews {
+            if !view.isMemberOfClass(UINavigationBar.self) {
+                view.userInteractionEnabled = enableInteraction
+            }
         }
     }
 
