@@ -70,10 +70,12 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
         }
         
         let suggestion = allSuggestions[section - 1]
-        return suggestion.details.count
+        let count = suggestion.details.count
+        return count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cellIdentifier = NSStringFromClass(UITableViewCell.self) as String
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
         
@@ -83,10 +85,13 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
         
         let suggestion = allSuggestions[indexPath.section - 1]
         let detail = suggestion.details[indexPath.row - 1]
-        cell.detailTextLabel?.text = detail.capitalizedString
+        let string = detail.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        cell.detailTextLabel?.text = string.firstCharacterUppercased()
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.textColor = UIColor.darkGrayColor()
-        
+        cell.selectionStyle = .None
+
         return cell
     }
     
@@ -104,6 +109,32 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
         return
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var height = 44.0 as CGFloat
+        if indexPath.row == 0 {
+            return height
+        }
+        
+        let suggestion = allSuggestions[indexPath.section - 1]
+        let detail = suggestion.details[indexPath.row - 1] as NSString
+        
+        let font = UIFont(name: "HelveticaNeue", size: 15.0)
+        let attributes = [NSFontAttributeName : font!] as [String : AnyObject]
+        let attrString = NSAttributedString(string: detail as String, attributes: attributes)
+        
+        let rectSize = attrString.boundingRectWithSize(CGSizeMake(CGRectGetWidth(tableView.bounds), .max),
+                                options: [.UsesLineFragmentOrigin, .UsesFontLeading],
+                                context: nil)
+        
+
+        height = CGRectGetHeight(rectSize)
+        var multiplier = 2.4 as CGFloat
+        if height > 35 {
+            multiplier = 1.5
+        }
+        return height * multiplier
+    }
+    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 30.0
@@ -118,6 +149,7 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
         }
         return .min
     }
+    
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         var view: UIView?

@@ -14,4 +14,11 @@ extension String {
     func removeWhitespace() -> String {
         return self.replace(" ", replacement: "")
     }
+    
+    func firstCharacterUppercased() -> String {
+        let str = self as NSString
+        let firstUppercaseCharacter = str.substringToIndex(1).uppercaseString
+        let firstUppercaseCharacterString = str.stringByReplacingCharactersInRange(NSMakeRange(0, 1), withString: firstUppercaseCharacter)
+        return firstUppercaseCharacterString
+    }
 }
