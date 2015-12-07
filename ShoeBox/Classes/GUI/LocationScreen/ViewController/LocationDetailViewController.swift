@@ -173,9 +173,11 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
             firstLocationUpdate = true;
             let start = CLLocation(latitude: self.location!.latitude!, longitude: self.location!.longitude!)
             let destination = change?[NSKeyValueChangeNewKey] as? CLLocation
-            let distance = getDistanceMetresBetweenLocationCoordinates(start.coordinate, coord2: destination!.coordinate)
-            directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + String(roundToPlaces(distance / 1000, places: 1)) + " KM"
-            self.tableView.reloadData()
+            if (destination != nil) {
+                let distance = getDistanceMetresBetweenLocationCoordinates(start.coordinate, coord2: destination!.coordinate)
+                directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + String(roundToPlaces(distance / 1000, places: 1)) + " KM"
+                self.tableView.reloadData()
+            }
         }
     }
 }
