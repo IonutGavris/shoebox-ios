@@ -8,6 +8,7 @@ pod 'GoogleMaps', '>= 1.11.0'
 pod 'Google-Maps-iOS-Utils-QuadTree', :git => 'https://github.com/norman784/google-maps-ios-utils.git'
 pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'ActionSheetPicker-3.0'
+pod 'SLExpandableTableView'
 
 target 'ShoeBox' do
 

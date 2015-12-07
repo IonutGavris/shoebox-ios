@@ -12,3 +12,4 @@
 #import "NonHierarchicalDistanceBasedAlgorithm.h"
 #import "ECSlidingViewController.h"
 #import "UIViewController+ECSlidingViewController.h"
+#import "SLExpandableTableView.h"

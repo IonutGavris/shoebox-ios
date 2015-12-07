@@ -45,6 +45,7 @@
 		E3B6EDD51C1469F200329635 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD41C1469F200329635 /* Spot.swift */; };
 		E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */; };
 		E3B6EDDC1C14711500329635 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
+		E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
@@ -117,6 +118,7 @@
 		E3B6EDD41C1469F200329635 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = Classes/Model/Map/Spot.swift; sourceTree = "<group>"; };
 		E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ShoeBoxFont.swift"; path = "Classes/Helpers/Extensions/UIFont/UIFont+ShoeBoxFont.swift"; sourceTree = "<group>"; };
 		E3B6EDDB1C14711500329635 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = Resources/Fonts/icomoon.ttf; sourceTree = "<group>"; };
+		E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsTableViewCell.swift; path = Classes/GUI/SuggestionScreen/Cell/SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
 		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
@@ -445,7 +447,7 @@
 		E34E595D1C09890B00E4E0B9 /* SuggestionScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E34E595F1C09891900E4E0B9 /* Views */,
+				E3B6EDDD1C14D9F000329635 /* Cell */,
 				E34E595E1C09891200E4E0B9 /* ViewController */,
 			);
 			name = SuggestionScreen;
@@ -457,13 +459,6 @@
 				E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		E34E595F1C09891900E4E0B9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		E34E59621C0989B000E4E0B9 /* SupportingFiles */ = {
@@ -540,6 +535,14 @@
 				E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */,
 			);
 			name = UIFont;
+			sourceTree = "<group>";
+		};
+		E3B6EDDD1C14D9F000329635 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
@@ -796,6 +799,7 @@
 				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
+				E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */,
 				3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */,
 				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				3A8C0D181C137463001E4ED9 /* PageViewController.swift in Sources */,

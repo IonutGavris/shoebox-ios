@@ -9,14 +9,15 @@
 import UIKit
 
 struct Suggestion {
-    var description: String
+    var details: [String]
     var maxAge: NSNumber
     var minAge: NSNumber
     var name: String
     var sex: String
     
     init(dictionary: [String: AnyObject]) {
-        description = dictionary["description"] as! String
+        let descriptionString = dictionary["description"] as! String
+        details = descriptionString.componentsSeparatedByString(",") 
         maxAge = dictionary["maxAge"] as! NSNumber
         minAge = dictionary["minAge"] as! NSNumber
         name = dictionary["name"] as! String
