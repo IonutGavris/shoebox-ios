@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias ShoeBoxAgesTopViewTapped = () -> Void
+typealias ShoeBoxAgesTopViewTapped = (String) -> Void
 
 class ShoeBoxAgesTopView: UIView {
 
@@ -31,7 +31,7 @@ class ShoeBoxAgesTopView: UIView {
         girlCheckmarkImageView.alpha = 1.0
         boyCheckmarkImageView.alpha = 0.0
         
-        girlBoyTappedCompletion()
+        girlBoyTappedCompletion("female")
     }
     
     @IBAction func boyViewTapped(gesture: UITapGestureRecognizer) {
@@ -40,6 +40,6 @@ class ShoeBoxAgesTopView: UIView {
         girlCheckmarkImageView.alpha = 0.0
         boyCheckmarkImageView.alpha = 1.0
         
-        girlBoyTappedCompletion()
+        girlBoyTappedCompletion("male")
     }
 }

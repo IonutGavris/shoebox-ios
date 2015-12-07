@@ -12,7 +12,8 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let suggestionSegueIdentifier = "ShowSuggestionScreenIdentifier"
     var selectedAge: Int?
-    
+    var childSex: String?
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topBarView: ShoeBoxAgesTopView!
     @IBOutlet weak var tableOverview: UIView!
@@ -23,13 +24,18 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
         
-        topBarView.girlBoyTappedCompletion = {[unowned self] () -> Void in
+        topBarView.girlBoyTappedCompletion = {[unowned self] (sex) -> Void in
             self.tableOverview.removeFromSuperview()
+            self.childSex = sex
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if segue.identifier == suggestionSegueIdentifier {
+            if let viewController = segue.destinationViewController as? SuggestionsViewController {
+                viewController.agesDetails = ["sex" : childSex!, "age" : NSNumber(integer: selectedAge!)]
+            }
+        }
     }
     
     //MARK: UItableViewDataSouce
@@ -75,6 +81,10 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         if indexPath.row == 4 {
             displayPickerView()
+        } else {
+            let text = cell.textLabel?.text
+            let firstAge = text!.stringBeforeCharacter("-")
+            selectedAge = Int(firstAge)! as Int
         }
         
     }

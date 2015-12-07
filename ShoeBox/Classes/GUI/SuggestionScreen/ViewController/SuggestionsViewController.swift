@@ -11,6 +11,7 @@ import UIKit
 class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate, SLExpandableTableViewDatasource {
     
     var allSuggestions: [Suggestion] = []
+    var agesDetails: [String : AnyObject]?
     
     @IBOutlet weak var tableView: SLExpandableTableView!
     
@@ -29,8 +30,18 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
                 }
                 let suggestion = Suggestion(dictionary: dict as! [String : AnyObject])
                 self.allSuggestions.append(suggestion)
-                self.tableView.reloadData()
             }
+            
+            let age = self.agesDetails!["age"]
+            let sex = self.agesDetails!["sex"] as! String
+
+            self.allSuggestions = self.allSuggestions.filter {
+                let isAgeMatched = ($0.minAge.integerValue >= age?.integerValue)
+                let isSexMatched = ($0.sex == sex || $0.sex == "both")
+                return isAgeMatched && isSexMatched
+            }
+
+            self.tableView.reloadData()
         }
     }
     

@@ -21,4 +21,11 @@ extension String {
         let firstUppercaseCharacterString = str.stringByReplacingCharactersInRange(NSMakeRange(0, 1), withString: firstUppercaseCharacter)
         return firstUppercaseCharacterString
     }
+    
+    func stringBeforeCharacter(character: String) -> String {
+        let string = self as NSString
+        let range = string.rangeOfString(character)
+        
+        return string.substringToIndex(range.location) as String
+    }
 }
