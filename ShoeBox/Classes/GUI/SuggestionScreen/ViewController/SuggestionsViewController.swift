@@ -36,7 +36,7 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
             let sex = self.agesDetails!["sex"] as! String
 
             self.allSuggestions = self.allSuggestions.filter {
-                let isAgeMatched = ($0.minAge.integerValue >= age?.integerValue)
+                let isAgeMatched = ($0.minAge.integerValue <= age?.integerValue)
                 let isSexMatched = ($0.sex == sex || $0.sex == "both")
                 return isAgeMatched && isSexMatched
             }

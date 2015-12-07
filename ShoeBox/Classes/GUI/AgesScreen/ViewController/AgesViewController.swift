@@ -77,7 +77,6 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
         cell.accessoryType = .Checkmark
-        tableView.reloadData()
 
         if indexPath.row == 4 {
             displayPickerView()
@@ -85,8 +84,8 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let text = cell.textLabel?.text
             let firstAge = text!.stringBeforeCharacter("-")
             selectedAge = Int(firstAge)! as Int
+            selectedAge = selectedAge! + 1
         }
-        
     }
     
     
