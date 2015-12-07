@@ -1398,9 +1398,9 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XnF-6e-AA5"/>
         <segue reference="luv-oe-pPa"/>
         <segue reference="YOn-5M-eeq"/>
+        <segue reference="O1w-6i-lrf"/>
         <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>

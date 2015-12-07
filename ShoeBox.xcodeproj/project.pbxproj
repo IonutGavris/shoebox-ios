@@ -20,6 +20,8 @@
 		3ABEE10F1C143C9B00A78638 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEE10E1C143C9B00A78638 /* ContainerViewController.swift */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
+		671428121C15836000158038 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
+		671428141C1586E700158038 /* icomoon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671428131C1586E700158038 /* icomoon.plist */; };
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
 		67A968E21C0F4BA700330961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A968E11C0F4BA700330961 /* Constants.swift */; };
@@ -44,7 +46,6 @@
 		E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */; };
 		E3B6EDD51C1469F200329635 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD41C1469F200329635 /* Spot.swift */; };
 		E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */; };
-		E3B6EDDC1C14711500329635 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
 		E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */; };
 		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
@@ -89,6 +90,7 @@
 		670340801BFE0EBC001DE623 /* ShoeBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeBoxUITests.swift; sourceTree = "<group>"; };
 		670340861BFE0EBC001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		671428131C1586E700158038 /* icomoon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = icomoon.plist; path = Resources/Fonts/icomoon.plist; sourceTree = "<group>"; };
 		678718961C0088AC00F2E739 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
 		67A968E11C0F4BA700330961 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 		E3B6EDD61C146A0200329635 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				671428131C1586E700158038 /* icomoon.plist */,
 				E3B6EDDB1C14711500329635 /* icomoon.ttf */,
 			);
 			name = Fonts;
@@ -697,8 +700,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
-				E3B6EDDC1C14711500329635 /* icomoon.ttf in Resources */,
+				671428121C15836000158038 /* icomoon.ttf in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
+				671428141C1586E700158038 /* icomoon.plist in Resources */,
 				E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */,
 				3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */,
 				E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */,

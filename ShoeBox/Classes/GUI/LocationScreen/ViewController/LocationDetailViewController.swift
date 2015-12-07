@@ -28,7 +28,9 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         
         directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
         details.append((location?.addressFull)!)
-        details.append((location?.hours)!)
+        if (location?.hours?.characters.count > 0) {
+            details.append((location?.hours)!)
+        }
         if location?.contacts?.count > 0 {
             for contact in (location?.contacts)! {
                 contacts.append(contact)
@@ -104,15 +106,20 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         if (row == 0) {
             title = directions
             cell.textLabel?.enabled = true
+            cell.imageView?.image = UIImage(glyphNamed: "directions")
             cell.accessoryType = .DisclosureIndicator
         } else if (row > details.count) {
-            let contact = contacts[row - 3]
+            let contact = contacts[row - (details.count + 1)]
             title = contact.name
             subtitle = contact.phoneNumber
             cell.textLabel?.enabled = true
+            cell.imageView?.image = UIImage(glyphNamed: "call")
+            cell.accessoryType = .DisclosureIndicator
         } else {
-            title = self.details[row - 1]
+            let current = row - 1
+            title = self.details[current]
             cell.textLabel?.enabled = false
+            cell.imageView?.image = UIImage(glyphNamed: current == 0 ? "address" : "hours")
         }
         
         cell.textLabel?.text = title
@@ -126,7 +133,7 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         if indexPath.row == 0 {
             openMapForPlace(location!)
         } else if indexPath.row > details.count {
-            callNumber((contacts[indexPath.row - 3].phoneNumber)!)
+            callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber)!)
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

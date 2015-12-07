@@ -9,6 +9,7 @@ pod 'Google-Maps-iOS-Utils-QuadTree', :git => 'https://github.com/norman784/goog
 pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'ActionSheetPicker-3.0'
 pod 'SLExpandableTableView'
+pod 'WTGlyphFontSet'
 
 target 'ShoeBox' do
 
