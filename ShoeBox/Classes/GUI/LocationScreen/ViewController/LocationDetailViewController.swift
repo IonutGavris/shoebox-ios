@@ -50,8 +50,7 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
     
     func initGoogleMaps(location: Location) {
         let camera = GMSCameraPosition.cameraWithLatitude(location.latitude!,longitude: location.longitude!, zoom: 16)
-        let rect = tableView.tableHeaderView!.frame
-        mapView = GMSMapView.mapWithFrame(rect, camera: camera)
+        mapView = GMSMapView.mapWithFrame(CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 250), camera: camera)
         mapView.delegate = self
         mapView.mapType = GoogleMaps.kGMSTypeHybrid
         let marker = GMSMarker()
@@ -114,7 +113,6 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
             subtitle = contact.phoneNumber
             cell.textLabel?.enabled = true
             cell.imageView?.image = UIImage(glyphNamed: "call")
-            cell.accessoryType = .DisclosureIndicator
         } else {
             let current = row - 1
             title = self.details[current]
