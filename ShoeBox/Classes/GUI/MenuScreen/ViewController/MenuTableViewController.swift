@@ -29,7 +29,9 @@ class MenuTableViewController: UITableViewController {
     var slideState: ShoeBoxSliderState = .Close
     
     let anchorDefaultOffset: CGFloat = 54.0
-    
+    let contactIdentifier = "Contact"
+    let shoeboxIdentifier = "ShoeBox"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +40,10 @@ class MenuTableViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         SwiftEventBus.postToMainThread("selectedMenu", sender: segue.identifier)
-        slideState = .Close
+
+        if segue.identifier == contactIdentifier || segue.identifier == shoeboxIdentifier {
+            slideState = .Close
+        }
     }
     
     @IBAction func unwindToMenuViewController(segue: UIStoryboardSegue) {
