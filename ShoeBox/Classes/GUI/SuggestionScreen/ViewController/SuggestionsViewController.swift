@@ -96,9 +96,10 @@ class SuggestionsViewController: UIViewController, SLExpandableTableViewDelegate
         
         let suggestion = allSuggestions[indexPath.section - 1]
         let detail = suggestion.details[indexPath.row - 1]
-        let string = detail.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var string = detail.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        string = string.firstCharacterUppercased()
         
-        cell.detailTextLabel?.text = string.firstCharacterUppercased()
+        cell.detailTextLabel?.text = string.stringWithoutDot()
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.textColor = UIColor.darkGrayColor()
         cell.selectionStyle = .None

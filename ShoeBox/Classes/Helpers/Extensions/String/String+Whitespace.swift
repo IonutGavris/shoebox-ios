@@ -28,4 +28,16 @@ extension String {
         
         return string.substringToIndex(range.location) as String
     }
+    
+    func stringWithoutDot() -> String {
+        var string = self as NSString
+        
+        let allCharacters = string.componentsSeparatedByString(" ")
+        let lastCharacter = self.characters.last!
+        
+        if lastCharacter == "." && allCharacters.count < 3 {
+            string = string.stringByReplacingOccurrencesOfString(".", withString: "")
+        }
+        return string as String
+    }
 }
