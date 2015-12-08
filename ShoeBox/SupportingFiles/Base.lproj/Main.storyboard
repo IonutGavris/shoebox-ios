@@ -258,11 +258,25 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="b7r-xP-Q6E" firstAttribute="leading" secondItem="3f7-mK-wtD" secondAttribute="leading" constant="20" id="0WD-jr-mAz">
+                                <variation key="widthClass=compact" constant="40"/>
+                            </constraint>
                             <constraint firstItem="b7r-xP-Q6E" firstAttribute="top" secondItem="bhL-x8-OVl" secondAttribute="bottom" constant="8" id="9Cc-Qj-Ozb"/>
+                            <constraint firstAttribute="trailing" secondItem="bhL-x8-OVl" secondAttribute="trailing" id="INa-2a-szR">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="b7r-xP-Q6E" secondAttribute="trailing" constant="20" id="NkG-3w-s9R">
+                                <variation key="widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="bhL-x8-OVl" firstAttribute="leading" secondItem="3f7-mK-wtD" secondAttribute="leading" id="R11-fX-a4u">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstAttribute="leadingMargin" secondItem="b7r-xP-Q6E" secondAttribute="leading" id="UPv-yJ-yGY">
                                 <variation key="widthClass=compact" constant="-20"/>
                             </constraint>
-                            <constraint firstItem="Vs7-qa-YP5" firstAttribute="top" secondItem="b7r-xP-Q6E" secondAttribute="bottom" constant="20" id="YuH-Um-YdD"/>
+                            <constraint firstItem="Vs7-qa-YP5" firstAttribute="top" secondItem="b7r-xP-Q6E" secondAttribute="bottom" constant="20" id="YuH-Um-YdD">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="b7r-xP-Q6E" secondAttribute="trailing" id="Zuk-oe-VBF">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
@@ -276,13 +290,17 @@
                                 <exclude reference="bhL-x8-OVl"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="YuH-Um-YdD"/>
-                                <exclude reference="9Cc-Qj-Ozb"/>
-                                <exclude reference="UPv-yJ-yGY"/>
-                                <exclude reference="Zuk-oe-VBF"/>
+                                <exclude reference="INa-2a-szR"/>
+                                <exclude reference="R11-fX-a4u"/>
                                 <exclude reference="b1h-DU-ny0"/>
                                 <exclude reference="fEr-Tn-3gt"/>
                                 <exclude reference="mgd-rr-NWb"/>
+                                <exclude reference="0WD-jr-mAz"/>
+                                <exclude reference="9Cc-Qj-Ozb"/>
+                                <exclude reference="NkG-3w-s9R"/>
+                                <exclude reference="UPv-yJ-yGY"/>
+                                <exclude reference="Zuk-oe-VBF"/>
+                                <exclude reference="YuH-Um-YdD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -291,13 +309,17 @@
                                 <include reference="bhL-x8-OVl"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="YuH-Um-YdD"/>
-                                <include reference="9Cc-Qj-Ozb"/>
-                                <include reference="UPv-yJ-yGY"/>
-                                <include reference="Zuk-oe-VBF"/>
-                                <include reference="b1h-DU-ny0"/>
+                                <include reference="INa-2a-szR"/>
+                                <include reference="R11-fX-a4u"/>
+                                <exclude reference="b1h-DU-ny0"/>
                                 <include reference="fEr-Tn-3gt"/>
-                                <include reference="mgd-rr-NWb"/>
+                                <exclude reference="mgd-rr-NWb"/>
+                                <include reference="0WD-jr-mAz"/>
+                                <include reference="9Cc-Qj-Ozb"/>
+                                <include reference="NkG-3w-s9R"/>
+                                <exclude reference="UPv-yJ-yGY"/>
+                                <exclude reference="Zuk-oe-VBF"/>
+                                <include reference="YuH-Um-YdD"/>
                             </mask>
                         </variation>
                     </view>
@@ -1392,7 +1414,7 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="luv-oe-pPa"/>
+        <segue reference="ao9-ve-uNo"/>
         <segue reference="YOn-5M-eeq"/>
         <segue reference="O1w-6i-lrf"/>
         <segue reference="uld-bm-5k5"/>
