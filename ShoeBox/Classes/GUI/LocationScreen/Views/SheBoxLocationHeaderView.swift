@@ -28,6 +28,7 @@ class SheBoxLocationHeaderView: UISearchBar, UISearchBarDelegate {
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         closure?(searchText)
+        searchBar.becomeFirstResponder()
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {

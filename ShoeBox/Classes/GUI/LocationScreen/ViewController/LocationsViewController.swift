@@ -59,6 +59,7 @@ class LocationsViewController: UITableViewController {
         // Populate cell as you see fit, like as below
         cell.textLabel?.text = location.title
         cell.detailTextLabel?.text = location.city! + ", " + location.country!
+        cell.accessoryType = .DisclosureIndicator
         
         return cell
     }
@@ -69,7 +70,18 @@ class LocationsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = SheBoxLocationHeaderView(frame: CGRectMake(0.0, 0.0, CGRectGetHeight(tableView.bounds), 44.0))
+        return headerView
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedLocation = filteredLocations[indexPath.row]
+        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: selectedLocation)
+    }
+    
+    //MARK: Property
+    
+    private lazy var headerView: SheBoxLocationHeaderView = {
+        let view = SheBoxLocationHeaderView(frame: CGRectMake(0.0, 0.0, CGRectGetHeight(self.tableView.bounds), 44.0))
         view.closure = { (searchText) -> Void in
             if searchText!.isEmpty {
                 self.filteredLocations = self.locationsData
@@ -85,11 +97,6 @@ class LocationsViewController: UITableViewController {
             self.tableView.reloadData()
         }
         return view
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let selectedLocation = filteredLocations[indexPath.row]
-        self.performSegueWithIdentifier(suggestionSegueIdentifier, sender: selectedLocation)
-    }
+    }()
     
 }
