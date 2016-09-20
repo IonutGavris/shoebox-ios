@@ -1,0 +1,7 @@
+app_identifier "ro.shoebox.ShoeBox" # The bundle identifier of your app
+apple_id "uclsoftware" # Your Apple email address
+
+team_id "L76G333DCJ"  # Developer Portal Team ID
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
