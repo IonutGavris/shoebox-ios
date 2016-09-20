@@ -23,6 +23,7 @@
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
 		671428121C15836000158038 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
 		671428141C1586E700158038 /* icomoon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671428131C1586E700158038 /* icomoon.plist */; };
+		6728B70C1D914B1700850497 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728B70B1D914B1700850497 /* SnapshotHelper.swift */; };
 		678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718961C0088AC00F2E739 /* Fabric.framework */; };
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
 		67A968E21C0F4BA700330961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A968E11C0F4BA700330961 /* Constants.swift */; };
@@ -92,6 +93,7 @@
 		670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeBoxUITests.swift; sourceTree = "<group>"; };
 		670340861BFE0EBC001DE623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		671428131C1586E700158038 /* icomoon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = icomoon.plist; path = Resources/Fonts/icomoon.plist; sourceTree = "<group>"; };
+		6728B70B1D914B1700850497 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		678718961C0088AC00F2E739 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
 		67A968E11C0F4BA700330961 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		670340831BFE0EBC001DE623 /* ShoeBoxUITests */ = {
 			isa = PBXGroup;
 			children = (
+				6728B70B1D914B1700850497 /* SnapshotHelper.swift */,
 				670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */,
 				670340861BFE0EBC001DE623 /* Info.plist */,
 			);
@@ -686,10 +689,12 @@
 					};
 					670340741BFE0EBB001DE623 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = L76G333DCJ;
 						TestTargetID = 670340601BFE0EBB001DE623;
 					};
 					6703407F1BFE0EBB001DE623 = {
 						CreatedOnToolsVersion = 7.1.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 670340601BFE0EBB001DE623;
 					};
 				};
@@ -933,6 +938,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */,
+				6728B70C1D914B1700850497 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,6 +1132,7 @@
 			baseConfigurationReference = 7FAAC51D1FE2C548F8C556F5 /* Pods-ShoeBoxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = L76G333DCJ;
 				INFOPLIST_FILE = ShoeBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxTests;
@@ -1139,6 +1146,8 @@
 			baseConfigurationReference = E07B77BAAF32C267F7D0BC52 /* Pods-ShoeBoxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = L76G333DCJ;
 				INFOPLIST_FILE = ShoeBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxTests;
@@ -1151,7 +1160,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE245669824C0BC39BC5971C /* Pods-ShoeBoxUITests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShoeBoxUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1164,7 +1175,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55A39D2F4FCD9B6D7C90315D /* Pods-ShoeBoxUITests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShoeBoxUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

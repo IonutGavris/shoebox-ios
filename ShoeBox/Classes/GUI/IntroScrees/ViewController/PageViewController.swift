@@ -23,6 +23,7 @@ class PageViewController: UIViewController {
         self.view.backgroundColor = UIColor.clearColor()
         imageContent.image = UIImage(named: imageName)
         labelDescription.text = labelText
+        labelDescription.accessibilityIdentifier = String(pageIndex)
     }
     
     override func didReceiveMemoryWarning() {
