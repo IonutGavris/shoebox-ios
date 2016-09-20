@@ -15,7 +15,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let suggestionSegueIdentifier = "ShowMapLocationDetailsScreenIdentifier"
     
     var mapView: GMSMapView!
-    var clusterManager: GClusterManager!
+    var clusterManager: GMUClusterManager!
     var firstLocationUpdate = false
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.view = mapView
         
         // Create the Cluster Manager
-        self.clusterManager = GClusterManager(mapView: mapView, algorithm: NonHierarchicalDistanceBasedAlgorithm(), renderer: GDefaultClusterRenderer(mapView: mapView))
+        self.clusterManager = GMUClusterManager(map: mapView, algorithm: GMUNonHierarchicalDistanceBasedAlgorithm(), renderer: GMUDefaultClusterRenderer())
         
         // Get a reference to firebase locations endpoint
         let ref = Firebase(url: Constants.ENDPOINT_LOCATIONS)
@@ -65,7 +65,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             }
             var current:Location
             var marker:GMSMarker
-            self.clusterManager.removeItems()
+            self.clusterManager.clearItems()
             for location in locations {
                 current = Location(dict: location as! NSDictionary)
                 marker = GMSMarker()
@@ -111,7 +111,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     //MARK: GMSMapViewDelegate
     
     func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
-        let infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil).first! as! CustomInfoWindow
+        let infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil)!.first! as! CustomInfoWindow
         let selectedLocation = marker.userData as? Location
         infoWindow.title.text = selectedLocation?.title
         infoWindow.subtitle.text = selectedLocation?.city

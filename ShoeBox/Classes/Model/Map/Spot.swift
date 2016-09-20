@@ -8,7 +8,7 @@
 
 import GoogleMaps
 
-class Spot: NSObject, GClusterItem {
+class Spot: NSObject, GMUClusterItem {
     
     var marker: GMSMarker
     var position: CLLocationCoordinate2D

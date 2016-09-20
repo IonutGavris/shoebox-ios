@@ -55,6 +55,7 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
     }
     
     func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError?) {
+        /*
         switch result.rawValue {
         case MFMailComposeResultCancelled.rawValue:
             print("Mail cancelled")
@@ -67,6 +68,7 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
         default:
             break
         }
+        */
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

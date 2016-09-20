@@ -6,10 +6,10 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 #import "ActionSheetPicker.h"
-#import "GCluster.h"
-#import "GClusterManager.h"
-#import "GDefaultClusterRenderer.h"
-#import "NonHierarchicalDistanceBasedAlgorithm.h"
+#import "GMUCluster.h"
+#import "GMUClusterManager.h"
+#import "GMUDefaultClusterRenderer.h"
+#import "GMUNonHierarchicalDistanceBasedAlgorithm.h"
 #import "ECSlidingViewController.h"
 #import "UIViewController+ECSlidingViewController.h"
 #import "SLExpandableTableView.h"
