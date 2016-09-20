@@ -15,11 +15,20 @@ fastlane_version "1.103.0"
 
 default_platform :ios
 
+# travis build number
+travisBuildNumber = ENV["TRAVIS_BUILD_NUMBER"]
+
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
-    
+    cocoapods(
+  		repo_update: true	# Run `pod repo update` before install
+	)
+
+    # set travis build number
+  	unless travisBuildNumber.nil? || travisBuildNumber == 0
+  		increment_build_number(build_number: travisBuildNumber)
+  	end
   end
 
   desc "Runs all the tests"
@@ -30,9 +39,9 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
+    match(type: "appstore") # more information: https://codesigning.guide
     gym(scheme: "ShoeBox") # Build your app - more options available
-    pilot
+    pilot(skip_waiting_for_build_processing: true)
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
@@ -40,8 +49,8 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    # match(type: "appstore")
-    # snapshot
+    match(type: "appstore")
+    snapshot
     gym(scheme: "ShoeBox") # Build your app - more options available
     deliver(force: true)
     # frameit
