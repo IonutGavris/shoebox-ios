@@ -37,7 +37,7 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! PageViewController).pageIndex
-        index++
+        index += 1
         if (index == 0) {
             return nil
         }
@@ -49,7 +49,7 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
         if (index == 0) {
             return nil
         }
-        index--
+        index -= 1
         return viewControllerAtIndex(index)
     }
     

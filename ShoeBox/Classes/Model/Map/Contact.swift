@@ -6,13 +6,13 @@
 //  Copyright © 2015 ShoeBox. All rights reserved.
 //
 
-class Contact {
+struct Contact: BaseModelProtocol {
 
-    var name: String?
-    var phoneNumber: String?
+    let name: String
+    let phoneNumber: String
     
-    init(dict: NSDictionary) {
-        name = dict.objectForKey("name") as? String
-        phoneNumber = dict.objectForKey("phoneNumber") as? String
+    init(dictionary: [String: AnyObject]) {
+        name = dictionary["name"] as! String
+        phoneNumber = dictionary["phoneNumber"] as! String
     }
 }

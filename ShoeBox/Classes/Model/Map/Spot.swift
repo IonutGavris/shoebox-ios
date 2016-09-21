@@ -10,8 +10,8 @@ import GoogleMaps
 
 class Spot: NSObject, GMUClusterItem {
     
-    var marker: GMSMarker
-    var position: CLLocationCoordinate2D
+    let marker: GMSMarker
+    let position: CLLocationCoordinate2D
     
     init(marker: GMSMarker) {
         self.marker = marker

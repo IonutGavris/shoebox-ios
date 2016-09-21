@@ -27,7 +27,7 @@ class LocationsViewController: UITableViewController {
             }
             self.locationsData.removeAll()
             for location in locations {
-                self.locationsData.append(Location(dict: location as! NSDictionary))
+                self.locationsData.append(Location(dictionary: location as! [String : AnyObject]))
                 
             }
             self.filteredLocations = self.locationsData

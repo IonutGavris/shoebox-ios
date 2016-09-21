@@ -67,7 +67,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             var marker:GMSMarker
             self.clusterManager.clearItems()
             for location in locations {
-                current = Location(dict: location as! NSDictionary)
+                current = Location(dictionary: location as! [String : AnyObject])
                 marker = GMSMarker()
                 marker.position = CLLocationCoordinate2DMake(current.latitude!, current.longitude!)
                 marker.title = current.title;
@@ -110,7 +110,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     //MARK: GMSMapViewDelegate
     
-    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
+    func mapView(mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         let infoWindow = NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil)!.first! as! CustomInfoWindow
         let selectedLocation = marker.userData as? Location
         infoWindow.title.text = selectedLocation?.title
@@ -118,11 +118,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         return infoWindow
     }
     
-    func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+    func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
         clusterManager.mapView(mapView, idleAtCameraPosition: position)
     }
     
-    func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
+    func mapView(mapView: GMSMapView, didTapInfoWindowOfMarker marker: GMSMarker) {
         self.performSegueWithIdentifier(self.suggestionSegueIdentifier, sender: marker.userData as? Location)
     }
 }

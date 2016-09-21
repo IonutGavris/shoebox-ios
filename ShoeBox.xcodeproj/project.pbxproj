@@ -35,7 +35,7 @@
 		E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E594D1C09889900E4E0B9 /* IntroViewController.swift */; };
 		E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */; };
 		E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */; };
-		E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainViewController.swift */; };
+		E34E59571C0988D700E4E0B9 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */; };
 		E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E595B1C09890300E4E0B9 /* MapViewController.swift */; };
 		E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */; };
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
@@ -50,9 +50,10 @@
 		E3B6EDD51C1469F200329635 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD41C1469F200329635 /* Spot.swift */; };
 		E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */; };
 		E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */; };
-		E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */; };
 		E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */; };
 		E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */; };
+		E3F4F4DC1D92F47B0063B150 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4F4DB1D92F47B0063B150 /* BaseModelProtocol.swift */; };
+		E3F4F4E01D9302860063B150 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +111,7 @@
 		E34E594D1C09889900E4E0B9 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Classes/GUI/IntroScrees/ViewController/IntroViewController.swift; sourceTree = "<group>"; };
 		E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationDetailViewController.swift; sourceTree = "<group>"; };
 		E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationsViewController.swift; sourceTree = "<group>"; };
-		E34E59561C0988D700E4E0B9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/GUI/MainScreen/ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Classes/GUI/MainScreen/ViewController/MainTabBarViewController.swift; sourceTree = "<group>"; };
 		E34E595B1C09890300E4E0B9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Classes/GUI/MapScreen/ViewController/MapViewController.swift; sourceTree = "<group>"; };
 		E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsViewController.swift; path = Classes/GUI/SuggestionScreen/ViewController/SuggestionsViewController.swift; sourceTree = "<group>"; };
 		E34E59631C0989F600E4E0B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
@@ -130,9 +131,10 @@
 		E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ShoeBoxFont.swift"; path = "Classes/Helpers/Extensions/UIFont/UIFont+ShoeBoxFont.swift"; sourceTree = "<group>"; };
 		E3B6EDDB1C14711500329635 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = Resources/Fonts/icomoon.ttf; sourceTree = "<group>"; };
 		E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsTableViewCell.swift; path = Classes/GUI/SuggestionScreen/Cell/SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
-		E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Classes/GUI/MenuScreen/ViewController/MenuTableViewController.swift; sourceTree = "<group>"; };
 		E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ShoeBoxColor.swift"; path = "Classes/Helpers/Extensions/UIColor/UIColor+ShoeBoxColor.swift"; sourceTree = "<group>"; };
 		E3DE2C551C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxAgesTopView.swift; path = Classes/GUI/AgesScreen/Views/ShoeBoxAgesTopView.swift; sourceTree = "<group>"; };
+		E3F4F4DB1D92F47B0063B150 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModelProtocol.swift; path = Classes/Model/Base/BaseModelProtocol.swift; sourceTree = "<group>"; };
+		E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Classes/GUI/Contacts/ViewController/ContactsViewController.swift; sourceTree = "<group>"; };
 		EE245669824C0BC39BC5971C /* Pods-ShoeBoxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxUITests/Pods-ShoeBoxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 		670340631BFE0EBB001DE623 /* ShoeBox */ = {
 			isa = PBXGroup;
 			children = (
+				E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */,
 				E34E592E1C0982E800E4E0B9 /* Classes */,
 				E34E59371C09850500E4E0B9 /* Resources */,
 				E34E59621C0989B000E4E0B9 /* SupportingFiles */,
@@ -288,7 +291,6 @@
 		E34E592E1C0982E800E4E0B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */,
 				E34E592F1C0982F300E4E0B9 /* GUI */,
 				E34E596C1C098A7A00E4E0B9 /* Model */,
 				3A1BABA71C079709007DE234 /* Helpers */,
@@ -299,13 +301,12 @@
 		E34E592F1C0982F300E4E0B9 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4F4DD1D9302460063B150 /* Contacts */,
 				E34E593B1C0986F400E4E0B9 /* AgesScreen */,
-				E3DE2C501C09D4A200F73362 /* Base */,
 				E34E59301C09833E00E4E0B9 /* IntroScreen */,
 				E34E594F1C0988A400E4E0B9 /* LocationScreen */,
 				E34E59311C09834600E4E0B9 /* MainScreen */,
 				E34E59581C0988E800E4E0B9 /* MapScreen */,
-				E3DE2C4C1C09A04400F73362 /* MenuScreen */,
 				E34E595D1C09890B00E4E0B9 /* SuggestionScreen */,
 				E34E59381C09851B00E4E0B9 /* Storyboard */,
 			);
@@ -324,7 +325,6 @@
 		E34E59311C09834600E4E0B9 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E34E59331C0984C300E4E0B9 /* View */,
 				E34E59321C0984BA00E4E0B9 /* ViewController */,
 			);
 			name = MainScreen;
@@ -333,16 +333,9 @@
 		E34E59321C0984BA00E4E0B9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E34E59561C0988D700E4E0B9 /* MainViewController.swift */,
+				E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		E34E59331C0984C300E4E0B9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		E34E59341C0984C800E4E0B9 /* ViewController */ = {
@@ -496,6 +489,7 @@
 		E34E596C1C098A7A00E4E0B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4F4DA1D92F46F0063B150 /* Base */,
 				E38D37D41C0F66F6004983ED /* Suggestion */,
 				67E731C61C0B5F6C00F259A5 /* Map */,
 			);
@@ -567,29 +561,6 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		E3DE2C4C1C09A04400F73362 /* MenuScreen */ = {
-			isa = PBXGroup;
-			children = (
-				E3DE2C4D1C09A04C00F73362 /* ViewController */,
-			);
-			name = MenuScreen;
-			sourceTree = "<group>";
-		};
-		E3DE2C4D1C09A04C00F73362 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E3DE2C4E1C09A08200F73362 /* MenuTableViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		E3DE2C501C09D4A200F73362 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 		E3DE2C511C0A0FFA00F73362 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +577,30 @@
 				E3DE2C531C0A103500F73362 /* UIColor+ShoeBoxColor.swift */,
 			);
 			name = UIColor;
+			sourceTree = "<group>";
+		};
+		E3F4F4DA1D92F46F0063B150 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4F4DB1D92F47B0063B150 /* BaseModelProtocol.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		E3F4F4DD1D9302460063B150 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4F4DE1D9302510063B150 /* ViewController */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		E3F4F4DE1D9302510063B150 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -901,12 +896,11 @@
 				E34E594E1C09889900E4E0B9 /* IntroViewController.swift in Sources */,
 				3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */,
 				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
-				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
+				E34E59571C0988D700E4E0B9 /* MainTabBarViewController.swift in Sources */,
 				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
 				E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */,
 				3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */,
-				E3DE2C4F1C09A08200F73362 /* MenuTableViewController.swift in Sources */,
 				3A8C0D181C137463001E4ED9 /* PageViewController.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
 				3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */,
@@ -921,7 +915,9 @@
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 				E3B6EDD51C1469F200329635 /* Spot.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
+				E3F4F4DC1D92F47B0063B150 /* BaseModelProtocol.swift in Sources */,
 				E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */,
+				E3F4F4E01D9302860063B150 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

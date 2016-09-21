@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uMY-ub-kN6">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5NL-Vp-GTp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -12,7 +12,7 @@
         <!--ShoeBox-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,11 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
-                                <frame key="frameInset" minY="64" width="600" height="268"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minY="64" width="600" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.69810901989999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,17 +32,13 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_what_to_put_in_the_box"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="details"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="SOP-bb-kVa" kind="show" id="TMW-81-BBs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
-                                <frame key="frameInset" minY="332" width="600" height="268"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minY="332" width="600" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.80000000000000004" alpha="0.69686612219999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="34"/>
@@ -54,7 +47,6 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_where_to_leave_the_box"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="join"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="m3E-7j-JUR" kind="show" identifier="" id="YOn-5M-eeq"/>
@@ -84,24 +76,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" id="vwm-gn-wvL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="barButtonTitle" value="a"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <segue destination="oe0-2t-Oqo" kind="unwind" unwindAction="unwindToMenuViewController:" id="wfy-lw-XKZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="3RY-3B-qUh" kind="presentation" identifier="ShowIntroScreenIdentifier" animates="NO" id="O1w-6i-lrf"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" tag="2" systemItem="history" id="wFF-lS-Y8U"/>
+                    <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="oe0-2t-Oqo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-378"/>
+            <point key="canvasLocation" x="-588" y="-317"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="1pJ-A7-4LW">
@@ -131,7 +111,6 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="intro_get_involved"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="buttonStart"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -164,13 +143,13 @@
                                 <exclude reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Nrb-tA-cgR"/>
                                 <exclude reference="3kg-kp-Pb0"/>
                                 <exclude reference="CXg-Pj-qUj"/>
                                 <exclude reference="Tli-90-NDT"/>
                                 <exclude reference="UfC-9v-2Ep"/>
                                 <exclude reference="ct6-YY-aNS"/>
                                 <exclude reference="xSZ-sI-ZOW"/>
-                                <exclude reference="Nrb-tA-cgR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -179,23 +158,24 @@
                                 <include reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Nrb-tA-cgR"/>
                                 <include reference="3kg-kp-Pb0"/>
                                 <include reference="CXg-Pj-qUj"/>
                                 <include reference="Tli-90-NDT"/>
                                 <include reference="UfC-9v-2Ep"/>
                                 <include reference="ct6-YY-aNS"/>
                                 <include reference="xSZ-sI-ZOW"/>
-                                <include reference="Nrb-tA-cgR"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="1" systemItem="more" id="5Vq-Yp-38X"/>
                     <connections>
                         <outlet property="buttonStart" destination="V8d-Yu-bW7" id="VoC-co-8KQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-sf-ZRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="-1101"/>
+            <point key="canvasLocation" x="-1404" y="-1064"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="cCE-91-u5T">
@@ -203,7 +183,46 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DP2-GL-VvD" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKA-kp-wzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288.5" y="-1126"/>
+            <point key="canvasLocation" x="-478" y="-1065"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="V0D-k2-3xG">
+            <objects>
+                <viewController id="mO0-uI-GPb" customClass="ContactsViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QbQ-j1-Y3B"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPx-Z9-ZXm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cEO-RE-TBl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="aST-8d-eFq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3z-Pl-oE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2247" y="489"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="zZE-l1-jQ9">
+            <objects>
+                <tabBarController id="5NL-Vp-GTp" customClass="MainTabBarViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3QE-xO-gfN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="yuu-SV-OZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LYu-dI-Lpv" kind="relationship" relationship="viewControllers" id="PuR-uJ-PDf"/>
+                        <segue destination="3RY-3B-qUh" kind="relationship" relationship="viewControllers" id="AwP-XY-Iq6"/>
+                        <segue destination="mO0-uI-GPb" kind="relationship" relationship="viewControllers" id="VyH-cU-Ytz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPm-lc-Xdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2305" y="-317"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="HhG-dc-eSQ">
@@ -217,8 +236,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-xP-Q6E">
-                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-xP-Q6E">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="erw-m5-Oe8"/>
                                 </constraints>
@@ -237,9 +255,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-x8-OVl">
-                                <frame key="frameInset" width="240" height="128"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-x8-OVl"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -315,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF0-bZ-iE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288.5" y="-1781"/>
+            <point key="canvasLocation" x="226" y="-1012"/>
         </scene>
         <!--ShoeBox-->
         <scene sceneID="RhZ-IM-vh0">
@@ -329,11 +345,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-ZB-4Lb" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-ZB-4Lb" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="i95-vz-FS2">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="i95-vz-FS2">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="0OC-e8-l5E"/>
                                             <constraint firstAttribute="height" constant="128" id="VZF-98-ngu">
@@ -353,11 +367,9 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je4-ql-MkK">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je4-ql-MkK">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FH-7nL">
-                                                <frame key="frameInset" width="240" height="128"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FH-7nL">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="83g-e9-UXk">
                                                         <variation key="widthClass=compact" constant="50"/>
@@ -379,8 +391,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
-                                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="LMx-7a-W2Q">
@@ -426,10 +437,10 @@
                                                 <exclude reference="zhU-U2-rTC"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="00G-Ho-8Iy"/>
-                                                <exclude reference="tQU-Bd-MsK"/>
                                                 <exclude reference="aCg-2K-Hx0"/>
                                                 <exclude reference="uzb-1f-X9O"/>
+                                                <exclude reference="00G-Ho-8Iy"/>
+                                                <exclude reference="tQU-Bd-MsK"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -438,21 +449,19 @@
                                                 <include reference="zhU-U2-rTC"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="00G-Ho-8Iy"/>
-                                                <include reference="tQU-Bd-MsK"/>
                                                 <include reference="aCg-2K-Hx0"/>
                                                 <include reference="uzb-1f-X9O"/>
+                                                <include reference="00G-Ho-8Iy"/>
+                                                <include reference="tQU-Bd-MsK"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Llk-P8-Cdj" appends="YES" id="S8D-fx-siL"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-Xd-3U2">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-Xd-3U2">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-rb-toa">
-                                                <frame key="frameInset" width="240" height="128"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-rb-toa">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="otr-qA-462">
                                                         <variation key="widthClass=compact" constant="50"/>
@@ -474,8 +483,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
-                                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="9IN-bn-XIw">
                                                         <variation key="widthClass=compact" constant="100"/>
@@ -518,10 +526,10 @@
                                                 <exclude reference="Rec-Ta-szn"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="5S3-qf-35B"/>
-                                                <exclude reference="vK1-UY-y4q"/>
                                                 <exclude reference="dpF-Z2-yi1"/>
                                                 <exclude reference="lNf-Ka-6wB"/>
+                                                <exclude reference="5S3-qf-35B"/>
+                                                <exclude reference="vK1-UY-y4q"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -530,10 +538,10 @@
                                                 <include reference="Rec-Ta-szn"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="5S3-qf-35B"/>
-                                                <include reference="vK1-UY-y4q"/>
                                                 <include reference="dpF-Z2-yi1"/>
                                                 <include reference="lNf-Ka-6wB"/>
+                                                <include reference="5S3-qf-35B"/>
+                                                <include reference="vK1-UY-y4q"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -634,16 +642,13 @@
                                     <outlet property="girlCheckmarkImageView" destination="HWR-FH-7nL" id="FQQ-tw-Tlr"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-y3-KQc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minX="-23" minY="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-y3-KQc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.696533203125" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sum-DT-e3C">
@@ -671,8 +676,7 @@
                                     <segue destination="zLx-Q6-8iB" kind="show" identifier="ShowSuggestionScreenIdentifier" id="7gc-zo-3Po"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-bx-EIh">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-bx-EIh">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nF2-om-73t">
@@ -838,7 +842,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2029.5" y="-730"/>
+            <point key="canvasLocation" x="1134" y="-450"/>
         </scene>
         <!--Sugestii-->
         <scene sceneID="9Zo-lz-aug">
@@ -852,11 +856,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-M8-I0L" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-M8-I0L" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-X3-7Y0">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-X3-7Y0">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="4ZL-G2-Iuv"/>
                                             <constraint firstAttribute="height" constant="128" id="rRx-l9-WHb">
@@ -876,8 +878,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-0R-HTg">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-0R-HTg">
                                         <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.69675514914772729" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -944,12 +945,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf" customClass="SLExpandableTableView">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf" customClass="SLExpandableTableView">
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-ZQ-Udi" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minX="-23" minY="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-ZQ-Udi" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.6965332031" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EU1-Bf-g2A"/>
@@ -1057,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qur-cT-siJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761.5" y="-730"/>
+            <point key="canvasLocation" x="1889" y="-450"/>
         </scene>
         <!--Locatii-->
         <scene sceneID="Pba-EX-U5Z">
@@ -1109,7 +1108,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWZ-so-5EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-15"/>
+            <point key="canvasLocation" x="2143" y="93"/>
         </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="UyP-vu-pxG">
@@ -1179,7 +1178,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMo-0q-7YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3405" y="-15"/>
+            <point key="canvasLocation" x="2940" y="105"/>
         </scene>
         <!--Harta-->
         <scene sceneID="d60-4T-KuH">
@@ -1213,119 +1212,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FD-km-J4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="-15"/>
+            <point key="canvasLocation" x="1242" y="94"/>
         </scene>
-        <!--Sliding View Controller-->
-        <scene sceneID="aOZ-e1-Zfw">
-            <objects>
-                <viewController id="uMY-ub-kN6" customClass="ECSlidingViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QOv-AC-HGt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wkn-9H-sJO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xnh-xs-xsw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="topViewControllerStoryboardId" value="ShoeBoxNavigationController"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="underLeftViewControllerStoryboardId" value="MenuTableViewController"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byw-Fg-JYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-291" y="-1040"/>
-        </scene>
-        <!--Menu Table View Controller-->
-        <scene sceneID="3n4-8C-PGY">
-            <objects>
-                <tableViewController storyboardIdentifier="MenuTableViewController" id="Os3-bl-ZgI" customClass="MenuTableViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7WZ-hS-UxJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <sections>
-                            <tableViewSection id="Ctz-jr-Kd8">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sw5-xE-dv1" style="IBUITableViewCellStyleDefault" id="c4D-fu-Tzs">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c4D-fu-Tzs" id="CQP-tK-Fc0">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ShoeBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sw5-xE-dv1">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="ShoeBox" customClass="ECSlidingSegue" id="ao9-ve-uNo"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationLevel="1" indentationWidth="0.0" textLabel="KfR-Ak-qm5" style="IBUITableViewCellStyleDefault" id="0pY-7W-JhW">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pY-7W-JhW" id="P5o-1e-S69">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KfR-Ak-qm5">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="Contact" customClass="ECSlidingSegue" id="luv-oe-pPa"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ecw-gy-lJF" style="IBUITableViewCellStyleDefault" id="lga-a9-ouW">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lga-a9-ouW" id="9T8-Yl-UQw">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecw-gy-lJF">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="3RY-3B-qUh" kind="presentation" identifier="About" id="XnF-6e-AA5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Os3-bl-ZgI" id="56k-Z9-q33"/>
-                            <outlet property="delegate" destination="Os3-bl-ZgI" id="RBQ-zv-2IF"/>
-                        </connections>
-                    </tableView>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aze-q1-kl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-289" y="-368"/>
-        </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="7Pm-QZ-0p5">
             <objects>
                 <navigationController storyboardIdentifier="ShoeBoxNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="LYu-dI-Lpv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pM0-6F-fud"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="fKg-5H-0xu">
@@ -1339,12 +1232,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K6v-u6-H3a"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qg9-uQ-uHT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtU-Ni-W22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-378"/>
+            <point key="canvasLocation" x="-1404" y="-317"/>
         </scene>
     </scenes>
     <resources>
@@ -1354,9 +1247,7 @@
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ao9-ve-uNo"/>
         <segue reference="YOn-5M-eeq"/>
-        <segue reference="O1w-6i-lrf"/>
-        <segue reference="uld-bm-5k5"/>
+        <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>

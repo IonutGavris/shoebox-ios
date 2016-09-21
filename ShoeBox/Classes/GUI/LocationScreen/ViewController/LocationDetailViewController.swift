@@ -131,7 +131,7 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         if indexPath.row == 0 {
             openMapForPlace(location!)
         } else if indexPath.row > details.count {
-            callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber)!)
+            callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber))
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

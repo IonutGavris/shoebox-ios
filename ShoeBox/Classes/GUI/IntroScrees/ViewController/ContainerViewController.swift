@@ -15,7 +15,7 @@ class ContainerViewController: UIViewController {
     @IBAction func startAction(sender: AnyObject) {
         let preferences = NSUserDefaults.standardUserDefaults()
         preferences.setBool(true, forKey: Constants.KEY_INTRO_COMPLETED)
-        dismissViewControllerAnimated(true, completion: nil)
+        SwiftEventBus.post(Constants.GET_INVOLVED_KEY)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
