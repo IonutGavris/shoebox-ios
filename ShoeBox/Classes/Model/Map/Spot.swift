@@ -31,8 +31,8 @@ class Spot: NSObject, MKAnnotation {
             self.newCoordinate = CLLocationCoordinate2DMake(latitude, longitude)
         } else {
             //Cluj-Napoca
-            let lat = NSNumber(double: 37.0902)
-            let long = NSNumber(double: 95.7129)
+            let lat = NSNumber(value: 37.0902 as Double)
+            let long = NSNumber(value: 95.7129 as Double)
             
             self.newCoordinate = CLLocationCoordinate2DMake(lat.doubleValue, long.doubleValue)
         }

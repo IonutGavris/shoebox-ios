@@ -26,11 +26,11 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         centerMapOnLocation()
         directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
         details.append((location?.addressFull)!)
-        if (location?.hours?.characters.count > 0) {
-            details.append((location?.hours)!)
+        if let location = location, let hours = location.hours, hours.characters.count > 0 {
+            details.append(hours)
         }
-        if location?.contacts?.count > 0 {
-            for contact in (location?.contacts)! {
+        if let location = location, let locContacts = location.contacts, locContacts.count > 0 {
+            for contact in locContacts {
                 contacts.append(contact)
             }
         }
@@ -38,43 +38,43 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     
     //MARK: UItableViewDataSouce
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return details.count + contacts.count + 1
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = indexPath.row > details.count ? "contact" : "cell"
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as UITableViewCell!
         
         if cell == nil {
-            cell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
         }
-        configureCell(cell, atIndexPath: indexPath)
+        configureCell(cell!, atIndexPath: indexPath)
         
-        return cell
+        return cell!
     }
     
-    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+    fileprivate func configureCell(_ cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
         var title: String?
         var subtitle: String?
         let row = indexPath.row
         
         if (row == 0) {
             title = directions
-            cell.textLabel?.enabled = true
+            cell.textLabel?.isEnabled = true
             cell.imageView?.image = UIImage(glyphNamed: "directions")
-            cell.accessoryType = .DisclosureIndicator
+            cell.accessoryType = .disclosureIndicator
         } else if (row > details.count) {
             let contact = contacts[row - (details.count + 1)]
             title = contact.name
             subtitle = contact.phoneNumber
-            cell.textLabel?.enabled = true
+            cell.textLabel?.isEnabled = true
             cell.imageView?.image = UIImage(glyphNamed: "call")
         } else {
             let current = row - 1
             title = self.details[current]
-            cell.textLabel?.enabled = false
+            cell.textLabel?.isEnabled = false
             cell.imageView?.image = UIImage(glyphNamed: current == 0 ? "address" : "hours")
         }
         
@@ -85,19 +85,19 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     
     //MARK: UITableViewDelegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             openMapFor(location!)
         } else if indexPath.row > details.count {
             callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber))
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     
     //MARK: Helper methods
     
-    private func openMapFor(location: Location) {
+    fileprivate func openMapFor(_ location: Location) {
         let latitute:CLLocationDegrees =  location.latitude!
         let longitute:CLLocationDegrees =  location.longitude!
         
@@ -105,25 +105,25 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         let coordinates = CLLocationCoordinate2DMake(latitute, longitute)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = location.title
-        mapItem.openInMapsWithLaunchOptions(options)
+        mapItem.openInMaps(launchOptions: options)
     }
     
-    private func callNumber(phoneNumber:String) {
-        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber.removeWhitespace())") {
-            let application:UIApplication = UIApplication.sharedApplication()
+    fileprivate func callNumber(_ phoneNumber:String) {
+        if let phoneCallURL:URL = URL(string: "tel://\(phoneNumber.removeWhitespace())") {
+            let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
                 application.openURL(phoneCallURL);
             }
         }
     }
     
-    private func centerMapOnLocation() {
+    fileprivate func centerMapOnLocation() {
         if let location = location, let latitude = location.latitude, let longitude = location.longitude {
             let newCoordinate = CLLocationCoordinate2DMake(latitude, longitude)
             let regionRadius: CLLocationDistance = 1000
@@ -141,11 +141,11 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
 
 extension LocationDetailViewController {
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? Spot {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
                 as? MKPinAnnotationView { // 2
                 dequeuedView.annotation = annotation
                 view = dequeuedView

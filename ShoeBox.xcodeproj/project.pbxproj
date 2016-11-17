@@ -29,6 +29,7 @@
 		67A968E21C0F4BA700330961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A968E11C0F4BA700330961 /* Constants.swift */; };
 		67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E731C91C0B878D00F259A5 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D780EA0ADE5D75EB8B6882F0 /* libPods-ShoeBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B9FA023B2F99689275A5F9 /* libPods-ShoeBox.a */; };
+		E3189BE11DDE480200F03044 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3189BE01DDE480200F03044 /* GoogleService-Info.plist */; };
 		E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */; };
 		E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59401C09880100E4E0B9 /* AgesViewController.swift */; };
 		E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E594B1C09885F00E4E0B9 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		9E7C0C9F3E1D7A0B7B508F63 /* Pods-ShoeBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBox/Pods-ShoeBox.debug.xcconfig"; sourceTree = "<group>"; };
 		E07B77BAAF32C267F7D0BC52 /* Pods-ShoeBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxTests/Pods-ShoeBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		E1B9FA023B2F99689275A5F9 /* libPods-ShoeBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3189BE01DDE480200F03044 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SupportingFiles/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		E34E59401C09880100E4E0B9 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = Classes/GUI/AgesScreen/ViewController/AgesViewController.swift; sourceTree = "<group>"; };
 		E34E594B1C09885F00E4E0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 		E34E59621C0989B000E4E0B9 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E3189BE01DDE480200F03044 /* GoogleService-Info.plist */,
 				3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */,
 				E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */,
 				E34E59631C0989F600E4E0B9 /* Info.plist */,
@@ -681,14 +684,17 @@
 					670340601BFE0EBB001DE623 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = L76G333DCJ;
+						LastSwiftMigration = 0810;
 					};
 					670340741BFE0EBB001DE623 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = L76G333DCJ;
+						LastSwiftMigration = 0810;
 						TestTargetID = 670340601BFE0EBB001DE623;
 					};
 					6703407F1BFE0EBB001DE623 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 670340601BFE0EBB001DE623;
 					};
@@ -722,6 +728,7 @@
 			files = (
 				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
 				671428121C15836000158038 /* icomoon.ttf in Resources */,
+				E3189BE11DDE480200F03044 /* GoogleService-Info.plist in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
 				671428141C1586E700158038 /* icomoon.plist in Resources */,
 				E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */,
@@ -1093,6 +1100,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match Development ro.shoebox.ShoeBox";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/SupportingFiles/ShoeBox-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1119,6 +1127,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore ro.shoebox.ShoeBox";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShoeBox/SupportingFiles/ShoeBox-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1133,6 +1142,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoeBox.app/ShoeBox";
 			};
 			name = Debug;
@@ -1148,6 +1158,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoeBox.app/ShoeBox";
 			};
 			name = Release;
@@ -1162,6 +1173,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ShoeBox;
 				USES_XCTRUNNER = YES;
 			};
@@ -1177,6 +1189,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.shoebox.ShoeBoxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ShoeBox;
 				USES_XCTRUNNER = YES;
 			};

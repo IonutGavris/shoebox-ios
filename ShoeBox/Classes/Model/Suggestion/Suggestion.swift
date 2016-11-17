@@ -17,7 +17,7 @@ struct Suggestion: BaseModelProtocol {
     
     init(dictionary: [String: AnyObject]) {
         let descriptionString = dictionary["description"] as! String
-        details = descriptionString.componentsSeparatedByString(",")
+        details = descriptionString.components(separatedBy: ",")
         maxAge = dictionary["maxAge"] as! NSNumber
         minAge = dictionary["minAge"] as! NSNumber
         name = dictionary["name"] as! String

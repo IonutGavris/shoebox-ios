@@ -30,53 +30,53 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == suggestionSegueIdentifier {
-            if let viewController = segue.destinationViewController as? SuggestionsViewController {
-                viewController.agesDetails = ["sex" : childSex!, "age" : NSNumber(integer: selectedAge!)]
+            if let viewController = segue.destination as? SuggestionsViewController {
+                viewController.agesDetails = ["sex" : childSex! as AnyObject, "age" : NSNumber(value: selectedAge! as Int)]
             }
         }
     }
     
     //MARK: UItableViewDataSouce
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = NSStringFromClass(UITableViewCell.self) as String
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as UITableViewCell!
         
         if cell == nil {
-            cell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
         }
-        configureCell(cell, atIndexPath: indexPath)
+        configureCell(cell!, atIndexPath: indexPath)
         
-        return cell
+        return cell!
     }
     
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return NSLocalizedString("shoeBox_details_header_name", comment: "")
     }
     
     //MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        bottomViewOverview.hidden = true
+        bottomViewOverview.isHidden = true
         selectedAge = nil
         
         removeAllCheckmarkIndicators()
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
-        cell.accessoryType = .Checkmark
+        let cell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        cell.accessoryType = .checkmark
 
         if indexPath.row == 4 {
             displayPickerView()
@@ -91,7 +91,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: Private methods
     
-    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+    fileprivate func configureCell(_ cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
         var title: String?
         
         let age = NSLocalizedString("shoeBox_details_years", comment: "")
@@ -111,7 +111,7 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 4:
             title = NSLocalizedString("shoeBox_details_choose_another_age", comment: "")
             if let age = selectedAge {
-                title = title! + " - \(age) " + NSLocalizedString("shoeBox_suggestions_age", comment: "")
+                title = title! + " - " + "\(age)" + " "  + NSLocalizedString("shoeBox_suggestions_age", comment: "")
             }
             break
         default:
@@ -121,29 +121,29 @@ class AgesViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.textLabel?.text = title
     }
     
-    private func removeAllCheckmarkIndicators() {
+    fileprivate func removeAllCheckmarkIndicators() {
         let allIndexPaths = tableView.indexPathsForVisibleRows
         
         for idxPath in allIndexPaths! {
-            let newCell = tableView.cellForRowAtIndexPath(idxPath)
-            newCell?.accessoryType = .None
+            let newCell = tableView.cellForRow(at: idxPath)
+            newCell?.accessoryType = .none
         }
     }
     
-    private func displayPickerView() {
+    fileprivate func displayPickerView() {
         var allAges: [Int] = []
         for i in 0...18 {
             allAges.append(i)
         }
         
-        ActionSheetStringPicker.showPickerWithTitle(NSLocalizedString("shoeBox_suggestions_select_age", comment: ""), rows: allAges, initialSelection: 0,
+        ActionSheetStringPicker.show(withTitle: NSLocalizedString("shoeBox_suggestions_select_age", comment: ""), rows: allAges, initialSelection: 0,
             doneBlock: { [unowned self] (picker, selectedIndex, selectedValue) -> Void in
                 self.selectedAge = selectedValue as? Int
                 self.tableView.reloadData()
                 
-            }, cancelBlock: { (picker) -> Void in
+            }, cancel: { (picker) -> Void in
                 self.removeAllCheckmarkIndicators()
-                self.bottomViewOverview.hidden = false
+                self.bottomViewOverview.isHidden = false
         }, origin: self.view)
     }
 

@@ -16,7 +16,7 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let emailTitle = "ShoeBox iOS"
@@ -29,7 +29,7 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
         //self.presentViewController(mc, animated: true, completion: nil)
     }
 
-    func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError?) {
+    func mailComposeController(_ controller:MFMailComposeViewController, didFinishWith result:MFMailComposeResult, error:Error?) {
         /*
          switch result.rawValue {
          case MFMailComposeResultCancelled.rawValue:
@@ -44,6 +44,6 @@ class ContactsViewController: UIViewController, MFMailComposeViewControllerDeleg
          break
          }
          */
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 }

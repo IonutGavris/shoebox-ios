@@ -12,13 +12,13 @@ class ContainerViewController: UIViewController {
     
     @IBOutlet weak var buttonStart: ShoeBoxLocalizedButton!
     
-    @IBAction func startAction(sender: AnyObject) {
-        let preferences = NSUserDefaults.standardUserDefaults()
-        preferences.setBool(true, forKey: Constants.KEY_INTRO_COMPLETED)
+    @IBAction func startAction(_ sender: AnyObject) {
+        let preferences = UserDefaults.standard
+        preferences.set(true, forKey: Constants.KEY_INTRO_COMPLETED)
         SwiftEventBus.post(Constants.GET_INVOLVED_KEY)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }

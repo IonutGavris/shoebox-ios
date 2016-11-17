@@ -25,7 +25,7 @@ class ShoeBoxAgesTopView: UIView {
 
     }
     
-    @IBAction func girlViewTapped(gesture: UITapGestureRecognizer) {
+    @IBAction func girlViewTapped(_ gesture: UITapGestureRecognizer) {
         girlBackgroundView.backgroundColor = UIColor.shoeBoxRedColor(0.7)
         boyBackgroundView.backgroundColor = UIColor.shoeBoxBlueColor(0.8)
         girlCheckmarkImageView.alpha = 1.0
@@ -34,7 +34,7 @@ class ShoeBoxAgesTopView: UIView {
         girlBoyTappedCompletion("female")
     }
     
-    @IBAction func boyViewTapped(gesture: UITapGestureRecognizer) {
+    @IBAction func boyViewTapped(_ gesture: UITapGestureRecognizer) {
         girlBackgroundView.backgroundColor = UIColor.shoeBoxRedColor(0.8)
         boyBackgroundView.backgroundColor = UIColor.shoeBoxBlueColor(0.7)
         girlCheckmarkImageView.alpha = 0.0

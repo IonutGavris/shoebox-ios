@@ -18,9 +18,10 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
                 
-        if (!NSUserDefaults.standardUserDefaults().boolForKey(Constants.KEY_INTRO_COMPLETED)) {
+        if (!UserDefaults.standard.bool(forKey: Constants.KEY_INTRO_COMPLETED)) {
             self.selectedIndex = 1
         }
+        
         
         SwiftEventBus.onMainThread(self, name: Constants.GET_INVOLVED_KEY) { (notif) in
             self.selectedIndex = 0

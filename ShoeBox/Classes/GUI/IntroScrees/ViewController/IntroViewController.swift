@@ -12,7 +12,7 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
     
     var count = 0
     var nextIndex = 0
-    weak var parent: ContainerViewController?
+    //var parent: ContainerViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,22 +20,22 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
         self.view.backgroundColor = UIColor.shoeBoxRedColor(0.8)
         self.delegate = self
         self.dataSource = self
-        self.setViewControllers([viewControllerAtIndex(0)!], direction: .Forward, animated: true, completion: nil)
+        self.setViewControllers([viewControllerAtIndex(0)!], direction: .forward, animated: true, completion: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        parent = self.parentViewController as? ContainerViewController
+    override func viewDidAppear(_ animated: Bool) {
+        //parent = self.parent as? ContainerViewController
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 3
     }
     
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! PageViewController).pageIndex
         index += 1
         if (index == 0) {
@@ -44,7 +44,7 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
         return viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! PageViewController).pageIndex
         if (index == 0) {
             return nil
@@ -53,30 +53,30 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
         return viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         let index = (pendingViewControllers[0] as! PageViewController).pageIndex
         nextIndex = index
     }
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if (completed) {
             switch nextIndex {
             case 0:
-                UIView.animateWithDuration(1.0, delay: 0, options: .AllowUserInteraction, animations: { () -> Void in
+                UIView.animate(withDuration: 1.0, delay: 0, options: .allowUserInteraction, animations: { () -> Void in
                     self.view.backgroundColor = UIColor.shoeBoxRedColor(0.8)
-                    self.parent!.buttonStart.backgroundColor = UIColor.shoeBoxRedColor(1)
+                   // self.parent?.buttonStart.backgroundColor = UIColor.shoeBoxRedColor(1)
                     }, completion: nil)
                 break
             case 1:
-                UIView.animateWithDuration(1.0, delay: 0, options: .AllowUserInteraction, animations: { () -> Void in
+                UIView.animate(withDuration: 1.0, delay: 0, options: .allowUserInteraction, animations: { () -> Void in
                     self.view.backgroundColor = UIColor.shoeBoxGreenColor(0.8)
-                    self.parent!.buttonStart.backgroundColor = UIColor.shoeBoxGreenColor(1)
+                    //self.parent?.buttonStart.backgroundColor = UIColor.shoeBoxGreenColor(1)
                     }, completion: nil)
                 break
             case 2:
-                UIView.animateWithDuration(1.0, delay: 0, options: .AllowUserInteraction, animations: { () -> Void in
+                UIView.animate(withDuration: 1.0, delay: 0, options: .allowUserInteraction, animations: { () -> Void in
                     self.view.backgroundColor = UIColor.shoeBoxBlueColor(0.8)
-                    self.parent!.buttonStart.backgroundColor = UIColor.shoeBoxBlueColor(1)
+                    //self.parent?.buttonStart.backgroundColor = UIColor.shoeBoxBlueColor(1)
                     }, completion: nil)
                 break
             default:
@@ -85,9 +85,9 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDelegate, U
         }
     }
     
-    func viewControllerAtIndex(index: Int) -> UIViewController? {
+    func viewControllerAtIndex(_ index: Int) -> UIViewController? {
         if (index >= 0 && index <= 2) {
-            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! PageViewController
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
             switch index {
             case 0:
                 controller.imageName = "girl_boy_image"

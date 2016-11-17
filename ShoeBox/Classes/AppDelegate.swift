@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         WTGlyphFontSet.loadFont("icomoon", filename: "icomoon.ttf")
         WTGlyphFontSet.setDefaultFontSetName("icomoon")
         
         Fabric.with([Crashlytics.self])
-        Firebase.defaultConfig().persistenceEnabled = true
-
+        FIRApp.configure()
+        
         return true
     }
 

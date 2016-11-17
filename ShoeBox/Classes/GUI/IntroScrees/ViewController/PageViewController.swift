@@ -20,7 +20,7 @@ class PageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clear
         imageContent.image = UIImage(named: imageName)
         labelDescription.text = labelText
         labelDescription.accessibilityIdentifier = String(pageIndex)
