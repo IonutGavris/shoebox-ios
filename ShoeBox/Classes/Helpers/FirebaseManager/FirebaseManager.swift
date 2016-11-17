@@ -11,7 +11,7 @@ import Firebase
 
 typealias FirebaseManagerClosure = (NSArray?) -> Void
 
-class FirebaseManager: NSObject {
+class FirebaseManager {
 
     static func extractAllSuggestions(using completion: @escaping (([Suggestion]) -> Void)) {
         

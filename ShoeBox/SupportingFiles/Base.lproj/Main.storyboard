@@ -350,7 +350,7 @@
         <!--ShoeBox-->
         <scene sceneID="RhZ-IM-vh0">
             <objects>
-                <viewController storyboardIdentifier="AgesViewController" title="ShoeBox" hidesBottomBarWhenPushed="YES" id="SOP-bb-kVa" customClass="AgesViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AgesViewController" title="ShoeBox" id="SOP-bb-kVa" customClass="AgesViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="agv-bh-sUF"/>
                         <viewControllerLayoutGuide type="bottom" id="3EP-H1-Dgs"/>
@@ -1224,7 +1224,7 @@
         <!--Harta-->
         <scene sceneID="d60-4T-KuH">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="m3E-7j-JUR" customClass="MapViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m3E-7j-JUR" customClass="MapViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsH-Po-oMT"/>
                         <viewControllerLayoutGuide type="bottom" id="nm6-tn-4QK"/>

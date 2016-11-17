@@ -18,8 +18,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var firstLocationUpdate = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,8 +45,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     fileprivate func setupMapView() {
         // set initial location in Cluj Napoca
-        let latitude = 46.769439;
-        let longitude = 23.590007;
+        let latitude = 46.77279
+        let longitude = 23.596058
         let initialLocation = CLLocation(latitude: latitude, longitude: longitude)
         
         centerMapOnLocationFrom(initialLocation.coordinate)
@@ -75,10 +73,12 @@ extension MapViewController {
                 view = dequeuedView
             } else {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             }
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.pinTintColor = UIColor.shoeBoxBlueColor(0.9)
+
             return view
         }
         return nil

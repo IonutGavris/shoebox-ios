@@ -12,8 +12,9 @@ import UIKit
 class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    private let regionDistance: CLLocationDistance = 10000
+
     var location: Location?
-    var firstLocationUpdate = false
     
     var directions: String?
     var details = [String]()
@@ -101,7 +102,6 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         let latitute:CLLocationDegrees =  location.latitude!
         let longitute:CLLocationDegrees =  location.longitude!
         
-        let regionDistance:CLLocationDistance = 10000
         let coordinates = CLLocationCoordinate2DMake(latitute, longitute)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
@@ -126,10 +126,9 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     fileprivate func centerMapOnLocation() {
         if let location = location, let latitude = location.latitude, let longitude = location.longitude {
             let newCoordinate = CLLocationCoordinate2DMake(latitude, longitude)
-            let regionRadius: CLLocationDistance = 1000
 
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(newCoordinate,
-                                               regionRadius * 2.0, regionRadius * 2.0)
+                                               regionDistance * 2.0, regionDistance * 2.0)
             mapView.setRegion(coordinateRegion, animated: true)
             
             let spot = Spot(location: location)
@@ -151,12 +150,9 @@ extension LocationDetailViewController {
                 view = dequeuedView
             } else {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                if #available(iOS 9.0, *) {
-                    view.pinTintColor = UIColor.shoeBoxRedColor(0.9)
-                } else {
-                    // Fallback on earlier versions
-                }
             }
+            view.pinTintColor = UIColor.shoeBoxBlueColor(0.9)
+
             return view
         }
         return nil
