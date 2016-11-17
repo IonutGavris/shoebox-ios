@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
         FIRApp.configure()
-        
+        FIRDatabase.database().persistenceEnabled = true
+
         return true
     }
 
