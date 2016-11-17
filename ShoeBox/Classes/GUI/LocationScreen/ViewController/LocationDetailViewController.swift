@@ -6,13 +6,12 @@
 //  Copyright © 2015 ShoeBox. All rights reserved.
 //
 
-import GoogleMaps
 import MapKit
 import UIKit
 
-class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
+class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     
-    var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     var location: Location?
     var firstLocationUpdate = false
     
@@ -24,8 +23,7 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = location?.title
-        initGoogleMaps(location!)
-        
+        centerMapOnLocation()
         directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
         details.append((location?.addressFull)!)
         if (location?.hours?.characters.count > 0) {
@@ -36,46 +34,6 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
                 contacts.append(contact)
             }
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        mapView.myLocationEnabled = true
-        mapView.addObserver(self, forKeyPath: "myLocation", options: .New, context: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        mapView.myLocationEnabled = false
-        mapView.removeObserver(self, forKeyPath: "myLocation")
-    }
-    
-    func initGoogleMaps(location: Location) {
-        let camera = GMSCameraPosition.cameraWithLatitude(location.latitude!,longitude: location.longitude!, zoom: 16)
-        mapView = GMSMapView.mapWithFrame(CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 250), camera: camera)
-        mapView.delegate = self
-        mapView.mapType = GoogleMaps.kGMSTypeHybrid
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(location.latitude!, location.longitude!)
-        marker.icon = GMSMarker.markerImageWithColor(UIColor.shoeBoxBlueColor(1.0))
-        marker.opacity = 0.9
-        marker.map = mapView
-        tableView.tableHeaderView = mapView
-    }
-    
-    func initPanorama(location: Location) {
-        let panoView = GMSPanoramaView(frame: tableView.tableHeaderView!.frame)
-        tableView.tableHeaderView = panoView
-        panoView.moveNearCoordinate(CLLocationCoordinate2DMake((location.latitude)!, (location.longitude)!))
-    }
-    
-    func getDistanceMetresBetweenLocationCoordinates(coord1: CLLocationCoordinate2D, coord2: CLLocationCoordinate2D) -> Double {
-        let location1 = CLLocation(latitude: coord1.latitude, longitude: coord1.longitude)
-        let location2 = CLLocation(latitude: coord2.latitude, longitude: coord2.longitude)
-        return location1.distanceFromLocation(location2)
-    }
-    
-    func roundToPlaces(value:Double, places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return round(value * divisor) / divisor
     }
     
     //MARK: UItableViewDataSouce
@@ -129,14 +87,17 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
-            openMapForPlace(location!)
+            openMapFor(location!)
         } else if indexPath.row > details.count {
             callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber))
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+
     
-    private func openMapForPlace(location: Location) {
+    //MARK: Helper methods
+    
+    private func openMapFor(location: Location) {
         let latitute:CLLocationDegrees =  location.latitude!
         let longitute:CLLocationDegrees =  location.longitude!
         
@@ -162,22 +123,43 @@ class LocationDetailViewController: UITableViewController, GMSMapViewDelegate {
         }
     }
     
-    //MARK: MapViewDelegate
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if (context != nil) {
-            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
-        }
-        if (!firstLocationUpdate) {
-            // If the first location update has not yet been recieved, then jump to that
-            // location.
-            firstLocationUpdate = true;
-            let start = CLLocation(latitude: self.location!.latitude!, longitude: self.location!.longitude!)
-            let destination = change?[NSKeyValueChangeNewKey] as? CLLocation
-            if (destination != nil) {
-                let distance = getDistanceMetresBetweenLocationCoordinates(start.coordinate, coord2: destination!.coordinate)
-                directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + String(roundToPlaces(distance / 1000, places: 1)) + " KM"
-                self.tableView.reloadData()
-            }
+    private func centerMapOnLocation() {
+        if let location = location, let latitude = location.latitude, let longitude = location.longitude {
+            let newCoordinate = CLLocationCoordinate2DMake(latitude, longitude)
+            let regionRadius: CLLocationDistance = 1000
+
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(newCoordinate,
+                                               regionRadius * 2.0, regionRadius * 2.0)
+            mapView.setRegion(coordinateRegion, animated: true)
+            
+            let spot = Spot(location: location)
+            mapView.addAnnotation(spot)
         }
     }
 }
+
+
+extension LocationDetailViewController {
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? Spot {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                if #available(iOS 9.0, *) {
+                    view.pinTintColor = UIColor.shoeBoxRedColor(0.9)
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
+            return view
+        }
+        return nil
+    }
+}
+

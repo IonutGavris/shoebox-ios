@@ -8,7 +8,6 @@
 
 import UIKit
 import Fabric
-import GoogleMaps
 import Crashlytics
 
 @UIApplicationMain
@@ -24,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
         Firebase.defaultConfig().persistenceEnabled = true
-        GMSServices.provideAPIKey("AIzaSyDFuQRN2Vx3TfSwbybE9VGaZs4fJO3pXHQ")
+
         return true
     }
 

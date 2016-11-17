@@ -4,9 +4,6 @@
 # use_frameworks!
 
 pod 'Firebase', '~> 2.3.2'
-pod 'GoogleMaps', '>= 2.0.1'
-pod 'Google-Maps-iOS-Utils'
-pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'ActionSheetPicker-3.0'
 pod 'SLExpandableTableView'
 pod 'WTGlyphFontSet'
