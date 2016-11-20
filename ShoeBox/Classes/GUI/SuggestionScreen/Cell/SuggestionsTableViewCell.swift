@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SLExpandableTableView
 
 class SuggestionsTableViewCell: UITableViewCell {
 
