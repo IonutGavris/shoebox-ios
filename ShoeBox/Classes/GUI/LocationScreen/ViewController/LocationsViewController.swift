@@ -7,85 +7,116 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LocationsViewController: UITableViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // segue id
-    let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
+    private let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
     // data
-    var locationsData = [Location]()
-    var filteredLocations = [Location]()
-
+    private var allLocations = [Location]()
+    private var filteredLocations = [Location]()
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         FirebaseManager.extractAllLocations { (locations) in
-            self.locationsData.removeAll()
-            self.locationsData = locations
+            self.allLocations.removeAll()
+            self.allLocations = locations
             self.filteredLocations = locations
-            self.tableView.reloadData()
+            self.setupTableViewDataSource()
         }
+        
+        setupSearchBar()
+        setupTableViewDelegate()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == suggestionSegueIdentifier
-        {
+        if segue.identifier == suggestionSegueIdentifier {
             if let destination = segue.destination as? LocationDetailViewController{
                 destination.location = sender as? Location
             }
         }
     }
     
-    //MARK: UItableViewDataSouce
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredLocations.count
-    }
+    //MARK: Private methods
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    private func setupTableViewDataSource() {
+        //Rx suggestion
+        tableView.dataSource = nil
         
-        let location = filteredLocations[indexPath.row]
-        // Populate cell as you see fit, like as below
-        cell.textLabel?.text = location.title
-        cell.detailTextLabel?.text = location.city! + ", " + location.country!
-        cell.accessoryType = .disclosureIndicator
-        
-        return cell
+        let datasource = Observable<[Location]>.just(filteredLocations)
+        datasource.bindTo(tableView.rx.items(cellIdentifier: "cell")) { index, location, cell in
+            cell.textLabel?.text = location.title
+            cell.detailTextLabel?.text = location.city! + ", " + location.country!
+            cell.accessoryType = .disclosureIndicator
+        }.addDisposableTo(disposeBag)
     }
     
-    //MARK: UITableViewDelegate
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return headerView
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedLocation = filteredLocations[indexPath.row]
-        self.performSegue(withIdentifier: suggestionSegueIdentifier, sender: selectedLocation)
-    }
-    
-    //MARK: Property
-    
-    fileprivate lazy var headerView: SheBoxLocationHeaderView = {
-        let view = SheBoxLocationHeaderView(frame: CGRect(x: 0.0, y: 0.0, width: self.tableView.bounds.height, height: 44.0))
-        view.closure = { (searchText) -> Void in
-            if searchText!.isEmpty {
-                self.filteredLocations = self.locationsData
-                self.tableView.reloadData()
-                return
-            }
-            
-            self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
-                let stringMatch = location.title!.range(of: searchText!, options: .caseInsensitive)
-                
-                return stringMatch != nil
+    private func setupTableViewDelegate() {
+        tableView.delegate = nil
+
+        tableView
+            .rx.modelSelected(Location.self)
+            .subscribe(onNext: { [unowned self] (location) in
+                self.performSegue(withIdentifier: self.suggestionSegueIdentifier, sender: location)
             })
-            self.tableView.reloadData()
-        }
-        return view
-    }()
+            .addDisposableTo(disposeBag)
+    }
     
+    private func setupSearchBar() {
+        searchBar.placeholder = NSLocalizedString("shoebox_list_search_placeHolder", comment: "")
+        
+        //Show cancel button
+        searchBar
+            .rx.textDidBeginEditing
+            .subscribe { [unowned self] (query) in
+                self.searchBar.setShowsCancelButton(true, animated: true)
+            }
+            .addDisposableTo(disposeBag)
+        
+        //Cancel button action
+        searchBar.rx.cancelButtonClicked.subscribe { [unowned self] (event) in
+            self.searchBar.text = nil
+            self.resignSearchBarResponder()
+            
+            self.filteredLocations = self.allLocations
+            self.setupTableViewDataSource()
+            }.addDisposableTo(disposeBag)
+        
+        //Search button action
+        searchBar.rx.searchButtonClicked.subscribe { [unowned self] (query) in
+            self.resignSearchBarResponder()
+            }
+            .addDisposableTo(disposeBag)
+        
+        searchBar
+            .rx.text
+            .map { $0! }
+            .debounce(0.3, scheduler: MainScheduler.instance) // Add delay
+            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+            .subscribe(onNext: { [unowned self] (query) in
+                if query.isEmpty {
+                    self.filteredLocations = self.allLocations
+                    
+                } else {
+                    self.filteredLocations = self.allLocations.filter({ (location: Location) -> Bool in
+                        let stringMatch = location.title!.range(of: query, options: .caseInsensitive)
+                        
+                        return stringMatch != nil
+                    })
+                }
+                
+                self.setupTableViewDataSource()
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    private func resignSearchBarResponder() {
+        self.searchBar.resignFirstResponder()
+        self.searchBar.setShowsCancelButton(false, animated: true)
+    }
 }

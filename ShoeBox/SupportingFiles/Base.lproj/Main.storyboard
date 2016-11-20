@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5NL-Vp-GTp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5NL-Vp-GTp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -976,9 +976,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="B5i-1f-FCC">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="iEH-bD-0h9" detailTextLabel="FMg-4L-3P9" style="IBUITableViewCellStyleSubtitle" id="XtV-KI-EtE">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -1002,10 +1007,6 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nHl-cT-1qc" id="i5a-8H-zeH"/>
-                            <outlet property="delegate" destination="nHl-cT-1qc" id="jAf-jb-oek"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ" customClass="LocalizedNavigationItem" customModule="ShoeBox" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -1013,6 +1014,7 @@
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="B5i-1f-FCC" id="fcw-VV-cyx"/>
                         <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowLocationDetailsScreenIdentifier" id="t9q-Tg-BFF"/>
                     </connections>
                 </tableViewController>
@@ -1183,6 +1185,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YOn-5M-eeq"/>
-        <segue reference="uld-bm-5k5"/>
+        <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>
