@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LYu-dI-Lpv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LYu-dI-Lpv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,19 +85,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" systemItem="history" id="wFF-lS-Y8U"/>
                     <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
-                        <rightBarButtonItems>
-                            <barButtonItem image="more" id="LHO-WP-qRj">
-                                <connections>
-                                    <action selector="moreButtonTapped:" destination="BYZ-38-t0r" id="pvG-Uv-lfR"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="action" id="0qN-7M-jCH">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="S0J-be-XH6"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0qN-7M-jCH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="S0J-be-XH6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="more" id="LHO-WP-qRj">
+                            <connections>
+                                <action selector="moreButtonTapped:" destination="BYZ-38-t0r" id="pvG-Uv-lfR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1090,7 +1087,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gY8-XI-qrx">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gY8-XI-qrx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <outlet property="delegate" destination="m3E-7j-JUR" id="xr8-xV-7PR"/>
@@ -1162,6 +1159,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YOn-5M-eeq"/>
-        <segue reference="t9q-Tg-BFF"/>
+        <segue reference="uld-bm-5k5"/>
     </inferredMetricsTieBreakers>
 </document>

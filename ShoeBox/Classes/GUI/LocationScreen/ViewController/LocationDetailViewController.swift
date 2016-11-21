@@ -12,7 +12,7 @@ import UIKit
 class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-    private let regionDistance: CLLocationDistance = 10000
+    private let regionDistance: CLLocationDistance = 100
 
     var location: Location?
     
