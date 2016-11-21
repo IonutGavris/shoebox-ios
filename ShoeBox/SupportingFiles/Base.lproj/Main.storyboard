@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5NL-Vp-GTp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LYu-dI-Lpv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,13 +7,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--ShoeBox-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
-                                <rect key="frame" x="-4" y="64" width="383" height="277"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="301.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="64" width="383" height="277"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="301.5"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.69810901989999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,10 +43,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
-                                <rect key="frame" x="-4" y="341" width="383" height="277"/>
+                                <rect key="frame" x="-4" y="365.5" width="383" height="301.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="341" width="383" height="277"/>
+                                <rect key="frame" x="-4" y="365.5" width="383" height="301.5"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.80000000000000004" alpha="0.69686612219999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="34"/>
@@ -84,7 +85,21 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" systemItem="history" id="wFF-lS-Y8U"/>
-                    <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6"/>
+                    <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
+                        <rightBarButtonItems>
+                            <barButtonItem image="more" id="LHO-WP-qRj">
+                                <connections>
+                                    <action selector="moreButtonTapped:" destination="BYZ-38-t0r" id="pvG-Uv-lfR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="0qN-7M-jCH">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="S0J-be-XH6"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +108,7 @@
         <!--Intro View Controller-->
         <scene sceneID="1pJ-A7-4LW">
             <objects>
-                <viewController id="3RY-3B-qUh" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController" id="3RY-3B-qUh" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wbb-dp-cNd"/>
                         <viewControllerLayoutGuide type="bottom" id="CGQ-8a-xTR"/>
@@ -103,19 +118,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF4-a5-qyV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                                 <connections>
                                     <outlet property="delegate" destination="3RY-3B-qUh" id="bD7-8X-zMl"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ng6-P2-0PI">
-                                <rect key="frame" x="168" y="511" width="39" height="37"/>
+                                <rect key="frame" x="168" y="560" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="GAq-X0-6mL"/>
                                 </constraints>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8d-Yu-bW7" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="548" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.28627450980392155" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="cAJ-Rq-U4a"/>
@@ -185,46 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-sf-ZRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="-1064"/>
-        </scene>
-        <!--Contacts View Controller-->
-        <scene sceneID="V0D-k2-3xG">
-            <objects>
-                <viewController id="mO0-uI-GPb" customClass="ContactsViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QbQ-j1-Y3B"/>
-                        <viewControllerLayoutGuide type="bottom" id="kPx-Z9-ZXm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cEO-RE-TBl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="aST-8d-eFq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I3z-Pl-oE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2247" y="489"/>
-        </scene>
-        <!--Main Tab Bar View Controller-->
-        <scene sceneID="zZE-l1-jQ9">
-            <objects>
-                <tabBarController id="5NL-Vp-GTp" customClass="MainTabBarViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="3QE-xO-gfN"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="yuu-SV-OZm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="LYu-dI-Lpv" kind="relationship" relationship="viewControllers" id="PuR-uJ-PDf"/>
-                        <segue destination="3RY-3B-qUh" kind="relationship" relationship="viewControllers" id="AwP-XY-Iq6"/>
-                        <segue destination="mO0-uI-GPb" kind="relationship" relationship="viewControllers" id="VyH-cU-Ytz"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sPm-lc-Xdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2305" y="-317"/>
+            <point key="canvasLocation" x="-1404" y="-1060"/>
         </scene>
         <!--ShoeBox-->
         <scene sceneID="RhZ-IM-vh0">
@@ -544,15 +520,15 @@
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
-                                <rect key="frame" x="0.0" y="224" width="375" height="344"/>
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
-                                <rect key="frame" x="0.0" y="224" width="375" height="344"/>
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-y3-KQc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.696533203125" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sum-DT-e3C">
@@ -581,7 +557,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-bx-EIh">
-                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nF2-om-73t">
@@ -854,11 +830,11 @@
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf" customClass="SLExpandableTableView">
-                                <rect key="frame" x="0.0" y="224" width="375" height="344"/>
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-ZQ-Udi" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.6965332031" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EU1-Bf-g2A"/>
@@ -1115,7 +1091,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gY8-XI-qrx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <outlet property="delegate" destination="m3E-7j-JUR" id="xr8-xV-7PR"/>
                                 </connections>
@@ -1180,6 +1156,7 @@
     <resources>
         <image name="checkmark_image" width="48" height="48"/>
         <image name="girl_boy_image" width="720" height="344"/>
+        <image name="more" width="25" height="25"/>
         <image name="what_to_put_in_box" width="720" height="512"/>
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
