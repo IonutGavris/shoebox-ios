@@ -8,6 +8,4 @@
 
 struct Constants {
     static let KEY_INTRO_COMPLETED = "KEY_INTRO_COMPLETED"
-    static let GET_INVOLVED_KEY = "GET_INVOLVED_KEY"
-
 }

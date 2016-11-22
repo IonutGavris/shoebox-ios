@@ -6,7 +6,7 @@
 //  Copyright © 2015 ShoeBox. All rights reserved.
 //
 
-class Location: BaseModelProtocol {
+struct Location: BaseModelProtocol {
     
     var address:String?
     var addressFull:String?
@@ -19,7 +19,7 @@ class Location: BaseModelProtocol {
     var state:String?
     var title:String?
     
-    required init(dictionary : [String: AnyObject]) {
+    init(dictionary : [String: AnyObject]) {
         address = dictionary["address"] as? String
         addressFull = dictionary["addressFull"] as? String
         city = dictionary["city"] as? String

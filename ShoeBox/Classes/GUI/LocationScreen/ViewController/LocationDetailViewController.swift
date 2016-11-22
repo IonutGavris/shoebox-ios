@@ -24,8 +24,11 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = location?.title
+       
         centerMapOnLocation()
+        
         directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
+       
         details.append((location?.addressFull)!)
         if let location = location, let hours = location.hours, hours.characters.count > 0 {
             details.append(hours)
@@ -55,6 +58,20 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         
         return cell!
     }
+
+    //MARK: UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            openMapFor(location!)
+        } else if indexPath.row > details.count {
+            callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber))
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    
+    //MARK: Helper methods
     
     fileprivate func configureCell(_ cell: UITableViewCell, atIndexPath indexPath: IndexPath) {
         var title: String?
@@ -84,19 +101,6 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         cell.detailTextLabel?.text = subtitle
     }
     
-    //MARK: UITableViewDelegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            openMapFor(location!)
-        } else if indexPath.row > details.count {
-            callNumber((contacts[indexPath.row - (details.count + 1)].phoneNumber))
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
-    
-    //MARK: Helper methods
     
     fileprivate func openMapFor(_ location: Location) {
         let latitute:CLLocationDegrees =  location.latitude!

@@ -10,11 +10,8 @@
 		209814D0FD156EE6E2B1C8F9 /* Pods_ShoeBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC58D98660ADFBA47433352D /* Pods_ShoeBox.framework */; };
 		3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A127F3F1C10FA4400406423 /* String+Whitespace.swift */; };
 		3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B183E1C10EADE00C26BD9 /* Contact.swift */; };
-		3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */; };
-		3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */; };
 		3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */; };
 		3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */; };
-		3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */; };
 		3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */; };
 		3ABEE10F1C143C9B00A78638 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEE10E1C143C9B00A78638 /* IntroViewController.swift */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
@@ -75,11 +72,8 @@
 /* Begin PBXFileReference section */
 		3A127F3F1C10FA4400406423 /* String+Whitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Whitespace.swift"; path = "Classes/Helpers/Extensions/String/String+Whitespace.swift"; sourceTree = "<group>"; };
 		3A4B183E1C10EADE00C26BD9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Classes/Model/Map/Contact.swift; sourceTree = "<group>"; };
-		3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoWindow.xib; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.xib; sourceTree = "<group>"; };
-		3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoWindow.swift; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.swift; sourceTree = "<group>"; };
 		3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedNavigationItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedNavigationItem.swift; sourceTree = "<group>"; };
 		3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedBarButtonItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
-		3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEventBus.swift; path = Classes/Helpers/SwiftEventBus.swift; sourceTree = "<group>"; };
 		3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cluj-Napoca.gpx"; path = "SupportingFiles/Cluj-Napoca.gpx"; sourceTree = "<group>"; };
 		3ABEE10E1C143C9B00A78638 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Classes/GUI/IntroScrees/ViewController/IntroViewController.swift; sourceTree = "<group>"; };
 		55A39D2F4FCD9B6D7C90315D /* Pods-ShoeBoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxUITests/Pods-ShoeBoxUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,7 +178,6 @@
 				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
 				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 				67A968E11C0F4BA700330961 /* Constants.swift */,
-				3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -423,7 +416,6 @@
 		E34E59581C0988E800E4E0B9 /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E34E595A1C0988F800E4E0B9 /* Views */,
 				E34E59591C0988F200E4E0B9 /* ViewController */,
 			);
 			name = MapScreen;
@@ -435,15 +427,6 @@
 				E34E595B1C09890300E4E0B9 /* MapViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		E34E595A1C0988F800E4E0B9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */,
-				3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		E34E595D1C09890B00E4E0B9 /* SuggestionScreen */ = {
@@ -697,7 +680,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
 				671428121C15836000158038 /* icomoon.ttf in Resources */,
 				E3189BE11DDE480200F03044 /* GoogleService-Info.plist in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
@@ -895,7 +877,6 @@
 				E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */,
 				3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
-				3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
 				E3EA562D1DE0BC8F00126931 /* PageView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
@@ -903,7 +884,6 @@
 				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,
 				67A968E21C0F4BA700330961 /* Constants.swift in Sources */,
 				3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */,
-				3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 				E3B6EDD51C1469F200329635 /* Spot.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
