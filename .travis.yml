@@ -1,5 +1,5 @@
 language: objective-c
-rvm: 2.2
+rvm: 1.9.3
 cache: cocoapods
 osx_image: xcode8.1
 
@@ -7,7 +7,7 @@ before_install:
 - gem install xcov --no-ri --no-rdoc --no-document
 - gem update fastlane --no-ri --no-rdoc --no-document
 
-install: true travis_wait 30
+install: true
 
 script: travis/script.sh
 after_success: travis/after_success_script.sh
