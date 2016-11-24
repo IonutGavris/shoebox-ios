@@ -15,6 +15,8 @@
 "shoeBox_more_info_about" = "About ShoeBox";
 "shoeBox_more_info_cancel" = "Cancel";
 "shoeBox_email_title" = "ShoeBox iOS";
+"shoeBox_share_title" = "ShoeBox Romania";
+"shoeBox_share_appstore_url" = "https://itunes.apple.com/us/app/shoebox-romania/id762718948?mt=8";
 
 //ShoeBox Ages
 "shoeBox_choose" = "Choose";

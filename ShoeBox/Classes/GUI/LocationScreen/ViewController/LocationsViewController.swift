@@ -40,16 +40,18 @@ class LocationsViewController: UITableViewController {
     fileprivate lazy var headerView: SheBoxLocationHeaderView = {
         let view = SheBoxLocationHeaderView(frame: CGRect(x: 0.0, y: 0.0, width: self.tableView.bounds.height, height: 44.0))
         view.closure = { (searchText) -> Void in
-            if searchText!.isEmpty {
+            guard let searchText = searchText else { return }
+            
+            if searchText.isEmpty {
                 self.filteredLocations = self.locationsData
                 self.tableView.reloadData()
                 return
             }
             
             self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
-                let stringMatch = location.title!.range(of: searchText!, options: .caseInsensitive)
+                guard let title = location.title else { return false }
                 
-                return stringMatch != nil
+                return title.lowercased().contains(searchText.lowercased())
             })
             self.tableView.reloadData()
         }

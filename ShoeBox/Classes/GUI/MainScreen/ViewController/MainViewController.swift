@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Social
 
 class MainViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -48,7 +49,8 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
     //MARK: MFMailComposeViewControllerDelegate
     
     
-    func mailComposeController(_ controller:MFMailComposeViewController, didFinishWith result:MFMailComposeResult, error:Error?) {
+    func mailComposeController(_ controller:MFMailComposeViewController,
+                               didFinishWith result:MFMailComposeResult, error:Error?) {
         
          switch result {
          case .cancelled:
@@ -67,17 +69,35 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
     
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         
+        let title = NSLocalizedString("shoeBox_share_title", comment: "")
+        var sharedItems: [Any] = [title]
+
+        if let url = URL(string: NSLocalizedString("shoeBox_share_appstore_url", comment: "")) {
+            sharedItems.append(url)
+        }
+        
+        let image = #imageLiteral(resourceName: "app_launcher_store")
+        sharedItems.append(image)
+        
+        let activityViewController = UIActivityViewController(activityItems: sharedItems, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.barButtonItem = sender
+        activityViewController.excludedActivityTypes = excludedActivityTypes
+        activityViewController.completionWithItemsHandler = { (activityType, completed, items, error) in
+            
+        }
+        
+        present(activityViewController, animated: true, completion: nil)
     }
     
     //MARK: Private methods
     
     private func showIntroViewController(animated: Bool = true) {
+        
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "IntroViewController") {
             present(vc, animated: animated, completion: nil)
         }
     }
 
-    
     private func showMailScreen() {
         
         let emailTitle = NSLocalizedString("shoeBox_email_title", comment: "")
@@ -92,6 +112,25 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
             present(mc, animated: true, completion: nil)
 
         }
+    }
+}
+
+extension MainViewController {
+    
+    fileprivate var excludedActivityTypes: [UIActivityType] {
+    
+        return [.postToWeibo,
+                .print,
+                .message,
+                .mail,
+                .copyToPasteboard,
+                .assignToContact,
+                .saveToCameraRoll,
+                .addToReadingList,
+                .postToTencentWeibo,
+                .airDrop,
+                .openInIBooks
+        ]
     }
 }
 
