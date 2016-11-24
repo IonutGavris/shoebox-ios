@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F45C7D293478DECAAC05167 /* libPods-ShoeBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC368F0313342EAAFC91A18C /* libPods-ShoeBox.a */; };
+		24081A5683A920BF615C0B43 /* libPods-ShoeBoxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFE241ECBFFFF8A73A8A828 /* libPods-ShoeBoxUITests.a */; };
 		3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A127F3F1C10FA4400406423 /* String+Whitespace.swift */; };
 		3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B183E1C10EADE00C26BD9 /* Contact.swift */; };
-		3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */; };
-		3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */; };
 		3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */; };
 		3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */; };
-		3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */; };
 		3AAD26FE1C0F953E00134609 /* Cluj-Napoca.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */; };
 		3ABEE10F1C143C9B00A78638 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEE10E1C143C9B00A78638 /* IntroViewController.swift */; };
-		481259CBE0AD1C42FCD7E5C8 /* libPods-ShoeBoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6CCC382884A8B91B79AE55 /* libPods-ShoeBoxTests.a */; };
-		6439F55344CD229F41B0253F /* libPods-ShoeBoxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC322BA8BD70FE8310009D9 /* libPods-ShoeBoxUITests.a */; };
 		6703407A1BFE0EBB001DE623 /* ShoeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340791BFE0EBB001DE623 /* ShoeBoxTests.swift */; };
 		670340851BFE0EBC001DE623 /* ShoeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670340841BFE0EBC001DE623 /* ShoeBoxUITests.swift */; };
 		671428121C15836000158038 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3B6EDDB1C14711500329635 /* icomoon.ttf */; };
@@ -27,14 +24,14 @@
 		678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678718971C0088AC00F2E739 /* Crashlytics.framework */; };
 		67A968E21C0F4BA700330961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A968E11C0F4BA700330961 /* Constants.swift */; };
 		67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E731C91C0B878D00F259A5 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		D780EA0ADE5D75EB8B6882F0 /* libPods-ShoeBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B9FA023B2F99689275A5F9 /* libPods-ShoeBox.a */; };
+		BF307350B79D58878AB8F71C /* libPods-ShoeBoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E949CB39AEE526E1B331571 /* libPods-ShoeBoxTests.a */; };
 		E3189BE11DDE480200F03044 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3189BE01DDE480200F03044 /* GoogleService-Info.plist */; };
 		E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */; };
 		E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59401C09880100E4E0B9 /* AgesViewController.swift */; };
 		E34E594C1C09885F00E4E0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E594B1C09885F00E4E0B9 /* Assets.xcassets */; };
 		E34E59541C0988C400E4E0B9 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */; };
 		E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */; };
-		E34E59571C0988D700E4E0B9 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */; };
+		E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59561C0988D700E4E0B9 /* MainViewController.swift */; };
 		E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E595B1C09890300E4E0B9 /* MapViewController.swift */; };
 		E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */; };
 		E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E59661C098A0200E4E0B9 /* LaunchScreen.storyboard */; };
@@ -43,9 +40,9 @@
 		E381C0EA1C0B1D7900D7AD1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E381C0EC1C0B1D7900D7AD1E /* Localizable.strings */; };
 		E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */; };
 		E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */; };
+		E3849E7E1DE7666F00B934E8 /* SheBoxLocationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3849E7D1DE7666F00B934E8 /* SheBoxLocationHeaderView.swift */; };
 		E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D51C0F6719004983ED /* Suggestion.swift */; };
 		E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37D81C0F6912004983ED /* FirebaseManager.swift */; };
-		E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */; };
 		E3B6EDD51C1469F200329635 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD41C1469F200329635 /* Spot.swift */; };
 		E3B6EDDA1C146ABB00329635 /* UIFont+ShoeBoxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */; };
 		E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B6EDDE1C14DA1B00329635 /* SuggestionsTableViewCell.swift */; };
@@ -54,7 +51,6 @@
 		E3EA562D1DE0BC8F00126931 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA562C1DE0BC8F00126931 /* PageView.swift */; };
 		E3EA562F1DE0BCAA00126931 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3EA562E1DE0BCAA00126931 /* PageView.xib */; };
 		E3F4F4DC1D92F47B0063B150 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4F4DB1D92F47B0063B150 /* BaseModelProtocol.swift */; };
-		E3F4F4E01D9302860063B150 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,13 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E949CB39AEE526E1B331571 /* libPods-ShoeBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A127F3F1C10FA4400406423 /* String+Whitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Whitespace.swift"; path = "Classes/Helpers/Extensions/String/String+Whitespace.swift"; sourceTree = "<group>"; };
 		3A4B183E1C10EADE00C26BD9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Classes/Model/Map/Contact.swift; sourceTree = "<group>"; };
-		3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoWindow.xib; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.xib; sourceTree = "<group>"; };
-		3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoWindow.swift; path = Classes/GUI/MapScreen/Views/CustomInfoWindow.swift; sourceTree = "<group>"; };
 		3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedNavigationItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedNavigationItem.swift; sourceTree = "<group>"; };
 		3A8224C51C0E270700A64284 /* LocalizedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedBarButtonItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedBarButtonItem.swift; sourceTree = "<group>"; };
-		3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEventBus.swift; path = Classes/Helpers/SwiftEventBus.swift; sourceTree = "<group>"; };
 		3AAD26FD1C0F953E00134609 /* Cluj-Napoca.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cluj-Napoca.gpx"; path = "SupportingFiles/Cluj-Napoca.gpx"; sourceTree = "<group>"; };
 		3ABEE10E1C143C9B00A78638 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Classes/GUI/IntroScrees/ViewController/IntroViewController.swift; sourceTree = "<group>"; };
 		55A39D2F4FCD9B6D7C90315D /* Pods-ShoeBoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxUITests/Pods-ShoeBoxUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,19 +93,18 @@
 		678718971C0088AC00F2E739 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Frameworks/Crashlytics.framework; sourceTree = "<group>"; };
 		67A968E11C0F4BA700330961 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Helpers/Constants.swift; sourceTree = "<group>"; };
 		67E731C91C0B878D00F259A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		7CC322BA8BD70FE8310009D9 /* libPods-ShoeBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAAC51D1FE2C548F8C556F5 /* Pods-ShoeBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxTests/Pods-ShoeBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8F6CCC382884A8B91B79AE55 /* libPods-ShoeBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FFE241ECBFFFF8A73A8A828 /* libPods-ShoeBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7C0C9F3E1D7A0B7B508F63 /* Pods-ShoeBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBox/Pods-ShoeBox.debug.xcconfig"; sourceTree = "<group>"; };
+		BC368F0313342EAAFC91A18C /* libPods-ShoeBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07B77BAAF32C267F7D0BC52 /* Pods-ShoeBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxTests/Pods-ShoeBoxTests.release.xcconfig"; sourceTree = "<group>"; };
-		E1B9FA023B2F99689275A5F9 /* libPods-ShoeBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3189BE01DDE480200F03044 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SupportingFiles/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E34E593E1C0987F300E4E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		E34E59401C09880100E4E0B9 /* AgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgesViewController.swift; path = Classes/GUI/AgesScreen/ViewController/AgesViewController.swift; sourceTree = "<group>"; };
 		E34E594B1C09885F00E4E0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
 		E34E59521C0988C400E4E0B9 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationDetailViewController.swift; sourceTree = "<group>"; };
 		E34E59531C0988C400E4E0B9 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = Classes/GUI/LocationScreen/ViewController/LocationsViewController.swift; sourceTree = "<group>"; };
-		E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Classes/GUI/MainScreen/ViewController/MainTabBarViewController.swift; sourceTree = "<group>"; };
+		E34E59561C0988D700E4E0B9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/GUI/MainScreen/ViewController/MainViewController.swift; sourceTree = "<group>"; };
 		E34E595B1C09890300E4E0B9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Classes/GUI/MapScreen/ViewController/MapViewController.swift; sourceTree = "<group>"; };
 		E34E59601C09893100E4E0B9 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsViewController.swift; path = Classes/GUI/SuggestionScreen/ViewController/SuggestionsViewController.swift; sourceTree = "<group>"; };
 		E34E59631C0989F600E4E0B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
@@ -124,9 +117,9 @@
 		E381C0F01C0B1DCC00D7AD1E /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "ro-RO.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E381C0F21C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedButton.swift; path = Classes/Helpers/LocalizedButton/ShoeBoxLocalizedButton.swift; sourceTree = "<group>"; };
 		E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoeBoxLocalizedLabel.swift; path = Classes/Helpers/LocalizedLabel/ShoeBoxLocalizedLabel.swift; sourceTree = "<group>"; };
+		E3849E7D1DE7666F00B934E8 /* SheBoxLocationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheBoxLocationHeaderView.swift; path = Classes/GUI/LocationScreen/Views/SheBoxLocationHeaderView.swift; sourceTree = "<group>"; };
 		E38D37D51C0F6719004983ED /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Suggestion.swift; path = Classes/Model/Suggestion/Suggestion.swift; sourceTree = "<group>"; };
 		E38D37D81C0F6912004983ED /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Classes/Helpers/FirebaseManager/FirebaseManager.swift; sourceTree = "<group>"; };
-		E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheBoxLocationHeaderView.swift; path = Classes/GUI/LocationScreen/Views/SheBoxLocationHeaderView.swift; sourceTree = "<group>"; };
 		E3B6EDD41C1469F200329635 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = Classes/Model/Map/Spot.swift; sourceTree = "<group>"; };
 		E3B6EDD91C146ABB00329635 /* UIFont+ShoeBoxFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ShoeBoxFont.swift"; path = "Classes/Helpers/Extensions/UIFont/UIFont+ShoeBoxFont.swift"; sourceTree = "<group>"; };
 		E3B6EDDB1C14711500329635 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = Resources/Fonts/icomoon.ttf; sourceTree = "<group>"; };
@@ -136,7 +129,6 @@
 		E3EA562C1DE0BC8F00126931 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Classes/GUI/IntroScrees/Views/PageView.swift; sourceTree = "<group>"; };
 		E3EA562E1DE0BCAA00126931 /* PageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PageView.xib; path = Classes/GUI/IntroScrees/Views/PageView.xib; sourceTree = "<group>"; };
 		E3F4F4DB1D92F47B0063B150 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModelProtocol.swift; path = Classes/Model/Base/BaseModelProtocol.swift; sourceTree = "<group>"; };
-		E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Classes/GUI/Contacts/ViewController/ContactsViewController.swift; sourceTree = "<group>"; };
 		EE245669824C0BC39BC5971C /* Pods-ShoeBoxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeBoxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeBoxUITests/Pods-ShoeBoxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +140,7 @@
 				67E731CA1C0B878D00F259A5 /* CoreLocation.framework in Frameworks */,
 				678718981C0088AC00F2E739 /* Fabric.framework in Frameworks */,
 				678718991C0088AC00F2E739 /* Crashlytics.framework in Frameworks */,
-				D780EA0ADE5D75EB8B6882F0 /* libPods-ShoeBox.a in Frameworks */,
+				0F45C7D293478DECAAC05167 /* libPods-ShoeBox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481259CBE0AD1C42FCD7E5C8 /* libPods-ShoeBoxTests.a in Frameworks */,
+				BF307350B79D58878AB8F71C /* libPods-ShoeBoxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6439F55344CD229F41B0253F /* libPods-ShoeBoxUITests.a in Frameworks */,
+				24081A5683A920BF615C0B43 /* libPods-ShoeBoxUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +180,6 @@
 				E381C0F11C0B1F1900D7AD1E /* LocalizedButton */,
 				E3DE2C511C0A0FFA00F73362 /* Extensions */,
 				67A968E11C0F4BA700330961 /* Constants.swift */,
-				3A8A36AB1C14DC6C00EB0115 /* SwiftEventBus.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -260,9 +251,9 @@
 				67E731C91C0B878D00F259A5 /* CoreLocation.framework */,
 				678718961C0088AC00F2E739 /* Fabric.framework */,
 				678718971C0088AC00F2E739 /* Crashlytics.framework */,
-				E1B9FA023B2F99689275A5F9 /* libPods-ShoeBox.a */,
-				8F6CCC382884A8B91B79AE55 /* libPods-ShoeBoxTests.a */,
-				7CC322BA8BD70FE8310009D9 /* libPods-ShoeBoxUITests.a */,
+				BC368F0313342EAAFC91A18C /* libPods-ShoeBox.a */,
+				0E949CB39AEE526E1B331571 /* libPods-ShoeBoxTests.a */,
+				8FFE241ECBFFFF8A73A8A828 /* libPods-ShoeBoxUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,7 +294,6 @@
 		E34E592F1C0982F300E4E0B9 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				E3F4F4DD1D9302460063B150 /* Contacts */,
 				E34E593B1C0986F400E4E0B9 /* AgesScreen */,
 				E34E59301C09833E00E4E0B9 /* IntroScreen */,
 				E34E594F1C0988A400E4E0B9 /* LocationScreen */,
@@ -335,7 +325,7 @@
 		E34E59321C0984BA00E4E0B9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E34E59561C0988D700E4E0B9 /* MainTabBarViewController.swift */,
+				E34E59561C0988D700E4E0B9 /* MainViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -411,7 +401,7 @@
 		E34E594F1C0988A400E4E0B9 /* LocationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E34E59511C0988B400E4E0B9 /* Views */,
+				E3849E7C1DE7666500B934E8 /* View */,
 				E34E59501C0988AE00E4E0B9 /* ViewController */,
 			);
 			name = LocationScreen;
@@ -426,18 +416,9 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		E34E59511C0988B400E4E0B9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E38D37DA1C0F9B25004983ED /* SheBoxLocationHeaderView.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		E34E59581C0988E800E4E0B9 /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E34E595A1C0988F800E4E0B9 /* Views */,
 				E34E59591C0988F200E4E0B9 /* ViewController */,
 			);
 			name = MapScreen;
@@ -449,15 +430,6 @@
 				E34E595B1C09890300E4E0B9 /* MapViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		E34E595A1C0988F800E4E0B9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3A8224BE1C0E0B6C00A64284 /* CustomInfoWindow.xib */,
-				3A8224C01C0E0B8300A64284 /* CustomInfoWindow.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		E34E595D1C09890B00E4E0B9 /* SuggestionScreen */ = {
@@ -521,6 +493,14 @@
 				E381C0F51C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift */,
 			);
 			name = LocalizedLabel;
+			sourceTree = "<group>";
+		};
+		E3849E7C1DE7666500B934E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3849E7D1DE7666F00B934E8 /* SheBoxLocationHeaderView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		E38D37D41C0F66F6004983ED /* Suggestion */ = {
@@ -590,22 +570,6 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		E3F4F4DD1D9302460063B150 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				E3F4F4DE1D9302510063B150 /* ViewController */,
-			);
-			name = Contacts;
-			sourceTree = "<group>";
-		};
-		E3F4F4DE1D9302510063B150 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E3F4F4DF1D9302860063B150 /* ContactsViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +624,7 @@
 				6703407D1BFE0EBB001DE623 /* Frameworks */,
 				6703407E1BFE0EBB001DE623 /* Resources */,
 				15BBB2BCE00DA0B8F632503B /* [CP] Copy Pods Resources */,
+				5518214DF4D85B4B9DCF1DFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -726,7 +691,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8224BF1C0E0B6C00A64284 /* CustomInfoWindow.xib in Resources */,
 				671428121C15836000158038 /* icomoon.ttf in Resources */,
 				E3189BE11DDE480200F03044 /* GoogleService-Info.plist in Resources */,
 				E34E59681C098A0200E4E0B9 /* LaunchScreen.storyboard in Resources */,
@@ -799,6 +763,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeBoxTests/Pods-ShoeBoxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5518214DF4D85B4B9DCF1DFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeBoxUITests/Pods-ShoeBoxUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6787188A1C00876200F2E739 /* ShellScript */ = {
@@ -901,30 +880,27 @@
 				E34E59551C0988C400E4E0B9 /* LocationsViewController.swift in Sources */,
 				3ABEE10F1C143C9B00A78638 /* IntroViewController.swift in Sources */,
 				E37EDD0B1C0C57AF0077B7F9 /* Location.swift in Sources */,
+				E3849E7E1DE7666F00B934E8 /* SheBoxLocationHeaderView.swift in Sources */,
 				3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */,
 				E381C0F61C0B2AB900D7AD1E /* ShoeBoxLocalizedLabel.swift in Sources */,
-				E34E59571C0988D700E4E0B9 /* MainTabBarViewController.swift in Sources */,
+				E34E59571C0988D700E4E0B9 /* MainViewController.swift in Sources */,
 				3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */,
 				E34E59611C09893100E4E0B9 /* SuggestionsViewController.swift in Sources */,
 				E3B6EDDF1C14DA1B00329635 /* SuggestionsTableViewCell.swift in Sources */,
 				3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */,
 				E38D37D91C0F6912004983ED /* FirebaseManager.swift in Sources */,
-				3A8A36AC1C14DC6C00EB0115 /* SwiftEventBus.swift in Sources */,
 				E3DE2C561C0A1D7B00F73362 /* ShoeBoxAgesTopView.swift in Sources */,
-				E38D37DB1C0F9B25004983ED /* SheBoxLocationHeaderView.swift in Sources */,
 				E3EA562D1DE0BC8F00126931 /* PageView.swift in Sources */,
 				E34E59411C09880100E4E0B9 /* AgesViewController.swift in Sources */,
 				E34E593F1C0987F300E4E0B9 /* AppDelegate.swift in Sources */,
 				E3DE2C541C0A103500F73362 /* UIColor+ShoeBoxColor.swift in Sources */,
 				67A968E21C0F4BA700330961 /* Constants.swift in Sources */,
 				3A8224C61C0E270700A64284 /* LocalizedBarButtonItem.swift in Sources */,
-				3A8224C11C0E0B8300A64284 /* CustomInfoWindow.swift in Sources */,
 				E34E595C1C09890300E4E0B9 /* MapViewController.swift in Sources */,
 				E3B6EDD51C1469F200329635 /* Spot.swift in Sources */,
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
 				E3F4F4DC1D92F47B0063B150 /* BaseModelProtocol.swift in Sources */,
 				E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */,
-				E3F4F4E01D9302860063B150 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

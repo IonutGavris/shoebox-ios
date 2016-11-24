@@ -44,7 +44,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func startAction(_ sender: AnyObject) {
         let preferences = UserDefaults.standard
         preferences.set(true, forKey: Constants.KEY_INTRO_COMPLETED)
-        SwiftEventBus.post(Constants.GET_INVOLVED_KEY)
+        dismiss(animated: true, completion: nil)
     }
     
     //MARK: UIScrollViewDelegate

@@ -10,7 +10,7 @@ import Foundation
 
 extension UIFont {
     
-    class func icommonFont(size : CGFloat) -> UIFont {
+    static func icommonFont(size : CGFloat) -> UIFont {
         return UIFont(name: "icomoon", size: size)!
     }
 }

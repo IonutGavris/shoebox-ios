@@ -11,10 +11,10 @@ import UIKit
 class LocationsViewController: UITableViewController {
     
     // segue id
-    let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
+    fileprivate let suggestionSegueIdentifier = "ShowLocationDetailsScreenIdentifier"
     // data
-    var locationsData = [Location]()
-    var filteredLocations = [Location]()
+    fileprivate var locationsData = [Location]()
+    fileprivate var filteredLocations = [Location]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +28,37 @@ class LocationsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == suggestionSegueIdentifier
-        {
+        if segue.identifier == suggestionSegueIdentifier {
             if let destination = segue.destination as? LocationDetailViewController{
                 destination.location = sender as? Location
             }
         }
     }
     
+    //MARK: Property
+    
+    fileprivate lazy var headerView: SheBoxLocationHeaderView = {
+        let view = SheBoxLocationHeaderView(frame: CGRect(x: 0.0, y: 0.0, width: self.tableView.bounds.height, height: 44.0))
+        view.closure = { (searchText) -> Void in
+            if searchText!.isEmpty {
+                self.filteredLocations = self.locationsData
+                self.tableView.reloadData()
+                return
+            }
+            
+            self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
+                let stringMatch = location.title!.range(of: searchText!, options: .caseInsensitive)
+                
+                return stringMatch != nil
+            })
+            self.tableView.reloadData()
+        }
+        return view
+    }()
+}
+
+extension LocationsViewController {
+
     //MARK: UItableViewDataSouce
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredLocations.count
@@ -67,25 +90,6 @@ class LocationsViewController: UITableViewController {
         self.performSegue(withIdentifier: suggestionSegueIdentifier, sender: selectedLocation)
     }
     
-    //MARK: Property
-    
-    fileprivate lazy var headerView: SheBoxLocationHeaderView = {
-        let view = SheBoxLocationHeaderView(frame: CGRect(x: 0.0, y: 0.0, width: self.tableView.bounds.height, height: 44.0))
-        view.closure = { (searchText) -> Void in
-            if searchText!.isEmpty {
-                self.filteredLocations = self.locationsData
-                self.tableView.reloadData()
-                return
-            }
-            
-            self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
-                let stringMatch = location.title!.range(of: searchText!, options: .caseInsensitive)
-                
-                return stringMatch != nil
-            })
-            self.tableView.reloadData()
-        }
-        return view
-    }()
-    
 }
+
+

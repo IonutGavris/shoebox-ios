@@ -52,8 +52,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         centerMapOnLocationFrom(initialLocation.coordinate)
     }
     
-    func centerMapOnLocationFrom(_ coordinate: CLLocationCoordinate2D) {
-        let regionRadius: CLLocationDistance = 1000
+    fileprivate func centerMapOnLocationFrom(_ coordinate: CLLocationCoordinate2D) {
+        let regionRadius: CLLocationDistance = 800
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
