@@ -1,5 +1,5 @@
 language: objective-c
-rvm: 2.2
+rvm: 2.2.5
 cache: cocoapods
 osx_image: xcode8.1
 
