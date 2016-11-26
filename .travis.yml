@@ -9,8 +9,5 @@ before_install:
 
 install: true
 
-before_script:
-- travis/create-keychain.sh
-
 script: travis/script.sh
 after_success: travis/after_success_script.sh
