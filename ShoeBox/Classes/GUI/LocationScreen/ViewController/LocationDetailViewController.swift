@@ -27,7 +27,13 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
        
         centerMapOnLocation()
         
-        directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
+        if (LocationManager.sharedInstance.currentLocation != nil) {
+            let place = CLLocation(latitude: self.location!.latitude!, longitude: self.location!.longitude!)
+            let distance = getDistanceMetresBetweenLocationCoordinates(coord1: LocationManager.sharedInstance.currentLocation!.coordinate, coord2: place.coordinate)
+            directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + String(roundToPlaces(value: distance / 1000, places: 1)) + " KM"
+        } else {
+            directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
+        }
        
         details.append((location?.addressFull)!)
         if let location = location, let hours = location.hours, hours.characters.count > 0 {
@@ -38,6 +44,16 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
                 contacts.append(contact)
             }
         }
+    }
+    func getDistanceMetresBetweenLocationCoordinates(coord1: CLLocationCoordinate2D, coord2: CLLocationCoordinate2D) -> Double {
+        let location1 = CLLocation(latitude: coord1.latitude, longitude: coord1.longitude)
+        let location2 = CLLocation(latitude: coord2.latitude, longitude: coord2.longitude)
+        return location1.distance(from: location2)
+    }
+    
+    func roundToPlaces(value:Double, places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(value * divisor) / divisor
     }
     
     //MARK: UItableViewDataSouce
