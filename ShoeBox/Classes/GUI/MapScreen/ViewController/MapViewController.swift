@@ -9,7 +9,7 @@
 import MapKit
 import UIKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     fileprivate struct MapViewConstants {
         // segue id
@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBOutlet weak var mapView: MKMapView!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,23 +34,32 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+            return
+        }
+        centerMapOnLocationFrom(CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+        locationManager.stopUpdatingLocation()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == MapViewConstants.suggestionSegueIdentifier {
-            if let destination = segue.destination as? LocationDetailViewController{
-                destination.location = sender as? Location
-            }
+        if segue.identifier == MapViewConstants.suggestionSegueIdentifier, let destination = segue.destination as? LocationDetailViewController {
+            destination.location = sender as? Location
         }
     }
 
     //MARK: Helper methods
     
     fileprivate func setupMapView() {
-        // set initial location in Cluj Napoca
-        let latitude = 46.77279
-        let longitude = 23.596058
-        let initialLocation = CLLocation(latitude: latitude, longitude: longitude)
         
-        centerMapOnLocationFrom(initialLocation.coordinate)
+        locationManager.delegate = self
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        mapView.showsUserLocation = true
     }
     
     fileprivate func centerMapOnLocationFrom(_ coordinate: CLLocationCoordinate2D) {
@@ -58,7 +68,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-
 }
 
 extension MapViewController {
@@ -67,8 +76,7 @@ extension MapViewController {
         if let annotation = annotation as? Spot {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-                as? MKPinAnnotationView { // 2
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView { // 2
                 dequeuedView.annotation = annotation
                 view = dequeuedView
             } else {
