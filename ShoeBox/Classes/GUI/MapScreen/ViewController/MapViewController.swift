@@ -9,7 +9,7 @@
 import MapKit
 import UIKit
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, LocationManagerDelegate {
     
     fileprivate struct MapViewConstants {
         // segue id
@@ -17,12 +17,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @IBOutlet weak var mapView: MKMapView!
-    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setupMapView()
+        LocationManager.sharedInstance.delegate = self
+        LocationManager.sharedInstance.startUpdatingLocation()
+        
+        mapView.showsUserLocation = true
         
         FirebaseManager.extractAllLocations { (locations) in
             var spots = [Spot]()
@@ -34,38 +35,36 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        centerMapOnLocationFrom(CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-        locationManager.stopUpdatingLocation()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MapViewConstants.suggestionSegueIdentifier, let destination = segue.destination as? LocationDetailViewController {
             destination.location = sender as? Location
         }
     }
+    
+    // LocationManagerDelegate methods
+    
+    func locationReceived(currentLocation: CLLocation) {
+        centerMapOnLocationFrom(CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude))
+        LocationManager.sharedInstance.stopUpdatingLocation()
+    }
+    
+    func locationDidFailWithError(error: Error) {
+        
+        // default coordinates for Cluj-Napoca, RO
+        let latitude = 46.77279
+        let longitude = 23.596058
+        let defaultLocation = CLLocation(latitude: latitude, longitude: longitude)
+        
+        centerMapOnLocationFrom(defaultLocation.coordinate)
+        LocationManager.sharedInstance.stopUpdatingLocation()
+        LocationManager.sharedInstance.currentLocation = defaultLocation;
+    }
 
     //MARK: Helper methods
     
-    fileprivate func setupMapView() {
-        
-        locationManager.delegate = self
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        mapView.showsUserLocation = true
-    }
-    
     fileprivate func centerMapOnLocationFrom(_ coordinate: CLLocationCoordinate2D) {
         let regionRadius: CLLocationDistance = 800
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate,
-                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 }

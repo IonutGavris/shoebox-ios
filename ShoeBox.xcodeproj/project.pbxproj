@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F45C7D293478DECAAC05167 /* libPods-ShoeBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC368F0313342EAAFC91A18C /* libPods-ShoeBox.a */; };
 		24081A5683A920BF615C0B43 /* libPods-ShoeBoxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFE241ECBFFFF8A73A8A828 /* libPods-ShoeBoxUITests.a */; };
+		2FB24FAB1DEC883C000EE20E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB24FAA1DEC883C000EE20E /* LocationManager.swift */; };
 		3A127F401C10FA4400406423 /* String+Whitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A127F3F1C10FA4400406423 /* String+Whitespace.swift */; };
 		3A4B183F1C10EADE00C26BD9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B183E1C10EADE00C26BD9 /* Contact.swift */; };
 		3A8224C41C0E26EF00A64284 /* LocalizedNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		0E949CB39AEE526E1B331571 /* libPods-ShoeBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB24FAA1DEC883C000EE20E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Classes/Helpers/LocationManager/LocationManager.swift; sourceTree = "<group>"; };
 		3A127F3F1C10FA4400406423 /* String+Whitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Whitespace.swift"; path = "Classes/Helpers/Extensions/String/String+Whitespace.swift"; sourceTree = "<group>"; };
 		3A4B183E1C10EADE00C26BD9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Classes/Model/Map/Contact.swift; sourceTree = "<group>"; };
 		3A8224C31C0E26EF00A64284 /* LocalizedNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizedNavigationItem.swift; path = Classes/Helpers/LocalizedNavigation/LocalizedNavigationItem.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FB24FA91DEC880D000EE20E /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				2FB24FAA1DEC883C000EE20E /* LocationManager.swift */,
+			);
+			name = LocationManager;
+			sourceTree = "<group>";
+		};
 		3A127F3E1C10FA0000406423 /* String */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		3A1BABA71C079709007DE234 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2FB24FA91DEC880D000EE20E /* LocationManager */,
 				E38D37D71C0F68B3004983ED /* FirebaseManager */,
 				3A8224C21C0E26C600A64284 /* LocalizedNavigation */,
 				E381C0F41C0B2A9600D7AD1E /* LocalizedLabel */,
@@ -901,6 +912,7 @@
 				E381C0F31C0B1F6200D7AD1E /* ShoeBoxLocalizedButton.swift in Sources */,
 				E3F4F4DC1D92F47B0063B150 /* BaseModelProtocol.swift in Sources */,
 				E38D37D61C0F6719004983ED /* Suggestion.swift in Sources */,
+				2FB24FAB1DEC883C000EE20E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
