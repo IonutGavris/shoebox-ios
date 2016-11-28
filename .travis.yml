@@ -1,6 +1,6 @@
 language: objective-c
 cache: cocoapods
-osx_image: xcode8.1
+osx_image: xcode8
 
 before_install:
 - gem install xcov --no-ri --no-rdoc --no-document
