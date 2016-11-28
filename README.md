@@ -1,3 +1,3 @@
 # shoebox-ios
 
-[![Build Status](https://travis-ci.org/IonutGavris/shoebox-ios.svg?branch=master)](https://travis-ci.org/IonutGavris/shoebox-ios)
+[![Build Status](https://www.bitrise.io/app/6ef713db5949fb11.svg?token=thuDOURvl-O9oT4d46hjsQ)](https://www.bitrise.io/app/6ef713db5949fb11)
