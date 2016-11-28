@@ -6,7 +6,7 @@
 //  Copyright © 2015 ShoeBox. All rights reserved.
 //
 
-class Location {
+struct Location: BaseModelProtocol {
     
     var address:String?
     var addressFull:String?
@@ -19,23 +19,23 @@ class Location {
     var state:String?
     var title:String?
     
-    init(dict : NSDictionary) {
-        address = dict.objectForKey("address") as? String
-        addressFull = dict.objectForKey("addressFull") as? String
-        city = dict.objectForKey("city") as? String
-        let data = dict.objectForKey("contacts") as? NSArray
-        if (data != nil) {
+    init(dictionary : [String: AnyObject]) {
+        address = dictionary["address"] as? String
+        addressFull = dictionary["addressFull"] as? String
+        city = dictionary["city"] as? String
+        if let data = dictionary["contacts"] as? NSArray {
             contacts = [Contact]()
-            for contactDict in data! {
-                let contact = Contact(dict: (contactDict as? NSDictionary)!)
+            for contactDict in data {
+                let contact = Contact(dictionary: contactDict as! [String : AnyObject])
                 contacts!.append(contact)
             }
         }
-        country = dict.objectForKey("country") as? String
-        hours = dict.objectForKey("hours") as? String
-        latitude = Double.init(dict.objectForKey("latitude") as! NSNumber)
-        longitude = Double.init(dict.objectForKey("longitude") as! NSNumber)
-        state = dict.objectForKey("state") as? String
-        title = dict.objectForKey("title") as? String
+
+        country = dictionary["country"] as? String
+        hours = dictionary["hours"] as? String
+        latitude = dictionary["latitude"] as? Double
+        longitude = dictionary["longitude"] as? Double
+        state = dictionary["state"] as? String
+        title = dictionary["title"] as? String
     }
 }

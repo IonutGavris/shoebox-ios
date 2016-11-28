@@ -11,6 +11,13 @@
 "shoeBox_what_to_put_in_the_box" = "Ce sa pun in cutie?";
 "shoeBox_where_to_leave_the_box" = "Unde sa las cutia?";
 
+"shoeBox_more_info_contact" = "Contacteaza ShoeBox";
+"shoeBox_more_info_about" = "Despre ShoeBox";
+"shoeBox_more_info_cancel" = "Anuleaza";
+"shoeBox_email_title" = "ShoeBox iOS";
+"shoeBox_share_title" = "ShoeBox Romania";
+"shoeBox_share_appstore_url" = "https://itunes.apple.com/us/app/shoebox-romania/id762718948?mt=8";
+
 //ShoeBox Ages
 "shoeBox_choose" = "Choose";
 

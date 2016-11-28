@@ -7,8 +7,8 @@
 //
 
 extension String {
-    func replace(string:String, replacement:String) -> String {
-        return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    func replace(_ string:String, replacement:String) -> String {
+        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
     }
     
     func removeWhitespace() -> String {
@@ -17,26 +17,26 @@ extension String {
     
     func firstCharacterUppercased() -> String {
         let str = self as NSString
-        let firstUppercaseCharacter = str.substringToIndex(1).uppercaseString
-        let firstUppercaseCharacterString = str.stringByReplacingCharactersInRange(NSMakeRange(0, 1), withString: firstUppercaseCharacter)
+        let firstUppercaseCharacter = str.substring(to: 1).uppercased()
+        let firstUppercaseCharacterString = str.replacingCharacters(in: NSMakeRange(0, 1), with: firstUppercaseCharacter)
         return firstUppercaseCharacterString
     }
     
-    func stringBeforeCharacter(character: String) -> String {
+    func stringBeforeCharacter(_ character: String) -> String {
         let string = self as NSString
-        let range = string.rangeOfString(character)
+        let range = string.range(of: character)
         
-        return string.substringToIndex(range.location) as String
+        return string.substring(to: range.location) as String
     }
     
     func stringWithoutDot() -> String {
         var string = self as NSString
         
-        let allCharacters = string.componentsSeparatedByString(" ")
+        let allCharacters = string.components(separatedBy: " ")
         let lastCharacter = self.characters.last!
         
         if lastCharacter == "." && allCharacters.count < 3 {
-            string = string.stringByReplacingOccurrencesOfString(".", withString: "")
+            string = string.replacingOccurrences(of: ".", with: "") as NSString
         }
         return string as String
     }

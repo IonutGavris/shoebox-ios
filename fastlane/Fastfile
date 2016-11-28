@@ -11,12 +11,12 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.103.0"
+fastlane_version "1.110.0"
 
 default_platform :ios
 
 # travis build number
-travisBuildNumber = ENV["TRAVIS_BUILD_NUMBER"]
+ciBuildNumber = ENV["BITRISE_BUILD_NUMBER"]
 
 platform :ios do
   before_all do
@@ -26,8 +26,8 @@ platform :ios do
 	)
 
     # set travis build number
-  	unless travisBuildNumber.nil? || travisBuildNumber == 0
-  		increment_build_number(build_number: travisBuildNumber)
+  	unless ciBuildNumber.nil? || ciBuildNumber == 0
+  		increment_build_number(build_number: ciBuildNumber)
   	end
   end
 

@@ -7,24 +7,57 @@
 //
 
 import UIKit
+import Firebase
 
-typealias FirebaseManagerClosure = NSArray? -> Void
+typealias FirebaseManagerClosure = (NSArray?) -> Void
 
-class FirebaseManager: NSObject {
+class FirebaseManager {
 
-    class func extractFirebaseDataForPath(path: String, usingClosure completion: FirebaseManagerClosure) {
-        let urlString = Constants.ENDPOINT_FIREBASE + "/\(path)"
-        let ref = Firebase(url: urlString)
+    static func extractAllSuggestions(using completion: @escaping (([Suggestion]) -> Void)) {
         
-        ref.observeEventType(.Value, withBlock: { snapshot in
+        extractFirebaseData(for: "suggestions", usingClosure: { results in
+            
+            var allSuggestions = [Suggestion]()
+            if let results = results {
+                for dict in results {
+                    if dict is NSNull {
+                        continue
+                    }
+
+                    let suggestion = Suggestion(dictionary: dict as! [String : AnyObject])
+                    allSuggestions.append(suggestion)
+                }
+            }
+            completion(allSuggestions)
+        })
+    }
+    
+    static func extractAllLocations(using completion: @escaping (([Location]) -> Void)) {
+    
+        extractFirebaseData(for: "locations", usingClosure: { results in
+            
+            var allLocations = [Location]()
+            if let results = results {
+                for dict in results {
+                    let location = Location(dictionary: dict as! [String : AnyObject])
+                    allLocations.append(location)
+                }
+            }
+            completion(allLocations)
+        })
+    }
+    
+    
+    private static func extractFirebaseData(for path: String, usingClosure completion: @escaping FirebaseManagerClosure) {
+        
+        let ref = FIRDatabase.database().reference(withPath: path)
+
+        ref.observe(.value, with: { snapshot in
             var results: NSArray?
             if let array = snapshot.value as? NSArray {
                 results = array
             }
             completion(results)
-
-            }, withCancelBlock: { error in
-                print(error.description)
         })
     }
 }

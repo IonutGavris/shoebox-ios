@@ -13,7 +13,7 @@ class ShoeBoxLocalizedButton: UIButton {
     var localizedText: String! {
         didSet {
             let newText = NSLocalizedString(localizedText, comment: "")
-            self.setTitle(newText, forState: .Normal)
+            self.setTitle(newText, for: UIControlState())
         }
     }
 

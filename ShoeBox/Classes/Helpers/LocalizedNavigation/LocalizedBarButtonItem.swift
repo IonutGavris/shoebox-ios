@@ -19,12 +19,12 @@ class LocalizedBarButtonItem: UIBarButtonItem {
     var barButtonTitle: String! {
         didSet {
             
-            let font = UIFont.icommonFont(20.0)
+            let font = UIFont.icommonFont(size: 20.0)
             let attributes = [NSFontAttributeName : font,
-                NSForegroundColorAttributeName : UIColor.whiteColor()]
+                NSForegroundColorAttributeName : UIColor.white]
             
             self.title = barButtonTitle
-            self.setTitleTextAttributes(attributes, forState: .Normal)
+            self.setTitleTextAttributes(attributes, for: UIControlState())
         }
     }
 }

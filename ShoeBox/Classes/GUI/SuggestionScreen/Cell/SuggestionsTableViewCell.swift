@@ -24,17 +24,17 @@ class SuggestionsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        UIView.animateWithDuration(0.4) { () -> Void in
-            self.arrowImageView.transform = selected ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
-        }
+        UIView.animate(withDuration: 0.4, animations: { () -> Void in
+            self.arrowImageView.transform = selected ? CGAffineTransform(rotationAngle: CGFloat(M_PI)) : CGAffineTransform.identity
+        }) 
     }
     
     //MARK: UIExpendingTableViewCell delegate
     
-    func setExpansionStyle(style: UIExpansionStyle, animated: Bool) {
+    func setExpansionStyle(_ style: UIExpansionStyle, animated: Bool) {
         
     }
     
@@ -56,8 +56,8 @@ class SuggestionsTableViewCell: UITableViewCell {
     
     lazy var arrowImageView: UIImageView = {
         var arrowView = UIImageView(image: UIImage(named: "suggestion_Arrow"))
-        arrowView.frame = CGRectMake(0.0, 0.0, 14.0, 14.0)
-        arrowView.autoresizingMask = [.FlexibleLeftMargin, .FlexibleTopMargin]
+        arrowView.frame = CGRect(x: 0.0, y: 0.0, width: 14.0, height: 14.0)
+        arrowView.autoresizingMask = [.flexibleLeftMargin, .flexibleTopMargin]
         
         return arrowView
     }()

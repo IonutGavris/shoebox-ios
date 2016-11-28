@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias SheBoxLocationHeaderViewTextClosure = String? -> Void
+typealias SheBoxLocationHeaderViewTextClosure = (String?) -> Void
 
 class SheBoxLocationHeaderView: UISearchBar, UISearchBarDelegate {
 
@@ -26,25 +26,25 @@ class SheBoxLocationHeaderView: UISearchBar, UISearchBarDelegate {
     
     //MARK: UISearchBarDelegate
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         closure?(searchText)
         searchBar.becomeFirstResponder()
     }
     
-    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.setShowsCancelButton(true, animated: true)
         
         return true
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = nil;
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         closure?(searchBar.text)
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
     }

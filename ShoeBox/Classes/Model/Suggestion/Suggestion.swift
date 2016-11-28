@@ -8,16 +8,16 @@
 
 import UIKit
 
-struct Suggestion {
-    var details: [String]
-    var maxAge: NSNumber
-    var minAge: NSNumber
-    var name: String
-    var sex: String
+struct Suggestion: BaseModelProtocol {
+    let details: [String]
+    let maxAge: NSNumber
+    let minAge: NSNumber
+    let name: String
+    let sex: String
     
     init(dictionary: [String: AnyObject]) {
         let descriptionString = dictionary["description"] as! String
-        details = descriptionString.componentsSeparatedByString(",") 
+        details = descriptionString.components(separatedBy: ",")
         maxAge = dictionary["maxAge"] as! NSNumber
         minAge = dictionary["minAge"] as! NSNumber
         name = dictionary["name"] as! String

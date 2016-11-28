@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uMY-ub-kN6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LYu-dI-Lpv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,11 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
-                                <frame key="frameInset" minY="64" width="600" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-G2-M7y">
+                                <rect key="frame" x="-4" y="64" width="383" height="301.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minY="64" width="600" height="268"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-JY-uDc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="64" width="383" height="301.5"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.69810901989999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,17 +36,16 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_what_to_put_in_the_box"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="details"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="SOP-bb-kVa" kind="show" id="TMW-81-BBs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
-                                <frame key="frameInset" minY="332" width="600" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where_to_leave_box" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Rl-0FF">
+                                <rect key="frame" x="-4" y="365.5" width="383" height="301.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minY="332" width="600" height="268"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-PB-0gc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="365.5" width="383" height="301.5"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.80000000000000004" alpha="0.69686612219999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="34"/>
@@ -54,7 +54,6 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="shoeBox_where_to_leave_the_box"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="join"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="m3E-7j-JUR" kind="show" identifier="" id="YOn-5M-eeq"/>
@@ -84,29 +83,29 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3cQ-Rl-0FF" secondAttribute="bottom" id="vwm-gn-wvL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="2" systemItem="history" id="wFF-lS-Y8U"/>
                     <navigationItem key="navigationItem" title="ShoeBox" id="jeg-UX-pG6">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Uas-us-KD5" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="barButtonTitle" value="a"/>
-                            </userDefinedRuntimeAttributes>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0qN-7M-jCH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="oe0-2t-Oqo" kind="unwind" unwindAction="unwindToMenuViewController:" id="wfy-lw-XKZ"/>
+                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="S0J-be-XH6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="more" id="LHO-WP-qRj">
+                            <connections>
+                                <action selector="moreButtonTapped:" destination="BYZ-38-t0r" id="pvG-Uv-lfR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="3RY-3B-qUh" kind="presentation" identifier="ShowIntroScreenIdentifier" animates="NO" id="O1w-6i-lrf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="oe0-2t-Oqo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-378"/>
+            <point key="canvasLocation" x="-588" y="-317"/>
         </scene>
-        <!--Container View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="1pJ-A7-4LW">
             <objects>
-                <viewController id="3RY-3B-qUh" customClass="ContainerViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController" id="3RY-3B-qUh" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wbb-dp-cNd"/>
                         <viewControllerLayoutGuide type="bottom" id="CGQ-8a-xTR"/>
@@ -115,12 +114,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-jv-9LC">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF4-a5-qyV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                                 <connections>
-                                    <segue destination="DP2-GL-VvD" kind="embed" id="PEV-9p-P1h"/>
+                                    <outlet property="delegate" destination="3RY-3B-qUh" id="bD7-8X-zMl"/>
                                 </connections>
-                            </containerView>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ng6-P2-0PI">
+                                <rect key="frame" x="168" y="560" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="GAq-X0-6mL"/>
+                                </constraints>
+                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8d-Yu-bW7" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.28627450980392155" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="cAJ-Rq-U4a"/>
@@ -131,7 +138,6 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="intro_get_involved"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="buttonStart"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -150,172 +156,48 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="trailing" secondItem="5Pq-jv-9LC" secondAttribute="trailing" id="3kg-kp-Pb0"/>
-                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="leading" secondItem="5Pq-jv-9LC" secondAttribute="leading" id="CXg-Pj-qUj"/>
-                            <constraint firstItem="5Pq-jv-9LC" firstAttribute="top" secondItem="ZwK-3M-afG" secondAttribute="top" id="Nrb-tA-cgR"/>
+                            <constraint firstAttribute="trailing" secondItem="vF4-a5-qyV" secondAttribute="trailing" id="1S8-zG-j8u"/>
+                            <constraint firstItem="Ng6-P2-0PI" firstAttribute="bottom" secondItem="vF4-a5-qyV" secondAttribute="bottom" id="Q6c-Y6-y8Y"/>
+                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="top" secondItem="vF4-a5-qyV" secondAttribute="bottom" id="R6x-0E-JA4"/>
                             <constraint firstItem="V8d-Yu-bW7" firstAttribute="leading" secondItem="ZwK-3M-afG" secondAttribute="leading" id="Tli-90-NDT"/>
-                            <constraint firstItem="V8d-Yu-bW7" firstAttribute="top" secondItem="5Pq-jv-9LC" secondAttribute="bottom" id="UfC-9v-2Ep"/>
+                            <constraint firstItem="Ng6-P2-0PI" firstAttribute="centerX" secondItem="ZwK-3M-afG" secondAttribute="centerX" id="Vy6-yc-TzJ"/>
+                            <constraint firstItem="vF4-a5-qyV" firstAttribute="top" secondItem="Wbb-dp-cNd" secondAttribute="bottom" constant="-20" id="Zva-hf-K6o"/>
                             <constraint firstAttribute="trailing" secondItem="V8d-Yu-bW7" secondAttribute="trailing" id="ct6-YY-aNS"/>
+                            <constraint firstItem="vF4-a5-qyV" firstAttribute="leading" secondItem="ZwK-3M-afG" secondAttribute="leading" id="lLF-xs-o7R"/>
                             <constraint firstItem="V8d-Yu-bW7" firstAttribute="bottom" secondItem="CGQ-8a-xTR" secondAttribute="top" id="xSZ-sI-ZOW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="5Pq-jv-9LC"/>
                                 <exclude reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3kg-kp-Pb0"/>
-                                <exclude reference="CXg-Pj-qUj"/>
                                 <exclude reference="Tli-90-NDT"/>
-                                <exclude reference="UfC-9v-2Ep"/>
                                 <exclude reference="ct6-YY-aNS"/>
                                 <exclude reference="xSZ-sI-ZOW"/>
-                                <exclude reference="Nrb-tA-cgR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="5Pq-jv-9LC"/>
                                 <include reference="V8d-Yu-bW7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3kg-kp-Pb0"/>
-                                <include reference="CXg-Pj-qUj"/>
                                 <include reference="Tli-90-NDT"/>
-                                <include reference="UfC-9v-2Ep"/>
                                 <include reference="ct6-YY-aNS"/>
                                 <include reference="xSZ-sI-ZOW"/>
-                                <include reference="Nrb-tA-cgR"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="1" systemItem="more" id="5Vq-Yp-38X"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="buttonStart" destination="V8d-Yu-bW7" id="VoC-co-8KQ"/>
+                        <outlet property="pageControl" destination="Ng6-P2-0PI" id="QeX-cB-Dp8"/>
+                        <outlet property="scrollView" destination="vF4-a5-qyV" id="uVK-lG-Lon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-sf-ZRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="-1101"/>
-        </scene>
-        <!--Intro View Controller-->
-        <scene sceneID="cCE-91-u5T">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DP2-GL-VvD" customClass="IntroViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TKA-kp-wzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1288.5" y="-1126"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="HhG-dc-eSQ">
-            <objects>
-                <viewController storyboardIdentifier="PageViewController" id="2l8-Vj-9VF" customClass="PageViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="weo-LU-MUW"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vs7-qa-YP5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3f7-mK-wtD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-xP-Q6E">
-                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="erw-m5-Oe8"/>
-                                </constraints>
-                                <string key="text">The ShoeBox project is a tiny attempt to make the world a better place. We try to put a smile on the face of underprivileged children every year, in the cities we live in.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="erw-m5-Oe8"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="erw-m5-Oe8"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-x8-OVl">
-                                <frame key="frameInset" width="240" height="128"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="b7r-xP-Q6E" firstAttribute="leading" secondItem="3f7-mK-wtD" secondAttribute="leading" constant="20" id="0WD-jr-mAz">
-                                <variation key="widthClass=compact" constant="40"/>
-                            </constraint>
-                            <constraint firstItem="b7r-xP-Q6E" firstAttribute="top" secondItem="bhL-x8-OVl" secondAttribute="bottom" constant="8" id="9Cc-Qj-Ozb"/>
-                            <constraint firstAttribute="trailing" secondItem="bhL-x8-OVl" secondAttribute="trailing" id="INa-2a-szR">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstAttribute="trailing" secondItem="b7r-xP-Q6E" secondAttribute="trailing" constant="20" id="NkG-3w-s9R">
-                                <variation key="widthClass=compact" constant="40"/>
-                            </constraint>
-                            <constraint firstItem="bhL-x8-OVl" firstAttribute="leading" secondItem="3f7-mK-wtD" secondAttribute="leading" id="R11-fX-a4u">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstAttribute="leadingMargin" secondItem="b7r-xP-Q6E" secondAttribute="leading" id="UPv-yJ-yGY">
-                                <variation key="widthClass=compact" constant="-20"/>
-                            </constraint>
-                            <constraint firstItem="Vs7-qa-YP5" firstAttribute="top" secondItem="b7r-xP-Q6E" secondAttribute="bottom" constant="20" id="YuH-Um-YdD">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="b7r-xP-Q6E" secondAttribute="trailing" id="Zuk-oe-VBF">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="bhL-x8-OVl" firstAttribute="leading" secondItem="3f7-mK-wtD" secondAttribute="leadingMargin" id="b1h-DU-ny0"/>
-                            <constraint firstItem="bhL-x8-OVl" firstAttribute="top" secondItem="weo-LU-MUW" secondAttribute="bottom" constant="20" id="fEr-Tn-3gt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bhL-x8-OVl" secondAttribute="trailing" id="mgd-rr-NWb"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="b7r-xP-Q6E"/>
-                                <exclude reference="bhL-x8-OVl"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="YuH-Um-YdD"/>
-                                <exclude reference="0WD-jr-mAz"/>
-                                <exclude reference="9Cc-Qj-Ozb"/>
-                                <exclude reference="NkG-3w-s9R"/>
-                                <exclude reference="UPv-yJ-yGY"/>
-                                <exclude reference="Zuk-oe-VBF"/>
-                                <exclude reference="INa-2a-szR"/>
-                                <exclude reference="R11-fX-a4u"/>
-                                <exclude reference="b1h-DU-ny0"/>
-                                <exclude reference="fEr-Tn-3gt"/>
-                                <exclude reference="mgd-rr-NWb"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="b7r-xP-Q6E"/>
-                                <include reference="bhL-x8-OVl"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="YuH-Um-YdD"/>
-                                <include reference="0WD-jr-mAz"/>
-                                <include reference="9Cc-Qj-Ozb"/>
-                                <include reference="NkG-3w-s9R"/>
-                                <exclude reference="UPv-yJ-yGY"/>
-                                <exclude reference="Zuk-oe-VBF"/>
-                                <include reference="INa-2a-szR"/>
-                                <include reference="R11-fX-a4u"/>
-                                <exclude reference="b1h-DU-ny0"/>
-                                <include reference="fEr-Tn-3gt"/>
-                                <exclude reference="mgd-rr-NWb"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="imageContent" destination="bhL-x8-OVl" id="Z0j-8j-sni"/>
-                        <outlet property="labelDescription" destination="b7r-xP-Q6E" id="Svp-IC-OdO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QF0-bZ-iE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1288.5" y="-1781"/>
+            <point key="canvasLocation" x="-1404" y="-1060"/>
         </scene>
         <!--ShoeBox-->
         <scene sceneID="RhZ-IM-vh0">
@@ -329,11 +211,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-ZB-4Lb" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-ZB-4Lb" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="i95-vz-FS2">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_boy_image" translatesAutoresizingMaskIntoConstraints="NO" id="i95-vz-FS2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="0OC-e8-l5E"/>
                                             <constraint firstAttribute="height" constant="128" id="VZF-98-ngu">
@@ -353,11 +235,11 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je4-ql-MkK">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je4-ql-MkK">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="160"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FH-7nL">
-                                                <frame key="frameInset" width="240" height="128"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FH-7nL">
+                                                <rect key="frame" x="68.5" y="55" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="83g-e9-UXk">
                                                         <variation key="widthClass=compact" constant="50"/>
@@ -379,8 +261,8 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
-                                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-U2-rTC" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
+                                                <rect key="frame" x="43.5" y="114" width="100" height="21"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="LMx-7a-W2Q">
@@ -426,10 +308,10 @@
                                                 <exclude reference="zhU-U2-rTC"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="00G-Ho-8Iy"/>
-                                                <exclude reference="tQU-Bd-MsK"/>
                                                 <exclude reference="aCg-2K-Hx0"/>
                                                 <exclude reference="uzb-1f-X9O"/>
+                                                <exclude reference="00G-Ho-8Iy"/>
+                                                <exclude reference="tQU-Bd-MsK"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -438,21 +320,21 @@
                                                 <include reference="zhU-U2-rTC"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="00G-Ho-8Iy"/>
-                                                <include reference="tQU-Bd-MsK"/>
                                                 <include reference="aCg-2K-Hx0"/>
                                                 <include reference="uzb-1f-X9O"/>
+                                                <include reference="00G-Ho-8Iy"/>
+                                                <include reference="tQU-Bd-MsK"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Llk-P8-Cdj" appends="YES" id="S8D-fx-siL"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-Xd-3U2">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-Xd-3U2">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="160"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-rb-toa">
-                                                <frame key="frameInset" width="240" height="128"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_image" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-rb-toa">
+                                                <rect key="frame" x="69" y="55" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="otr-qA-462">
                                                         <variation key="widthClass=compact" constant="50"/>
@@ -474,8 +356,8 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
-                                                <frame key="frameInset" minX="-42" minY="-21" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baiat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-Ta-szn" customClass="ShoeBoxLocalizedLabel" customModule="ShoeBox" customModuleProvider="target">
+                                                <rect key="frame" x="44" y="114" width="100" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="9IN-bn-XIw">
                                                         <variation key="widthClass=compact" constant="100"/>
@@ -518,10 +400,10 @@
                                                 <exclude reference="Rec-Ta-szn"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="5S3-qf-35B"/>
-                                                <exclude reference="vK1-UY-y4q"/>
                                                 <exclude reference="dpF-Z2-yi1"/>
                                                 <exclude reference="lNf-Ka-6wB"/>
+                                                <exclude reference="5S3-qf-35B"/>
+                                                <exclude reference="vK1-UY-y4q"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -530,10 +412,10 @@
                                                 <include reference="Rec-Ta-szn"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="5S3-qf-35B"/>
-                                                <include reference="vK1-UY-y4q"/>
                                                 <include reference="dpF-Z2-yi1"/>
                                                 <include reference="lNf-Ka-6wB"/>
+                                                <include reference="5S3-qf-35B"/>
+                                                <include reference="vK1-UY-y4q"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -579,14 +461,6 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="6ZV-UU-7aI"/>
-                                        <exclude reference="3wc-4A-9v9"/>
-                                        <exclude reference="S8E-c3-HC6"/>
-                                        <exclude reference="bvc-vZ-vqc"/>
-                                        <exclude reference="fme-Wa-WRC"/>
-                                        <exclude reference="jKR-p7-JmB"/>
-                                        <exclude reference="of2-xu-NUG"/>
-                                        <exclude reference="rbK-Ow-Hnl"/>
-                                        <exclude reference="xtP-ES-MAH"/>
                                         <exclude reference="BTy-si-O7U"/>
                                         <exclude reference="V1S-hS-ttO"/>
                                         <exclude reference="VyP-vf-WFy"/>
@@ -597,6 +471,14 @@
                                         <exclude reference="UD2-Na-pTu"/>
                                         <exclude reference="wda-HS-VuZ"/>
                                         <exclude reference="yDY-In-PTx"/>
+                                        <exclude reference="3wc-4A-9v9"/>
+                                        <exclude reference="S8E-c3-HC6"/>
+                                        <exclude reference="bvc-vZ-vqc"/>
+                                        <exclude reference="fme-Wa-WRC"/>
+                                        <exclude reference="jKR-p7-JmB"/>
+                                        <exclude reference="of2-xu-NUG"/>
+                                        <exclude reference="rbK-Ow-Hnl"/>
+                                        <exclude reference="xtP-ES-MAH"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -607,14 +489,6 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="6ZV-UU-7aI"/>
-                                        <exclude reference="3wc-4A-9v9"/>
-                                        <include reference="S8E-c3-HC6"/>
-                                        <include reference="bvc-vZ-vqc"/>
-                                        <exclude reference="fme-Wa-WRC"/>
-                                        <exclude reference="jKR-p7-JmB"/>
-                                        <exclude reference="of2-xu-NUG"/>
-                                        <include reference="rbK-Ow-Hnl"/>
-                                        <include reference="xtP-ES-MAH"/>
                                         <include reference="BTy-si-O7U"/>
                                         <include reference="V1S-hS-ttO"/>
                                         <include reference="VyP-vf-WFy"/>
@@ -625,6 +499,14 @@
                                         <include reference="UD2-Na-pTu"/>
                                         <include reference="wda-HS-VuZ"/>
                                         <exclude reference="yDY-In-PTx"/>
+                                        <exclude reference="3wc-4A-9v9"/>
+                                        <include reference="S8E-c3-HC6"/>
+                                        <include reference="bvc-vZ-vqc"/>
+                                        <exclude reference="fme-Wa-WRC"/>
+                                        <exclude reference="jKR-p7-JmB"/>
+                                        <exclude reference="of2-xu-NUG"/>
+                                        <include reference="rbK-Ow-Hnl"/>
+                                        <include reference="xtP-ES-MAH"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -634,16 +516,16 @@
                                     <outlet property="girlCheckmarkImageView" destination="HWR-FH-7nL" id="FQQ-tw-Tlr"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-96-5AN">
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juP-uc-6IG">
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-y3-KQc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minX="-23" minY="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-y3-KQc" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.696533203125" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sum-DT-e3C">
@@ -671,8 +553,8 @@
                                     <segue destination="zLx-Q6-8iB" kind="show" identifier="ShowSuggestionScreenIdentifier" id="7gc-zo-3Po"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-bx-EIh">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubS-bx-EIh">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nF2-om-73t">
@@ -761,22 +643,22 @@
                                 <exclude reference="ACX-iI-CHc"/>
                                 <exclude reference="IdW-S4-dPs"/>
                                 <exclude reference="Tcj-8W-X2K"/>
-                                <exclude reference="0Qi-LF-iCw"/>
-                                <exclude reference="IUV-Kf-9Yo"/>
-                                <exclude reference="Mkk-sO-TG4"/>
-                                <exclude reference="p0I-t1-DXR"/>
-                                <exclude reference="tGk-Tz-JMz"/>
+                                <exclude reference="Pop-tc-YUH"/>
+                                <exclude reference="T8D-wk-nRq"/>
+                                <exclude reference="nh7-kS-H5o"/>
                                 <exclude reference="Ikc-Zo-vew"/>
                                 <exclude reference="dK9-eM-7gX"/>
                                 <exclude reference="oOB-mk-q2I"/>
                                 <exclude reference="p1s-Mm-WiR"/>
                                 <exclude reference="pe7-Bg-0mE"/>
-                                <exclude reference="Pop-tc-YUH"/>
-                                <exclude reference="T8D-wk-nRq"/>
-                                <exclude reference="nh7-kS-H5o"/>
                                 <exclude reference="Fi0-l5-vLo"/>
                                 <exclude reference="NGu-hf-CHM"/>
                                 <exclude reference="kXS-KT-tsg"/>
+                                <exclude reference="0Qi-LF-iCw"/>
+                                <exclude reference="IUV-Kf-9Yo"/>
+                                <exclude reference="Mkk-sO-TG4"/>
+                                <exclude reference="p0I-t1-DXR"/>
+                                <exclude reference="tGk-Tz-JMz"/>
                                 <exclude reference="XFC-w8-t2a"/>
                                 <exclude reference="bZ7-vi-kxG"/>
                             </mask>
@@ -793,22 +675,22 @@
                                 <include reference="ACX-iI-CHc"/>
                                 <include reference="IdW-S4-dPs"/>
                                 <exclude reference="Tcj-8W-X2K"/>
-                                <include reference="0Qi-LF-iCw"/>
-                                <include reference="IUV-Kf-9Yo"/>
-                                <exclude reference="Mkk-sO-TG4"/>
-                                <include reference="p0I-t1-DXR"/>
-                                <include reference="tGk-Tz-JMz"/>
+                                <include reference="Pop-tc-YUH"/>
+                                <include reference="T8D-wk-nRq"/>
+                                <include reference="nh7-kS-H5o"/>
                                 <include reference="Ikc-Zo-vew"/>
                                 <include reference="dK9-eM-7gX"/>
                                 <exclude reference="oOB-mk-q2I"/>
                                 <include reference="p1s-Mm-WiR"/>
                                 <exclude reference="pe7-Bg-0mE"/>
-                                <include reference="Pop-tc-YUH"/>
-                                <include reference="T8D-wk-nRq"/>
-                                <include reference="nh7-kS-H5o"/>
                                 <include reference="Fi0-l5-vLo"/>
                                 <include reference="NGu-hf-CHM"/>
                                 <include reference="kXS-KT-tsg"/>
+                                <include reference="0Qi-LF-iCw"/>
+                                <include reference="IUV-Kf-9Yo"/>
+                                <exclude reference="Mkk-sO-TG4"/>
+                                <include reference="p0I-t1-DXR"/>
+                                <include reference="tGk-Tz-JMz"/>
                                 <include reference="XFC-w8-t2a"/>
                                 <include reference="bZ7-vi-kxG"/>
                             </mask>
@@ -838,7 +720,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2029.5" y="-730"/>
+            <point key="canvasLocation" x="1134" y="-450"/>
         </scene>
         <!--Sugestii-->
         <scene sceneID="9Zo-lz-aug">
@@ -852,11 +734,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-M8-I0L" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-M8-I0L" customClass="ShoeBoxAgesTopView" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-X3-7Y0">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="what_to_put_in_box" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-X3-7Y0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="4ZL-G2-Iuv"/>
                                             <constraint firstAttribute="height" constant="128" id="rRx-l9-WHb">
@@ -876,8 +758,8 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-0R-HTg">
-                                        <frame key="frameInset" width="240" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-0R-HTg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                         <color key="backgroundColor" red="0.019607843137254902" green="0.80784313725490198" blue="0.22352941176470587" alpha="0.69675514914772729" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -944,12 +826,12 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf" customClass="SLExpandableTableView">
-                                <frame key="frameInset" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-qk-jUf" customClass="SLExpandableTableView">
+                                <rect key="frame" x="0.0" y="224" width="375" height="393"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-ZQ-Udi" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
-                                <frame key="frameInset" minX="-23" minY="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-ZQ-Udi" customClass="ShoeBoxLocalizedButton" customModule="ShoeBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.80784313730000001" blue="0.22352941179999999" alpha="0.6965332031" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EU1-Bf-g2A"/>
@@ -1006,8 +888,6 @@
                                 <exclude reference="I0w-ZQ-Udi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BFo-s4-vqe"/>
-                                <exclude reference="ctl-rG-VXV"/>
                                 <exclude reference="KzO-OR-1ST"/>
                                 <exclude reference="Qem-dR-1XD"/>
                                 <exclude reference="geP-HY-TAQ"/>
@@ -1020,6 +900,8 @@
                                 <exclude reference="dHc-QX-aYY"/>
                                 <exclude reference="tLC-Mj-MrG"/>
                                 <exclude reference="zxH-vc-TeI"/>
+                                <exclude reference="BFo-s4-vqe"/>
+                                <exclude reference="ctl-rG-VXV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1029,8 +911,6 @@
                                 <include reference="I0w-ZQ-Udi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BFo-s4-vqe"/>
-                                <include reference="ctl-rG-VXV"/>
                                 <include reference="KzO-OR-1ST"/>
                                 <include reference="Qem-dR-1XD"/>
                                 <include reference="geP-HY-TAQ"/>
@@ -1043,6 +923,8 @@
                                 <exclude reference="dHc-QX-aYY"/>
                                 <exclude reference="tLC-Mj-MrG"/>
                                 <exclude reference="zxH-vc-TeI"/>
+                                <include reference="BFo-s4-vqe"/>
+                                <include reference="ctl-rG-VXV"/>
                             </mask>
                         </variation>
                     </view>
@@ -1057,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qur-cT-siJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761.5" y="-730"/>
+            <point key="canvasLocation" x="1889" y="-450"/>
         </scene>
         <!--Locatii-->
         <scene sceneID="Pba-EX-U5Z">
@@ -1069,21 +951,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="iEH-bD-0h9" detailTextLabel="FMg-4L-3P9" style="IBUITableViewCellStyleSubtitle" id="XtV-KI-EtE">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtV-KI-EtE" id="dvT-Me-zzI">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEH-bD-0h9">
-                                            <frame key="frameInset" minX="15" minY="5" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMg-4L-3P9">
-                                            <frame key="frameInset" minX="15" minY="25" width="41" height="14"/>
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1093,10 +975,6 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nHl-cT-1qc" id="i5a-8H-zeH"/>
-                            <outlet property="delegate" destination="nHl-cT-1qc" id="jAf-jb-oek"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locatii" id="lAd-Za-6tQ" customClass="LocalizedNavigationItem" customModule="ShoeBox" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -1109,7 +987,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWZ-so-5EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-15"/>
+            <point key="canvasLocation" x="2143" y="93"/>
         </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="UyP-vu-pxG">
@@ -1119,16 +997,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <mapView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" id="4Sc-Ac-xnk">
+                            <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="vaq-Wd-mn1" id="rCA-L3-JhZ"/>
+                            </connections>
+                        </mapView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="2pg-Ql-1FL" style="IBUITableViewCellStyleDefault" id="xef-hC-JCx">
-                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="306" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xef-hC-JCx" id="Btp-G5-c59">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pg-Ql-1FL">
-                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1141,14 +1026,14 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="contact" textLabel="K3h-cm-qZK" detailTextLabel="HWP-IZ-YL6" style="IBUITableViewCellStyleValue1" id="wOx-jg-ZZS">
-                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="350" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wOx-jg-ZZS" id="jwg-Kd-IlB">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K3h-cm-qZK">
-                                            <frame key="frameInset" minX="15" minY="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1158,7 +1043,7 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HWP-IZ-YL6">
-                                            <frame key="frameInset" minX="318" minY="12" width="42" height="20"/>
+                                            <rect key="frame" x="318" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.1764705882" green="0.24313725489999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1176,10 +1061,13 @@
                             <outlet property="delegate" destination="vaq-Wd-mn1" id="93j-pZ-3Zs"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="mapView" destination="4Sc-Ac-xnk" id="acH-Zn-JPD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMo-0q-7YK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3405" y="-15"/>
+            <point key="canvasLocation" x="2940" y="105"/>
         </scene>
         <!--Harta-->
         <scene sceneID="d60-4T-KuH">
@@ -1192,7 +1080,21 @@
                     <view key="view" contentMode="scaleToFill" id="dFC-mf-lBN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gY8-XI-qrx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="m3E-7j-JUR" id="xr8-xV-7PR"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nm6-tn-4QK" firstAttribute="top" secondItem="gY8-XI-qrx" secondAttribute="bottom" id="9O8-69-whd"/>
+                            <constraint firstAttribute="trailing" secondItem="gY8-XI-qrx" secondAttribute="trailing" id="LFf-Ya-hSp"/>
+                            <constraint firstItem="gY8-XI-qrx" firstAttribute="leading" secondItem="dFC-mf-lBN" secondAttribute="leading" id="bIn-Oc-nVE"/>
+                            <constraint firstItem="gY8-XI-qrx" firstAttribute="top" secondItem="bsH-Po-oMT" secondAttribute="bottom" id="v6z-qx-2pu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Harta" id="Naq-r0-uB6" customClass="LocalizedNavigationItem" customModule="ShoeBox" customModuleProvider="target">
                         <barButtonItem key="rightBarButtonItem" title="Lista" id="jQF-Xg-hZs" customClass="LocalizedBarButtonItem" customModule="ShoeBox" customModuleProvider="target">
@@ -1208,124 +1110,19 @@
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="gY8-XI-qrx" id="mWZ-1c-ax5"/>
                         <segue destination="vaq-Wd-mn1" kind="show" identifier="ShowMapLocationDetailsScreenIdentifier" id="uld-bm-5k5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FD-km-J4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="-15"/>
+            <point key="canvasLocation" x="1134" y="264"/>
         </scene>
-        <!--Sliding View Controller-->
-        <scene sceneID="aOZ-e1-Zfw">
-            <objects>
-                <viewController id="uMY-ub-kN6" customClass="ECSlidingViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QOv-AC-HGt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wkn-9H-sJO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xnh-xs-xsw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="topViewControllerStoryboardId" value="ShoeBoxNavigationController"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="underLeftViewControllerStoryboardId" value="MenuTableViewController"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byw-Fg-JYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-291" y="-1040"/>
-        </scene>
-        <!--Menu Table View Controller-->
-        <scene sceneID="3n4-8C-PGY">
-            <objects>
-                <tableViewController storyboardIdentifier="MenuTableViewController" id="Os3-bl-ZgI" customClass="MenuTableViewController" customModule="ShoeBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7WZ-hS-UxJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <sections>
-                            <tableViewSection id="Ctz-jr-Kd8">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sw5-xE-dv1" style="IBUITableViewCellStyleDefault" id="c4D-fu-Tzs">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c4D-fu-Tzs" id="CQP-tK-Fc0">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ShoeBox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sw5-xE-dv1">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="ShoeBox" customClass="ECSlidingSegue" id="ao9-ve-uNo"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationLevel="1" indentationWidth="0.0" textLabel="KfR-Ak-qm5" style="IBUITableViewCellStyleDefault" id="0pY-7W-JhW">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pY-7W-JhW" id="P5o-1e-S69">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KfR-Ak-qm5">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="LYu-dI-Lpv" kind="custom" identifier="Contact" customClass="ECSlidingSegue" id="luv-oe-pPa"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ecw-gy-lJF" style="IBUITableViewCellStyleDefault" id="lga-a9-ouW">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lga-a9-ouW" id="9T8-Yl-UQw">
-                                            <frame key="frameInset" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecw-gy-lJF">
-                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="3RY-3B-qUh" kind="presentation" identifier="About" id="XnF-6e-AA5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Os3-bl-ZgI" id="56k-Z9-q33"/>
-                            <outlet property="delegate" destination="Os3-bl-ZgI" id="RBQ-zv-2IF"/>
-                        </connections>
-                    </tableView>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aze-q1-kl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-289" y="-368"/>
-        </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="7Pm-QZ-0p5">
             <objects>
                 <navigationController storyboardIdentifier="ShoeBoxNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="LYu-dI-Lpv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pM0-6F-fud"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="fKg-5H-0xu">
@@ -1339,24 +1136,23 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K6v-u6-H3a"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qg9-uQ-uHT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtU-Ni-W22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-378"/>
+            <point key="canvasLocation" x="-1404" y="-317"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark_image" width="48" height="48"/>
         <image name="girl_boy_image" width="720" height="344"/>
+        <image name="more" width="25" height="25"/>
         <image name="what_to_put_in_box" width="720" height="512"/>
         <image name="where_to_leave_box" width="720" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ao9-ve-uNo"/>
         <segue reference="YOn-5M-eeq"/>
-        <segue reference="O1w-6i-lrf"/>
-        <segue reference="uld-bm-5k5"/>
+        <segue reference="t9q-Tg-BFF"/>
     </inferredMetricsTieBreakers>
 </document>

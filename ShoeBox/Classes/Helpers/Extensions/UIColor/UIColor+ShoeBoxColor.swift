@@ -10,15 +10,15 @@ import Foundation
 
 extension UIColor {
 
-    class func shoeBoxGreenColor(alpha: Float) -> UIColor {
+    static func shoeBoxGreenColor(_ alpha: Float) -> UIColor {
         return UIColor(fullRed: 5.0, fullGreen: 206.0, fullBlue: 57.0, alpha: alpha)
     }
     
-    class func shoeBoxRedColor(alpha: Float) -> UIColor {
+    static func shoeBoxRedColor(_ alpha: Float) -> UIColor {
         return UIColor(fullRed: 255.0, fullGreen: 85.0, fullBlue: 0.0, alpha: alpha)
 
     }
-    class func shoeBoxBlueColor(alpha: Float) -> UIColor {
+    static func shoeBoxBlueColor(_ alpha: Float) -> UIColor {
         return UIColor(fullRed: 13.0, fullGreen: 50.0, fullBlue: 204.0, alpha: alpha)
     }
     
