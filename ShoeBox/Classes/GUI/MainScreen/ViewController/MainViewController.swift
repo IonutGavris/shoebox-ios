@@ -9,8 +9,10 @@
 import UIKit
 import MessageUI
 import Social
+import Firebase
+import GoogleSignIn
 
-class MainViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class MainViewController: UIViewController, MFMailComposeViewControllerDelegate, FIRInviteDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,14 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
         if !UserDefaults.standard.bool(forKey: Constants.KEY_INTRO_COMPLETED) {
             showIntroViewController(animated: false)
         }
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signInSilently()
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // Do nothing
     }
     
     @IBAction func moreButtonTapped(_ sender: UIBarButtonItem) {
@@ -43,6 +53,20 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
         
         controller.addAction(contactUs)
         
+        let inviteFriends = UIAlertAction(title: NSLocalizedString("shoeBox_more_info_invite", comment: ""),
+                                      style: .default, handler: { [weak self] (action) in
+            self?.inviteFriends()
+        })
+        
+        controller.addAction(inviteFriends)
+        
+        let shareApp = UIAlertAction(title: NSLocalizedString("shoeBox_more_info_share", comment: ""),
+                                          style: .default, handler: { [weak self] (action) in
+            self?.shareButtonTapped()
+        })
+        
+        controller.addAction(shareApp)
+        
         present(controller, animated: true, completion: nil)
     }
     
@@ -65,30 +89,7 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
         
         controller.dismiss(animated: true, completion: nil)
     }
-    
-    
-    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
-        
-        let title = NSLocalizedString("shoeBox_share_title", comment: "")
-        var sharedItems: [Any] = [title]
-
-        if let url = URL(string: NSLocalizedString("shoeBox_share_appstore_url", comment: "")) {
-            sharedItems.append(url)
-        }
-        
-        let image = #imageLiteral(resourceName: "app_launcher_store")
-        sharedItems.append(image)
-        
-        let activityViewController = UIActivityViewController(activityItems: sharedItems, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.barButtonItem = sender
-        activityViewController.excludedActivityTypes = excludedActivityTypes
-        activityViewController.completionWithItemsHandler = { (activityType, completed, items, error) in
-            
-        }
-        
-        present(activityViewController, animated: true, completion: nil)
-    }
-    
+   
     //MARK: Private methods
     
     private func showIntroViewController(animated: Bool = true) {
@@ -112,6 +113,54 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate 
             present(mc, animated: true, completion: nil)
 
         }
+    }
+    
+    private func inviteFriends() {
+        if let _ = GIDSignIn.sharedInstance().currentUser {
+            if let invite = FIRInvites.inviteDialog() {
+                invite.setInviteDelegate(self)
+                
+                // NOTE: You must have the App Store ID set in your developer console project
+                // in order for invitations to successfully be sent.
+                
+                // A message hint for the dialog. Note this manifests differently depending on the
+                // received invation type. For example, in an email invite this appears as the subject.
+                var message = NSLocalizedString("shoeBox_invitation_message", comment: "")
+                if let name = GIDSignIn.sharedInstance().currentUser.profile.name {
+                    message += "\n\n\(name)"
+                }
+                invite.setMessage(message)
+                // Title for the dialog, this is what the user sees before sending the invites.
+                invite.setTitle("ShoeBox")
+                invite.setDeepLink("app_url")
+                invite.setCallToActionText(NSLocalizedString("shoeBox_invitation_cta", comment: ""))
+                invite.open()
+            }
+        } else {
+            GIDSignIn.sharedInstance().signIn()
+        }
+    }
+    
+    private func shareButtonTapped() {
+        
+        let title = NSLocalizedString("shoeBox_share_title", comment: "")
+        var sharedItems: [Any] = [title]
+        
+        if let url = URL(string: "https://rww9v.app.goo.gl/cffF") {
+            sharedItems.append(url)
+        }
+        
+        let image = #imageLiteral(resourceName: "app_launcher_store")
+        sharedItems.append(image)
+        
+        let activityViewController = UIActivityViewController(activityItems: sharedItems, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = excludedActivityTypes
+        activityViewController.completionWithItemsHandler = { (activityType, completed, items, error) in
+            
+        }
+        
+        present(activityViewController, animated: true, completion: nil)
     }
 }
 
