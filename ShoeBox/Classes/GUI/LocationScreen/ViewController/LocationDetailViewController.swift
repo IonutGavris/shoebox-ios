@@ -27,7 +27,13 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
        
         centerMapOnLocation()
         
-        directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
+        if let currentLocation = LocationManager.sharedInstance.currentLocation, let placeLatitude = self.location!.latitude, let placeLongitude = self.location!.longitude {
+            let place = CLLocation(latitude: placeLatitude, longitude: placeLongitude)
+            let distance = currentLocation.distance(from: place)
+            directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + String(roundToPlaces(value: distance / 1000, places: 1)) + " KM"
+        } else {
+            directions = NSLocalizedString("shoebox_distance", comment: "") + ": " + NSLocalizedString("shoebox_calculating", comment: "")
+        }
        
         details.append((location?.addressFull)!)
         if let location = location, let hours = location.hours, hours.characters.count > 0 {
@@ -38,6 +44,11 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
                 contacts.append(contact)
             }
         }
+    }
+    
+    func roundToPlaces(value:Double, places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(value * divisor) / divisor
     }
     
     //MARK: UItableViewDataSouce
