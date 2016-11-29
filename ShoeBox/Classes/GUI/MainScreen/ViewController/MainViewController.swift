@@ -133,7 +133,6 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
                 // Title for the dialog, this is what the user sees before sending the invites.
                 invite.setTitle("ShoeBox")
                 invite.setDeepLink("app_url")
-                invite.setCallToActionText(NSLocalizedString("shoeBox_invitation_cta", comment: ""))
                 invite.open()
             }
         } else {
