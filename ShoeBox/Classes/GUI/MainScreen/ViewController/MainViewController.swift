@@ -14,6 +14,8 @@ import GoogleSignIn
 
 class MainViewController: UIViewController, MFMailComposeViewControllerDelegate, FIRInviteDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
     
+    private var shouldOpenInvitesAgain = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +30,10 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // Do nothing
+        if user != nil && shouldOpenInvitesAgain {
+            inviteFriends()
+            shouldOpenInvitesAgain = false
+        }
     }
     
     @IBAction func moreButtonTapped(_ sender: UIBarButtonItem) {
@@ -132,6 +137,7 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
                 invite.open()
             }
         } else {
+            shouldOpenInvitesAgain = true
             GIDSignIn.sharedInstance().signIn()
         }
     }
