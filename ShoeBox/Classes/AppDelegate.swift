@@ -36,11 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
-        if let invite = FIRInvites.handle(url, sourceApplication:sourceApplication, annotation:"") as? FIRReceivedInvite {
-            let matchType =
-                (invite.matchType == .weak) ? "Weak" : "Strong"
-            print("Invite received from: \(sourceApplication) Deeplink: \(invite.deepLink)," +
-                "Id: \(invite.inviteId), Type: \(matchType)")
+        if let _ = FIRInvites.handle(url, sourceApplication:sourceApplication, annotation:"") as? FIRReceivedInvite {
             return true
         }
         

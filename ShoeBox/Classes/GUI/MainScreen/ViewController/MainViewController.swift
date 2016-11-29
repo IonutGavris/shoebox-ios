@@ -119,12 +119,7 @@ class MainViewController: UIViewController, MFMailComposeViewControllerDelegate,
         if let _ = GIDSignIn.sharedInstance().currentUser {
             if let invite = FIRInvites.inviteDialog() {
                 invite.setInviteDelegate(self)
-                
-                // NOTE: You must have the App Store ID set in your developer console project
-                // in order for invitations to successfully be sent.
-                
-                // A message hint for the dialog. Note this manifests differently depending on the
-                // received invation type. For example, in an email invite this appears as the subject.
+
                 var message = NSLocalizedString("shoeBox_invitation_message", comment: "")
                 if let name = GIDSignIn.sharedInstance().currentUser.profile.name {
                     message += "\n\n\(name)"
