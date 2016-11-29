@@ -24,7 +24,9 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = location?.title
-       
+        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
         centerMapOnLocation()
         
         if let currentLocation = LocationManager.sharedInstance.currentLocation, let placeLatitude = self.location!.latitude, let placeLongitude = self.location!.longitude {

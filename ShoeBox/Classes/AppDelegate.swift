@@ -10,6 +10,8 @@ import UIKit
 import Fabric
 import Crashlytics
 import Firebase
+import GoogleSignIn
+
 import UserNotifications
 
 @UIApplicationMain
@@ -32,6 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+        if let _ = FIRInvites.handle(url, sourceApplication:sourceApplication, annotation:"") as? FIRReceivedInvite {
+            return true
+        }
+        
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: "")
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate, FIRMessagingDelegate {

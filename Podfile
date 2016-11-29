@@ -5,6 +5,7 @@
 
 target 'ShoeBox' do
     pod 'Firebase/Database'
+    pod 'Firebase/Invites'
     pod 'Firebase/Messaging'
     pod 'ActionSheetPicker-3.0'
     pod 'SLExpandableTableView'
