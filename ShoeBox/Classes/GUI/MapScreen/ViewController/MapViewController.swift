@@ -63,7 +63,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, LocationManagerDel
     //MARK: Helper methods
     
     fileprivate func centerMapOnLocationFrom(_ coordinate: CLLocationCoordinate2D) {
-        let regionRadius: CLLocationDistance = 800
+        let regionRadius: CLLocationDistance = 2000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
@@ -89,10 +89,6 @@ extension MapViewController {
             return view
         }
         return nil
-    }
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        centerMapOnLocationFrom(userLocation.coordinate)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
