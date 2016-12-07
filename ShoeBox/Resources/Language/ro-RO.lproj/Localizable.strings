@@ -41,6 +41,9 @@
 //ShoeBox Suggestion Details
 "shoeBox_sUggestion_Details_footer_name" = "* NU puneti produse perisabile! (ex: banane, portocale, iaurt)";
 
+//ShoeBox Suggestions Language Key
+"shoeBox_suggestions_language_key" = "suggestions";
+
 //ShoeBox Map
 "shoebox_map" = "Harta";
 "shoebox_locations" = "Locatii";
