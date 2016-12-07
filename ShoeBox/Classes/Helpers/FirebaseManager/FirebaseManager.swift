@@ -15,7 +15,7 @@ class FirebaseManager {
 
     static func extractAllSuggestions(using completion: @escaping (([Suggestion]) -> Void)) {
         
-        extractFirebaseData(for: "suggestions", usingClosure: { results in
+        extractFirebaseData(for: NSLocalizedString("shoeBox_suggestions_language_key", comment: ""), usingClosure: { results in
             
             var allSuggestions = [Suggestion]()
             if let results = results {

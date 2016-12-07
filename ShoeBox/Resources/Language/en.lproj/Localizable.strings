@@ -41,6 +41,9 @@
 //ShoeBox Suggestion Details
 "shoeBox_sUggestion_Details_footer_name" = "* DO NOT put perishable products! (eg: bananas, oranges, yogurt)";
 
+//ShoeBox Suggestions Language Key
+"shoeBox_suggestions_language_key" = "suggestions_en";
+
 //ShoeBox Map
 "shoebox_map" = "Map";
 "shoebox_locations" = "Locations";
