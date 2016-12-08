@@ -38,12 +38,17 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
         }
        
         details.append((location?.addressFull)!)
-        if let location = location, let hours = location.hours, hours.characters.count > 0 {
-            details.append(hours)
-        }
-        if let location = location, let locContacts = location.contacts, locContacts.count > 0 {
-            for contact in locContacts {
-                contacts.append(contact)
+        if let location = location {
+            if let hours = location.hours, hours.characters.count > 0 {
+                details.append(hours)
+            }
+            if let locContacts = location.contacts, locContacts.count > 0 {
+                for contact in locContacts {
+                    contacts.append(contact)
+                }
+            }
+            if let messages = location.messages, messages.characters.count > 0 {
+                details.append(messages)
             }
         }
     }
@@ -102,11 +107,20 @@ class LocationDetailViewController: UITableViewController, MKMapViewDelegate {
             subtitle = contact.phoneNumber
             cell.textLabel?.isEnabled = true
             cell.imageView?.image = UIImage(glyphNamed: "call")
-        } else {
+        } else if (row <= details.count) {
             let current = row - 1
             title = self.details[current]
             cell.textLabel?.isEnabled = false
-            cell.imageView?.image = UIImage(glyphNamed: current == 0 ? "address" : "hours")
+            var imageName: String
+            switch current {
+            case 0:
+                imageName = "address"
+            case 1:
+                imageName = "hours"
+            default:
+                imageName = ""
+            }
+            cell.imageView?.image = UIImage(glyphNamed: imageName)
         }
         
         cell.textLabel?.text = title

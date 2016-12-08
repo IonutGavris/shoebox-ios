@@ -18,6 +18,7 @@ struct Location: BaseModelProtocol {
     var longitude:Double?
     var state:String?
     var title:String?
+    var messages:String?
     
     init(dictionary : [String: AnyObject]) {
         address = dictionary["address"] as? String
@@ -37,5 +38,6 @@ struct Location: BaseModelProtocol {
         longitude = dictionary["longitude"] as? Double
         state = dictionary["state"] as? String
         title = dictionary["title"] as? String
+        messages = dictionary["messages"] as? String
     }
 }
