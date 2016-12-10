@@ -50,8 +50,12 @@ class LocationsViewController: UITableViewController {
             
             self.filteredLocations = self.locationsData.filter({ (location: Location) -> Bool in
                 guard let title = location.title else { return false }
+                guard let city = location.city else { return false }
+                guard let country = location.country else { return false }
                 
-                return title.lowercased().contains(searchText.lowercased())
+                let composedString = title + city + country
+                
+                return composedString.lowercased().contains(searchText.lowercased())
             })
             self.tableView.reloadData()
         }
